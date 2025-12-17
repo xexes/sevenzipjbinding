@@ -481,10 +481,17 @@ EXTERN_C_END
   Z7_COM_QI_ENTRY(i8) \
   )
 
-// Define Z7_IFACE_COM7_IMP and Z7_IFACE_COM7_PURE as empty macros - interfaces are declared through inheritance
+// Define Z7_IFACE_COM7_IMP and Z7_IFACE_COM7_PURE macros for interface methods
 #ifndef Z7_IFACE_COM7_IMP
 #define Z7_IFACE_COM7_IMP(i)
 #endif
+
+// Helper macros for declaring pure virtual interface methods
+#define Z7_IFACE_PURE(f) STDMETHOD(f) PURE;
+#define Z7_IFACE_PURE_(t, f) STDMETHOD_(t, f) PURE;
+
+// Z7_IFACE_COM7_PURE expands to nothing by default
+// Individual interface headers can redefine this locally if needed
 #ifndef Z7_IFACE_COM7_PURE
 #define Z7_IFACE_COM7_PURE(i)
 #endif
