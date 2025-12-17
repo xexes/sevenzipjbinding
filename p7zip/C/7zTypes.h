@@ -85,7 +85,7 @@ typedef int WRes;
           | (HRESULT)0x80000000 ))
 
 #define MY_SRes_HRESULT_FROM_WRes(x) \
-  ((HRESULT)(x) <= 0 ? ((HRESULT)(x)) : MY_HRESULT_FROM_errno_CONST_ERROR(x))
+  (((HRESULT)(x)) <= 0 ? ((HRESULT)(x)) : MY_HRESULT_FROM_errno_CONST_ERROR(x))
 
 // we call macro HRESULT_FROM_WIN32 for system errors (WRes) that are (errno)
 #define HRESULT_FROM_WIN32(x) MY_SRes_HRESULT_FROM_WRes(x)

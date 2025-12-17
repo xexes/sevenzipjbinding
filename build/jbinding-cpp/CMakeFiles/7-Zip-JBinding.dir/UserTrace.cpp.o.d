@@ -1,5 +1,5 @@
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: \
- /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStaticInfo.cpp \
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UserTrace.cpp.o: \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/UserTrace.cpp \
  /usr/include/stdc-predef.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/SevenZipJBinding.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows/StdAfx.h \
@@ -298,4 +298,11 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../../C/7zTypes.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../Common/MyTypes.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/Defs.h \
- /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaStandardLibrary.h
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaStandardLibrary.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JNITools.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JBindingTools.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaPackageSevenZip.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStaticInfo.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaStandardLibrary.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/UnicodeHelper.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/UserTrace.h

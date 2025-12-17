@@ -1,5 +1,5 @@
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: \
- /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStaticInfo.cpp \
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UniversalArchiveOpenCallback.cpp.o: \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/UniversalArchiveOpenCallback.cpp \
  /usr/include/stdc-predef.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/SevenZipJBinding.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows/StdAfx.h \
@@ -298,4 +298,25 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../../C/7zTypes.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../Common/MyTypes.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/Defs.h \
- /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaStandardLibrary.h
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaStandardLibrary.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JNITools.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/JBindingTools.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/UniversalArchiveOpenCallback.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaArchiveOpenCallback.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaAbstract.h \
+ /usr/include/c++/13/stack /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/refwrap.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_stack.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./Debug.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JBindingTools.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStatInfos/JavaPackageSevenZip.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStaticInfo.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStatInfos/JavaStandardLibrary.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaArchiveOpenVolumeCallback.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaInStream.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaSequentialInStream.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyCom.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaAbstract.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaCryptoGetTextPassword.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaInStream.h
