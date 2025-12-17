@@ -70,7 +70,10 @@ typedef struct { LONGLONG QuadPart; } LARGE_INTEGER;
 typedef struct { ULONGLONG QuadPart; } ULARGE_INTEGER;
 
 typedef const CHAR *LPCSTR;
+#ifndef _TCHAR_DEFINED
 typedef CHAR TCHAR;
+#define _TCHAR_DEFINED
+#endif
 typedef const TCHAR *LPCTSTR;
 typedef wchar_t WCHAR;
 typedef WCHAR OLECHAR;
@@ -141,6 +144,16 @@ typedef LONG SCODE;
 
 // #define MIDL_INTERFACE(x) struct
 
+// Define Z7_COM7F macros for COM method implementations
+#ifndef Z7_COM7F_E
+#define Z7_COM7F_E STDMETHODIMP_(HRESULT)
+#endif
+#ifndef Z7_COM7F_IMF
+#define Z7_COM7F_IMF(f) STDMETHODIMP f
+#endif
+#ifndef Z7_COM7F_IMF2
+#define Z7_COM7F_IMF2(t, f) STDMETHODIMP_(t) f
+#endif
 
 #ifdef __cplusplus
 
@@ -292,6 +305,8 @@ typedef enum tagSTREAM_SEEK
 
 
 
+#ifndef _SYSTEMTIME_DEFINED_
+#define _SYSTEMTIME_DEFINED_
 typedef struct
 {
   WORD wYear;
@@ -303,13 +318,17 @@ typedef struct
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME;
+#endif
 
+#ifndef _MYWINDOWS_TIME_FUNCTIONS_
+#define _MYWINDOWS_TIME_FUNCTIONS_
 BOOL WINAPI FileTimeToLocalFileTime(const FILETIME *fileTime, FILETIME *localFileTime);
 BOOL WINAPI LocalFileTimeToFileTime(const FILETIME *localFileTime, FILETIME *fileTime);
 BOOL WINAPI FileTimeToSystemTime(const FILETIME *fileTime, SYSTEMTIME *systemTime);
 // VOID WINAPI GetSystemTimeAsFileTime(FILETIME *systemTimeAsFileTime);
 
 DWORD GetTickCount();
+#endif
 
 
 /*

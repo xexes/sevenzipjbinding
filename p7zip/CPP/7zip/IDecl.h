@@ -25,4 +25,8 @@
 
 #define DECL_INTERFACE(i, groupId, subId) DECL_INTERFACE_SUB(i, IUnknown, groupId, subId)
 
+// Define 7-Zip specific interface macros
+#define Z7_DECL_IFACE_7ZIP_SUB(i, base, groupId, subId) DECL_INTERFACE_SUB(i, base, groupId, subId)
+#define Z7_DECL_IFACE_7ZIP(i, groupId, subId) DECL_INTERFACE(i, groupId, subId)
+
 #endif

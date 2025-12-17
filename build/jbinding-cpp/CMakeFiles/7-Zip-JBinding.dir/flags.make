@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_DEFINES = -DBREAK_HANDLER -DENV_HAVE_GCCVISIBILITYPATCH -DENV_UNIX -DNDEBUG -DUNICODE -DUNIX_USE_WIN_FILE -D_7ZIP_LARGE_PAGES -D_7_Zip_JBinding_EXPORTS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -D_UNICODE
+C_DEFINES = -DBREAK_HANDLER -DENV_HAVE_GCCVISIBILITYPATCH -DENV_UNIX -DNDEBUG -DUNICODE -DUNIX_USE_WIN_FILE -DZ7_SFX -D_7ZIP_LARGE_PAGES -D_7_Zip_JBinding_EXPORTS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -D_UNICODE
 
 C_INCLUDES = -I/usr/lib/jvm/temurin-17-jdk-amd64/include -I/usr/lib/jvm/temurin-17-jdk-amd64/include/linux -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/C -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/include_windows -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp/javah -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/.
 
 C_FLAGS =  -fmessage-length=0 -fPIC   -O2 -fPIC -fexceptions -pipe
 
-CXX_DEFINES = -DBREAK_HANDLER -DENV_HAVE_GCCVISIBILITYPATCH -DENV_UNIX -DNDEBUG -DUNICODE -DUNIX_USE_WIN_FILE -D_7ZIP_LARGE_PAGES -D_7_Zip_JBinding_EXPORTS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -D_UNICODE
+CXX_DEFINES = -DBREAK_HANDLER -DENV_HAVE_GCCVISIBILITYPATCH -DENV_UNIX -DNDEBUG -DUNICODE -DUNIX_USE_WIN_FILE -DZ7_SFX -D_7ZIP_LARGE_PAGES -D_7_Zip_JBinding_EXPORTS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -D_UNICODE
 
 CXX_INCLUDES = -I/usr/lib/jvm/temurin-17-jdk-amd64/include -I/usr/lib/jvm/temurin-17-jdk-amd64/include/linux -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/C -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/include_windows -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp/javah -I/home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/.
 

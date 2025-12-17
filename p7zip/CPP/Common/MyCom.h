@@ -481,6 +481,13 @@ EXTERN_C_END
   Z7_COM_QI_ENTRY(i8) \
   )
 
+// Define Z7_IFACE_COM7_IMP and Z7_IFACE_COM7_PURE as empty macros - interfaces are declared through inheritance
+#ifndef Z7_IFACE_COM7_IMP
+#define Z7_IFACE_COM7_IMP(i)
+#endif
+#ifndef Z7_IFACE_COM7_PURE
+#define Z7_IFACE_COM7_PURE(i)
+#endif
 
 #define Z7_IFACES_IMP_UNK_1(i1) \
   Z7_COM_UNKNOWN_IMP_1(i1) \
