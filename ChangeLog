@@ -1,6 +1,14 @@
 7-Zip-JBinding ChangeLog
 ========================
 
+Release - 25.01-1.00 (Release, cross-platform, based on 7-Zip 25.01)
+
+	* Update to 7-Zip 25.01
+		- Enhanced symbolic link handling security
+		- Fixes CVE-2025-11001 and CVE-2025-11002
+		- Updated copyright year to 2025
+		- Based on 7-Zip released August 3, 2025
+
 Release - 16.02-2.02 (Release, cross-platform, based on zip/p7zip 16.02)
 
 	* Bugfix #5 RandomAccessFileOutStream should implement Closeable
