@@ -119,7 +119,8 @@ namespace NCoderPropID
     kNumThreads,
     kEndMarker,
     kLevel,
-    kReduceSize // estimated size of data that will be compressed. Encoder can use this value to reduce dictionary size.
+    kReduceSize, // estimated size of data that will be compressed. Encoder can use this value to reduce dictionary size.
+    kBlockSize2 // additional block size parameter for some codecs
   };
 }
 

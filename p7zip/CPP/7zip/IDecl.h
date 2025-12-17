@@ -29,4 +29,13 @@
 #define Z7_DECL_IFACE_7ZIP_SUB(i, base, groupId, subId) DECL_INTERFACE_SUB(i, base, groupId, subId)
 #define Z7_DECL_IFACE_7ZIP(i, groupId, subId) DECL_INTERFACE(i, groupId, subId)
 
+// Define interface declaration macros for pure interfaces
+#define Z7_IFACE_DECL_PURE_(i, base) \
+  struct i : public base \
+  { Z7_IFACE_COM7_PURE(i) };
+
+#define Z7_IFACE_DECL_PURE(i) \
+  struct i : public IUnknown \
+  { Z7_IFACE_COM7_PURE(i) };
+
 #endif
