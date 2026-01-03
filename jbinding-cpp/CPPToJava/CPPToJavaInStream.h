@@ -35,7 +35,7 @@ public:
 		if (iid == IID_IInStream)
 	    {
 	        *outObject = (void *)(IInStream *)this;
-	        AddRef();
+	        CPPToJavaSequentialInStream::AddRef();  // Explicitly qualify to resolve ambiguity
 	        return S_OK;
 	    }
 		return CPPToJavaSequentialInStream::QueryInterface(iid, outObject);

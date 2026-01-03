@@ -314,6 +314,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPInArchiveImpl.cpp.
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStatInfos/JavaPackageSevenZip.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStaticInfo.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStatInfos/JavaStandardLibrary.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaSequentialInStream.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyCom.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaCryptoGetTextPassword.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CodecTools.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./UnicodeHelper.h \

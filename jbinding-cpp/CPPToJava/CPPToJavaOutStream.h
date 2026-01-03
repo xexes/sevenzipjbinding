@@ -26,23 +26,17 @@ public:
         return result;
     }
 
-    STDMETHOD(QueryInterface)(REFGUID iid, void ** outObject) throw() {
+    STDMETHOD(QueryInterface)(REFGUID iid, void ** outObject) throw() Z7_override {
         if (iid == IID_IOutStream) {
             *outObject = (void *) (IOutStream *) this;
-            AddRef();
+            CPPToJavaSequentialOutStream::AddRef();  // Explicitly qualify to resolve ambiguity
             return S_OK;
         }
 
         return CPPToJavaSequentialOutStream::QueryInterface(iid, outObject);
     }
 
-    STDMETHOD_(ULONG, AddRef)() throw() {
-        return CPPToJavaSequentialOutStream::AddRef();
-    }
-
-    STDMETHOD_(ULONG, Release)() {
-        return CPPToJavaSequentialOutStream::Release();
-    }
+    // Inherit AddRef and Release from base class (no need to override)
 
     STDMETHOD(Seek)(Int64 offset, UInt32 seekOrigin, UInt64 *newPosition);
 

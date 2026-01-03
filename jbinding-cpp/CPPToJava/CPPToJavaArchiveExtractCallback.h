@@ -41,7 +41,7 @@ public:
         }
     }
 
-    STDMETHOD(QueryInterface)(REFGUID refguid, void ** p) throw() {
+    STDMETHOD(QueryInterface)(REFGUID refguid, void ** p) throw() Z7_override {
         TRACE_OBJECT_CALL("QueryInterface");
 
         if (refguid == IID_ICryptoGetTextPassword && _cryptoGetTextPasswordImpl) {
@@ -53,15 +53,7 @@ public:
         return CPPToJavaProgress::QueryInterface(refguid, p);
     }
 
-    STDMETHOD_(ULONG, AddRef)() throw() {
-        TRACE_OBJECT_CALL("AddRef");
-        return CPPToJavaProgress::AddRef();
-    }
-
-    STDMETHOD_(ULONG, Release)() {
-        TRACE_OBJECT_CALL("Release");
-        return CPPToJavaProgress::Release();
-    }
+    // Inherit AddRef and Release from CPPToJavaProgress (non-final now)
 
     STDMETHOD(SetTotal)(UInt64 total) {
         TRACE_OBJECT_CALL("SetTotal");

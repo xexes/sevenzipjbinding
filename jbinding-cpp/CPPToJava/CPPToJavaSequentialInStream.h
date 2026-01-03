@@ -23,13 +23,21 @@
   ++_m_RefCount; return S_OK; }
 
 #define MY_ADDREF_RELEASE_NONFINAL \
-  private: \
+  protected: \
   STDMETHOD_(ULONG, AddRef)() throw() Z7_override \
     { return ++_m_RefCount; } \
   STDMETHOD_(ULONG, Release)() throw() Z7_override \
     { if (--_m_RefCount != 0) return _m_RefCount; \
       delete this;  return 0; }
 
+// Non-final version for base class with no interfaces (like IProgress)
+#define MY_UNKNOWN_IMP_NONFINAL \
+  MY_QUERYINTERFACE_BEGIN \
+  { IUnknown *tu = this; *outObject = tu; } \
+  MY_QUERYINTERFACE_END \
+  MY_ADDREF_RELEASE_NONFINAL
+
+// Non-final version for base class with one interface
 #define MY_UNKNOWN_IMP1_NONFINAL(i) \
   MY_QUERYINTERFACE_BEGIN \
   { IUnknown *tu = this; *outObject = tu; } \

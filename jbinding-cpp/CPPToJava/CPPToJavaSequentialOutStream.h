@@ -6,6 +6,9 @@
 #include "CPPToJavaAbstract.h"
 #include "JavaStatInfos/JavaPackageSevenZip.h"
 
+// Import non-final COM macros from CPPToJavaSequentialInStream.h
+#include "CPPToJavaSequentialInStream.h"
+
 class CPPToJavaSequentialOutStream : public CPPToJavaAbstract,
 	public virtual ISequentialOutStream,
 	public CMyUnknownImp
@@ -13,7 +16,7 @@ class CPPToJavaSequentialOutStream : public CPPToJavaAbstract,
 private:
     jni::ISequentialOutStream * _iSequentialOutStream;
 public:
-	MY_UNKNOWN_IMP1(ISequentialOutStream)
+	MY_UNKNOWN_IMP1_NONFINAL(ISequentialOutStream)
 
 public:
 	CPPToJavaSequentialOutStream(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject javaSequentialOutStreamImpl) :

@@ -316,6 +316,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPOutArchiveImpl.cpp
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStatInfos/JavaPackageSevenZip.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStaticInfo.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./JavaStatInfos/JavaStandardLibrary.h \
+ /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaSequentialInStream.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaArchiveUpdateCallback.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/./CPPToJava/CPPToJavaProgress.h \
  /home/runner/work/sevenzipjbinding/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/IPassword.h \

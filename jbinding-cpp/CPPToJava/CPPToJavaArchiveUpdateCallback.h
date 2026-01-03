@@ -63,7 +63,7 @@ public:
         return CPPToJavaProgress::SetCompleted(completeValue);
     }
 
-    STDMETHOD(QueryInterface)(REFGUID refguid, void ** p) throw() {
+    STDMETHOD(QueryInterface)(REFGUID refguid, void ** p) throw() Z7_override {
         TRACE_OBJECT_CALL("QueryInterface");
 
         if ((refguid == IID_ICryptoGetTextPassword) || (refguid == IID_ICryptoGetTextPassword2))
@@ -76,7 +76,7 @@ public:
                     *p = (void *)(ICryptoGetTextPassword2 *)this;
             	else
                     return E_NOINTERFACE;
-                AddRef();
+                CPPToJavaProgress::AddRef();  // Explicitly qualify to avoid ambiguity
                 return S_OK;
             }
             return E_NOINTERFACE;
@@ -85,15 +85,7 @@ public:
         return CPPToJavaProgress::QueryInterface(refguid, p);
     }
 
-    STDMETHOD_(ULONG, AddRef)() throw() {
-        TRACE_OBJECT_CALL("AddRef");
-        return CPPToJavaProgress::AddRef();
-    }
-
-    STDMETHOD_(ULONG, Release)() {
-        TRACE_OBJECT_CALL("Release");
-        return CPPToJavaProgress::Release();
-    }
+    // Inherit AddRef and Release from CPPToJavaProgress (non-final now)
 
     void freeOutItem(JNIEnvInstance & jniEnvInstance);
 
