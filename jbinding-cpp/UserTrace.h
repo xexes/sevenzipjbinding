@@ -14,7 +14,7 @@ inline AString UIntToString(UInt32 v)
 {
   char sz[32];
   ConvertUInt64ToString(v, sz);
-  return sz;
+  return AString(sz);  // Explicit conversion needed for new 7-Zip
 }
 
 inline UString operator<<(UString msg, const wchar_t * str) {

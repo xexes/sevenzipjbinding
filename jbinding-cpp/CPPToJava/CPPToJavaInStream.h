@@ -29,7 +29,8 @@ public:
 		return result;
 	}
 
-	STDMETHOD(QueryInterface)(REFGUID iid, void ** outObject) throw()
+	// Override QueryInterface to add IInStream support (base class is non-final)
+	STDMETHOD(QueryInterface)(REFGUID iid, void ** outObject) throw() Z7_override
 	{
 		if (iid == IID_IInStream)
 	    {
@@ -38,16 +39,6 @@ public:
 	        return S_OK;
 	    }
 		return CPPToJavaSequentialInStream::QueryInterface(iid, outObject);
-	}
-
-	STDMETHOD_(ULONG, AddRef)() throw()
-	{
-		return CPPToJavaSequentialInStream::AddRef();
-	}
-
-	STDMETHOD_(ULONG, Release)()
-	{
-        return CPPToJavaSequentialInStream::Release();
 	}
 
 	STDMETHOD(Seek)(Int64 offset, UInt32 seekOrigin, UInt64 *newPosition);
