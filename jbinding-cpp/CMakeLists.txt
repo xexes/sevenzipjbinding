@@ -79,7 +79,7 @@ IF(MINGW64)
     add_definitions(-DMINGW -mthreads -D_JNI_IMPLEMENTATION_ -D_OLEAUT32_ -D_USER32_)
 ENDIF()
 
-# Define Z7_SFX to skip some UI-related code we don't need in JBinding
+# Define Z7_SFX to skip UI-related code we don't need in JBinding
 add_definitions(-DZ7_SFX)
 
 IF(CMAKE_BUILD_TYPE STREQUAL "Debug")

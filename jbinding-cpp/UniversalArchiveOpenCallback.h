@@ -55,12 +55,12 @@ public:
 
     STDMETHOD_(ULONG, AddRef)()
     {
-        return ++__m_RefCount;
+        return ++_m_RefCount;
     }
     STDMETHOD_(ULONG, Release)()
     {
-        if (--__m_RefCount != 0)
-            return __m_RefCount;
+        if (--_m_RefCount != 0)
+            return _m_RefCount;
         delete this;
         return 0;
     }

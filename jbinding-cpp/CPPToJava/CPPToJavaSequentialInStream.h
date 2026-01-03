@@ -17,6 +17,7 @@ class CPPToJavaSequentialInStream :
 public:
 	MY_UNKNOWN_IMP1(ISequentialInStream)
 
+public:
 	CPPToJavaSequentialInStream(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject sequentialInStream)
 		: CPPToJavaAbstract(jbindingSession, initEnv, sequentialInStream),
 		  _iSequentialInStream(jni::ISequentialInStream::_getInstanceFromObject(initEnv, sequentialInStream))

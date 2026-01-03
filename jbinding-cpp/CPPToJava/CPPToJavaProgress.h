@@ -13,6 +13,7 @@ private:
 public:
 	MY_UNKNOWN_IMP
 
+public:
 	CPPToJavaProgress(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject progress) :
 		CPPToJavaAbstract(jbindingSession, initEnv, progress),
 		        _iProgress(jni::IProgress::_getInstanceFromObject(initEnv, progress))

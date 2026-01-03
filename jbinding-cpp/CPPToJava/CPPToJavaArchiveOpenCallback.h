@@ -10,7 +10,8 @@ class CPPToJavaArchiveOpenCallback : public CPPToJavaAbstract, public virtual IA
     jni::IArchiveOpenCallback * _iArchiveOpenCallback;
 public:
     MY_UNKNOWN_IMP
-
+    
+public:
     CPPToJavaArchiveOpenCallback(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject archiveOpenCallback) :
         CPPToJavaAbstract(jbindingSession, initEnv, archiveOpenCallback),
                 _iArchiveOpenCallback(jni::IArchiveOpenCallback::_getInstanceFromObject(initEnv, archiveOpenCallback))

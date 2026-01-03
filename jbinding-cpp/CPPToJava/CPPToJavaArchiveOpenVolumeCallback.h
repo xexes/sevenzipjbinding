@@ -13,6 +13,7 @@ private:
 public:
     MY_UNKNOWN_IMP
 
+public:
     CPPToJavaArchiveOpenVolumeCallback(JBindingSession & jbindingSession, JNIEnv * initEnv,
                                        jobject archiveOpenColumeCallback) :
         CPPToJavaAbstract(jbindingSession, initEnv, archiveOpenColumeCallback),
