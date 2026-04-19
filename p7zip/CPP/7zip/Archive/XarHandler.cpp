@@ -901,8 +901,18 @@ Z7_COM7F_IMF(CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *val
 
       case kpidIsDir: prop = item.IsDir; break;
       
-      case kpidSize:     if (item.HasData && !item.IsDir) prop = item.Size; break;
-      case kpidPackSize: if (item.HasData && !item.IsDir) prop = item.PackSize; break;
+      case kpidSize:
+        if (!item.IsDir) {
+          // Return 0 for empty files (no <data> element in XAR TOC).
+          // HasData is false for zero-byte files which have no data entry.
+          prop = item.HasData ? item.Size : (UInt64)0;
+        }
+        break;
+      case kpidPackSize:
+        if (!item.IsDir) {
+          prop = item.HasData ? item.PackSize : (UInt64)0;
+        }
+        break;
 
       case kpidMethod:
       {

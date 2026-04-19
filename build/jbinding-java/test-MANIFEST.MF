@@ -5,4 +5,4 @@ Implementation-Title: 7-Zip-JBinding tests
 Implementation-Vendor: sevenzipjbind.sf.net
 Implementation-Version: 25.01-1.00
 Built-By: Boris Brodski
-Built-Date: 2026-04-19 19:09:35Z
+Built-Date: 2026-04-19 19:14:28Z
