@@ -363,7 +363,10 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
     	// 7-Zip 25.01 may request additional properties (e.g. kpidComment) that the
     	// Java update callback does not need to provide. Returning VT_EMPTY is the
     	// correct way to indicate "not available" per the IArchiveUpdateCallback contract.
-    	return S_OK;
+    	// IMPORTANT: Use break (not return) so cPropVariant.Detach(value) is called below,
+    	// which correctly sets value->vt = VT_EMPTY. Returning early leaves value->vt = VT_NULL
+    	// (set above), which causes E_INVALIDARG in strict encoders like the ZIP handler.
+    	break;
     }
 
     cPropVariant.Detach(value);

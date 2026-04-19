@@ -18,7 +18,3 @@ JUnit-badarchive 1 5.88278
 JUnit-misc 1 0.457259
 ---
 JUnit-snippets
-JUnit-snippets-no-privileged-init
-JUnit-single-file-extraction
-JUnit-multiple-files-extraction
-JUnit-compression
