@@ -11,6 +11,14 @@ private:
     jni::IArchiveExtractCallback * _iArchiveExtractCallback;
 
 public:
+    // IArchiveExtractCallback and ICryptoGetTextPassword each have non-virtual IUnknown paths.
+    // Must provide AddRef/Release explicitly to satisfy all vtable slots.
+    STDMETHOD_(ULONG, AddRef)() throw() Z7_override
+        { return ++_m_RefCount; }
+    STDMETHOD_(ULONG, Release)() throw() Z7_override
+        { if (--_m_RefCount != 0) return _m_RefCount; delete this; return 0; }
+
+public:
     CPPToJavaArchiveExtractCallback(JBindingSession & jbindingSession, JNIEnv * initEnv,
                                     jobject archiveExtractCallbackImpl) :
         CPPToJavaProgress(jbindingSession, initEnv, archiveExtractCallbackImpl),

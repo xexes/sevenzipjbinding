@@ -7,6 +7,14 @@ class CPPToJavaInStream : public virtual IInStream, public CPPToJavaSequentialIn
 private:
     jni::ISeekableStream * _iSeekableStream;
 public:
+    // IInStream inherits ISequentialInStream non-virtually, creating a second IUnknown path.
+    // Must provide AddRef/Release explicitly to satisfy both vtable slots.
+    STDMETHOD_(ULONG, AddRef)() throw() Z7_override
+        { return ++_m_RefCount; }
+    STDMETHOD_(ULONG, Release)() throw() Z7_override
+        { if (--_m_RefCount != 0) return _m_RefCount; delete this; return 0; }
+
+public:
 	CPPToJavaInStream(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject inStream) :
 		CPPToJavaSequentialInStream(jbindingSession, initEnv, inStream),
 		        _iSeekableStream(jni::ISeekableStream::_getInstanceFromObject(initEnv, inStream))

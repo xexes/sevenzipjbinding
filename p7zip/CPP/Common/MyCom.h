@@ -12,10 +12,10 @@ class CMyComPtr
   T* _p;
 public:
   CMyComPtr(): _p(NULL) {}
-  CMyComPtr(T* p) throw() { if ((_p = p) != NULL) p->AddRef(); }
-  CMyComPtr(const CMyComPtr<T>& lp) throw() { if ((_p = lp._p) != NULL) _p->AddRef(); }
-  ~CMyComPtr() { if (_p) _p->Release(); }
-  void Release() { if (_p) { _p->Release(); _p = NULL; } }
+  CMyComPtr(T* p) throw() { if ((_p = p) != NULL) ((IUnknown*)p)->AddRef(); }
+  CMyComPtr(const CMyComPtr<T>& lp) throw() { if ((_p = lp._p) != NULL) ((IUnknown*)_p)->AddRef(); }
+  ~CMyComPtr() { if (_p) ((IUnknown*)_p)->Release(); }
+  void Release() { if (_p) { ((IUnknown*)_p)->Release(); _p = NULL; } }
   operator T*() const {  return (T*)_p;  }
   T* Interface() const {  return (T*)_p;  }
   // T& operator*() const {  return *_p; }
@@ -24,9 +24,9 @@ public:
   T* operator=(T* p)
   {
     if (p)
-      p->AddRef();
+      ((IUnknown*)p)->AddRef();
     if (_p)
-      _p->Release();
+      ((IUnknown*)_p)->Release();
     _p = p;
     return p;
   }
@@ -482,20 +482,31 @@ EXTERN_C_END
   )
 
 // Define Z7_IFACE_COM7_IMP and Z7_IFACE_COM7_PURE macros for interface methods
+// Z7_COM7F_IMP: declare a method as override+final inside a class body
+// Z7_COM7F_IMF is defined in MyWindows.h (included above)
+#ifndef Z7_COM7F_IMP
+#define Z7_COM7F_IMP(f)               Z7_COM7F_IMF(f)     Z7_override Z7_final;
+#define Z7_COM7F_IMP2(t, f)           Z7_COM7F_IMF2(t, f) Z7_override Z7_final;
+#define Z7_COM7F_IMP_NONFINAL(f)      Z7_COM7F_IMF(f)     Z7_override;
+#define Z7_COM7F_IMP_NONFINAL2(t, f)  Z7_COM7F_IMF2(t, f) Z7_override;
+// Z7_COM7F_PURE: declare a method as pure virtual inside an interface definition
+#define Z7_COM7F_PURE(f)              virtual Z7_COM7F_IMF(f) =0;
+#define Z7_COM7F_PURE2(t, f)          virtual Z7_COM7F_IMF2(t, f) =0;
+#endif
+
+// Z7_IFACE_COM7_IMP(name): generate override+final declarations for all methods of interface.
+// Z7_IFACE_COM7_PURE(name): generate pure virtual declarations for interface definition.
+// Uses Z7_IFACEM_##name macro defined in the interface headers (IStream.h, IArchive.h, etc.)
 #ifndef Z7_IFACE_COM7_IMP
-#define Z7_IFACE_COM7_IMP(i)
+#define Z7_IFACE_COM7_IMP(name)           Z7_IFACEM_ ## name(Z7_COM7F_IMP)
+#define Z7_IFACE_COM7_IMP_NONFINAL(name)  Z7_IFACEM_ ## name(Z7_COM7F_IMP_NONFINAL)
+#define Z7_IFACE_COM7_PURE(name)          Z7_IFACEM_ ## name(Z7_COM7F_PURE)
 #endif
 
-// Helper macros for declaring pure virtual interface methods
-#define Z7_IFACE_PURE(f) STDMETHOD(f) PURE;
+
+// Helper macro for declaring pure virtual interface methods
+// (Z7_IFACE_PURE is the interface-level version defined in IDecl.h)
 #define Z7_IFACE_PURE_(t, f) STDMETHOD_(t, f) PURE;
-
-// Z7_IFACE_COM7_PURE expands to nothing by default
-// Individual interface headers can redefine this locally if needed
-#ifndef Z7_IFACE_COM7_PURE
-#define Z7_IFACE_COM7_PURE(i)
-#endif
-
 #define Z7_IFACES_IMP_UNK_1(i1) \
   Z7_COM_UNKNOWN_IMP_1(i1) \
   Z7_IFACE_COM7_IMP(i1) \

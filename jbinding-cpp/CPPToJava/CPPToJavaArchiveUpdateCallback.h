@@ -23,6 +23,14 @@ private:
     jni::ICryptoGetTextPassword * _cryptoGetTextPassword;
 
 public:
+    // IArchiveUpdateCallback, ICryptoGetTextPassword, ICryptoGetTextPassword2 all inherit
+    // IUnknown non-virtually, creating multiple IUnknown paths. Must implement AddRef/Release.
+    STDMETHOD_(ULONG, AddRef)() throw() Z7_override
+        { return ++_m_RefCount; }
+    STDMETHOD_(ULONG, Release)() throw() Z7_override
+        { if (--_m_RefCount != 0) return _m_RefCount; delete this; return 0; }
+
+public:
     CPPToJavaArchiveUpdateCallback(JBindingSession & jbindingSession, JNIEnv * initEnv,
                                    jobject archiveUpdateCallback, bool isInArchiveAttached,
                                    int archiveFormatIndex, jobject outArchive) :

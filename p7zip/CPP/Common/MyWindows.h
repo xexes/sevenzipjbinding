@@ -155,6 +155,27 @@ typedef LONG SCODE;
 #define Z7_COM7F_IMF2(t, f) STDMETHODIMP_(t) f
 #endif
 
+// Method signature macros for use inside class body declarations
+// These require Z7_override and Z7_final to be defined (defined later in this file or by compiler)
+#ifndef Z7_COM7F_IMP
+#define Z7_COM7F_IMP(f)               Z7_COM7F_IMF(f)     Z7_override Z7_final;
+#define Z7_COM7F_IMP2(t, f)           Z7_COM7F_IMF2(t, f) Z7_override Z7_final;
+#define Z7_COM7F_IMP_NONFINAL(f)      Z7_COM7F_IMF(f)     Z7_override;
+#define Z7_COM7F_IMP_NONFINAL2(t, f)  Z7_COM7F_IMF2(t, f) Z7_override;
+// Pure virtual method declaration macros for interface definitions
+#define Z7_COM7F_PURE(f)              virtual Z7_COM7F_IMF(f) =0;
+#define Z7_COM7F_PURE2(t, f)          virtual Z7_COM7F_IMF2(t, f) =0;
+#endif
+
+// Z7_IFACE_COM7_IMP/PURE: generate method declarations for all methods of an interface.
+// Uses Z7_IFACEM_##name macros defined in the interface headers (IStream.h, IArchive.h, etc.)
+// Defined here so they're available even when MyCom.h is not included before interface headers.
+#ifndef Z7_IFACE_COM7_IMP
+#define Z7_IFACE_COM7_IMP(name)           Z7_IFACEM_ ## name(Z7_COM7F_IMP)
+#define Z7_IFACE_COM7_IMP_NONFINAL(name)  Z7_IFACEM_ ## name(Z7_COM7F_IMP_NONFINAL)
+#define Z7_IFACE_COM7_PURE(name)          Z7_IFACEM_ ## name(Z7_COM7F_PURE)
+#endif
+
 #ifdef __cplusplus
 
 /*

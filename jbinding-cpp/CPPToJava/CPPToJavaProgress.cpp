@@ -13,7 +13,7 @@ STDMETHODIMP CPPToJavaProgress::SetCompleted(const UInt64 * completeValue) {
     return jniEnvInstance.exceptionCheck() ? S_FALSE : S_OK;
 }
 
-STDMETHODIMP CPPToJavaProgress::SetTotal(UINT64 total) {
+STDMETHODIMP CPPToJavaProgress::SetTotal(UInt64 total) {
     TRACE_OBJECT_CALL("SetTotal");
 
     JNIEnvInstance jniEnvInstance(_jbindingSession);

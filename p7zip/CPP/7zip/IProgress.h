@@ -11,6 +11,10 @@
   STDMETHOD(SetTotal)(UInt64 total) x; \
   STDMETHOD(SetCompleted)(const UInt64 *completeValue) x; \
 
+#define Z7_IFACEM_IProgress(x) \
+  x(SetTotal(UInt64 total)) \
+  x(SetCompleted(const UInt64 *completeValue)) \
+
 DECL_INTERFACE(IProgress, 0, 5)
 {
   INTERFACE_IProgress(PURE)

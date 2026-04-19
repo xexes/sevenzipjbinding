@@ -1157,10 +1157,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/DeflateProp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/DeflateProps.cpp.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/DeflateProps.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/DeflateProps.cpp.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ExtHandler.cpp
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ExtHandler.cpp
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ExtHandler.cpp > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ExtHandler.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/GzHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/GzHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.i: cmake_force
@@ -1174,7 +1188,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/FatHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/FatHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.i: cmake_force
@@ -1188,7 +1202,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/HandlerCont.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/HandlerCont.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.i: cmake_force
@@ -1202,7 +1216,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/HfsHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/HfsHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.cpp.i: cmake_force
@@ -1216,7 +1230,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HfsHandler.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/LzmaHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/LzmaHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler.cpp.i: cmake_force
@@ -1230,7 +1244,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzmaHandler
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/NtfsHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/NtfsHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler.cpp.i: cmake_force
@@ -1244,7 +1258,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/NtfsHandler
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/PpmdHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/PpmdHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler.cpp.i: cmake_force
@@ -1258,7 +1272,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/PpmdHandler
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/SplitHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/SplitHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandler.cpp.i: cmake_force
@@ -1272,7 +1286,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/SplitHandle
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/XzHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/XzHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.cpp.i: cmake_force
@@ -1286,7 +1300,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XzHandler.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/CoderMixer2.cpp.i: cmake_force
@@ -1300,7 +1314,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/Code
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.i: cmake_force
@@ -1314,7 +1328,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/Dumm
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/FindSignature.cpp.i: cmake_force
@@ -1328,7 +1342,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/Find
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.i: cmake_force
@@ -1342,7 +1356,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/Hand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InStreamWithCRC.cpp.i: cmake_force
@@ -1356,7 +1370,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/InSt
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ItemNameUtils.cpp.i: cmake_force
@@ -1370,7 +1384,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/Item
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/MultiStream.cpp.i: cmake_force
@@ -1384,7 +1398,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/Mult
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp.i: cmake_force
@@ -1398,7 +1412,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutS
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp.i: cmake_force
@@ -1412,7 +1426,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/OutS
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/ParseProperties.cpp.i: cmake_force
@@ -1426,7 +1440,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Common/Pars
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp.i: cmake_force
@@ -1440,7 +1454,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zCompre
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode.cpp.i: cmake_force
@@ -1454,7 +1468,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zDecode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode.cpp.i: cmake_force
@@ -1468,7 +1482,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zEncode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtract.cpp.i: cmake_force
@@ -1482,7 +1496,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zExtrac
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolderInStream.cpp.i: cmake_force
@@ -1496,7 +1510,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zFolder
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandler.cpp.i: cmake_force
@@ -1510,7 +1524,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandle
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandlerOut.cpp.i: cmake_force
@@ -1524,7 +1538,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHandle
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader.cpp.i: cmake_force
@@ -1538,7 +1552,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zHeader
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp.i: cmake_force
@@ -1552,7 +1566,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cpp.i: cmake_force
@@ -1566,7 +1580,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zOut.cp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProperties.cpp.i: cmake_force
@@ -1580,7 +1594,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zProper
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecStream.cpp.i: cmake_force
@@ -1594,7 +1608,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zSpecSt
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate.cpp.i: cmake_force
@@ -1608,7 +1622,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zUpdate
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegister.cpp.i: cmake_force
@@ -1622,7 +1636,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/7z/7zRegist
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBlockInStream.cpp.i: cmake_force
@@ -1636,7 +1650,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabBloc
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHandler.cpp.i: cmake_force
@@ -1650,7 +1664,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHeader.cpp.i: cmake_force
@@ -1664,7 +1678,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabHead
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.cpp.i: cmake_force
@@ -1678,7 +1692,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.i: cmake_force
@@ -1692,7 +1706,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Cab/CabRegi
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/LzhHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/LzhHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.cpp.i: cmake_force
@@ -1706,7 +1720,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/LzhHandler.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzhDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzhDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder.cpp.i: cmake_force
@@ -1720,7 +1734,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzhDecoder
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecoder.cpp.i: cmake_force
@@ -1734,7 +1748,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmsDecode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHandler.cpp.i: cmake_force
@@ -1748,7 +1762,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.i: cmake_force
@@ -1762,7 +1776,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Chm/ChmIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHandler.cpp.i: cmake_force
@@ -1776,7 +1790,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.cpp.i: cmake_force
@@ -1790,7 +1804,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Udf/UdfIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandler.cpp.i: cmake_force
@@ -1804,7 +1818,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHandlerOut.cpp.i: cmake_force
@@ -1818,7 +1832,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.cpp.i: cmake_force
@@ -1832,7 +1846,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegister.cpp.i: cmake_force
@@ -1846,7 +1860,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Wim/WimRegi
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ArHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ArHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.cpp.i: cmake_force
@@ -1860,7 +1874,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArHandler.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/RpmHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/RpmHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.cpp.i: cmake_force
@@ -1874,7 +1888,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/RpmHandler.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/XarHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/XarHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.cpp.i: cmake_force
@@ -1888,7 +1902,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/XarHandler.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ArjHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/ArjHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.cpp.i: cmake_force
@@ -1902,7 +1916,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ArjHandler.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/CpioHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/CpioHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler.cpp.i: cmake_force
@@ -1916,7 +1930,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/CpioHandler
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHandler.cpp.i: cmake_force
@@ -1930,7 +1944,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHeader.cpp.i: cmake_force
@@ -1944,7 +1958,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoHead
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.cpp.i: cmake_force
@@ -1958,7 +1972,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegister.cpp.i: cmake_force
@@ -1972,7 +1986,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Iso/IsoRegi
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.i: cmake_force
@@ -1986,7 +2000,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisDe
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp.i: cmake_force
@@ -2000,7 +2014,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisHa
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn.cpp.i: cmake_force
@@ -2014,7 +2028,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisIn
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRegister.cpp.i: cmake_force
@@ -2028,7 +2042,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Nsis/NsisRe
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHandler.cpp.i: cmake_force
@@ -2042,7 +2056,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/RarHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.i: cmake_force
@@ -2056,7 +2070,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Rar/Rar5Han
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandler.cpp.i: cmake_force
@@ -2070,7 +2084,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp.i: cmake_force
@@ -2084,7 +2098,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHeader.cpp.i: cmake_force
@@ -2098,7 +2112,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarHead
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.cpp.i: cmake_force
@@ -2112,7 +2126,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.cpp.i: cmake_force
@@ -2126,7 +2140,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarOut.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegister.cpp.i: cmake_force
@@ -2140,7 +2154,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarRegi
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpdate.cpp.i: cmake_force
@@ -2154,7 +2168,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Tar/TarUpda
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.i: cmake_force
@@ -2168,7 +2182,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipAddC
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandler.cpp.i: cmake_force
@@ -2182,7 +2196,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHandlerOut.cpp.i: cmake_force
@@ -2196,7 +2210,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipHand
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.cpp.i: cmake_force
@@ -2210,7 +2224,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem.cpp.i: cmake_force
@@ -2224,7 +2238,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipItem
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.cpp.i: cmake_force
@@ -2238,7 +2252,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipOut.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp.i: cmake_force
@@ -2252,7 +2266,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipUpda
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegister.cpp.i: cmake_force
@@ -2266,7 +2280,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Zip/ZipRegi
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.cpp.i: cmake_force
@@ -2280,7 +2294,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Coder.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Bcj2Register.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Bcj2Register.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Register.cpp.i: cmake_force
@@ -2294,7 +2308,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Bcj2Regist
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BcjCoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BcjCoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.cpp.i: cmake_force
@@ -2308,7 +2322,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjCoder.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BcjRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BcjRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegister.cpp.i: cmake_force
@@ -2322,7 +2336,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BcjRegiste
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BitlDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BitlDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecoder.cpp.i: cmake_force
@@ -2336,7 +2350,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BitlDecode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BranchMisc.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BranchMisc.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc.cpp.i: cmake_force
@@ -2350,7 +2364,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchMisc
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BranchRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BranchRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegister.cpp.i: cmake_force
@@ -2364,7 +2378,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BranchRegi
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ByteSwap.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ByteSwap.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.cpp.i: cmake_force
@@ -2378,7 +2392,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ByteSwap.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Crc.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Crc.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.cpp.i: cmake_force
@@ -2392,7 +2406,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Crc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decoder.cpp.i: cmake_force
@@ -2406,7 +2420,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Decod
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encoder.cpp.i: cmake_force
@@ -2420,7 +2434,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Encod
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Register.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/BZip2Register.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Register.cpp.i: cmake_force
@@ -2434,7 +2448,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/BZip2Regis
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/CopyCoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/CopyCoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.cpp.i: cmake_force
@@ -2448,7 +2462,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyCoder.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/CopyRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/CopyRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegister.cpp.i: cmake_force
@@ -2462,7 +2476,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/CopyRegist
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Deflate64Register.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Deflate64Register.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64Register.cpp.i: cmake_force
@@ -2476,7 +2490,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Deflate64R
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDecoder.cpp.i: cmake_force
@@ -2490,7 +2504,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateDec
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEncoder.cpp.i: cmake_force
@@ -2504,7 +2518,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateEnc
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeflateRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeflateRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateRegister.cpp.i: cmake_force
@@ -2518,7 +2532,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeflateReg
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeltaFilter.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/DeltaFilter.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilter.cpp.i: cmake_force
@@ -2532,7 +2546,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/DeltaFilte
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decoder.cpp.i: cmake_force
@@ -2546,7 +2560,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Decod
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encoder.cpp.i: cmake_force
@@ -2560,7 +2574,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Encod
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Lzma2Register.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Lzma2Register.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Register.cpp.i: cmake_force
@@ -2574,7 +2588,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Lzma2Regis
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDecoder.cpp.i: cmake_force
@@ -2588,7 +2602,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeDec
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuffmanDecoder.cpp.i: cmake_force
@@ -2602,7 +2616,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ImplodeHuf
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.i: cmake_force
@@ -2616,7 +2630,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.i: cmake_force
@@ -2630,7 +2644,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmaRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmaRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.i: cmake_force
@@ -2641,10 +2655,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegist
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzmaRegister.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzOutWindow.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzOutWindow.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.i: cmake_force
@@ -2658,7 +2686,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindo
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzxDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/LzxDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.i: cmake_force
@@ -2672,7 +2700,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.i: cmake_force
@@ -2686,7 +2714,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncoder.cpp.i: cmake_force
@@ -2700,7 +2728,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdEncode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegister.cpp.i: cmake_force
@@ -2714,7 +2742,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdRegist
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdZip.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/PpmdZip.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cpp.i: cmake_force
@@ -2728,7 +2756,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdZip.cp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDecoder.cpp.i: cmake_force
@@ -2742,7 +2770,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/QuantumDec
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decoder.cpp.i: cmake_force
@@ -2756,7 +2784,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar1Decode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decoder.cpp.i: cmake_force
@@ -2770,7 +2798,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar2Decode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decoder.cpp.i: cmake_force
@@ -2784,7 +2812,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Decode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar3Vm.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar3Vm.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp.i: cmake_force
@@ -2798,7 +2826,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar3Vm.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decoder.cpp.i: cmake_force
@@ -2812,7 +2840,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/Rar5Decode
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsRegister.cpp.i: cmake_force
@@ -2826,7 +2854,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/RarCodecsR
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.i: cmake_force
@@ -2840,7 +2868,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDeco
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.i: cmake_force
@@ -2854,7 +2882,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XpressDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XpressDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.i: cmake_force
@@ -2865,10 +2893,38 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDeco
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XpressDecoder.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzDecoder.cpp
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzDecoder.cpp
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzDecoder.cpp > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzDecoder.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.s
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzEncoder.cpp
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzEncoder.cpp
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzEncoder.cpp > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/XzEncoder.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.i: cmake_force
@@ -2879,10 +2935,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecode
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/7zAes.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/7zAes.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.i: cmake_force
@@ -2896,7 +2966,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.s:
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.i: cmake_force
@@ -2910,7 +2980,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegiste
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/HmacSha1.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/HmacSha1.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.i: cmake_force
@@ -2924,7 +2994,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/HmacSha256.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/HmacSha256.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.cpp.i: cmake_force
@@ -2938,7 +3008,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha256.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/MyAes.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/MyAes.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.i: cmake_force
@@ -2952,7 +3022,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/MyAes.cpp.s:
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSha1.cpp.i: cmake_force
@@ -2966,7 +3036,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Pbkdf2HmacSh
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/RandGen.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/RandGen.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.i: cmake_force
@@ -2980,7 +3050,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RandGen.cpp.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.i: cmake_force
@@ -2994,7 +3064,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar20Crypto.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.i: cmake_force
@@ -3008,7 +3078,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/Rar5Aes.cpp.
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/RarAes.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/RarAes.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.i: cmake_force
@@ -3022,7 +3092,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/RarAes.cpp.s
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/WzAes.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/WzAes.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.i: cmake_force
@@ -3036,7 +3106,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/WzAes.cpp.s:
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cpp.i: cmake_force
@@ -3050,7 +3120,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipCrypto.cp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/ZipStrong.cpp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/7zip/Crypto/ZipStrong.cpp
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cpp.i: cmake_force
@@ -3064,7 +3134,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/ZipStrong.cp
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bcj2.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bcj2.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.i: cmake_force
@@ -3078,7 +3148,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bcj2Enc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bcj2Enc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.i: cmake_force
@@ -3092,7 +3162,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bcj2Enc.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Blake2s.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Blake2s.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.i: cmake_force
@@ -3106,7 +3176,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Blake2s.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bra.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bra.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.i: cmake_force
@@ -3120,7 +3190,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bra86.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Bra86.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.i: cmake_force
@@ -3134,7 +3204,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Bra86.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/BraIA64.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/BraIA64.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.i: cmake_force
@@ -3148,7 +3218,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BraIA64.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/BwtSort.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/BwtSort.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.i: cmake_force
@@ -3162,7 +3232,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/BwtSort.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/CpuArch.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/CpuArch.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.i: cmake_force
@@ -3176,7 +3246,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/CpuArch.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/HuffEnc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/HuffEnc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.i: cmake_force
@@ -3190,7 +3260,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/HuffEnc.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFind.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFind.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.i: cmake_force
@@ -3204,7 +3274,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFind.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFindMt.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFindMt.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.i: cmake_force
@@ -3218,7 +3288,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindMt.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzmaDec.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzmaDec.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.i: cmake_force
@@ -3232,7 +3302,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaDec.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzmaEnc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzmaEnc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.i: cmake_force
@@ -3246,7 +3316,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzmaEnc.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sort.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sort.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.i: cmake_force
@@ -3260,7 +3330,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sort.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha1.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha1.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.i: cmake_force
@@ -3274,7 +3344,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Threads.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Threads.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.i: cmake_force
@@ -3288,7 +3358,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Threads.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Aes.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Aes.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.i: cmake_force
@@ -3302,7 +3372,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Aes.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Alloc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Alloc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.i: cmake_force
@@ -3316,7 +3386,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Alloc.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha256.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha256.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.i: cmake_force
@@ -3330,7 +3400,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/7zCrc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/7zCrc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.i: cmake_force
@@ -3344,7 +3414,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrc.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/7zCrcOpt.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/7zCrcOpt.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.i: cmake_force
@@ -3358,7 +3428,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zCrcOpt.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/7zStream.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/7zStream.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.i: cmake_force
@@ -3372,7 +3442,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Delta.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Delta.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.i: cmake_force
@@ -3386,7 +3456,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2Dec.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2Dec.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.i: cmake_force
@@ -3397,10 +3467,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2Dec.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2DecMt.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2DecMt.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2DecMt.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2DecMt.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2Enc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2Enc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.i: cmake_force
@@ -3411,10 +3495,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Lzma2Enc.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFindOpt.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFindOpt.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFindOpt.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/LzFindOpt.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/MtCoder.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/MtCoder.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.i: cmake_force
@@ -3425,10 +3523,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/MtCoder.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/MtDec.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/MtDec.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/MtDec.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/MtDec.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.i: cmake_force
@@ -3439,10 +3551,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7aDec.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7aDec.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7aDec.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7aDec.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7Dec.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_251) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7Dec.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.i: cmake_force
@@ -3456,7 +3582,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7Enc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_252) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd7Enc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.i: cmake_force
@@ -3470,7 +3596,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd8.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_253) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd8.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.i: cmake_force
@@ -3484,7 +3610,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd8Dec.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd8Dec.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.i: cmake_force
@@ -3498,7 +3624,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd8Enc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_255) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd8Enc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.i: cmake_force
@@ -3509,10 +3635,66 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Ppmd8Enc.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.s
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha1Opt.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_256) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha1Opt.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha1Opt.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha1Opt.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.s
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha256Opt.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_257) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha256Opt.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha256Opt.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha256Opt.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.s
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha512.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_258) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha512.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha512.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Sha512.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.s
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/SwapBytes.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_259) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/SwapBytes.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/SwapBytes.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/SwapBytes.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.s
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Xz.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_260) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Xz.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.i: cmake_force
@@ -3526,7 +3708,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzCrc64.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_261) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzCrc64.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.i: cmake_force
@@ -3540,7 +3722,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzCrc64Opt.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_262) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzCrc64Opt.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.i: cmake_force
@@ -3554,7 +3736,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.s: cmake_forc
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzDec.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_263) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzDec.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.i: cmake_force
@@ -3568,7 +3750,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzEnc.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_251) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_264) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzEnc.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.i: cmake_force
@@ -3582,7 +3764,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.s: cmake_force
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzIn.c
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_252) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_265) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzIn.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.i: cmake_force
@@ -3593,19 +3775,61 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.s"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/XzIn.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.s
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/myWindows/wine_date_and_time.cpp
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_253) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o"
-	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/myWindows/wine_date_and_time.cpp
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Xxh64.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_266) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Xxh64.c
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.i"
-	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/myWindows/wine_date_and_time.cpp > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.i
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Xxh64.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.i
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.s"
-	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/myWindows/wine_date_and_time.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.s
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/Xxh64.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.s
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/ZstdDec.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_267) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/ZstdDec.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/ZstdDec.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/ZstdDec.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.s
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/AesOpt.c
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_268) "Building C object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/AesOpt.c
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/AesOpt.c > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/C/AesOpt.c -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.s
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/flags.make
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o: /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/Windows/FileLink.cpp
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_269) "Building CXX object jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o -MF CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o.d -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o -c /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/Windows/FileLink.cpp
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.i"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/Windows/FileLink.cpp > CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.i
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.s"
+	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/sevenzipjbinding/sevenzipjbinding/p7zip/CPP/Windows/FileLink.cpp -o CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.s
 
 # Object files for target 7-Zip-JBinding
 7__Zip__JBinding_OBJECTS = \
@@ -3686,6 +3910,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ZHandler.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Bz2Handler.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/DeflateProps.cpp.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o" \
@@ -3792,6 +4017,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o" \
@@ -3808,7 +4034,10 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o" \
@@ -3846,21 +4075,32 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o" \
 "CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o" \
-"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o"
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o" \
+"CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o"
 
 # External object files for target 7-Zip-JBinding
 7__Zip__JBinding_EXTERNAL_OBJECTS =
@@ -3942,6 +4182,7 @@ jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ZHandler.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/Bz2Handler.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/DeflateProps.cpp.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/ExtHandler.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/GzHandler.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/FatHandler.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Archive/HandlerCont.cpp.o
@@ -4048,6 +4289,7 @@ jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaDecoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaEncoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzmaRegister.cpp.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzfseDecoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzOutWindow.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/LzxDecoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/PpmdDecoder.cpp.o
@@ -4064,7 +4306,10 @@ jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ShrinkDecoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZDecoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XpressDecoder.cpp.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzDecoder.cpp.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/XzEncoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZlibDecoder.cpp.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Compress/ZstdDecoder.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAes.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/7zAesRegister.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/7zip/Crypto/HmacSha1.cpp.o
@@ -4102,25 +4347,36 @@ jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/7zStream.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Delta.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Dec.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2DecMt.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Lzma2Enc.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/LzFindOpt.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtCoder.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/MtDec.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7aDec.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Dec.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd7Enc.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Dec.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Ppmd8Enc.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha1Opt.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha256Opt.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Sha512.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/SwapBytes.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xz.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzCrc64Opt.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzDec.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzEnc.c.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/XzIn.c.o
-jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/myWindows/wine_date_and_time.cpp.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/Xxh64.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/ZstdDec.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/C/AesOpt.c.o
+jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/p7zip/CPP/Windows/FileLink.cpp.o
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/build.make
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/compiler_depend.ts
 jbinding-cpp/lib7-Zip-JBinding.so: jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Linking CXX shared library lib7-Zip-JBinding.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/runner/work/sevenzipjbinding/sevenzipjbinding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_270) "Linking CXX shared library lib7-Zip-JBinding.so"
 	cd /home/runner/work/sevenzipjbinding/sevenzipjbinding/build/jbinding-cpp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/7-Zip-JBinding.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

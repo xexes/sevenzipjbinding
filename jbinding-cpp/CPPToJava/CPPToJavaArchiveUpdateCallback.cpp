@@ -168,7 +168,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
         cPropVariant = UString(FromJChar(jniEnvInstance, (jstring)value));
 
 	#define ASSIGN_VALUE_TO_C_PROP_VARIANT_INTEGER                                                                  \
-        cPropVariant = (Int32)jni::Integer::intValue(jniEnvInstance, value);                                        \
+        cPropVariant.Set_Int32((Int32)jni::Integer::intValue(jniEnvInstance, value));                               \
         if (jniEnvInstance.exceptionCheck()) {                                                                      \
             return S_FALSE;                                                                                         \
         }
@@ -231,7 +231,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
     }
 
     if (propID == kpidTimeType) {
-        cPropVariant = NFileTimeType::kWindows;
+        cPropVariant.Set_Int32((Int32)NFileTimeType::kWindows);
         cPropVariant.Detach(value);
         return S_OK;
     }

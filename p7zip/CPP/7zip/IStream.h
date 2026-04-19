@@ -13,15 +13,10 @@ Z7_PURE_INTERFACES_BEGIN
 
 #define Z7_IFACE_CONSTR_STREAM_SUB(i, base, n) \
   Z7_DECL_IFACE_7ZIP_SUB(i, base, 3, n) \
-  { Z7_IFACEM_##i(Z7_IFACE_PURE) };
+  { Z7_IFACE_COM7_PURE(i) };
 
 #define Z7_IFACE_CONSTR_STREAM(i, n) \
         Z7_IFACE_CONSTR_STREAM_SUB(i, IUnknown, n)
-
-// Define Z7_IFACE_PURE macro for method declarations if not already defined
-#ifndef Z7_IFACE_PURE
-#define Z7_IFACE_PURE(f) STDMETHOD(f) PURE;
-#endif
 
 
 /*
