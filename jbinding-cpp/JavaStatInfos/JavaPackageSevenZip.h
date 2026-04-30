@@ -4,55 +4,55 @@
 #include "JavaStaticInfo.h"
 #include "JavaStandardLibrary.h"
 
-#define SEVEN_ZIP_PACKAGE								"net/sf/sevenzipjbinding"
-#define SEVEN_ZIP_PACKAGE_IMPL							"net/sf/sevenzipjbinding/impl"
+#define SEVEN_ZIP_PACKAGE								        "net/sf/sevenzipjbinding"
+#define SEVEN_ZIP_PACKAGE_IMPL							        "net/sf/sevenzipjbinding/impl"
 
-#define JAVA_PROP_ID 									SEVEN_ZIP_PACKAGE "/PropID"
-#define JAVA_PROP_ID_T 									JAVA_MAKE_SIGNATURE_TYPE(JAVA_PROP_ID)
+#define JAVA_PROP_ID 									        SEVEN_ZIP_PACKAGE "/PropID"
+#define JAVA_PROP_ID_T 									        JAVA_MAKE_SIGNATURE_TYPE(JAVA_PROP_ID)
 
-#define JAVA_EXTRACT_ASK_MODE 							SEVEN_ZIP_PACKAGE "/ExtractAskMode"
-#define JAVA_EXTRACT_ASK_MODE_T 						JAVA_MAKE_SIGNATURE_TYPE(JAVA_EXTRACT_ASK_MODE)
+#define JAVA_EXTRACT_ASK_MODE 							        SEVEN_ZIP_PACKAGE "/ExtractAskMode"
+#define JAVA_EXTRACT_ASK_MODE_T 						        JAVA_MAKE_SIGNATURE_TYPE(JAVA_EXTRACT_ASK_MODE)
 
-#define JAVA_EXTRACT_OPERATION_RESULT 			SEVEN_ZIP_PACKAGE "/ExtractOperationResult"
-#define JAVA_EXTRACT_OPERATION_RESULT_T			JAVA_MAKE_SIGNATURE_TYPE(JAVA_EXTRACT_OPERATION_RESULT)
+#define JAVA_EXTRACT_OPERATION_RESULT 			                SEVEN_ZIP_PACKAGE "/ExtractOperationResult"
+#define JAVA_EXTRACT_OPERATION_RESULT_T			                JAVA_MAKE_SIGNATURE_TYPE(JAVA_EXTRACT_OPERATION_RESULT)
 
-#define JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE 	SEVEN_ZIP_PACKAGE "/ReportExtractResultIndexType"
-#define JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE_T JAVA_MAKE_SIGNATURE_TYPE(JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE)
+#define JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE 	                SEVEN_ZIP_PACKAGE "/ReportExtractResultIndexType"
+#define JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE_T                 JAVA_MAKE_SIGNATURE_TYPE(JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE)
 
-#define JAVA_IIN_ARCHIVE 						SEVEN_ZIP_PACKAGE "/IInArchive"
-#define JAVA_IIN_ARCHIVE_T 								JAVA_MAKE_SIGNATURE_TYPE(JAVA_IIN_ARCHIVE)
+#define JAVA_IIN_ARCHIVE 					        	        SEVEN_ZIP_PACKAGE "/IInArchive"
+#define JAVA_IIN_ARCHIVE_T 								        JAVA_MAKE_SIGNATURE_TYPE(JAVA_IIN_ARCHIVE)
 
-#define JAVA_IIN_STREAM 								SEVEN_ZIP_PACKAGE "/IInStream"
-#define JAVA_IIN_STREAM_T 								JAVA_MAKE_SIGNATURE_TYPE(JAVA_IIN_STREAM)
+#define JAVA_IIN_STREAM 								        SEVEN_ZIP_PACKAGE "/IInStream"
+#define JAVA_IIN_STREAM_T 								        JAVA_MAKE_SIGNATURE_TYPE(JAVA_IIN_STREAM)
 
-#define JAVA_ISEQUENTIAL_IN_STREAM 						SEVEN_ZIP_PACKAGE "/ISequentialInStream"
-#define JAVA_ISEQUENTIAL_IN_STREAM_T 					JAVA_MAKE_SIGNATURE_TYPE(JAVA_ISEQUENTIAL_IN_STREAM)
+#define JAVA_ISEQUENTIAL_IN_STREAM 						        SEVEN_ZIP_PACKAGE "/ISequentialInStream"
+#define JAVA_ISEQUENTIAL_IN_STREAM_T 					        JAVA_MAKE_SIGNATURE_TYPE(JAVA_ISEQUENTIAL_IN_STREAM)
 
-#define JAVA_ISEQUENTIAL_OUT_STREAM 					SEVEN_ZIP_PACKAGE "/ISequentialOutStream"
-#define JAVA_ISEQUENTIAL_OUT_STREAM_T 					JAVA_MAKE_SIGNATURE_TYPE(JAVA_ISEQUENTIAL_OUT_STREAM)
+#define JAVA_ISEQUENTIAL_OUT_STREAM 					        SEVEN_ZIP_PACKAGE "/ISequentialOutStream"
+#define JAVA_ISEQUENTIAL_OUT_STREAM_T 					        JAVA_MAKE_SIGNATURE_TYPE(JAVA_ISEQUENTIAL_OUT_STREAM)
 
-#define JAVA_IOUT_ARCHIVE                               SEVEN_ZIP_PACKAGE "/IOutArchive"
-#define JAVA_IOUT_ARCHIVE_T                             JAVA_MAKE_SIGNATURE_TYPE(JAVA_IOUT_ARCHIVE)
+#define JAVA_IOUT_ARCHIVE                                       SEVEN_ZIP_PACKAGE "/IOutArchive"
+#define JAVA_IOUT_ARCHIVE_T                                     JAVA_MAKE_SIGNATURE_TYPE(JAVA_IOUT_ARCHIVE)
 
-#define JAVA_IOUT_ITEM_CALLBACK_BASE 		            SEVEN_ZIP_PACKAGE "/IOutItemCallbackBase"
-#define JAVA_IOUT_ITEM_CALLBACK_BASE_T	                JAVA_MAKE_SIGNATURE_TYPE(JAVA_IOUT_ITEM_CALLBACK_BASE)
+#define JAVA_IOUT_ITEM_CALLBACK_BASE 		                    SEVEN_ZIP_PACKAGE "/IOutItemCallbackBase"
+#define JAVA_IOUT_ITEM_CALLBACK_BASE_T	                        JAVA_MAKE_SIGNATURE_TYPE(JAVA_IOUT_ITEM_CALLBACK_BASE)
 
-#define JAVA_ARCHIVE_FORMAT								SEVEN_ZIP_PACKAGE "/ArchiveFormat"
-#define JAVA_ARCHIVE_FORMAT_T 							JAVA_MAKE_SIGNATURE_TYPE(JAVA_ARCHIVE_FORMAT)
+#define JAVA_ARCHIVE_FORMAT								        SEVEN_ZIP_PACKAGE "/ArchiveFormat"
+#define JAVA_ARCHIVE_FORMAT_T 							        JAVA_MAKE_SIGNATURE_TYPE(JAVA_ARCHIVE_FORMAT)
 
-#define JAVA_OUT_ITEM_FACTORY                           SEVEN_ZIP_PACKAGE_IMPL "/OutItemFactory"
-#define JAVA_OUT_ITEM_FACTORY_T                         JAVA_MAKE_SIGNATURE_TYPE(JAVA_OUT_ITEM_FACTORY)
+#define JAVA_OUT_ITEM_FACTORY                                   SEVEN_ZIP_PACKAGE_IMPL "/OutItemFactory"
+#define JAVA_OUT_ITEM_FACTORY_T                                 JAVA_MAKE_SIGNATURE_TYPE(JAVA_OUT_ITEM_FACTORY)
 
-#define JAVA_OUT_ITEM                                   SEVEN_ZIP_PACKAGE_IMPL "/OutItem"
-#define JAVA_OUT_ITEM_T                                 JAVA_MAKE_SIGNATURE_TYPE(JAVA_OUT_ITEM)
+#define JAVA_OUT_ITEM                                           SEVEN_ZIP_PACKAGE_IMPL "/OutItem"
+#define JAVA_OUT_ITEM_T                                         JAVA_MAKE_SIGNATURE_TYPE(JAVA_OUT_ITEM)
 
-#define JAVA_IOUT_ITEM_BASE                             SEVEN_ZIP_PACKAGE "/IOutItemBase"
-#define JAVA_IOUT_ITEM_BASE_T                           JAVA_MAKE_SIGNATURE_TYPE(JAVA_IOUT_ITEM_BASE)
+#define JAVA_IOUT_ITEM_BASE                                     SEVEN_ZIP_PACKAGE "/IOutItemBase"
+#define JAVA_IOUT_ITEM_BASE_T                                   JAVA_MAKE_SIGNATURE_TYPE(JAVA_IOUT_ITEM_BASE)
 
-#define JT_PROP_ID(name, param_spec)   				JT_PARAM(Object, JAVA_PROP_ID_T, name, param_spec)
-#define JT_EXTRACT_ASK_MODE(name, param_spec)  		JT_PARAM(Object, JAVA_EXTRACT_ASK_MODE_T, name, param_spec)
-#define JT_EXTRACT_OPERATION_RESULT(name, param_spec)   JT_PARAM(Object, JAVA_EXTRACT_OPERATION_RESULT_T, name, param_spec)
-#define JT_REPORT_EXTRACT_RESULT_INDEX_TYPE(name, param_spec) JT_PARAM(Object, JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE_T, name, param_spec)
+#define JT_PROP_ID(name, param_spec)   				            JT_PARAM(Object, JAVA_PROP_ID_T, name, param_spec)
+#define JT_EXTRACT_ASK_MODE(name, param_spec)  		            JT_PARAM(Object, JAVA_EXTRACT_ASK_MODE_T, name, param_spec)
+#define JT_EXTRACT_OPERATION_RESULT(name, param_spec)           JT_PARAM(Object, JAVA_EXTRACT_OPERATION_RESULT_T, name, param_spec)
+#define JT_REPORT_EXTRACT_RESULT_INDEX_TYPE(name, param_spec)   JT_PARAM(Object, JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE_T, name, param_spec)
 
 
 JT_BEGIN_INTERFACE(SEVEN_ZIP_PACKAGE, ISequentialInStream)
