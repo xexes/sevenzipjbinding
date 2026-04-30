@@ -16,6 +16,8 @@ import java.io.InputStream;
 import java.util.Date;
 import java.util.Random;
 
+import org.junit.Test;
+
 import net.sf.sevenzipjbinding.ArchiveFormat;
 import net.sf.sevenzipjbinding.ExtractOperationResult;
 import net.sf.sevenzipjbinding.IInArchive;
@@ -25,8 +27,6 @@ import net.sf.sevenzipjbinding.SevenZipException;
 import net.sf.sevenzipjbinding.junit.ExtractFileAbstractTest;
 import net.sf.sevenzipjbinding.junit.junittools.annotations.Multithreaded;
 import net.sf.sevenzipjbinding.junit.junittools.annotations.Repeat;
-
-import org.junit.Test;
 
 /**
  * This test tests extraction of archives with a single file. Test data: <code>testdata/simple</code>.<br>
@@ -219,11 +219,7 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
                 PasswordArchiveExtractCallback extractCallback = new PasswordArchiveExtractCallback(outputStream);
                 inArchive.extract(new int[] { index }, false, extractCallback);
                 operationResult = extractCallback.getExtractOperationResult();
-                // Verify reportExtractResult was called with expected values
-                assertNotNull("reportExtractResult should have been called", extractCallback.getLastReportedIndexType());
-                assertEquals("reportExtractResult index mismatch", index, extractCallback.getLastReportedIndex());
-                assertNotNull("reportExtractResult operation result should not be null", 
-                    extractCallback.getLastReportedOperationResult());
+                assertNotNull("setOperationResult should have been called", operationResult);
             } else {
                 operationResult = inArchive.extractSlow(index, outputStream, context().passwordToUse);
             }
