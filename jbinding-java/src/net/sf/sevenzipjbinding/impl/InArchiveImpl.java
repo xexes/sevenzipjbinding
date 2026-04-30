@@ -23,6 +23,7 @@ import net.sf.sevenzipjbinding.ISequentialOutStream;
 import net.sf.sevenzipjbinding.NFileTimeType;
 import net.sf.sevenzipjbinding.PropID;
 import net.sf.sevenzipjbinding.PropertyInfo;
+import net.sf.sevenzipjbinding.ReportExtractResultIndexType;
 import net.sf.sevenzipjbinding.SevenZipException;
 import net.sf.sevenzipjbinding.simple.ISimpleInArchive;
 import net.sf.sevenzipjbinding.simple.impl.SimpleInArchiveImpl;
@@ -77,6 +78,10 @@ public final class InArchiveImpl implements IInArchive {
 
         ExtractOperationResult getExtractOperationResult() {
             return extractOperationResult;
+        }
+
+        public void reportExtractResult(ReportExtractResultIndexType indexType, int index,
+                ExtractOperationResult extractOperationResult) throws SevenZipException {
         }
     }
 

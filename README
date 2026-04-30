@@ -138,7 +138,7 @@ c) The next step is to run CMake. Both in-source and out-of-source methods are s
     $ cmake .
 
    Where <srcdir> is a directory, where you extracted or checked out the source code.   
-   On some Linux distributions you will need to set JAVA_JDK cmake option to your Java JDK 1.5 or higher. You can use a GUI CMake
+   On some Linux distributions you will need to set JAVA_JDK cmake option to your Java JDK 8 or higher. You can use a GUI CMake
    tool 'cmake-gui', edit 'CMakeCache.txt' file with your favorite text editor or just delete 'CMakeCache.txt' file
    and restart CMake with a -DJAVA_JDK parameter:
     $ cmake . -DJAVA_JDK=<path-to-jdk>
@@ -204,13 +204,13 @@ a) Install DockCross according to installation instructions on the home page (ht
 b) Check out or copy 7-Zip-JBinding source code to your build directory
     $ git clone https://github.com/borisbrodski/sevenzipjbinding.git SevenZipJBinding
 c) Copy JDK to your build directory to make it visible to the container.
-    $ cp -r <my-JDKs>/jdk1.5.0_22 ./jdk1.5.0_22
+    $ cp -r <my-JDKs>/jdk8 ./jdk8
     (Mostly for jni.h and stuff. JDK must not match the target platform.)
 d) Define build command sequence, like this one:
     $ CMD='
         mkdir build ;
         cd build ;
-        cmake ../SevenZipJBinding -DJAVA_SYSTEM=arm -DJAVA_ARCH=v6 -DCMAKE_BUILD_TYPE=Release -DJAVA_JDK=../jdk1.5.0_22/
+        cmake ../SevenZipJBinding -DJAVA_SYSTEM=arm -DJAVA_ARCH=v6 -DCMAKE_BUILD_TYPE=Release -DJAVA_JDK=../jdk8/
         make
         make package
     '
