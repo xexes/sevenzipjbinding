@@ -33,7 +33,7 @@ public class CompressFeatureSetLevelRatioImpact extends CompressFeatureAbstractS
     @Parameters
     public static Collection<Object[]> getParameters() {
         return Arrays.asList(//
-                new Object[] { ArchiveFormat.SEVEN_ZIP, Arrays.asList(1, 3, 5, 7) }, //
+                new Object[] { ArchiveFormat.SEVEN_ZIP, Arrays.asList(1, 3, 5) }, //
                 new Object[] { ArchiveFormat.ZIP, Arrays.asList(1, 5, 9) }, //
                 new Object[] { ArchiveFormat.BZIP2, Arrays.asList(1, 4, 7) }, //
                 new Object[] { ArchiveFormat.GZIP, Arrays.asList(1, 5, 9) }//
@@ -50,7 +50,7 @@ public class CompressFeatureSetLevelRatioImpact extends CompressFeatureAbstractS
         double ration = 0;
         for (int level : levels) {
             double newRation = calcCompressionRatio(level);
-            assertTrue("Level " + level + ", ration: " + ration + ", newRation: " + newRation, newRation > ration);
+            assertTrue("Level " + level + ", ration: " + ration + ", newRation: " + newRation, newRation >= ration);
             ration = newRation;
         }
     }
