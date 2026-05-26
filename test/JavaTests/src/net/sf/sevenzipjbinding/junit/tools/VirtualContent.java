@@ -659,6 +659,12 @@ public class VirtualContent {
         itemList.get(index).modificationTime = time;
     }
 
+    public void updateItemAttributesByPath(String itemToUpdatePath, Integer attributes) {
+        int index = getIndexByPath(itemToUpdatePath);
+        itemList.get(index).attributes = attributes;
+        itemList.get(index).attributesSet = (attributes != null);
+    }
+
     public void updateUserByPath(String itemToUpdatePath, String newValue) {
         int index = getIndexByPath(itemToUpdatePath);
         itemList.get(index).user = newValue;

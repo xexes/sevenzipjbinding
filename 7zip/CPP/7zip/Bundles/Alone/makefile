@@ -1,18 +1,16 @@
 PROG = 7za.exe
-MY_CONSOLE = 1
-CFLAGS = $(CFLAGS)
-
-!IFNDEF UNDER_CE
-CFLAGS = $(CFLAGS) -DWIN_LONG_PATH -D_7ZIP_LARGE_PAGES -DSUPPORT_DEVICE_FILE
-!ENDIF
-
+# USE_C_AES = 1
+# USE_C_SHA = 1
+# USE_C_LZFINDOPT = 1
 
 COMMON_OBJS = \
   $O\CommandLineParser.obj \
   $O\CRC.obj \
   $O\CrcReg.obj \
+  $O\DynLimBuf.obj \
   $O\IntToString.obj \
   $O\ListFileUtils.obj \
+  $O\LzFindPrepare.obj \
   $O\NewHandler.obj \
   $O\StdInStream.obj \
   $O\StdOutStream.obj \
@@ -22,6 +20,7 @@ COMMON_OBJS = \
   $O\UTFConvert.obj \
   $O\MyVector.obj \
   $O\Wildcard.obj \
+  $O\XzCrc64Init.obj \
   $O\XzCrc64Reg.obj \
   $O\Sha1Reg.obj \
   $O\Sha256Reg.obj \
@@ -38,8 +37,11 @@ WIN_OBJS = \
   $O\MemoryLock.obj \
   $O\PropVariant.obj \
   $O\PropVariantConv.obj \
+  $O\PropVariantUtils.obj \
+  $O\Registry.obj \
   $O\Synchronization.obj \
   $O\System.obj \
+  $O\SystemInfo.obj \
   $O\TimeUtils.obj \
 
 7ZIP_COMMON_OBJS = \
@@ -54,6 +56,7 @@ WIN_OBJS = \
   $O\MemBlocks.obj \
   $O\MethodId.obj \
   $O\MethodProps.obj \
+  $O\MultiOutStream.obj \
   $O\OffsetStream.obj \
   $O\OutBuffer.obj \
   $O\OutMemStream.obj \
@@ -73,7 +76,6 @@ AR_OBJS = \
   $O\LzmaHandler.obj \
   $O\SplitHandler.obj \
   $O\XzHandler.obj \
-  $O\ZHandler.obj \
 
 AR_COMMON_OBJS = \
   $O\CoderMixer2.obj \
@@ -139,7 +141,7 @@ COMPRESS_OBJS = \
   $O\BranchMisc.obj \
   $O\BranchRegister.obj \
   $O\ByteSwap.obj \
-  $O\BZip2CRC.obj \
+  $O\BZip2Crc.obj \
   $O\BZip2Decoder.obj \
   $O\BZip2Encoder.obj \
   $O\BZip2Register.obj \
@@ -151,7 +153,6 @@ COMPRESS_OBJS = \
   $O\DeflateRegister.obj \
   $O\DeltaFilter.obj \
   $O\ImplodeDecoder.obj \
-  $O\ImplodeHuffmanDecoder.obj \
   $O\Lzma2Decoder.obj \
   $O\Lzma2Encoder.obj \
   $O\Lzma2Register.obj \
@@ -166,7 +167,8 @@ COMPRESS_OBJS = \
   $O\PpmdZip.obj \
   $O\QuantumDecoder.obj \
   $O\ShrinkDecoder.obj \
-  $O\ZDecoder.obj \
+  $O\XzDecoder.obj \
+  $O\XzEncoder.obj \
 
 CRYPTO_OBJS = \
   $O\7zAes.obj \
@@ -195,19 +197,20 @@ C_OBJS = \
   $O\LzFind.obj \
   $O\LzFindMt.obj \
   $O\Lzma2Dec.obj \
+  $O\Lzma2DecMt.obj \
   $O\Lzma2Enc.obj \
   $O\LzmaDec.obj \
   $O\LzmaEnc.obj \
   $O\MtCoder.obj \
+  $O\MtDec.obj \
   $O\Ppmd7.obj \
   $O\Ppmd7Dec.obj \
   $O\Ppmd7Enc.obj \
   $O\Ppmd8.obj \
   $O\Ppmd8Dec.obj \
   $O\Ppmd8Enc.obj \
-  $O\Sha1.obj \
-  $O\Sha256.obj \
   $O\Sort.obj \
+  $O\SwapBytes.obj \
   $O\Threads.obj \
   $O\Xz.obj \
   $O\XzDec.obj \
@@ -219,5 +222,9 @@ C_OBJS = \
 !include "../../Aes.mak"
 !include "../../Crc.mak"
 !include "../../Crc64.mak"
+!include "../../LzFindOpt.mak"
+!include "../../LzmaDec.mak"
+!include "../../Sha1.mak"
+!include "../../Sha256.mak"
 
 !include "../../7zip.mak"

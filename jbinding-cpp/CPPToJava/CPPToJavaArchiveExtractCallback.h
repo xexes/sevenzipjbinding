@@ -1,98 +1,91 @@
 #ifndef CPPTOJAVAARCHIVEEXTRACTCALLBACK_H_
 #define CPPTOJAVAARCHIVEEXTRACTCALLBACK_H_
 
-#include "CPPToJavaProgress.h"
 #include "CPPToJavaCryptoGetTextPassword.h"
+#include "CPPToJavaProgress.h"
+#include "Common/MyCom.h"
 
 class CPPToJavaArchiveExtractCallback : public virtual IArchiveExtractCallback,
-        public virtual ICryptoGetTextPassword, public virtual CPPToJavaProgress {
+                                        public virtual ICryptoGetTextPassword,
+                                        public virtual IArchiveExtractCallbackMessage2,
+                                        public virtual CPPToJavaAbstract,
+                                        public virtual CMyUnknownImp {
 private:
-    ICryptoGetTextPassword * _cryptoGetTextPasswordImpl;
-    jni::IArchiveExtractCallback * _iArchiveExtractCallback;
+  ICryptoGetTextPassword *_cryptoGetTextPasswordImpl;
+  jni::IArchiveExtractCallback *_iArchiveExtractCallback;
+  CPPToJavaProgress _progress;
 
 public:
-    CPPToJavaArchiveExtractCallback(JBindingSession & jbindingSession, JNIEnv * initEnv,
-                                    jobject archiveExtractCallbackImpl) :
-        CPPToJavaProgress(jbindingSession, initEnv, archiveExtractCallbackImpl),
-                _iArchiveExtractCallback(jni::IArchiveExtractCallback::_getInstanceFromObject(
-                        initEnv, archiveExtractCallbackImpl)) {
-        TRACE_OBJECT_CREATION("CPPToJavaArchiveExtractCallback")
+  CPPToJavaArchiveExtractCallback(JBindingSession &jbindingSession,
+                                  JNIEnv *initEnv,
+                                  jobject archiveExtractCallbackImpl)
+      : CPPToJavaAbstract(jbindingSession, initEnv, archiveExtractCallbackImpl),
+        _progress(jbindingSession, initEnv, archiveExtractCallbackImpl),
+        _iArchiveExtractCallback(
+            jni::IArchiveExtractCallback::_getInstanceFromObject(
+                initEnv, archiveExtractCallbackImpl)) {
+    TRACE_OBJECT_CREATION("CPPToJavaArchiveExtractCallback")
 
-        jclass cryptoGetTextPasswordClass = initEnv->FindClass(CRYPTOGETTEXTPASSWORD_CLASS);
-        FATALIF(cryptoGetTextPasswordClass == NULL,
-                "Can't find class " CRYPTOGETTEXTPASSWORD_CLASS);
+    jclass cryptoGetTextPasswordClass =
+        initEnv->FindClass(CRYPTOGETTEXTPASSWORD_CLASS);
+    FATALIF(cryptoGetTextPasswordClass == NULL,
+            "Can't find class " CRYPTOGETTEXTPASSWORD_CLASS);
 
-        if (initEnv->IsInstanceOf(_javaImplementation, cryptoGetTextPasswordClass)) {
-            CMyComPtr<ICryptoGetTextPassword> cryptoGetTextPasswordComPtr =
-                    new CPPToJavaCryptoGetTextPassword(_jbindingSession, initEnv,
-                            _javaImplementation);
-            _cryptoGetTextPasswordImpl = cryptoGetTextPasswordComPtr.Detach();
-        } else {
-            _cryptoGetTextPasswordImpl = NULL;
-        }
-
+    if (initEnv->IsInstanceOf(_javaImplementation,
+                              cryptoGetTextPasswordClass)) {
+      CMyComPtr<ICryptoGetTextPassword> cryptoGetTextPasswordComPtr =
+          new CPPToJavaCryptoGetTextPassword(_jbindingSession, initEnv,
+                                             _javaImplementation);
+      _cryptoGetTextPasswordImpl = cryptoGetTextPasswordComPtr.Detach();
+    } else {
+      _cryptoGetTextPasswordImpl = NULL;
     }
+  }
 
-    ~CPPToJavaArchiveExtractCallback() {
-        TRACE_OBJECT_CALL("~CPPToJavaArchiveExtractCallback");
+  virtual ~CPPToJavaArchiveExtractCallback() {
+    TRACE_OBJECT_CALL("~CPPToJavaArchiveExtractCallback");
 
-        if (_cryptoGetTextPasswordImpl) {
-            _cryptoGetTextPasswordImpl->Release();
-        }
+    if (_cryptoGetTextPasswordImpl) {
+      _cryptoGetTextPasswordImpl->Release();
     }
+  }
 
-    STDMETHOD(QueryInterface)(REFGUID refguid, void ** p) throw() {
-        TRACE_OBJECT_CALL("QueryInterface");
+public:
+  STDMETHOD(SetTotal)(UInt64 total) noexcept Z7_override {
+    TRACE_OBJECT_CALL("SetTotal");
+    return _progress.SetTotal(total);
+  }
 
-        if (refguid == IID_ICryptoGetTextPassword && _cryptoGetTextPasswordImpl) {
-            *p = (void *) (ICryptoGetTextPassword *) _cryptoGetTextPasswordImpl;
-            _cryptoGetTextPasswordImpl->AddRef();
-            return S_OK;
-        }
+  STDMETHOD(SetCompleted)(const UInt64 *completeValue) noexcept Z7_override {
+    TRACE_OBJECT_CALL("SetCompleted");
+    return _progress.SetCompleted(completeValue);
+  }
 
-        return CPPToJavaProgress::QueryInterface(refguid, p);
-    }
+  // STDMETHOD(GetStream)(UInt32 index, ISequentialOutStream **outStream, Int32
+  // askExtractMode);
+  //
+  // /*
+  //  * FROM 7-ZIP:
+  //  *
+  //  * GetStream OUT: S_OK - OK, S_FALSE - skeep this file
+  //  *
+  //  */
+  // STDMETHOD(PrepareOperation)(Int32 askExtractMode);
+  // STDMETHOD(SetOperationResult)(Int32 resultEOperationResult);
 
-    STDMETHOD_(ULONG, AddRef)() throw() {
-        TRACE_OBJECT_CALL("AddRef");
-        return CPPToJavaProgress::AddRef();
-    }
+public:
+  // Z7_COM_QI_BEGIN2(IArchiveExtractCallback)
+  // // Z7_COM_QI_ENTRY(ICryptoGetTextPassword)
+  // Z7_COM_QI_END
+  // Z7_COM_ADDREF_RELEASE
 
-    STDMETHOD_(ULONG, Release)() {
-        TRACE_OBJECT_CALL("Release");
-        return CPPToJavaProgress::Release();
-    }
+  Z7_IFACE_COM7_IMP_NONFINAL(IArchiveExtractCallback)
+  Z7_IFACE_COM7_IMP_NONFINAL(ICryptoGetTextPassword)
+  Z7_IFACE_COM7_IMP_NONFINAL(IArchiveExtractCallbackMessage2)
 
-    STDMETHOD(SetTotal)(UInt64 total) {
-        TRACE_OBJECT_CALL("SetTotal");
-        return CPPToJavaProgress::SetTotal(total);
-    }
-
-    STDMETHOD(SetCompleted)(const UInt64 *completeValue) {
-        TRACE_OBJECT_CALL("SetCompleted");
-        return CPPToJavaProgress::SetCompleted(completeValue);
-    }
-
-    STDMETHOD(CryptoGetTextPassword)(BSTR *password) {
-        TRACE_OBJECT_CALL("CryptoGetTextPassword");
-
-        if (_cryptoGetTextPasswordImpl) {
-            return _cryptoGetTextPasswordImpl->CryptoGetTextPassword(password);
-        }
-
-        return E_NOINTERFACE;
-    }
-
-    STDMETHOD(GetStream)(UInt32 index, ISequentialOutStream **outStream, Int32 askExtractMode);
-
-    /*
-     * FROM 7-ZIP:
-     *
-     * GetStream OUT: S_OK - OK, S_FALSE - skeep this file
-     *
-     */
-    STDMETHOD(PrepareOperation)(Int32 askExtractMode);
-    STDMETHOD(SetOperationResult)(Int32 resultEOperationResult);
+private:
+  Z7_COM_UNKNOWN_IMP_4(IArchiveExtractCallback, ICryptoGetTextPassword,
+                       IProgress, IArchiveExtractCallbackMessage2)
 };
 
 #endif /*CPPTOJAVAARCHIVEEXTRACTCALLBACK_H_*/

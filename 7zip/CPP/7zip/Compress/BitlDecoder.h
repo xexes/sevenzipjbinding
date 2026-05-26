@@ -1,7 +1,7 @@
 // BitlDecoder.h -- the Least Significant Bit of byte is First
 
-#ifndef __BITL_DECODER_H
-#define __BITL_DECODER_H
+#ifndef ZIP7_INC_BITL_DECODER_H
+#define ZIP7_INC_BITL_DECODER_H
 
 #include "../IStream.h"
 
@@ -38,17 +38,30 @@ public:
     _value = 0;
   }
 
-  UInt64 GetStreamSize() const { return _stream.GetStreamSize(); }
+  // the size of portion data in real stream that was already read from this object.
+  // it doesn't include unused data in BitStream object buffer (up to 4 bytes)
+  // it doesn't include unused data in TInByte buffers
+  // it doesn't include virtual Extra bytes after the end of real stream data
+  UInt64 GetStreamSize() const
+  {
+    return ExtraBitsWereRead() ?
+        _stream.GetStreamSize():
+        GetProcessedSize();
+  }
+
+  // the size of virtual data that was read from this object.
   UInt64 GetProcessedSize() const { return _stream.GetProcessedSize() - ((kNumBigValueBits - _bitPos) >> 3); }
 
   bool ThereAreDataInBitsBuffer() const { return this->_bitPos != kNumBigValueBits; }
-
+  
+  Z7_FORCE_INLINE
   void Normalize()
   {
     for (; _bitPos >= 8; _bitPos -= 8)
       _value = ((UInt32)_stream.ReadByte() << (kNumBigValueBits - _bitPos)) | _value;
   }
   
+  Z7_FORCE_INLINE
   UInt32 ReadBits(unsigned numBits)
   {
     Normalize();
@@ -88,7 +101,8 @@ public:
     CBaseDecoder<TInByte>::Init();
     _normalValue = 0;
   }
-
+  
+  Z7_FORCE_INLINE
   void Normalize()
   {
     for (; this->_bitPos >= 8; this->_bitPos -= 8)
@@ -99,18 +113,21 @@ public:
     }
   }
   
+  Z7_FORCE_INLINE
   UInt32 GetValue(unsigned numBits)
   {
     Normalize();
     return ((this->_value >> (8 - this->_bitPos)) & kMask) >> (kNumValueBits - numBits);
   }
-
+  
+  Z7_FORCE_INLINE
   void MovePos(unsigned numBits)
   {
     this->_bitPos += numBits;
     _normalValue >>= numBits;
   }
   
+  Z7_FORCE_INLINE
   UInt32 ReadBits(unsigned numBits)
   {
     Normalize();
@@ -120,9 +137,11 @@ public:
   }
 
   void AlignToByte() { MovePos((32 - this->_bitPos) & 7); }
-
+  
+  Z7_FORCE_INLINE
   Byte ReadDirectByte() { return this->_stream.ReadByte(); }
-
+  
+  Z7_FORCE_INLINE
   Byte ReadAlignedByte()
   {
     if (this->_bitPos == kNumBigValueBits)
@@ -130,6 +149,21 @@ public:
     Byte b = (Byte)(_normalValue & 0xFF);
     MovePos(8);
     return b;
+  }
+
+  // call it only if the object is aligned for byte.
+  Z7_FORCE_INLINE
+  bool ReadAlignedByte_FromBuf(Byte &b)
+  {
+    if (this->_stream.NumExtraBytes != 0)
+      if (this->_stream.NumExtraBytes >= 4
+          || kNumBigValueBits - this->_bitPos <= (this->_stream.NumExtraBytes << 3))
+        return false;
+    if (this->_bitPos == kNumBigValueBits)
+      return this->_stream.ReadByte_FromBuf(b);
+    b = (Byte)(_normalValue & 0xFF);
+    MovePos(8);
+    return true;
   }
 };
 

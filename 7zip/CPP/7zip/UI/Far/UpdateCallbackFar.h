@@ -1,7 +1,7 @@
 // UpdateCallbackFar.h
 
-#ifndef __UPDATE_CALLBACK_FAR_H
-#define __UPDATE_CALLBACK_FAR_H
+#ifndef ZIP7_INC_UPDATE_CALLBACK_FAR_H
+#define ZIP7_INC_UPDATE_CALLBACK_FAR_H
 
 #include "../../../Common/MyCom.h"
 
@@ -11,39 +11,33 @@
 
 #include "ProgressBox.h"
 
-class CUpdateCallback100Imp:
-  public IFolderArchiveUpdateCallback,
-  public IFolderArchiveUpdateCallback2,
-  public IFolderScanProgress,
-  public ICryptoGetTextPassword,
-  public CMyUnknownImp
-{
+Z7_CLASS_IMP_COM_6(
+  CUpdateCallback100Imp
+  , IFolderArchiveUpdateCallback
+  , IFolderArchiveUpdateCallback2
+  , IFolderScanProgress
+  , ICryptoGetTextPassword2
+  , ICryptoGetTextPassword
+  , IArchiveOpenCallback
+)
+  Z7_IFACE_COM7_IMP(IProgress)
+
   // CMyComPtr<IInFolderArchive> _archiveHandler;
   CProgressBox *_percent;
-  UInt64 _total;
-  bool m_PasswordIsDefined;
-  UString m_Password;
-
+  // UInt64 _total;
 public:
-  MY_UNKNOWN_IMP4(
-      IFolderArchiveUpdateCallback,
-      IFolderArchiveUpdateCallback2,
-      IFolderScanProgress,
-      ICryptoGetTextPassword)
+  bool PasswordIsDefined;
+  UString Password;
 
-  INTERFACE_IProgress(;)
-  INTERFACE_IFolderArchiveUpdateCallback(;)
-  INTERFACE_IFolderArchiveUpdateCallback2(;)
-  INTERFACE_IFolderScanProgress(;)
-
-  STDMETHOD(CryptoGetTextPassword)(BSTR *password);
-
-  CUpdateCallback100Imp(): _total(0) {}
+  CUpdateCallback100Imp()
+    // : _total(0)
+    {}
   void Init(/* IInFolderArchive *archiveHandler, */ CProgressBox *progressBox)
   {
     // _archiveHandler = archiveHandler;
     _percent = progressBox;
-    m_PasswordIsDefined = false;
+    PasswordIsDefined = false;
+    Password.Empty();
   }
 };
 

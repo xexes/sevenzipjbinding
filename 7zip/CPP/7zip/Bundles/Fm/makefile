@@ -1,14 +1,6 @@
 PROG = 7zFM.exe
-CFLAGS = $(CFLAGS) \
-  -DLANG \
-  -DNEW_FOLDER_INTERFACE \
 
-!IFDEF UNDER_CE
-LIBS = $(LIBS) ceshell.lib Commctrl.lib
-!ELSE
-LIBS = $(LIBS) comctl32.lib htmlhelp.lib comdlg32.lib Mpr.lib Gdi32.lib
-CFLAGS = $(CFLAGS) -DWIN_LONG_PATH -DSUPPORT_DEVICE_FILE
-!ENDIF
+CFLAGS = $(CFLAGS) -DZ7_LARGE_PAGES
 
 !include "../Format7zF/Arc.mak"
 
@@ -30,9 +22,9 @@ WIN_OBJS = $(WIN_OBJS) \
   $O\MemoryLock.obj \
   $O\Menu.obj \
   $O\ProcessUtils.obj \
-  $O\PropVariantConv.obj \
   $O\Registry.obj \
   $O\ResourceString.obj \
+  $O\SystemInfo.obj \
   $O\Shell.obj \
   $O\Window.obj \
 
@@ -46,9 +38,9 @@ WIN_CTRL_OBJS = \
 7ZIP_COMMON_OBJS = $(7ZIP_COMMON_OBJS) \
   $O\FilePathAutoRename.obj \
   $O\FileStreams.obj \
+  $O\MultiOutStream.obj \
 
 UI_COMMON_OBJS = \
-  $O\ArchiveCommandLine.obj \
   $O\ArchiveExtractCallback.obj \
   $O\ArchiveName.obj \
   $O\ArchiveOpenCallback.obj \

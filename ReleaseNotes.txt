@@ -18,7 +18,7 @@ Main features of 16.02-2.01 (Release, extraction/compression/update, cross-platf
         - Convenient archive format specific and generic compression APIs
         - Password protected archives (7z, zip) with encrypted archive headers (7z only)
         
-    * 7-Zip-JBinding requires Java 1.5 or higher
+    * 7-Zip-JBinding requires Java 8 or higher
 
     * Cross-platform. Binaries available for
         - Windows 32/64

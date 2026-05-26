@@ -1,11 +1,15 @@
 // Panel.h
 
-#ifndef __PANEL_H
-#define __PANEL_H
+#ifndef ZIP7_INC_PANEL_H
+#define ZIP7_INC_PANEL_H
 
 #include "../../../Common/MyWindows.h"
 
+#if defined(__MINGW32__) || defined(__MINGW64__)
+#include <shlobj.h>
+#else
 #include <ShlObj.h>
+#endif
 
 #include "../../../../C/Alloc.h"
 
@@ -17,6 +21,7 @@
 #include "../../../Windows/FileFind.h"
 #include "../../../Windows/FileName.h"
 #include "../../../Windows/Handle.h"
+#include "../../../Windows/PropVariantConv.h"
 #include "../../../Windows/Synchronization.h"
 
 #include "../../../Windows/Control/ComboBox.h"
@@ -46,7 +51,8 @@
 
 const int kParentFolderID = 100;
 
-const int kParentIndex = -1;
+const unsigned kParentIndex = (unsigned)(int)-1;
+const UInt32 kParentIndex_UInt32 = (UInt32)(Int32)kParentIndex;
 
 #if !defined(_WIN32) || defined(UNDER_CE)
 #define ROOT_FS_FOLDER L"\\"
@@ -54,7 +60,9 @@ const int kParentIndex = -1;
 #define ROOT_FS_FOLDER L"C:\\"
 #endif
 
-struct CPanelCallback
+Z7_PURE_INTERFACES_BEGIN
+
+DECLARE_INTERFACE(CPanelCallback)
 {
   virtual void OnTab() = 0;
   virtual void SetFocusToPath(unsigned index) = 0;
@@ -66,6 +74,7 @@ struct CPanelCallback
   virtual void DragEnd() = 0;
   virtual void RefreshTitle(bool always) = 0;
 };
+Z7_PURE_INTERFACES_END
 
 void PanelCopyItems();
 
@@ -114,7 +123,7 @@ public:
   {
     FOR_VECTOR (i, (*this))
       if ((*this)[i].ID == id)
-        return i;
+        return (int)i;
     return -1;
   }
 
@@ -192,11 +201,15 @@ UString GetFolderPath(IFolderFolder *folder);
 
 class CPanel;
 
-class CMyListView: public NWindows::NControl::CListView2
+class CMyListView Z7_final: public NWindows::NControl::CListView2
 {
+  // ~CMyListView() ZIP7_eq_delete;
+  // CMyListView() ZIP7_eq_delete;
 public:
+  // CMyListView() {}
+  // ~CMyListView() Z7_DESTRUCTOR_override {} // change it
   CPanel *_panel;
-  LRESULT OnMessage(UINT message, WPARAM wParam, LPARAM lParam);
+  LRESULT OnMessage(UINT message, WPARAM wParam, LPARAM lParam) Z7_override;
 };
 
 /*
@@ -219,11 +232,18 @@ public:
 struct CSelectedState
 {
   int FocusedItem;
-  UString FocusedName;
   bool SelectFocused;
+  bool FocusedName_Defined;
+  bool CalledFromTimer;
+  UString FocusedName;
   UStringVector SelectedNames;
-  
-  CSelectedState(): FocusedItem(-1), SelectFocused(false) {}
+
+  CSelectedState():
+      FocusedItem(-1),
+      SelectFocused(true),
+      FocusedName_Defined(false),
+      CalledFromTimer(false)
+    {}
 };
 
 #ifdef UNDER_CE
@@ -241,6 +261,9 @@ struct CCopyToOptions
   bool replaceAltStreamChars;
   bool showErrorMessages;
 
+  bool NeedRegistryZone;
+  NExtract::NZoneIdMode::EEnum ZoneIdMode;
+
   UString folder;
 
   UStringVector hashMethods;
@@ -255,27 +278,46 @@ struct CCopyToOptions
       includeAltStreams(true),
       replaceAltStreamChars(false),
       showErrorMessages(false),
+      NeedRegistryZone(true),
+      ZoneIdMode(NExtract::NZoneIdMode::kNone),
       VirtFileSystemSpec(NULL),
       VirtFileSystem(NULL)
       {}
 };
   
 
-class CPanel: public NWindows::NControl::CWindow2
+
+struct COpenResult
+{
+  // bool needOpenArc;
+  // out:
+  bool ArchiveIsOpened;
+  bool Encrypted;
+  UString ErrorMessage;
+
+  COpenResult():
+      // needOpenArc(false),
+      ArchiveIsOpened(false), Encrypted(false) {}
+};
+
+
+
+
+class CPanel Z7_final: public NWindows::NControl::CWindow2
 {
   CExtToIconMap _extToIconMap;
   UINT _baseID;
-  int _comboBoxID;
+  unsigned _comboBoxID;
   UINT _statusBarID;
 
   CAppState *_appState;
 
-  bool OnCommand(int code, int itemID, LPARAM lParam, LRESULT &result);
-  LRESULT OnMessage(UINT message, WPARAM wParam, LPARAM lParam);
-  virtual bool OnCreate(CREATESTRUCT *createStruct);
-  virtual bool OnSize(WPARAM wParam, int xSize, int ySize);
-  virtual void OnDestroy();
-  virtual bool OnNotify(UINT controlID, LPNMHDR lParam, LRESULT &result);
+  virtual bool OnCommand(unsigned code, unsigned itemID, LPARAM lParam, LRESULT &result) Z7_override;
+  virtual LRESULT OnMessage(UINT message, WPARAM wParam, LPARAM lParam) Z7_override;
+  virtual bool OnCreate(CREATESTRUCT *createStruct) Z7_override;
+  virtual bool OnSize(WPARAM wParam, int xSize, int ySize) Z7_override;
+  virtual void OnDestroy() Z7_override;
+  virtual bool OnNotify(UINT controlID, LPNMHDR lParam, LRESULT &result) Z7_override;
 
   void AddComboBoxItem(const UString &name, int iconIndex, int indent, bool addToList);
 
@@ -296,7 +338,7 @@ class CPanel: public NWindows::NControl::CWindow2
   void OnItemChanged(NMLISTVIEW *item);
   void OnNotifyActivateItems();
   bool OnNotifyList(LPNMHDR lParam, LRESULT &result);
-  void OnDrag(LPNMLISTVIEW nmListView);
+  void OnDrag(LPNMLISTVIEW nmListView, bool isRightButton = false);
   bool OnKeyDown(LPNMLVKEYDOWN keyDownInfo, LRESULT &result);
   BOOL OnBeginLabelEdit(LV_DISPINFOW * lpnmh);
   BOOL OnEndLabelEdit(LV_DISPINFOW * lpnmh);
@@ -325,9 +367,7 @@ private:
   void AddColumn(const CPropColumn &prop);
 
   void SetFocusedSelectedItem(int index, bool select);
-  HRESULT RefreshListCtrl(const UString &focusedName, int focusedPos, bool selectFocused,
-      const UStringVector &selectedNames);
-
+  
   void OnShiftSelectMessage();
   void OnArrowWithShift();
 
@@ -361,6 +401,7 @@ public:
   // CMyComboBox _headerComboBox;
   CMyComboBoxEdit _comboBoxEdit;
   CMyListView _listView;
+  bool _thereAre_ListView_Items;
   NWindows::NControl::CStatusBar _statusBar;
   bool _lastFocusedIsList;
   // NWindows::NControl::CStatusBar _statusBar2;
@@ -372,6 +413,16 @@ public:
   // CUIntVector _realIndices;
   bool _enableItemChangeNotify;
   bool _mySelectMode;
+
+  int _timestampLevel;
+
+
+  void RedrawListItems()
+  {
+    _listView.RedrawAllItems();
+  }
+
+
   CBoolVector _selectedStatusVector;
 
   CSelectedState _selectedState;
@@ -380,7 +431,19 @@ public:
 
   bool PanelCreated;
 
-  HWND GetParent();
+  void DeleteListItems()
+  {
+    if (_thereAre_ListView_Items)
+    {
+      bool b = _enableItemChangeNotify;
+      _enableItemChangeNotify = false;
+      _listView.DeleteAllItems();
+      _thereAre_ListView_Items = false;
+      _enableItemChangeNotify = b;
+    }
+  }
+
+  HWND GetParent() const;
 
   UInt32 GetRealIndex(const LVITEMW &item) const
   {
@@ -391,19 +454,19 @@ public:
     return (UInt32)item.lParam;
   }
   
-  int GetRealItemIndex(int indexInListView) const
+  unsigned GetRealItemIndex(int indexInListView) const
   {
     /*
     if (_virtualMode)
       return indexInListView;
     */
     LPARAM param;
-    if (!_listView.GetItemParam(indexInListView, param))
+    if (!_listView.GetItemParam((unsigned)indexInListView, param))
       throw 1;
-    return (int)param;
+    return (unsigned)param;
   }
 
-  UInt32 _ListViewMode;
+  UInt32 _listViewMode;
   int _xSize;
 
   bool _flatMode;
@@ -423,11 +486,18 @@ public:
   NWindows::NDLL::CLibrary _library;
   
   CMyComPtr<IFolderFolder> _folder;
+  CBoolVector _isDirVector;
   CMyComPtr<IFolderCompare> _folderCompare;
   CMyComPtr<IFolderGetItemName> _folderGetItemName;
   CMyComPtr<IArchiveGetRawProps> _folderRawProps;
   CMyComPtr<IFolderAltStreams> _folderAltStreams;
   CMyComPtr<IFolderOperations> _folderOperations;
+
+
+  // for drag and drop highliting
+  int m_DropHighlighted_SelectionIndex;
+  // int m_SubFolderIndex;      // realIndex of item in m_Panel list (if drop cursor to that item)
+  UString m_DropHighlighted_SubFolderName;   // name of folder in m_Panel list (if drop cursor to that folder)
 
   void ReleaseFolder();
   void SetNewFolder(IFolderFolder *newFolder);
@@ -439,27 +509,34 @@ public:
   void GetSelectedNames(UStringVector &selectedNames);
   void SaveSelectedState(CSelectedState &s);
   HRESULT RefreshListCtrl(const CSelectedState &s);
-  HRESULT RefreshListCtrlSaveFocused();
+  HRESULT RefreshListCtrl_SaveFocused(bool onTimer = false);
+
+  // UInt32 GetItem_Attrib(UInt32 itemIndex) const;
 
   bool GetItem_BoolProp(UInt32 itemIndex, PROPID propID) const;
-  bool IsItem_Deleted(int itemIndex) const;
-  bool IsItem_Folder(int itemIndex) const;
-  bool IsItem_AltStream(int itemIndex) const;
+  
+  bool IsItem_Deleted(unsigned itemIndex) const;
+  bool IsItem_Folder(unsigned itemIndex) const;
+  bool IsItem_AltStream(unsigned itemIndex) const;
 
-  UString GetItemName(int itemIndex) const;
-  UString GetItemName_for_Copy(int itemIndex) const;
-  void GetItemName(int itemIndex, UString &s) const;
-  UString GetItemPrefix(int itemIndex) const;
-  UString GetItemRelPath(int itemIndex) const;
-  UString GetItemRelPath2(int itemIndex) const;
-  UString GetItemFullPath(int itemIndex) const;
-  UInt64 GetItemSize(int itemIndex) const;
+  UString GetItemName(unsigned itemIndex) const;
+  UString GetItemName_for_Copy(unsigned itemIndex) const;
+  void GetItemName(unsigned itemIndex, UString &s) const;
+  UString GetItemPrefix(unsigned itemIndex) const;
+  UString GetItemRelPath(unsigned itemIndex) const;
+  UString GetItemRelPath2(unsigned itemIndex) const;
+
+  void Add_ItemRelPath2_To_String(unsigned itemIndex, UString &s) const;
+
+  UString GetItemFullPath(unsigned itemIndex) const;
+  UInt64 GetItem_UInt64Prop(unsigned itemIndex, PROPID propID) const;
+  UInt64 GetItemSize(unsigned itemIndex) const;
 
   ////////////////////////
   // PanelFolderChange.cpp
 
   void SetToRootFolder();
-  HRESULT BindToPath(const UString &fullPath, const UString &arcFormat, bool &archiveIsOpened, bool &encrypted); // can be prefix
+  HRESULT BindToPath(const UString &fullPath, const UString &arcFormat, COpenResult &openRes); // can be prefix
   HRESULT BindToPathAndRefresh(const UString &path);
   void OpenDrivesFolder();
   
@@ -474,6 +551,7 @@ public:
   void CloseOpenFolders();
   void OpenRootFolder();
 
+  UString GetParentDirPrefix() const;
 
   HRESULT Create(HWND mainWindow, HWND parentWindow,
       UINT id,
@@ -482,7 +560,8 @@ public:
       CPanelCallback *panelCallback,
       CAppState *appState,
       bool needOpenArc,
-      bool &archiveIsOpened, bool &encrypted);
+      COpenResult &openRes);
+
   void SetFocusToList();
   void SetFocusToLastRememberedItem();
 
@@ -490,34 +569,42 @@ public:
   void SaveListViewInfo();
 
   CPanel() :
-      // _virtualMode(flase),
+      _thereAre_ListView_Items(false),
       _exStyle(0),
       _showDots(false),
       _showRealFileIcons(false),
-      _needSaveInfo(false),
-      _startGroupSelect(0),
-      _selectionIsDefined(false),
-      _ListViewMode(3),
+      // _virtualMode(flase),
+      _enableItemChangeNotify(true),
+      _mySelectMode(false),
+      _timestampLevel(kTimestampPrintLevel_MIN),
+
+      _thereAreDeletedItems(false),
+      _markDeletedItems(true),
+      PanelCreated(false),
+
+      _listViewMode(3),
+      _xSize(300),
+
       _flatMode(false),
       _flatModeForDisk(false),
       _flatModeForArc(false),
-      PanelCreated(false),
 
       // _showNtfsStrems_Mode(false),
       // _showNtfsStrems_ModeForDisk(false),
       // _showNtfsStrems_ModeForArc(false),
 
-      _xSize(300),
-      _mySelectMode(false),
-      _thereAreDeletedItems(false),
-      _markDeletedItems(true),
-      _enableItemChangeNotify(true),
-      _dontShowMode(false)
+      _dontShowMode(false),
+
+      m_DropHighlighted_SelectionIndex(-1),
+
+      _needSaveInfo(false),
+      _startGroupSelect(0),
+      _selectionIsDefined(false)
   {}
 
   void SetExtendedStyle()
   {
-    if (_listView != 0)
+    if (_listView)
       _listView.SetExtendedListViewStyle(_exStyle);
   }
 
@@ -537,33 +624,41 @@ public:
   void SetSortRawStatus();
 
   void Release();
-  ~CPanel();
+  ~CPanel() Z7_DESTRUCTOR_override;
   void OnLeftClick(MY_NMLISTVIEW_NMITEMACTIVATE *itemActivate);
   bool OnRightClick(MY_NMLISTVIEW_NMITEMACTIVATE *itemActivate, LRESULT &result);
   void ShowColumnsContextMenu(int x, int y);
 
   void OnTimer();
-  void OnReload();
+  void OnReload(bool onTimer = false);
   bool OnContextMenu(HANDLE windowHandle, int xPos, int yPos);
 
   CMyComPtr<IContextMenu> _sevenZipContextMenu;
   CMyComPtr<IContextMenu> _systemContextMenu;
+  
   HRESULT CreateShellContextMenu(
       const CRecordVector<UInt32> &operatedIndices,
       CMyComPtr<IContextMenu> &systemContextMenu);
+  
   void CreateSystemMenu(HMENU menu,
+      bool showExtendedVerbs,
       const CRecordVector<UInt32> &operatedIndices,
       CMyComPtr<IContextMenu> &systemContextMenu);
+  
   void CreateSevenZipMenu(HMENU menu,
+      bool showExtendedVerbs,
       const CRecordVector<UInt32> &operatedIndices,
+      int firstDirIndex,
       CMyComPtr<IContextMenu> &sevenZipContextMenu);
+  
   void CreateFileMenu(HMENU menu,
       CMyComPtr<IContextMenu> &sevenZipContextMenu,
       CMyComPtr<IContextMenu> &systemContextMenu,
       bool programMenu);
+  
   void CreateFileMenu(HMENU menu);
-  bool InvokePluginCommand(int id);
-  bool InvokePluginCommand(int id, IContextMenu *sevenZipContextMenu,
+  bool InvokePluginCommand(unsigned id);
+  bool InvokePluginCommand(unsigned id, IContextMenu *sevenZipContextMenu,
       IContextMenu *systemContextMenu);
 
   void InvokeSystemCommand(const char *command);
@@ -582,10 +677,10 @@ public:
   // void SortItems(int index);
   void SortItemsWithPropID(PROPID propID);
 
-  void GetSelectedItemsIndices(CRecordVector<UInt32> &indices) const;
-  void GetOperatedItemIndices(CRecordVector<UInt32> &indices) const;
-  void GetAllItemIndices(CRecordVector<UInt32> &indices) const;
-  void GetOperatedIndicesSmart(CRecordVector<UInt32> &indices) const;
+  void Get_ItemIndices_Selected(CRecordVector<UInt32> &indices) const;
+  void Get_ItemIndices_Operated(CRecordVector<UInt32> &indices) const;
+  void Get_ItemIndices_All(CRecordVector<UInt32> &indices) const;
+  void Get_ItemIndices_OperSmart(CRecordVector<UInt32> &indices) const;
   // void GetOperatedListViewIndices(CRecordVector<UInt32> &indices) const;
   void KillSelection();
 
@@ -597,6 +692,7 @@ public:
   bool IsFSDrivesFolder() const;
   bool IsAltStreamsFolder() const;
   bool IsArcFolder() const;
+  bool IsHashFolder() const;
   
   /*
     c:\Dir
@@ -656,12 +752,11 @@ public:
 
   class CDisableTimerProcessing
   {
-    CLASS_NO_COPY(CDisableTimerProcessing);
+    Z7_CLASS_NO_COPY(CDisableTimerProcessing)
 
     bool _processTimer;
-
     CPanel &_panel;
-    
+   
     public:
 
     CDisableTimerProcessing(CPanel &panel): _panel(panel) { Disable(); }
@@ -677,9 +772,38 @@ public:
     }
   };
 
+  class CDisableTimerProcessing2
+  {
+    Z7_CLASS_NO_COPY(CDisableTimerProcessing2)
+
+    bool _processTimer;
+    CPanel *_panel;
+   
+    public:
+
+    CDisableTimerProcessing2(CPanel *panel): _processTimer(true), _panel(panel) { Disable(); }
+    ~CDisableTimerProcessing2() { Restore(); }
+    void Disable()
+    {
+      if (_panel)
+      {
+        _processTimer = _panel->_processTimer;
+        _panel->_processTimer = false;
+      }
+    }
+    void Restore()
+    {
+      if (_panel)
+      {
+        _panel->_processTimer = _processTimer;
+        _panel = NULL;
+      }
+    }
+  };
+
   class CDisableNotify
   {
-    CLASS_NO_COPY(CDisableNotify);
+    Z7_CLASS_NO_COPY(CDisableNotify)
 
     bool _processNotify;
     bool _processStatusBar;
@@ -709,70 +833,71 @@ public:
     }
   };
 
-  // bool _passwordIsDefined;
-  // UString _password;
-
   void InvalidateList() { _listView.InvalidateRect(NULL, true); }
 
   HRESULT RefreshListCtrl();
 
-  void MessageBoxInfo(LPCWSTR message, LPCWSTR caption);
-  void MessageBox(LPCWSTR message);
-  void MessageBoxWarning(LPCWSTR message);
-  void MessageBox(LPCWSTR message, LPCWSTR caption);
-  void MessageBoxMyError(LPCWSTR message);
-  void MessageBoxError(HRESULT errorCode, LPCWSTR caption);
-  void MessageBoxError(HRESULT errorCode);
-  void MessageBoxError2Lines(LPCWSTR message, HRESULT errorCode);
-  void MessageBoxLastError(LPCWSTR caption);
-  void MessageBoxLastError();
-
+  
+  // void MessageBox_Info(LPCWSTR message, LPCWSTR caption) const;
+  // void MessageBox_Warning(LPCWSTR message) const;
+  void MessageBox_Error_Caption(LPCWSTR message, LPCWSTR caption) const;
+  void MessageBox_Error(LPCWSTR message) const;
+  void MessageBox_Error_HRESULT_Caption(HRESULT errorCode, LPCWSTR caption) const;
+  void MessageBox_Error_HRESULT(HRESULT errorCode) const;
+  void MessageBox_Error_2Lines_Message_HRESULT(LPCWSTR message, HRESULT errorCode) const;
+  void MessageBox_LastError(LPCWSTR caption) const;
+  void MessageBox_LastError() const;
+  void MessageBox_Error_LangID(UINT resourceID) const;
+  void MessageBox_Error_UnsupportOperation() const;
   // void MessageBoxErrorForUpdate(HRESULT errorCode, UINT resourceID);
 
-  void MessageBoxErrorLang(UINT resourceID);
 
   void OpenAltStreams();
 
   void OpenFocusedItemAsInternal(const wchar_t *type = NULL);
   void OpenSelectedItems(bool internal);
 
-  void OpenFolderExternal(int index);
+  void OpenFolderExternal(unsigned index);
 
-  void OpenFolder(int index);
+  void OpenFolder(unsigned index);
   HRESULT OpenParentArchiveFolder();
   
   HRESULT OpenAsArc(IInStream *inStream,
       const CTempFileInfo &tempFileInfo,
       const UString &virtualFilePath,
       const UString &arcFormat,
-      bool &encrypted);
+      COpenResult &openRes);
 
   HRESULT OpenAsArc_Msg(IInStream *inStream,
       const CTempFileInfo &tempFileInfo,
       const UString &virtualFilePath,
-      const UString &arcFormat,
-      bool &encrypted,
-      bool showErrorMessage);
+      const UString &arcFormat
+      // , bool showErrorMessage
+      );
   
-  HRESULT OpenAsArc_Name(const UString &relPath, const UString &arcFormat, bool &encrypted, bool showErrorMessage);
-  HRESULT OpenAsArc_Index(int index, const wchar_t *type /* = NULL */, bool showErrorMessage);
+  HRESULT OpenAsArc_Name(const UString &relPath, const UString &arcFormat
+      // , bool showErrorMessage
+      );
+  HRESULT OpenAsArc_Index(unsigned index, const wchar_t *type /* = NULL */
+      // , bool showErrorMessage
+      );
   
-  void OpenItemInArchive(int index, bool tryInternal, bool tryExternal,
+  void OpenItemInArchive(unsigned index, bool tryInternal, bool tryExternal,
       bool editMode, bool useEditor, const wchar_t *type = NULL);
   
   HRESULT OnOpenItemChanged(UInt32 index, const wchar_t *fullFilePath, bool usePassword, const UString &password);
   LRESULT OnOpenItemChanged(LPARAM lParam);
 
   bool IsVirus_Message(const UString &name);
-  void OpenItem(int index, bool tryInternal, bool tryExternal, const wchar_t *type = NULL);
+  void OpenItem(unsigned index, bool tryInternal, bool tryExternal, const wchar_t *type = NULL);
   void EditItem(bool useEditor);
-  void EditItem(int index, bool useEditor);
+  void EditItem(unsigned index, bool useEditor);
 
   void RenameFile();
   void ChangeComment();
 
   void SetListViewMode(UInt32 index);
-  UInt32 GetListViewMode() const { return _ListViewMode; }
+  UInt32 GetListViewMode() const { return _listViewMode; }
   PROPID GetSortID() const { return _sortID; }
 
   void ChangeFlatMode();
@@ -791,16 +916,21 @@ public:
 
   void AddToArchive();
 
-  void GetFilePaths(const CRecordVector<UInt32> &indices, UStringVector &paths, bool allowFolders = false);
+  int FindDir_InOperatedList(const CRecordVector<UInt32> &indices) const;
+  void GetFilePaths(const CRecordVector<UInt32> &indices, UStringVector &paths) const;
   void ExtractArchives();
   void TestArchives();
+
 
   HRESULT CopyTo(CCopyToOptions &options,
       const CRecordVector<UInt32> &indices,
       UStringVector *messages,
-      bool &usePassword, UString &password);
+      bool &usePassword, UString &password,
+      const UStringVector *filePaths = NULL);
 
-  HRESULT CopyTo(CCopyToOptions &options, const CRecordVector<UInt32> &indices, UStringVector *messages)
+  HRESULT CopyTo(CCopyToOptions &options,
+      const CRecordVector<UInt32> &indices,
+      UStringVector *messages)
   {
     bool usePassword = false;
     UString password;
@@ -813,17 +943,29 @@ public:
     return CopyTo(options, indices, messages, usePassword, password);
   }
 
+  HRESULT CopyFsItems(CCopyToOptions &options,
+      const UStringVector &filePaths,
+      UStringVector *messages)
+  {
+    bool usePassword = false;
+    UString password;
+    CRecordVector<UInt32> indices;
+    return CopyTo(options, indices, messages, usePassword, password, &filePaths);
+  }
+
+
   HRESULT CopyFrom(bool moveMode, const UString &folderPrefix, const UStringVector &filePaths,
       bool showErrorMessages, UStringVector *messages);
 
-  void CopyFromNoAsk(const UStringVector &filePaths);
-  void CopyFromAsk(const UStringVector &filePaths);
+  void CopyFromNoAsk(bool moveMode, const UStringVector &filePaths);
 
-  // empty folderPath means create new Archive to path of first fileName.
-  void DropObject(IDataObject * dataObject, const UString &folderPath);
-
-  // empty folderPath means create new Archive to path of first fileName.
-  void CompressDropFiles(const UStringVector &fileNames, const UString &folderPath);
+  void CompressDropFiles(
+      const UStringVector &filePaths,
+      const UString &folderPath,
+      bool createNewArchive,
+      bool moveMode,
+      UInt32 sourceFlags,
+      UInt32 &targetFlags);
 
   void RefreshTitle(bool always = false) { _panelCallback->RefreshTitle(always);  }
   void RefreshTitleAlways() { RefreshTitle(true);  }
@@ -835,14 +977,14 @@ class CMyBuffer
 {
   void *_data;
 public:
-  CMyBuffer(): _data(0) {}
+  CMyBuffer(): _data(NULL) {}
   operator void *() { return _data; }
   bool Allocate(size_t size)
   {
-    if (_data != 0)
+    if (_data)
       return false;
     _data = ::MidAlloc(size);
-    return _data != 0;
+    return _data != NULL;
   }
   ~CMyBuffer() { ::MidFree(_data); }
 };
@@ -862,7 +1004,7 @@ public:
       throw 9387173;
     _needExit = true;
     _numActiveThreads = 0;
-  };
+  }
 
   ~CExitEventLauncher() { Exit(true); }
 

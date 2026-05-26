@@ -6,7 +6,6 @@
 
 #include "../../Common/ComTry.h"
 #include "../../Common/Defs.h"
-#include "../../Common/IntToString.h"
 
 #include "../../Windows/PropVariant.h"
 
@@ -72,8 +71,10 @@ struct CItem
   }
 };
 
-class CHandler: public CHandlerCont
+Z7_class_CHandler_final: public CHandlerCont
 {
+  Z7_IFACE_COM7_IMP(IInArchive_Cont)
+
   CRecordVector<CItem> _items;
   unsigned _blockSizeLog;
   UInt32 _numBlocks;
@@ -83,16 +84,13 @@ class CHandler: public CHandlerCont
   HRESULT ReadTables(IInStream *stream);
   UInt64 BlocksToBytes(UInt32 i) const { return (UInt64)i << _blockSizeLog; }
 
-  virtual int GetItem_ExtractInfo(UInt32 index, UInt64 &pos, UInt64 &size) const
+  virtual int GetItem_ExtractInfo(UInt32 index, UInt64 &pos, UInt64 &size) const Z7_override
   {
     const CItem &item = _items[index];
     pos = BlocksToBytes(item.StartBlock);
     size = BlocksToBytes(item.NumBlocks);
     return NExtract::NOperationResult::kOK;
   }
-
-public:
-  INTERFACE_IInArchive_Cont(;)
 };
 
 static const UInt32 kSectorSize = 512;
@@ -119,7 +117,7 @@ HRESULT CHandler::ReadTables(IInStream *stream)
 {
   Byte buf[kSectorSize];
   {
-    RINOK(ReadStream_FALSE(stream, buf, kSectorSize));
+    RINOK(ReadStream_FALSE(stream, buf, kSectorSize))
     if (buf[0] != kSig0 || buf[1] != kSig1)
       return S_FALSE;
     UInt32 blockSize = Get16(buf + 2);
@@ -137,14 +135,14 @@ HRESULT CHandler::ReadTables(IInStream *stream)
   unsigned numSkips = (unsigned)1 << (_blockSizeLog - 9);
   for (unsigned j = 1; j < numSkips; j++)
   {
-    RINOK(ReadStream_FALSE(stream, buf, kSectorSize));
+    RINOK(ReadStream_FALSE(stream, buf, kSectorSize))
   }
 
   UInt32 numBlocksInMap = 0;
   
   for (unsigned i = 0;;)
   {
-    RINOK(ReadStream_FALSE(stream, buf, kSectorSize));
+    RINOK(ReadStream_FALSE(stream, buf, kSectorSize))
  
     CItem item;
     
@@ -168,7 +166,7 @@ HRESULT CHandler::ReadTables(IInStream *stream)
     _items.Add(item);
     for (unsigned j = 1; j < numSkips; j++)
     {
-      RINOK(ReadStream_FALSE(stream, buf, kSectorSize));
+      RINOK(ReadStream_FALSE(stream, buf, kSectorSize))
     }
     if (++i == numBlocksInMap)
       break;
@@ -179,17 +177,17 @@ HRESULT CHandler::ReadTables(IInStream *stream)
   return S_OK;
 }
 
-STDMETHODIMP CHandler::Open(IInStream *stream, const UInt64 *, IArchiveOpenCallback * /* callback */)
+Z7_COM7F_IMF(CHandler::Open(IInStream *stream, const UInt64 *, IArchiveOpenCallback * /* callback */))
 {
   COM_TRY_BEGIN
   Close();
-  RINOK(ReadTables(stream));
+  RINOK(ReadTables(stream))
   _stream = stream;
   return S_OK;
   COM_TRY_END
 }
 
-STDMETHODIMP CHandler::Close()
+Z7_COM7F_IMF(CHandler::Close())
 {
   _isArc = false;
   _phySize = 0;
@@ -221,7 +219,7 @@ static AString GetString(const char *s)
   return res;
 }
 
-STDMETHODIMP CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value)
+Z7_COM7F_IMF(CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value))
 {
   COM_TRY_BEGIN
   NCOM::CPropVariant prop;
@@ -232,7 +230,7 @@ STDMETHODIMP CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value)
       int mainIndex = -1;
       FOR_VECTOR (i, _items)
       {
-        AString s = GetString(_items[i].Type);
+        AString s (GetString(_items[i].Type));
         if (s != "Apple_Free" &&
             s != "Apple_partition_map")
         {
@@ -241,11 +239,11 @@ STDMETHODIMP CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value)
             mainIndex = -1;
             break;
           }
-          mainIndex = i;
+          mainIndex = (int)i;
         }
       }
       if (mainIndex >= 0)
-        prop = (UInt32)mainIndex;
+        prop = (UInt32)(Int32)mainIndex;
       break;
     }
     case kpidClusterSize: prop = (UInt32)1 << _blockSizeLog; break;
@@ -264,13 +262,13 @@ STDMETHODIMP CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value)
   COM_TRY_END
 }
 
-STDMETHODIMP CHandler::GetNumberOfItems(UInt32 *numItems)
+Z7_COM7F_IMF(CHandler::GetNumberOfItems(UInt32 *numItems))
 {
   *numItems = _items.Size();
   return S_OK;
 }
 
-STDMETHODIMP CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *value)
+Z7_COM7F_IMF(CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *value))
 {
   COM_TRY_BEGIN
   NCOM::CPropVariant prop;
@@ -279,19 +277,15 @@ STDMETHODIMP CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *val
   {
     case kpidPath:
     {
-      AString s = GetString(item.Name);
+      AString s (GetString(item.Name));
       if (s.IsEmpty())
-      {
-        char s2[32];
-        ConvertUInt32ToString(index, s2);
-        s = s2;
-      }
-      AString type = GetString(item.Type);
+        s.Add_UInt32(index);
+      AString type (GetString(item.Type));
       if (type == "Apple_HFS")
         type = "hfs";
       if (!type.IsEmpty())
       {
-        s += '.';
+        s.Add_Dot();
         s += type;
       }
       prop = s;
@@ -311,7 +305,7 @@ STDMETHODIMP CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *val
 static const Byte k_Signature[] = { kSig0, kSig1 };
 
 REGISTER_ARC_I(
-  "APM", "apm", 0, 0xD4,
+  "APM", "apm", NULL, 0xD4,
   k_Signature,
   0,
   0,

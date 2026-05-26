@@ -130,8 +130,7 @@ public class TraceCompressionTest extends JUnitNativeTestBase<VoidContext> {
                 + "Get property 'propertyPath' (index: 0)\n" //
                 + "Get property 'propertyIsDir' (index: 0)\n" //
                 + "Get property 'propertyLastModificationTime' (index: 0)\n" //
-                + "Get property 'propertyLastAccessTime' (index: 0)\n" //
-                + "Get property 'propertyCreationTime' (index: 0)\n" //
+                + "Get property 'propertyComment' (index: 0)\n" //
                 + "Get property 'dataSize' (index: 0)\n" //
                 + "Get stream (index: 0)\n" //
                 + "Get update info (new data: true) (new props: true) (old index: -1) (index: 1)\n" //
@@ -139,8 +138,7 @@ public class TraceCompressionTest extends JUnitNativeTestBase<VoidContext> {
                 + "Get property 'propertyPath' (index: 1)\n" //
                 + "Get property 'propertyIsDir' (index: 1)\n" //
                 + "Get property 'propertyLastModificationTime' (index: 1)\n" //
-                + "Get property 'propertyLastAccessTime' (index: 1)\n" //
-                + "Get property 'propertyCreationTime' (index: 1)\n" //
+                + "Get property 'propertyComment' (index: 1)\n" //
                 + "Get property 'dataSize' (index: 1)\n" //
                 + "Get stream (index: 1)\n");
     }
@@ -190,19 +188,18 @@ public class TraceCompressionTest extends JUnitNativeTestBase<VoidContext> {
                 "Get stream (index: 0)\n");
     }
 
-    @Test
+  @Test
     public void testUpdateZip() throws Exception {
         testUpdate(ArchiveFormat.ZIP, "Updating 2 items\n"
-                + "Get update info (new data: false) (new props: false) (old index: 0) (index: 0)\n" + //
-                "Get update info (new data: true) (new props: true) (old index: -1) (index: 1)\n" + //
-                "Get property 'propertyAttributes' (index: 1)\n" + //
-                "Get property 'propertyPath' (index: 1)\n" + //
-                "Get property 'propertyIsDir' (index: 1)\n" + //
-                "Get property 'propertyLastModificationTime' (index: 1)\n" + //
-                "Get property 'propertyLastAccessTime' (index: 1)\n" + //
-                "Get property 'propertyCreationTime' (index: 1)\n" + //
-                "Get property 'dataSize' (index: 1)\n" + //
-                "Get stream (index: 1)\n");
+                + "Get update info (new data: false) (new props: false) (old index: 0) (index: 0)\n"
+                + "Get update info (new data: true) (new props: true) (old index: -1) (index: 1)\n"
+                + "Get property 'propertyAttributes' (index: 1)\n"
+                + "Get property 'propertyPath' (index: 1)\n"
+                + "Get property 'propertyIsDir' (index: 1)\n"
+                + "Get property 'propertyLastModificationTime' (index: 1)\n"
+                + "Get property 'propertyComment' (index: 1)\n"
+                + "Get property 'dataSize' (index: 1)\n"
+                + "Get stream (index: 1)\n");
     }
 
     @Test

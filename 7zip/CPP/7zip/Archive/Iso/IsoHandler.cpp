@@ -3,14 +3,12 @@
 #include "StdAfx.h"
 
 #include "../../../Common/ComTry.h"
-#include "../../../Common/IntToString.h"
+#include "../../../Common/MyLinux.h"
 #include "../../../Common/StringConvert.h"
-
-#include "../../../Windows/PropVariant.h"
-#include "../../../Windows/TimeUtils.h"
 
 #include "../../Common/LimitedStreams.h"
 #include "../../Common/ProgressUtils.h"
+#include "../../Common/StreamUtils.h"
 
 #include "../../Compress/CopyCoder.h"
 
@@ -30,7 +28,14 @@ static const Byte kProps[] =
   kpidIsDir,
   kpidSize,
   kpidPackSize,
-  kpidMTime
+  kpidMTime,
+  // kpidCTime,
+  // kpidATime,
+  kpidPosixAttrib,
+  // kpidUserId,
+  // kpidGroupId,
+  // kpidLinks,
+  kpidSymLink
 };
 
 static const Byte kArcProps[] =
@@ -44,28 +49,28 @@ static const Byte kArcProps[] =
 IMP_IInArchive_Props
 IMP_IInArchive_ArcProps
 
-STDMETHODIMP CHandler::Open(IInStream *stream,
+Z7_COM7F_IMF(CHandler::Open(IInStream *stream,
     const UInt64 * /* maxCheckStartPosition */,
-    IArchiveOpenCallback * /* openArchiveCallback */)
+    IArchiveOpenCallback * /* openArchiveCallback */))
 {
   COM_TRY_BEGIN
   Close();
   {
-    RINOK(_archive.Open(stream));
+    RINOK(_archive.Open(stream))
     _stream = stream;
   }
   return S_OK;
   COM_TRY_END
 }
 
-STDMETHODIMP CHandler::Close()
+Z7_COM7F_IMF(CHandler::Close())
 {
   _archive.Clear();
   _stream.Release();
   return S_OK;
 }
 
-STDMETHODIMP CHandler::GetNumberOfItems(UInt32 *numItems)
+Z7_COM7F_IMF(CHandler::GetNumberOfItems(UInt32 *numItems))
 {
   *numItems = _archive.Refs.Size() + _archive.BootEntries.Size();
   return S_OK;
@@ -96,7 +101,7 @@ static void AddErrorMessage(AString &s, const char *message)
   s += message;
 }
 
-STDMETHODIMP CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value)
+Z7_COM7F_IMF(CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value))
 {
   COM_TRY_BEGIN
   NCOM::CPropVariant prop;
@@ -120,8 +125,8 @@ STDMETHODIMP CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value)
       prop = s;
       break;
     }
-    case kpidCTime: { FILETIME utc; if (vol.CTime.GetFileTime(utc)) prop = utc; break; }
-    case kpidMTime: { FILETIME utc; if (vol.MTime.GetFileTime(utc)) prop = utc; break; }
+    case kpidCTime: { vol.CTime.GetFileTime(prop); break; }
+    case kpidMTime: { vol.MTime.GetFileTime(prop); break; }
   }
   }
 
@@ -157,7 +162,7 @@ STDMETHODIMP CHandler::GetArchiveProperty(PROPID propID, PROPVARIANT *value)
   COM_TRY_END
 }
 
-STDMETHODIMP CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *value)
+Z7_COM7F_IMF(CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *value))
 {
   COM_TRY_BEGIN
   NCOM::CPropVariant prop;
@@ -169,13 +174,11 @@ STDMETHODIMP CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *val
     {
       case kpidPath:
       {
-        AString s = "[BOOT]" STRING_PATH_SEPARATOR;
+        AString s ("[BOOT]" STRING_PATH_SEPARATOR);
         if (_archive.BootEntries.Size() != 1)
         {
-          char temp[16];
-          ConvertUInt32ToString(index + 1, temp);
-          s += temp;
-          s += '-';
+          s.Add_UInt32(index + 1);
+          s.Add_Minus();
         }
         s += be.GetName();
         prop = s;
@@ -209,21 +212,89 @@ STDMETHODIMP CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *val
           if (!s.IsEmpty() && s.Back() == L'.')
             s.DeleteBack();
 
-          NItemName::ConvertToOSName2(s);
+          NItemName::ReplaceToOsSlashes_Remove_TailSlash(s);
           prop = s;
         }
         break;
+
+      case kpidSymLink:
+        if (_archive.IsSusp)
+        {
+          UInt32 mode;
+          if (item.GetPx(_archive.SuspSkipSize, k_Px_Mode, mode))
+          {
+            if (MY_LIN_S_ISLNK(mode))
+            {
+              AString s8;
+              if (item.GetSymLink(_archive.SuspSkipSize, s8))
+              {
+                UString s = MultiByteToUnicodeString(s8, CP_OEMCP);
+                prop = s;
+              }
+            }
+          }
+        }
+        break;
+
+
+      case kpidPosixAttrib:
+      /*
+      case kpidLinks:
+      case kpidUserId:
+      case kpidGroupId:
+      */
+      {
+        if (_archive.IsSusp)
+        {
+          UInt32 t = 0;
+          switch (propID)
+          {
+            case kpidPosixAttrib: t = k_Px_Mode; break;
+            /*
+            case kpidLinks: t = k_Px_Links; break;
+            case kpidUserId: t = k_Px_User; break;
+            case kpidGroupId: t = k_Px_Group; break;
+            */
+          }
+          UInt32 v;
+          if (item.GetPx(_archive.SuspSkipSize, t, v))
+            prop = v;
+        }
+        break;
+      }
+      
       case kpidIsDir: prop = item.IsDir(); break;
       case kpidSize:
       case kpidPackSize:
         if (!item.IsDir())
           prop = (UInt64)ref.TotalSize;
         break;
+
       case kpidMTime:
+      // case kpidCTime:
+      // case kpidATime:
       {
-        FILETIME utc;
-        if (item.DateTime.GetFileTime(utc))
-          prop = utc;
+        // if
+        item.DateTime.GetFileTime(prop);
+        /*
+        else
+        {
+          UInt32 t = 0;
+          switch (propID)
+          {
+            case kpidMTime: t = k_Tf_MTime; break;
+            case kpidCTime: t = k_Tf_CTime; break;
+            case kpidATime: t = k_Tf_ATime; break;
+          }
+          CRecordingDateTime dt;
+          if (item.GetTf(_archive.SuspSkipSize, t, dt))
+          {
+            FILETIME utc;
+            if (dt.GetFileTime(utc))
+              prop = utc;
+          }
+        }
+        */
         break;
       }
     }
@@ -233,11 +304,11 @@ STDMETHODIMP CHandler::GetProperty(UInt32 index, PROPID propID, PROPVARIANT *val
   COM_TRY_END
 }
 
-STDMETHODIMP CHandler::Extract(const UInt32 *indices, UInt32 numItems,
-    Int32 testMode, IArchiveExtractCallback *extractCallback)
+Z7_COM7F_IMF(CHandler::Extract(const UInt32 *indices, UInt32 numItems,
+    Int32 testMode, IArchiveExtractCallback *extractCallback))
 {
   COM_TRY_BEGIN
-  bool allFilesMode = (numItems == (UInt32)(Int32)-1);
+  const bool allFilesMode = (numItems == (UInt32)(Int32)-1);
   if (allFilesMode)
     numItems = _archive.Refs.Size();
   if (numItems == 0)
@@ -276,15 +347,15 @@ STDMETHODIMP CHandler::Extract(const UInt32 *indices, UInt32 numItems,
   for (i = 0; i < numItems; i++, currentTotalSize += currentItemSize)
   {
     lps->InSize = lps->OutSize = currentTotalSize;
-    RINOK(lps->SetCur());
+    RINOK(lps->SetCur())
     currentItemSize = 0;
     CMyComPtr<ISequentialOutStream> realOutStream;
-    Int32 askMode = testMode ?
+    const Int32 askMode = testMode ?
         NExtract::NAskMode::kTest :
         NExtract::NAskMode::kExtract;
-    UInt32 index = allFilesMode ? i : indices[i];
+    const UInt32 index = allFilesMode ? i : indices[i];
     
-    RINOK(extractCallback->GetStream(index, &realOutStream, askMode));
+    RINOK(extractCallback->GetStream(index, &realOutStream, askMode))
 
     UInt64 blockIndex;
     if (index < (UInt32)_archive.Refs.Size())
@@ -293,8 +364,8 @@ STDMETHODIMP CHandler::Extract(const UInt32 *indices, UInt32 numItems,
       const CDir &item = ref.Dir->_subItems[ref.Index];
       if (item.IsDir())
       {
-        RINOK(extractCallback->PrepareOperation(askMode));
-        RINOK(extractCallback->SetOperationResult(NExtract::NOperationResult::kOK));
+        RINOK(extractCallback->PrepareOperation(askMode))
+        RINOK(extractCallback->SetOperationResult(NExtract::NOperationResult::kOK))
         continue;
       }
       currentItemSize = ref.TotalSize;
@@ -312,7 +383,7 @@ STDMETHODIMP CHandler::Extract(const UInt32 *indices, UInt32 numItems,
     if (!testMode && !realOutStream)
       continue;
 
-    RINOK(extractCallback->PrepareOperation(askMode));
+    RINOK(extractCallback->PrepareOperation(askMode))
 
     bool isOK = true;
     if (index < (UInt32)_archive.Refs.Size())
@@ -321,11 +392,13 @@ STDMETHODIMP CHandler::Extract(const UInt32 *indices, UInt32 numItems,
       UInt64 offset = 0;
       for (UInt32 e = 0; e < ref.NumExtents; e++)
       {
-        lps->InSize = lps->OutSize = currentTotalSize + offset;
         const CDir &item2 = ref.Dir->_subItems[ref.Index + e];
-        RINOK(_stream->Seek((UInt64)item2.ExtentLocation * kBlockSize, STREAM_SEEK_SET, NULL));
+        if (item2.Size == 0)
+          continue;
+        lps->InSize = lps->OutSize = currentTotalSize + offset;
+        RINOK(InStream_SeekSet(_stream, (UInt64)item2.ExtentLocation * kBlockSize))
         streamSpec->Init(item2.Size);
-        RINOK(copyCoder->Code(inStream, realOutStream, NULL, NULL, progress));
+        RINOK(copyCoder->Code(inStream, realOutStream, NULL, NULL, progress))
         if (copyCoderSpec->TotalSize != item2.Size)
         {
           isOK = false;
@@ -336,25 +409,25 @@ STDMETHODIMP CHandler::Extract(const UInt32 *indices, UInt32 numItems,
     }
     else
     {
-      RINOK(_stream->Seek((UInt64)blockIndex * kBlockSize, STREAM_SEEK_SET, NULL));
+      RINOK(InStream_SeekSet(_stream, (UInt64)blockIndex * kBlockSize))
       streamSpec->Init(currentItemSize);
-      RINOK(copyCoder->Code(inStream, realOutStream, NULL, NULL, progress));
+      RINOK(copyCoder->Code(inStream, realOutStream, NULL, NULL, progress))
       if (copyCoderSpec->TotalSize != currentItemSize)
         isOK = false;
     }
     realOutStream.Release();
     RINOK(extractCallback->SetOperationResult(isOK ?
         NExtract::NOperationResult::kOK:
-        NExtract::NOperationResult::kDataError));
+        NExtract::NOperationResult::kDataError))
   }
   return S_OK;
   COM_TRY_END
 }
 
-STDMETHODIMP CHandler::GetStream(UInt32 index, ISequentialInStream **stream)
+Z7_COM7F_IMF(CHandler::GetStream(UInt32 index, ISequentialInStream **stream))
 {
   COM_TRY_BEGIN
-  *stream = 0;
+  *stream = NULL;
   UInt64 blockIndex;
   UInt64 currentItemSize;
   

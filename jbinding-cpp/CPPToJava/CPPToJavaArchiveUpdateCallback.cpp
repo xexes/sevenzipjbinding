@@ -8,7 +8,6 @@
 #include "CodecTools.h"
 
 #include "UserTrace.h"
-
 void CPPToJavaArchiveUpdateCallback::freeOutItem(JNIEnvInstance & jniEnvInstance) {
     if (_outItem) {
         jniEnvInstance->DeleteGlobalRef(_outItem);
@@ -60,7 +59,7 @@ LONG CPPToJavaArchiveUpdateCallback::getOrUpdateOutItem(JNIEnvInstance & jniEnvI
 STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetUpdateItemInfo(UInt32 index, Int32 *newData, /*1 - new data, 0 - old data */
 Int32 *newProperties, /* 1 - new properties, 0 - old properties */
 UInt32 *indexInArchive /* -1 if there is no in archive, or if doesn't matter */
-) {
+) noexcept {
     TRACE_OBJECT_CALL("GetUpdateItemInfo");
 
     JNIEnvInstance jniEnvInstance(_jbindingSession);
@@ -155,7 +154,7 @@ UInt32 *indexInArchive /* -1 if there is no in archive, or if doesn't matter */
 }
 
 STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID propID,
-                                                         PROPVARIANT *value) {
+                                                         PROPVARIANT *value) noexcept {
 
 //	#define JNI_TYPE_STRING                              jstring
 //	#define JNI_TYPE_INTEGER                             jobject
@@ -165,35 +164,35 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
 //	#define JNI_TYPE_LONG                                jlong
 
 	#define ASSIGN_VALUE_TO_C_PROP_VARIANT_STRING                                                                   \
-        cPropVariant = UString(FromJChar(jniEnvInstance, (jstring)value));
+        cPropVariant = UString(FromJChar(jniEnvInstance, (jstring)jvalue));
 
 	#define ASSIGN_VALUE_TO_C_PROP_VARIANT_INTEGER                                                                  \
-        cPropVariant = (Int32)jni::Integer::intValue(jniEnvInstance, value);                                        \
+        cPropVariant = (Int32)jni::Integer::intValue(jniEnvInstance, jvalue);                                       \
         if (jniEnvInstance.exceptionCheck()) {                                                                      \
             return S_FALSE;                                                                                         \
         }
 
     #define ASSIGN_VALUE_TO_C_PROP_VARIANT_BOOLEAN                                                                  \
-        cPropVariant = (bool)jni::Boolean::booleanValue(jniEnvInstance, value);                                     \
+        cPropVariant = (bool)jni::Boolean::booleanValue(jniEnvInstance, jvalue);                                    \
         if (jniEnvInstance.exceptionCheck()) {                                                                      \
             return S_FALSE;                                                                                         \
         }
 
     #define ASSIGN_VALUE_TO_C_PROP_VARIANT_LONG                                                                     \
-        cPropVariant = (UInt64)jni::Long::longValue(jniEnvInstance, value);                                         \
+        cPropVariant = (UInt64)jni::Long::longValue(jniEnvInstance, jvalue);                                        \
         if (jniEnvInstance.exceptionCheck()) {                                                                      \
             return S_FALSE;                                                                                         \
         }                                                                                                           \
 
     #define ASSIGN_VALUE_TO_C_PROP_VARIANT_UINTEGER                                                                 \
-        cPropVariant = (UInt32)jni::Integer::intValue(jniEnvInstance, value);                                       \
+        cPropVariant = (UInt32)jni::Integer::intValue(jniEnvInstance, jvalue);                                      \
         if (jniEnvInstance.exceptionCheck()) {                                                                      \
             return S_FALSE;                                                                                         \
         }                                                                                                           \
 
 	#define ASSIGN_VALUE_TO_C_PROP_VARIANT_DATE                                                                     \
         FILETIME filetime;                                                                                          \
-        if (!ObjectToFILETIME(jniEnvInstance, value, filetime)) {                                                   \
+        if (!ObjectToFILETIME(jniEnvInstance, jvalue, filetime)) {                                                  \
             return S_FALSE;                                                                                         \
         }                                                                                                           \
         cPropVariant = filetime;                                                                                    \
@@ -204,10 +203,14 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
             userTrace(jniEnvInstance, _outArchive,                                                                  \
                 UString(L"Get property '" #fieldName "' (index: ") << index << L")");                               \
         }                                                                                                           \
-        jobject value = jni::OutItem::fieldName##_Get(jniEnvInstance, _outItem);                                    \
-	    if (value) {                                                                                                \
+        jobject jvalue = jni::OutItem::fieldName##_Get(jniEnvInstance, _outItem);                                   \
+	    if (jvalue) {                                                                                                \
             ASSIGN_VALUE_TO_C_PROP_VARIANT_##TYPE                                                                   \
-            jniEnvInstance->DeleteLocalRef(value);                                                                  \
+            jniEnvInstance->DeleteLocalRef(jvalue);                                                                 \
+        } else {                                                                                                    \
+            /* Field is null in Java - return VT_EMPTY for missing property */                                      \
+            value->vt = VT_EMPTY;                                                                                   \
+            return S_OK;                                                                                            \
         }                                                                                                           \
 		break;                                                                                                      \
 	}
@@ -231,7 +234,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
     }
 
     if (propID == kpidTimeType) {
-        cPropVariant = NFileTimeType::kWindows;
+        cPropVariant = (UInt32)NFileTimeType::kWindows;
         cPropVariant.Detach(value);
         return S_OK;
     }
@@ -241,14 +244,56 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
         return result;
     }
 
-    switch (propID) {
+   switch (propID) {
     case kpidSize:               GET_ATTRIBUTE(LONG,     dataSize)
 
     case kpidAttrib:             GET_ATTRIBUTE(UINTEGER, propertyAttributes)
     case kpidPosixAttrib:        GET_ATTRIBUTE(UINTEGER, propertyPosixAttributes)
     case kpidPath:               GET_ATTRIBUTE(STRING,   propertyPath)
+    case kpidName: {
+        // For tar and other formats, kpidName is often requested. 
+        // Return the filename (without path) from propertyPath.
+        if (isUserTraceEnabled(jniEnvInstance, _outArchive)) {
+            userTrace(jniEnvInstance, _outArchive,
+                UString(L"Get property 'kpidName' (index: ") << index << L")");
+        }
+        jobject pathValue = jni::OutItem::propertyPath_Get(jniEnvInstance, _outItem);
+        if (pathValue) {
+            jstring pathString = (jstring)pathValue;
+            const jchar* pathChars = jniEnvInstance->GetStringChars(pathString, NULL);
+            size_t pathLen = jniEnvInstance->GetStringLength(pathString);
+            
+            // Find last slash to extract filename
+            int lastSlash = -1;
+            for (int i = 0; i < (int)pathLen; i++) {
+                if (pathChars[i] == '/' || pathChars[i] == '\\') {
+                    lastSlash = i;
+                }
+            }
+            
+            if (lastSlash >= 0 && lastSlash < (int)pathLen - 1) {
+                // Extract substring after last slash
+                jstring nameString = jniEnvInstance->NewString(pathChars + lastSlash + 1, pathLen - lastSlash - 1);
+                cPropVariant = UString(FromJChar(jniEnvInstance, nameString));
+                jniEnvInstance->DeleteLocalRef(nameString);
+            } else if (lastSlash < 0) {
+                // No slash - the whole path is the filename
+                cPropVariant = UString(FromJChar(jniEnvInstance, pathString));
+            }
+            jniEnvInstance->ReleaseStringChars(pathString, pathChars);
+            jniEnvInstance->DeleteLocalRef(pathValue);
+        } else {
+            // propertyPath is null - return VT_EMPTY
+            value->vt = VT_EMPTY;
+            return S_OK;
+        }
+        break;
+    }
     case kpidIsDir:              GET_ATTRIBUTE(BOOLEAN,  propertyIsDir)
     case kpidIsAnti:             GET_ATTRIBUTE(BOOLEAN,  propertyIsAnti)
+    case kpidComment:            GET_ATTRIBUTE(STRING,   propertyComment)
+    case kpidEncrypted:          GET_ATTRIBUTE(BOOLEAN,  propertyEncrypted)
+    case kpidCRC:                GET_ATTRIBUTE(UINTEGER, propertyCRC)
     case kpidMTime:              GET_ATTRIBUTE(DATE,     propertyLastModificationTime)
     case kpidATime:              GET_ATTRIBUTE(DATE,     propertyLastAccessTime)
     case kpidCTime:              GET_ATTRIBUTE(DATE,     propertyCreationTime)
@@ -257,110 +302,12 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
     case kpidSymLink:            GET_ATTRIBUTE(STRING,   propertySymLink)
     case kpidHardLink:           GET_ATTRIBUTE(STRING,   propertyHardLink)
 
-    case kpidTimeType: // Should be processed by now
+   case kpidTimeType: // Should be processed by now
     default:
-#ifdef _DEBUG
-
-        printf("kpidMainSubfile: %i\n", (int) kpidMainSubfile);
-        printf("kpidHandlerItemIndex: %i\n", (int) kpidHandlerItemIndex);
-        printf("kpidPath: %i\n", (int) kpidPath);
-        printf("kpidName: %i\n", (int) kpidName);
-        printf("kpidExtension: %i\n", (int) kpidExtension);
-        printf("kpidIsDir: %i\n", (int) kpidIsDir);
-        printf("kpidSize: %i\n", (int) kpidSize);
-        printf("kpidPackSize: %i\n", (int) kpidPackSize);
-        printf("kpidAttrib: %i\n", (int) kpidAttrib);
-        printf("kpidCTime: %i\n", (int) kpidCTime);
-        printf("kpidATime: %i\n", (int) kpidATime);
-        printf("kpidMTime: %i\n", (int) kpidMTime);
-        printf("kpidSolid: %i\n", (int) kpidSolid);
-        printf("kpidCommented: %i\n", (int) kpidCommented);
-        printf("kpidEncrypted: %i\n", (int) kpidEncrypted);
-        printf("kpidSplitBefore: %i\n", (int) kpidSplitBefore);
-        printf("kpidSplitAfter: %i\n", (int) kpidSplitAfter);
-        printf("kpidDictionarySize: %i\n", (int) kpidDictionarySize);
-        printf("kpidCRC: %i\n", (int) kpidCRC);
-        printf("kpidType: %i\n", (int) kpidType);
-        printf("kpidIsAnti: %i\n", (int) kpidIsAnti);
-        printf("kpidMethod: %i\n", (int) kpidMethod);
-        printf("kpidHostOS: %i\n", (int) kpidHostOS);
-        printf("kpidFileSystem: %i\n", (int) kpidFileSystem);
-        printf("kpidUser: %i\n", (int) kpidUser);
-        printf("kpidGroup: %i\n", (int) kpidGroup);
-        printf("kpidBlock: %i\n", (int) kpidBlock);
-        printf("kpidComment: %i\n", (int) kpidComment);
-        printf("kpidPosition: %i\n", (int) kpidPosition);
-        printf("kpidPrefix: %i\n", (int) kpidPrefix);
-        printf("kpidNumSubDirs: %i\n", (int) kpidNumSubDirs);
-        printf("kpidNumSubFiles: %i\n", (int) kpidNumSubFiles);
-        printf("kpidUnpackVer: %i\n", (int) kpidUnpackVer);
-        printf("kpidVolume: %i\n", (int) kpidVolume);
-        printf("kpidIsVolume: %i\n", (int) kpidIsVolume);
-        printf("kpidOffset: %i\n", (int) kpidOffset);
-        printf("kpidLinks: %i\n", (int) kpidLinks);
-        printf("kpidNumBlocks: %i\n", (int) kpidNumBlocks);
-        printf("kpidNumVolumes: %i\n", (int) kpidNumVolumes);
-        printf("kpidTimeType: %i\n", (int) kpidTimeType);
-        printf("kpidBit64: %i\n", (int) kpidBit64);
-        printf("kpidBigEndian: %i\n", (int) kpidBigEndian);
-        printf("kpidCpu: %i\n", (int) kpidCpu);
-        printf("kpidPhySize: %i\n", (int) kpidPhySize);
-        printf("kpidHeadersSize: %i\n", (int) kpidHeadersSize);
-        printf("kpidChecksum: %i\n", (int) kpidChecksum);
-        printf("kpidCharacts: %i\n", (int) kpidCharacts);
-        printf("kpidVa: %i\n", (int) kpidVa);
-        printf("kpidId: %i\n", (int) kpidId);
-        printf("kpidShortName: %i\n", (int) kpidShortName);
-        printf("kpidCreatorApp: %i\n", (int) kpidCreatorApp);
-        printf("kpidSectorSize: %i\n", (int) kpidSectorSize);
-        printf("kpidPosixAttrib: %i\n", (int) kpidPosixAttrib);
-        printf("kpidSymLink: %i\n", (int) kpidSymLink);
-        printf("kpidError: %i\n", (int) kpidError);
-        printf("kpidTotalSize: %i\n", (int) kpidTotalSize);
-        printf("kpidFreeSpace: %i\n", (int) kpidFreeSpace);
-        printf("kpidClusterSize: %i\n", (int) kpidClusterSize);
-        printf("kpidVolumeName: %i\n", (int) kpidVolumeName);
-        printf("kpidLocalName: %i\n", (int) kpidLocalName);
-        printf("kpidProvider: %i\n", (int) kpidProvider);
-        printf("kpidNtSecure: %i\n", (int) kpidNtSecure);
-        printf("kpidIsAltStream: %i\n", (int) kpidIsAltStream);
-        printf("kpidIsAux: %i\n", (int) kpidIsAux);
-        printf("kpidIsDeleted: %i\n", (int) kpidIsDeleted);
-        printf("kpidIsTree: %i\n", (int) kpidIsTree);
-        printf("kpidSha1: %i\n", (int) kpidSha1);
-        printf("kpidSha256: %i\n", (int) kpidSha256);
-        printf("kpidErrorType: %i\n", (int) kpidErrorType);
-        printf("kpidNumErrors: %i\n", (int) kpidNumErrors);
-        printf("kpidErrorFlags: %i\n", (int) kpidErrorFlags);
-        printf("kpidWarningFlags: %i\n", (int) kpidWarningFlags);
-        printf("kpidWarning: %i\n", (int) kpidWarning);
-        printf("kpidNumStreams: %i\n", (int) kpidNumStreams);
-        printf("kpidNumAltStreams: %i\n", (int) kpidNumAltStreams);
-        printf("kpidAltStreamsSize: %i\n", (int) kpidAltStreamsSize);
-        printf("kpidVirtualSize: %i\n", (int) kpidVirtualSize);
-        printf("kpidUnpackSize: %i\n", (int) kpidUnpackSize);
-        printf("kpidTotalPhySize: %i\n", (int) kpidTotalPhySize);
-        printf("kpidVolumeIndex: %i\n", (int) kpidVolumeIndex);
-        printf("kpidSubType: %i\n", (int) kpidSubType);
-        printf("kpidShortComment: %i\n", (int) kpidShortComment);
-        printf("kpidCodePage: %i\n", (int) kpidCodePage);
-        printf("kpidIsNotArcType: %i\n", (int) kpidIsNotArcType);
-        printf("kpidPhySizeCantBeDetected: %i\n", (int) kpidPhySizeCantBeDetected);
-        printf("kpidZerosTailIsAllowed: %i\n", (int) kpidZerosTailIsAllowed);
-        printf("kpidTailSize: %i\n", (int) kpidTailSize);
-        printf("kpidEmbeddedStubSize: %i\n", (int) kpidEmbeddedStubSize);
-        printf("kpidNtReparse: %i\n", (int) kpidNtReparse);
-        printf("kpidHardLink: %i\n", (int) kpidHardLink);
-        printf("kpidINode: %i\n", (int) kpidINode);
-        printf("kpidStreamId: %i\n", (int) kpidStreamId);
-        printf("kpidReadOnly: %i\n", (int) kpidReadOnly);
-        printf("kpidOutNam: %i\n", (int) kpidOutName);
-        printf("kpidCopyLink: %i\n", (int) kpidCopyLink);
-
-#endif // _DEBUG
-
-    	jniEnvInstance.reportError("CPPToJavaArchiveUpdateCallback::GetProperty() : unexpected propID=%u", propID);
-    	return S_FALSE;
+        // For unknown/unsupported properties, return VT_EMPTY instead of VT_NULL.
+        // 7-zip handlers (especially tar) expect VT_EMPTY for missing properties.
+        value->vt = VT_EMPTY;
+        return S_OK;
     }
 
     cPropVariant.Detach(value);
@@ -368,7 +315,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
     return S_OK;
 }
 
-STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetStream(UInt32 index, ISequentialInStream **inStream) {
+STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetStream(UInt32 index, ISequentialInStream **inStream) noexcept {
     TRACE_OBJECT_CALL("GetStream");
     JNIEnvInstance jniEnvInstance(_jbindingSession);
 
@@ -408,7 +355,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetStream(UInt32 index, ISequential
     return S_OK;
 }
 
-STDMETHODIMP CPPToJavaArchiveUpdateCallback::SetOperationResult(Int32 operationResult) {
+STDMETHODIMP CPPToJavaArchiveUpdateCallback::SetOperationResult(Int32 operationResult) noexcept {
     TRACE_OBJECT_CALL("SetOperationResult");
     JNIEnvInstance jniEnvInstance(_jbindingSession);
 
@@ -423,7 +370,8 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::SetOperationResult(Int32 operationR
     return S_OK;
 }
 
-STDMETHODIMP CPPToJavaArchiveUpdateCallback::CryptoGetTextPassword(BSTR *password) {
+STDMETHODIMP CPPToJavaArchiveUpdateCallback::CryptoGetTextPassword(BSTR *password) noexcept {
+    TRACE_OBJECT_CALL("CryptoGetTextPassword");
 	Int32 passwordIsDefined;
 	CryptoGetTextPassword2(&passwordIsDefined, password);
 	if (!passwordIsDefined) {
@@ -432,9 +380,19 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::CryptoGetTextPassword(BSTR *passwor
     return S_OK;
 }
 
-STDMETHODIMP CPPToJavaArchiveUpdateCallback::CryptoGetTextPassword2(Int32 *passwordIsDefined, BSTR *password) {
+STDMETHODIMP CPPToJavaArchiveUpdateCallback::CryptoGetTextPassword2(Int32 *passwordIsDefined, BSTR *password) noexcept {
     TRACE_OBJECT_CALL("CryptoGetTextPassword");
     JNIEnvInstance jniEnvInstance(_jbindingSession);
+
+    if (!_isICryptoGetTextPasswordImplemented) {
+        if (passwordIsDefined) {
+            *passwordIsDefined = false;
+        }
+        if (password) {
+            *password = NULL;
+        }
+        return S_OK;
+    }
 
 	if (!_cryptoGetTextPassword) {
 		_cryptoGetTextPassword = jni::ICryptoGetTextPassword::_getInstanceFromObject(jniEnvInstance, _javaImplementation);

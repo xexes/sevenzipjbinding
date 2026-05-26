@@ -3,6 +3,7 @@ COMMON_OBJS = \
   $O\CrcReg.obj \
   $O\DynLimBuf.obj \
   $O\IntToString.obj \
+  $O\LzFindPrepare.obj \
   $O\MyMap.obj \
   $O\MyString.obj \
   $O\MyVector.obj \
@@ -14,6 +15,7 @@ COMMON_OBJS = \
   $O\StringToInt.obj \
   $O\UTFConvert.obj \
   $O\Wildcard.obj \
+  $O\XzCrc64Init.obj \
   $O\XzCrc64Reg.obj \
 
 WIN_OBJS = \
@@ -22,6 +24,7 @@ WIN_OBJS = \
   $O\FileIO.obj \
   $O\FileName.obj \
   $O\PropVariant.obj \
+  $O\PropVariantConv.obj \
   $O\PropVariantUtils.obj \
   $O\Synchronization.obj \
   $O\System.obj \
@@ -51,9 +54,11 @@ WIN_OBJS = \
   $O\VirtThread.obj \
 
 AR_OBJS = \
+  $O\ApfsHandler.obj \
   $O\ApmHandler.obj \
   $O\ArHandler.obj \
   $O\ArjHandler.obj \
+  $O\Base64Handler.obj \
   $O\Bz2Handler.obj \
   $O\ComHandler.obj \
   $O\CpioHandler.obj \
@@ -69,6 +74,7 @@ AR_OBJS = \
   $O\HandlerCont.obj \
   $O\HfsHandler.obj \
   $O\IhexHandler.obj \
+  $O\LpHandler.obj \
   $O\LzhHandler.obj \
   $O\LzmaHandler.obj \
   $O\MachoHandler.obj \
@@ -80,12 +86,14 @@ AR_OBJS = \
   $O\PpmdHandler.obj \
   $O\QcowHandler.obj \
   $O\RpmHandler.obj \
+  $O\SparseHandler.obj \
   $O\SplitHandler.obj \
   $O\SquashfsHandler.obj \
   $O\SwfHandler.obj \
   $O\UefiHandler.obj \
   $O\VdiHandler.obj \
   $O\VhdHandler.obj \
+  $O\VhdxHandler.obj \
   $O\VmdkHandler.obj \
   $O\XarHandler.obj \
   $O\XzHandler.obj \
@@ -102,7 +110,6 @@ AR_COMMON_OBJS = \
   $O\OutStreamWithSha1.obj \
   $O\HandlerOut.obj \
   $O\ParseProperties.obj \
-
 
 7Z_OBJS = \
   $O\7zCompressionMode.obj \
@@ -197,7 +204,7 @@ COMPRESS_OBJS = \
   $O\DeflateRegister.obj \
   $O\DeltaFilter.obj \
   $O\ImplodeDecoder.obj \
-  $O\ImplodeHuffmanDecoder.obj \
+  $O\LzfseDecoder.obj \
   $O\LzhDecoder.obj \
   $O\Lzma2Decoder.obj \
   $O\Lzma2Encoder.obj \
@@ -220,10 +227,12 @@ COMPRESS_OBJS = \
   $O\Rar5Decoder.obj \
   $O\RarCodecsRegister.obj \
   $O\ShrinkDecoder.obj \
+  $O\XpressDecoder.obj \
+  $O\XzDecoder.obj \
+  $O\XzEncoder.obj \
   $O\ZlibDecoder.obj \
   $O\ZlibEncoder.obj \
   $O\ZDecoder.obj \
-  $O\XPressDecoder.obj \
 
 CRYPTO_OBJS = \
   $O\7zAes.obj \
@@ -240,7 +249,6 @@ CRYPTO_OBJS = \
   $O\WzAes.obj \
   $O\ZipCrypto.obj \
   $O\ZipStrong.obj \
-
 
 C_OBJS = \
   $O\7zBuf2.obj \
@@ -259,19 +267,21 @@ C_OBJS = \
   $O\LzFind.obj \
   $O\LzFindMt.obj \
   $O\Lzma2Dec.obj \
+  $O\Lzma2DecMt.obj \
   $O\Lzma2Enc.obj \
   $O\LzmaDec.obj \
   $O\LzmaEnc.obj \
   $O\MtCoder.obj \
+  $O\MtDec.obj \
   $O\Ppmd7.obj \
   $O\Ppmd7Dec.obj \
+  $O\Ppmd7aDec.obj \
   $O\Ppmd7Enc.obj \
   $O\Ppmd8.obj \
   $O\Ppmd8Dec.obj \
   $O\Ppmd8Enc.obj \
-  $O\Sha1.obj \
-  $O\Sha256.obj \
   $O\Sort.obj \
+  $O\SwapBytes.obj \
   $O\Threads.obj \
   $O\Xz.obj \
   $O\XzDec.obj \
@@ -281,3 +291,7 @@ C_OBJS = \
 !include "../../Aes.mak"
 !include "../../Crc.mak"
 !include "../../Crc64.mak"
+!include "../../LzFindOpt.mak"
+!include "../../LzmaDec.mak"
+!include "../../Sha1.mak"
+!include "../../Sha256.mak"

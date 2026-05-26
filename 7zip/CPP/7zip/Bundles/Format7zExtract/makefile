@@ -1,7 +1,7 @@
 PROG = 7zxa.dll
 DEF_FILE = ../../Archive/Archive2.def
 CFLAGS = $(CFLAGS) \
-  -DEXTRACT_ONLY \
+  -DZ7_EXTRACT_ONLY \
 
 COMMON_OBJS = \
   $O\CRC.obj \
@@ -42,6 +42,7 @@ AR_OBJS = \
 
 AR_COMMON_OBJS = \
   $O\CoderMixer2.obj \
+  $O\HandlerOut.obj \
   $O\ItemNameUtils.obj \
   $O\OutStreamWithCRC.obj \
   $O\ParseProperties.obj \
@@ -90,6 +91,7 @@ CRYPTO_OBJS = \
   $O\MyAesReg.obj \
 
 C_OBJS = \
+  $O\7zStream.obj \
   $O\Alloc.obj \
   $O\Bcj2.obj \
   $O\Bra.obj \
@@ -98,13 +100,17 @@ C_OBJS = \
   $O\CpuArch.obj \
   $O\Delta.obj \
   $O\Lzma2Dec.obj \
+  $O\Lzma2DecMt.obj \
   $O\LzmaDec.obj \
+  $O\MtDec.obj \
   $O\Ppmd7.obj \
   $O\Ppmd7Dec.obj \
-  $O\Sha256.obj \
+  $O\SwapBytes.obj \
   $O\Threads.obj \
 
 !include "../../Aes.mak"
 !include "../../Crc.mak"
+!include "../../LzmaDec.mak"
+!include "../../Sha256.mak"
 
 !include "../../7zip.mak"

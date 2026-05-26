@@ -1,19 +1,31 @@
 /* 7zipInstall.c - 7-Zip Installer
-2015-12-09 : Igor Pavlov : Public domain */
+2023-04-04 : Igor Pavlov : Public domain */
 
 #include "Precomp.h"
 
 #define SZ_ERROR_ABORT 100
 
-#ifdef _MSC_VER
+#include "../../7zWindows.h"
+
+#if defined(_MSC_VER) && _MSC_VER < 1600
 #pragma warning(disable : 4201) // nonstandard extension used : nameless struct/union
 #endif
 
-#include <windows.h>
+#ifdef Z7_OLD_WIN_SDK
+struct IShellView;
+#define SHFOLDERAPI  EXTERN_C DECLSPEC_IMPORT HRESULT STDAPICALLTYPE
+SHFOLDERAPI SHGetFolderPathW(HWND hwnd, int csidl, HANDLE hToken, DWORD dwFlags, LPWSTR pszPath);
+#define BIF_NEWDIALOGSTYLE     0x0040   // Use the new dialog layout with the ability to resize
+typedef enum {
+    SHGFP_TYPE_CURRENT  = 0,   // current value for user, verify it exists
+    SHGFP_TYPE_DEFAULT  = 1,   // default value, may not exist
+} SHGFP_TYPE;
+#endif
+#if defined(__MINGW32__) || defined(__MINGW64__)
+#include <shlobj.h>
+#else
 #include <ShlObj.h>
-
-#define LLL_(quote) L##quote
-#define LLL(quote) LLL_(quote)
+#endif
 
 #include "../../7z.h"
 #include "../../7zAlloc.h"
@@ -21,42 +33,86 @@
 #include "../../7zFile.h"
 #include "../../7zVersion.h"
 #include "../../CpuArch.h"
+#include "../../DllSecur.h"
 
 #include "resource.h"
 
-static const WCHAR *k_7zip = L"7-Zip";
+#if (defined(__GNUC__) && (__GNUC__ >= 8)) || defined(__clang__)
+  // #pragma GCC diagnostic ignored "-Wcast-function-type"
+#endif
 
-static const WCHAR *k_Reg_Software_7zip = L"Software\\7-Zip";
+#if defined(__clang__) || defined(__GNUC__)
+typedef void (*Z7_voidFunction)(void);
+#define MY_CAST_FUNC (Z7_voidFunction)
+#elif defined(_MSC_VER) && _MSC_VER > 1920
+#define MY_CAST_FUNC  (void *)
+// #pragma warning(disable : 4191) // 'type cast': unsafe conversion from 'FARPROC' to 'void (__cdecl *)()'
+#else
+#define MY_CAST_FUNC
+#endif
 
-// #define _64BIT_INSTALLER 1
+#define LLL_(quote) L##quote
+#define LLL(quote) LLL_(quote)
+
+#define wcscat lstrcatW
+#define wcslen (size_t)lstrlenW
+#define wcscpy lstrcpyW
+// wcsncpy() and lstrcpynW() work differently. We don't use them.
+
+#define kInputBufSize ((size_t)1 << 18)
+
+#define Z7_7ZIP_CUR_VER ((MY_VER_MAJOR << 16) | MY_VER_MINOR)
+#define Z7_7ZIP_DLL_VER_COMPAT ((16 << 16) | 3)
+
+static LPCSTR const k_7zip = "7-Zip";
+
+static LPCWSTR const k_Reg_Software_7zip = L"Software\\7-Zip";
+
+// #define Z7_64BIT_INSTALLER 1
 
 #ifdef _WIN64
-  #define _64BIT_INSTALLER 1
+  #define Z7_64BIT_INSTALLER 1
 #endif
 
 #define k_7zip_with_Ver_base L"7-Zip " LLL(MY_VERSION)
 
-#ifdef _64BIT_INSTALLER
-  #define k_7zip_with_Ver k_7zip_with_Ver_base L" (x64)"
+#ifdef Z7_64BIT_INSTALLER
+
+  // #define USE_7ZIP_32_DLL
+
+  #if defined(_M_ARM64) || defined(_M_ARM)
+    #define k_Postfix  L" (arm64)"
+  #else
+    #define k_Postfix  L" (x64)"
+    #define USE_7ZIP_32_DLL
+  #endif
 #else
-  #define k_7zip_with_Ver k_7zip_with_Ver_base
+  #if defined(_M_ARM64) || defined(_M_ARM)
+    #define k_Postfix  L" (arm)"
+  #else
+    // #define k_Postfix  L" (x86)"
+    #define k_Postfix
+  #endif
 #endif
 
-static const WCHAR *k_7zip_with_Ver_str = k_7zip_with_Ver;
+#define k_7zip_with_Ver  k_7zip_with_Ver_base k_Postfix
 
-static const WCHAR *k_7zip_Setup = k_7zip_with_Ver L" Setup";
 
-static const WCHAR *k_Reg_Path = L"Path";
+static LPCWSTR const k_7zip_with_Ver_str = k_7zip_with_Ver;
 
-static const WCHAR *k_Reg_Path32 = L"Path"
-  #ifdef _64BIT_INSTALLER
+static LPCWSTR const k_7zip_Setup = k_7zip_with_Ver L" Setup";
+
+static LPCWSTR const k_Reg_Path = L"Path";
+
+static LPCWSTR const k_Reg_Path32 = L"Path"
+  #ifdef Z7_64BIT_INSTALLER
     L"64"
   #else
     L"32"
   #endif
     ;
  
-#if defined(_64BIT_INSTALLER) && !defined(_WIN64)
+#if defined(Z7_64BIT_INSTALLER) && !defined(_WIN64)
   #define k_Reg_WOW_Flag KEY_WOW64_64KEY
 #else
   #define k_Reg_WOW_Flag 0
@@ -70,14 +126,14 @@ static const WCHAR *k_Reg_Path32 = L"Path"
 
 #define k_7zip_CLSID L"{23170F69-40C1-278A-1000-000100020000}"
 
-static const WCHAR *k_Reg_CLSID_7zip = L"CLSID\\" k_7zip_CLSID;
-static const WCHAR *k_Reg_CLSID_7zip_Inproc = L"CLSID\\" k_7zip_CLSID L"\\InprocServer32";
+static LPCWSTR const k_Reg_CLSID_7zip = L"CLSID\\" k_7zip_CLSID;
+static LPCWSTR const k_Reg_CLSID_7zip_Inproc = L"CLSID\\" k_7zip_CLSID L"\\InprocServer32";
 
 #define g_AllUsers True
 
-static Bool g_Install_was_Pressed;
-static Bool g_Finished;
-static Bool g_SilentMode;
+static BoolInt g_Install_was_Pressed;
+static BoolInt g_Finished;
+static BoolInt g_SilentMode;
 
 static HWND g_HWND;
 static HWND g_Path_HWND;
@@ -86,33 +142,123 @@ static HWND g_Progress_HWND;
 
 static DWORD g_TotalSize;
 
+static WCHAR cmd[MAX_PATH + 4];
+static WCHAR cmdError[MAX_PATH + 4];
 static WCHAR path[MAX_PATH * 2 + 40];
 
 
-#define MAKE_CHAR_UPPER(c) ((((c) >= 'a' && (c) <= 'z') ? (c) -= 0x20 : (c)))
 
-static void PrintErrorMessage(const char *s)
+static void CpyAscii(wchar_t *dest, const char *s)
 {
-  WCHAR s2[256 + 4];
-  unsigned i;
-  for (i = 0; i < 256; i++)
+  for (;;)
   {
-    Byte b = s[i];
+    Byte b = (Byte)*s++;
+    *dest++ = b;
     if (b == 0)
-      break;
-    s2[i] = b;
+      return;
   }
-  s2[i] = 0;
-  MessageBoxW(g_HWND, s2, k_7zip_with_Ver_str, MB_ICONERROR);
 }
 
-static WRes MyCreateDir(const WCHAR *name)
+static void CatAscii(wchar_t *dest, const char *s)
+{
+  dest += wcslen(dest);
+  CpyAscii(dest, s);
+}
+
+static void PrintErrorMessage(const char *s1, const wchar_t *s2)
+{
+  WCHAR m[MAX_PATH + 512];
+  m[0] = 0;
+  CatAscii(m, "ERROR:");
+  if (s1)
+  {
+    CatAscii(m, "\n");
+    CatAscii(m, s1);
+  }
+  if (s2)
+  {
+    CatAscii(m, "\n");
+    wcscat(m, s2);
+  }
+  MessageBoxW(g_HWND, m, k_7zip_with_Ver_str, MB_ICONERROR | MB_OK);
+}
+
+
+typedef DWORD (WINAPI * Func_GetFileVersionInfoSizeW)(LPCWSTR lptstrFilename, LPDWORD lpdwHandle);
+typedef BOOL (WINAPI * Func_GetFileVersionInfoW)(LPCWSTR lptstrFilename, DWORD dwHandle, DWORD dwLen, LPVOID lpData);
+typedef BOOL (WINAPI * Func_VerQueryValueW)(const LPVOID pBlock, LPWSTR lpSubBlock, LPVOID * lplpBuffer, PUINT puLen);
+
+static HMODULE g_version_dll_hModule;
+
+static DWORD GetFileVersion(LPCWSTR s)
+{
+  DWORD size = 0;
+  void *vi = NULL;
+  DWORD version = 0;
+
+  Func_GetFileVersionInfoSizeW my_GetFileVersionInfoSizeW;
+  Func_GetFileVersionInfoW my_GetFileVersionInfoW;
+  Func_VerQueryValueW my_VerQueryValueW;
+
+  if (!g_version_dll_hModule)
+  {
+    wchar_t buf[MAX_PATH + 100];
+    {
+      unsigned len = GetSystemDirectoryW(buf, MAX_PATH + 2);
+      if (len == 0 || len > MAX_PATH)
+        return 0;
+    }
+    {
+      unsigned pos = (unsigned)lstrlenW(buf);
+      if (buf[pos - 1] != '\\')
+        buf[pos++] = '\\';
+      lstrcpyW(buf + pos, L"version.dll");
+    }
+    g_version_dll_hModule = LoadLibraryW(buf);
+    if (!g_version_dll_hModule)
+      return 0;
+  }
+
+  my_GetFileVersionInfoSizeW = (Func_GetFileVersionInfoSizeW) MY_CAST_FUNC GetProcAddress(g_version_dll_hModule,
+    "GetFileVersionInfoSizeW");
+  my_GetFileVersionInfoW = (Func_GetFileVersionInfoW) MY_CAST_FUNC GetProcAddress(g_version_dll_hModule,
+    "GetFileVersionInfoW");
+  my_VerQueryValueW = (Func_VerQueryValueW) MY_CAST_FUNC GetProcAddress(g_version_dll_hModule,
+    "VerQueryValueW");
+
+  if (!my_GetFileVersionInfoSizeW
+     || !my_GetFileVersionInfoW
+     || !my_VerQueryValueW)
+    return 0;
+  
+  size = my_GetFileVersionInfoSizeW(s, NULL);
+  if (size == 0)
+    return 0;
+  
+  vi = malloc(size);
+  if (!vi)
+    return 0;
+  
+  if (my_GetFileVersionInfoW(s, 0, size, vi))
+  {
+    VS_FIXEDFILEINFO *fi = NULL;
+    UINT fiLen = 0;
+    if (my_VerQueryValueW(vi, L"\\", (LPVOID *)&fi, &fiLen))
+      version = fi->dwFileVersionMS;
+  }
+  
+  free(vi);
+  return version;
+}
+
+
+static WRes MyCreateDir(LPCWSTR name)
 {
   return CreateDirectoryW(name, NULL) ? 0 : GetLastError();
 }
 
 #define IS_SEPAR(c) (c == WCHAR_PATH_SEPARATOR)
-#define IS_LETTER_CHAR(c) ((c) >= 'a' && (c) <= 'z' || (c) >= 'A' && (c) <= 'Z')
+#define IS_LETTER_CHAR(c) (((c) >= 'a' && (c) <= 'z') || ((c) >= 'A' && (c) <= 'Z'))
 #define IS_DRIVE_PATH(s) (IS_LETTER_CHAR(s[0]) && s[1] == ':' && IS_SEPAR(s[2]))
 
 static int ReverseFind_PathSepar(const wchar_t *s)
@@ -129,7 +275,7 @@ static int ReverseFind_PathSepar(const wchar_t *s)
   }
 }
 
-static WRes CreateComplexDir()
+static WRes CreateComplexDir(void)
 {
   WCHAR s[MAX_PATH + 10];
 
@@ -163,7 +309,7 @@ static WRes CreateComplexDir()
   {
     size_t len = wcslen(s);
     {
-      int pos = ReverseFind_PathSepar(s);
+      const int pos = ReverseFind_PathSepar(s);
       if (pos < 0)
         return wres;
       if ((unsigned)pos < prefixSize)
@@ -173,7 +319,7 @@ static WRes CreateComplexDir()
         if (len == 1)
           return 0;
         s[pos] = 0;
-        len = pos;
+        len = (unsigned)pos;
       }
     }
 
@@ -185,7 +331,7 @@ static WRes CreateComplexDir()
         break;
       if (wres == ERROR_ALREADY_EXISTS)
       {
-        DWORD attrib = GetFileAttributesW(s);
+        const DWORD attrib = GetFileAttributesW(s);
         if (attrib != INVALID_FILE_ATTRIBUTES)
           if ((attrib & FILE_ATTRIBUTE_DIRECTORY) == 0)
             return ERROR_ALREADY_EXISTS;
@@ -199,7 +345,7 @@ static WRes CreateComplexDir()
   
     for (;;)
     {
-      size_t pos = wcslen(s);
+      const size_t pos = wcslen(s);
       if (pos >= len)
         return 0;
       s[pos] = CHAR_PATH_SEPARATOR;
@@ -215,7 +361,7 @@ static int MyRegistry_QueryString(HKEY hKey, LPCWSTR name, LPWSTR dest)
 {
   DWORD cnt = MAX_PATH * sizeof(name[0]);
   DWORD type = 0;
-  LONG res = RegQueryValueExW(hKey, name, NULL, &type, (LPBYTE)dest, (DWORD *)&cnt);
+  const LONG res = RegQueryValueExW(hKey, name, NULL, &type, (LPBYTE)dest, &cnt);
   if (type != REG_SZ)
     return False;
   return res == ERROR_SUCCESS;
@@ -224,11 +370,11 @@ static int MyRegistry_QueryString(HKEY hKey, LPCWSTR name, LPWSTR dest)
 static int MyRegistry_QueryString2(HKEY hKey, LPCWSTR keyName, LPCWSTR valName, LPWSTR dest)
 {
   HKEY key = 0;
-  LONG res = RegOpenKeyExW(hKey, keyName, 0, KEY_READ | k_Reg_WOW_Flag, &key);
+  const LONG res = RegOpenKeyExW(hKey, keyName, 0, KEY_READ | k_Reg_WOW_Flag, &key);
   if (res != ERROR_SUCCESS)
     return False;
   {
-    Bool res2 = MyRegistry_QueryString(key, valName, dest);
+    const BoolInt res2 = MyRegistry_QueryString(key, valName, dest);
     RegCloseKey(key);
     return res2;
   }
@@ -267,7 +413,7 @@ static LONG MyRegistry_CreateKeyAndVal(HKEY parentKey, LPCWSTR keyName, LPCWSTR 
 }
 
 
-#ifdef _64BIT_INSTALLER
+#ifdef USE_7ZIP_32_DLL
 
 static LONG MyRegistry_CreateKey_32(HKEY parentKey, LPCWSTR name, HKEY *destKey)
 {
@@ -301,7 +447,7 @@ static LONG MyRegistry_CreateKeyAndVal_32(HKEY parentKey, LPCWSTR keyName, LPCWS
 
 #define kSignatureSearchLimit (1 << 22)
 
-static Bool FindSignature(CSzFile *stream, UInt64 *resPos)
+static BoolInt FindSignature(CSzFile *stream, UInt64 *resPos)
 {
   Byte buf[kBufSize];
   size_t numPrevBytes = 0;
@@ -361,7 +507,7 @@ static void HexToString(UInt32 val, WCHAR *s)
 
 #ifndef UNDER_CE
 
-int CALLBACK BrowseCallbackProc(HWND hwnd, UINT uMsg, LPARAM lp, LPARAM data)
+static int CALLBACK BrowseCallbackProc(HWND hwnd, UINT uMsg, LPARAM lp, LPARAM data)
 {
   UNUSED_VAR(lp)
   UNUSED_VAR(data)
@@ -389,7 +535,7 @@ int CALLBACK BrowseCallbackProc(HWND hwnd, UINT uMsg, LPARAM lp, LPARAM data)
   return 0;
 }
 
-static Bool MyBrowseForFolder(HWND owner, LPCWSTR title, UINT ulFlags,
+static BoolInt MyBrowseForFolder(HWND owner, LPCWSTR title, UINT ulFlags,
     LPCWSTR initialFolder, LPWSTR resultPath)
 {
   WCHAR displayName[MAX_PATH];
@@ -426,7 +572,7 @@ static void NormalizePrefix(WCHAR *s)
   
   for (;; i++)
   {
-    wchar_t c = s[i];
+    const wchar_t c = s[i];
     if (c == 0)
       break;
     if (c == '/')
@@ -454,7 +600,7 @@ static wchar_t MyWCharLower_Ascii(wchar_t c)
   return c;
 }
 
-static const WCHAR *FindSubString(const WCHAR *s1, const char *s2)
+static LPCWSTR FindSubString(LPCWSTR s1, const char *s2)
 {
   for (;;)
   {
@@ -463,7 +609,7 @@ static const WCHAR *FindSubString(const WCHAR *s1, const char *s2)
       return NULL;
     for (i = 0;; i++)
     {
-      Byte b = s2[i];
+      const char b = s2[i];
       if (b == 0)
         return s1;
       if (MyWCharLower_Ascii(s1[i]) != (Byte)MyCharLower_Ascii(b))
@@ -480,13 +626,13 @@ static void Set7zipPostfix(WCHAR *s)
   NormalizePrefix(s);
   if (FindSubString(s, "7-Zip"))
     return;
-  wcscat(s, L"7-Zip\\");
+  CatAscii(s, "7-Zip\\");
 }
     
 
-static int Install();
+static int Install(void);
 
-static void OnClose()
+static void OnClose(void)
 {
   if (g_Install_was_Pressed && !g_Finished)
   {
@@ -500,7 +646,13 @@ static void OnClose()
   g_HWND = NULL;
 }
 
-static INT_PTR CALLBACK MyDlgProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+static
+#ifdef Z7_OLD_WIN_SDK
+  BOOL
+#else
+  INT_PTR
+#endif
+CALLBACK MyDlgProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
   // UNUSED_VAR(hwnd)
   UNUSED_VAR(lParam)
@@ -532,7 +684,7 @@ static INT_PTR CALLBACK MyDlgProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM
           }
           if (!g_Install_was_Pressed)
           {
-            SendMessage(hwnd, WM_NEXTDLGCTL, (WPARAM)GetDlgItem(hwnd, IDCANCEL), TRUE);
+            SendMessage(hwnd, WM_NEXTDLGCTL, (WPARAM)(void *)GetDlgItem(hwnd, IDCANCEL), TRUE);
             
             EnableWindow(g_Path_HWND, FALSE);
             EnableWindow(GetDlgItem(hwnd, IDB_EXTRACT_SET_PATH), FALSE);
@@ -606,7 +758,7 @@ static LONG SetRegKey_Path2(HKEY parentKey)
   return res;
 }
 
-static void SetRegKey_Path()
+static void SetRegKey_Path(void)
 {
   SetRegKey_Path2(HKEY_CURRENT_USER);
   SetRegKey_Path2(HKEY_LOCAL_MACHINE);
@@ -643,7 +795,7 @@ static void SetShellProgramsGroup(HWND hwndOwner)
 {
   #ifdef UNDER_CE
 
-  // wcscpy(link, L"\\Program Files\\");
+  // CpyAscii(link, "\\Program Files\\");
   UNUSED_VAR(hwndOwner)
 
   #else
@@ -652,7 +804,7 @@ static void SetShellProgramsGroup(HWND hwndOwner)
 
   for (; i < 3; i++)
   {
-    Bool isOK = True;
+    BoolInt isOK = True;
     WCHAR link[MAX_PATH + 40];
     WCHAR destPath[MAX_PATH + 40];
 
@@ -664,8 +816,8 @@ static void SetShellProgramsGroup(HWND hwndOwner)
       continue;
 
     NormalizePrefix(link);
-    wcscat(link, k_7zip);
-    // wcscat(link, L"2");
+    CatAscii(link, k_7zip);
+    // CatAscii(link, "2");
     
     if (i != 0)
       MyCreateDir(link);
@@ -678,14 +830,14 @@ static void SetShellProgramsGroup(HWND hwndOwner)
 
       for (k = 0; k < 2; k++)
       {
-        wcscpy(link + baseLen, k == 0 ?
-            L"7-Zip File Manager.lnk" :
-            L"7-Zip Help.lnk"
+        CpyAscii(link + baseLen, k == 0 ?
+            "7-Zip File Manager.lnk" :
+            "7-Zip Help.lnk"
            );
         wcscpy(destPath, path);
-        wcscat(destPath, k == 0 ?
-            L"7zFM.exe" :
-            L"7-zip.chm");
+        CatAscii(destPath, k == 0 ?
+            "7zFM.exe" :
+            "7-zip.chm");
         
         if (i == 0)
           DeleteFileW(link);
@@ -701,15 +853,15 @@ static void SetShellProgramsGroup(HWND hwndOwner)
   #endif
 }
 
-static const WCHAR *k_Shell_Approved = L"Software\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Approved";
-static const WCHAR *k_7zip_ShellExtension = L"7-Zip Shell Extension";
+static LPCWSTR const k_Shell_Approved = L"Software\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Approved";
+static LPCWSTR const k_7zip_ShellExtension = L"7-Zip Shell Extension";
 
-static void WriteCLSID()
+static void WriteCLSID(void)
 {
   HKEY destKey;
   LONG res;
 
-  #ifdef _64BIT_INSTALLER
+  #ifdef USE_7ZIP_32_DLL
  
   MyRegistry_CreateKeyAndVal_32(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip, NULL, k_7zip_ShellExtension);
   
@@ -717,9 +869,9 @@ static void WriteCLSID()
   
   if (res == ERROR_SUCCESS)
   {
-    WCHAR destPath[MAX_PATH + 10];
+    WCHAR destPath[MAX_PATH + 40];
     wcscpy(destPath, path);
-    wcscat(destPath, L"7-zip32.dll");
+    CatAscii(destPath, "7-zip32.dll");
     /* res = */ MyRegistry_SetString(destKey, NULL, destPath);
     /* res = */ MyRegistry_SetString(destKey, L"ThreadingModel", L"Apartment");
     // DeleteRegValue(destKey, L"InprocServer32");
@@ -736,9 +888,9 @@ static void WriteCLSID()
   
   if (res == ERROR_SUCCESS)
   {
-    WCHAR destPath[MAX_PATH + 10];
+    WCHAR destPath[MAX_PATH + 40];
     wcscpy(destPath, path);
-    wcscat(destPath, L"7-zip.dll");
+    CatAscii(destPath, "7-zip.dll");
     /* res = */ MyRegistry_SetString(destKey, NULL, destPath);
     /* res = */ MyRegistry_SetString(destKey, L"ThreadingModel", L"Apartment");
     // DeleteRegValue(destKey, L"InprocServer32");
@@ -746,45 +898,45 @@ static void WriteCLSID()
   }
 }
 
-static const WCHAR * const k_ShellEx_Items[] =
+static LPCSTR const k_ShellEx_Items[] =
 {
-    L"*\\shellex\\ContextMenuHandlers"
-  , L"Directory\\shellex\\ContextMenuHandlers"
-  , L"Folder\\shellex\\ContextMenuHandlers"
-  , L"Directory\\shellex\\DragDropHandlers"
-  , L"Drive\\shellex\\DragDropHandlers"
+    "*\\shellex\\ContextMenuHandlers"
+  , "Directory\\shellex\\ContextMenuHandlers"
+  , "Folder\\shellex\\ContextMenuHandlers"
+  , "Directory\\shellex\\DragDropHandlers"
+  , "Drive\\shellex\\DragDropHandlers"
 };
 
-static void WriteShellEx()
+static void WriteShellEx(void)
 {
   unsigned i;
   WCHAR destPath[MAX_PATH + 40];
 
-  for (i = 0; i < sizeof(k_ShellEx_Items) / sizeof(k_ShellEx_Items[0]); i++)
+  for (i = 0; i < Z7_ARRAY_SIZE(k_ShellEx_Items); i++)
   {
-    wcscpy(destPath, k_ShellEx_Items[i]);
-    wcscat(destPath, L"\\7-Zip");
+    CpyAscii(destPath, k_ShellEx_Items[i]);
+    CatAscii(destPath, "\\7-Zip");
 
-    #ifdef _64BIT_INSTALLER
+    #ifdef USE_7ZIP_32_DLL
     MyRegistry_CreateKeyAndVal_32(HKEY_CLASSES_ROOT, destPath, NULL, k_7zip_CLSID);
     #endif
     MyRegistry_CreateKeyAndVal   (HKEY_CLASSES_ROOT, destPath, NULL, k_7zip_CLSID);
   }
 
-  #ifdef _64BIT_INSTALLER
+  #ifdef USE_7ZIP_32_DLL
   MyRegistry_CreateKeyAndVal_32(HKEY_LOCAL_MACHINE, k_Shell_Approved, k_7zip_CLSID, k_7zip_ShellExtension);
   #endif
   MyRegistry_CreateKeyAndVal   (HKEY_LOCAL_MACHINE, k_Shell_Approved, k_7zip_CLSID, k_7zip_ShellExtension);
 
 
+  wcscpy(destPath, path);
+  CatAscii(destPath, "7zFM.exe");
+  
   {
     HKEY destKey = 0;
     LONG res = MyRegistry_CreateKey(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\7zFM.exe", &destKey);
     if (res == ERROR_SUCCESS)
     {
-      wcscpy(destPath, path);
-      wcscat(destPath, L"7zFM.exe");
-
       MyRegistry_SetString(destKey, NULL, destPath);
       MyRegistry_SetString(destKey, L"Path", path);
       RegCloseKey(destKey);
@@ -797,18 +949,18 @@ static void WriteShellEx()
     LONG res = MyRegistry_CreateKey(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\7-Zip", &destKey);
     if (res == ERROR_SUCCESS)
     {
-      // wcscpy(destPath, path);
-      // wcscat(destPath, L"7zFM.exe");
       MyRegistry_SetString(destKey, L"DisplayName", k_7zip_with_Ver_str);
       MyRegistry_SetString(destKey, L"DisplayVersion", LLL(MY_VERSION_NUMBERS));
-
       MyRegistry_SetString(destKey, L"DisplayIcon", destPath);
+      MyRegistry_SetString(destKey, L"InstallLocation", path);
 
-      wcscpy(destPath, path);
-      MyRegistry_SetString(destKey, L"InstallLocation", destPath);
-      wcscat(destPath, L"Uninstall.exe");
-      // wcscat(destPath, L"\"");
+      destPath[0] = '\"';
+      wcscpy(destPath + 1, path);
+      CatAscii(destPath, "Uninstall.exe\"");
       MyRegistry_SetString(destKey, L"UninstallString", destPath);
+
+      CatAscii(destPath, " /S");
+      MyRegistry_SetString(destKey, L"QuietUninstallString", destPath);
       
       MyRegistry_SetDWORD(destKey, L"NoModify", 1);
       MyRegistry_SetDWORD(destKey, L"NoRepair", 1);
@@ -832,16 +984,26 @@ static void WriteShellEx()
 
 static const wchar_t *GetCmdParam(const wchar_t *s)
 {
-  Bool quoteMode = False;
+  unsigned pos = 0;
+  BoolInt quoteMode = False;
   for (;; s++)
   {
     wchar_t c = *s;
+    if (c == 0 || (c == L' ' && !quoteMode))
+      break;
     if (c == L'\"')
+    {
       quoteMode = !quoteMode;
-    else if (c == 0 || (c == L' ' && !quoteMode))
-      return s;
+      continue;
+    }
+    if (pos >= Z7_ARRAY_SIZE(cmd) - 1)
+      exit(1);
+    cmd[pos++] = c;
   }
+  cmd[pos] = 0;
+  return s;
 }
+
 
 static void RemoveQuotes(wchar_t *s)
 {
@@ -857,7 +1019,7 @@ static void RemoveQuotes(wchar_t *s)
   }
 }
 
-#define IS_LIMIT_CHAR(c) (c == 0 || c == ' ')
+// #define IS_LIMIT_CHAR(c) (c == 0 || c == ' ')
 
 
 typedef BOOL (WINAPI *Func_IsWow64Process)(HANDLE, PBOOL);
@@ -876,6 +1038,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
   UNUSED_VAR(nCmdShow)
 
   #ifndef UNDER_CE
+  LoadSecurityDlls();
   CoInitialize(NULL);
   #endif
 
@@ -891,7 +1054,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     for (;;)
     {
       {
-        wchar_t c = *s;
+        const wchar_t c = *s;
         if (c == 0)
           break;
         if (c == ' ')
@@ -903,31 +1066,44 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
       {
         const wchar_t *s2 = GetCmdParam(s);
-        if (s[0] == '/')
+        BoolInt error = True;
+        if (cmd[0] == '/')
         {
-          if (s[1] == 'S' && IS_LIMIT_CHAR(s[2]))
-            g_SilentMode = True;
-          else if (s[1] == 'D' && s[2] == '=')
+          if (cmd[1] == 'S')
           {
-            size_t num;
-            s += 3;
-            num = s2 - s;
-            if (num > MAX_PATH)
-              num = MAX_PATH;
-            wcsncpy(path, s, num);
-            RemoveQuotes(path);
+            if (cmd[2] == 0)
+            {
+              g_SilentMode = True;
+              error = False;
+            }
+          }
+          else if (cmd[1] == 'D' && cmd[2] == '=')
+          {
+            wcscpy(path, cmd + 3);
+            // RemoveQuotes(path);
+            error = False;
           }
         }
         s = s2;
+        if (error && cmdError[0] == 0)
+          wcscpy(cmdError, cmd);
       }
+    }
+
+    if (cmdError[0] != 0)
+    {
+      if (!g_SilentMode)
+        PrintErrorMessage("Unsupported command:", cmdError);
+      return 1;
     }
   }
 
-  #if defined(_64BIT_INSTALLER) && !defined(_WIN64)
+  #if defined(Z7_64BIT_INSTALLER) && !defined(_WIN64)
   {
     BOOL isWow64 = FALSE;
-    Func_IsWow64Process func_IsWow64Process = (Func_IsWow64Process)
-        GetProcAddress(GetModuleHandleW(L"kernel32.dll"), "IsWow64Process");
+    const Func_IsWow64Process func_IsWow64Process = (Func_IsWow64Process)
+        MY_CAST_FUNC GetProcAddress(GetModuleHandleW(L"kernel32.dll"),
+        "IsWow64Process");
     
     if (func_IsWow64Process)
       func_IsWow64Process(GetCurrentProcess(), &isWow64);
@@ -935,7 +1111,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     if (!isWow64)
     {
       if (!g_SilentMode)
-        PrintErrorMessage("This installation requires Windows x64");
+        PrintErrorMessage("This installation requires Windows " MY_CPU_NAME, NULL);
       return 1;
     }
   }
@@ -945,8 +1121,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
   if (path[0] == 0)
   {
     HKEY key = 0;
-    Bool ok = False;
-    LONG res = RegOpenKeyExW(HKEY_CURRENT_USER, k_Reg_Software_7zip, 0, KEY_READ | k_Reg_WOW_Flag, &key);
+    BoolInt ok = False;
+    const LONG res = RegOpenKeyExW(HKEY_CURRENT_USER, k_Reg_Software_7zip, 0, KEY_READ | k_Reg_WOW_Flag, &key);
     if (res == ERROR_SUCCESS)
     {
       ok = MyRegistry_QueryString(key, k_Reg_Path32, path);
@@ -959,27 +1135,27 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     {
       /*
       #ifdef UNDER_CE
-        wcscpy(path, L"\\Program Files\\");
+        CpyAscii(path, "\\Program Files\\");
       #else
       
-        #ifdef _64BIT_INSTALLER
+        #ifdef Z7_64BIT_INSTALLER
         {
           DWORD ttt = GetEnvironmentVariableW(L"ProgramW6432", path, MAX_PATH);
           if (ttt == 0 || ttt > MAX_PATH)
-            wcscpy(path, L"C:\\");
+            CpyAscii(path, "C:\\");
         }
         #else
         if (!SHGetSpecialFolderPathW(0, path, CSIDL_PROGRAM_FILES, FALSE))
-          wcscpy(path, L"C:\\");
+          CpyAscii(path, "C:\\");
         #endif
       #endif
       */
       if (!MyRegistry_QueryString2(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion", L"ProgramFilesDir", path))
-        wcscpy(path,
+        CpyAscii(path,
             #ifdef UNDER_CE
-              L"\\Program Files\\"
+              "\\Program Files\\"
             #else
-              L"C:\\"
+              "C:\\"
             #endif
             );
 
@@ -1003,7 +1179,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
       return 1;
 
     {
-      HICON hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON));
+      const HICON hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON));
       // SendMessage(g_HWND, WM_SETICON, (WPARAM)ICON_SMALL, (LPARAM)hIcon);
       SendMessage(g_HWND, WM_SETICON, (WPARAM)ICON_BIG, (LPARAM)hIcon);
     }
@@ -1041,7 +1217,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
             SetDlgItemTextW(g_HWND, IDOK, L"Close");
             EnableWindow(GetDlgItem(g_HWND, IDOK), TRUE);
             EnableWindow(GetDlgItem(g_HWND, IDCANCEL), FALSE);
-            SendMessage(g_HWND, WM_NEXTDLGCTL, (WPARAM)GetDlgItem(g_HWND, IDOK), TRUE);
+            SendMessage(g_HWND, WM_NEXTDLGCTL, (WPARAM)(void *)GetDlgItem(g_HWND, IDOK), TRUE);
           }
         }
       }
@@ -1057,9 +1233,10 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
   }
 }
 
-static Bool GetErrorMessage(DWORD errorCode, WCHAR *message)
+
+static BoolInt GetErrorMessage(DWORD errorCode, WCHAR *message)
 {
-  LPVOID msgBuf;
+  LPWSTR msgBuf;
   if (FormatMessageW(
           FORMAT_MESSAGE_ALLOCATE_BUFFER
         | FORMAT_MESSAGE_FROM_SYSTEM
@@ -1071,10 +1248,12 @@ static Bool GetErrorMessage(DWORD errorCode, WCHAR *message)
   return True;
 }
 
-static int Install()
+
+
+static int Install(void)
 {
   CFileInStream archiveStream;
-  CLookToRead lookStream;
+  CLookToRead2 lookStream;
   CSzArEx db;
   
   SRes res = SZ_OK;
@@ -1085,7 +1264,7 @@ static int Install()
   ISzAlloc allocTempImp;
   WCHAR sfxPath[MAX_PATH + 2];
 
-  Bool needReboot = False;
+  int needRebootLevel = 0;
 
   allocImp.Alloc = SzAlloc;
   allocImp.Free = SzFree;
@@ -1094,7 +1273,7 @@ static int Install()
   allocTempImp.Free = SzFreeTemp;
 
   {
-    DWORD len = GetModuleFileNameW(NULL, sfxPath, MAX_PATH);
+    const DWORD len = GetModuleFileNameW(NULL, sfxPath, MAX_PATH);
     if (len == 0 || len > MAX_PATH)
       return 1;
   }
@@ -1125,8 +1304,10 @@ if (res == SZ_OK)
   }
 
   FileInStream_CreateVTable(&archiveStream);
-  LookToRead_CreateVTable(&lookStream, False);
+  LookToRead2_CreateVTable(&lookStream, False);
+  lookStream.buf = NULL;
  
+  RemoveQuotes(path);
   {
     // Remove post spaces
     unsigned endPos = 0;
@@ -1134,7 +1315,7 @@ if (res == SZ_OK)
     
     for (;;)
     {
-      wchar_t c = path[i++];
+      const wchar_t c = path[i++];
       if (c == 0)
         break;
       if (c != ' ')
@@ -1142,23 +1323,39 @@ if (res == SZ_OK)
     }
 
     path[endPos] = 0;
+    if (path[0] == 0)
+    {
+      PrintErrorMessage("Incorrect path", NULL);
+      return 1;
+    }
   }
 
   NormalizePrefix(path);
   winRes = CreateComplexDir();
 
   if (winRes != 0)
-    res = E_FAIL;
+    res = SZ_ERROR_FAIL;
 
   pathLen = wcslen(path);
+
+  if (res == SZ_OK)
+  {
+    lookStream.buf = (Byte *)ISzAlloc_Alloc(&allocImp, kInputBufSize);
+    if (!lookStream.buf)
+      res = SZ_ERROR_MEM;
+    else
+    {
+      lookStream.bufSize = kInputBufSize;
+      lookStream.realStream = &archiveStream.vt;
+      LookToRead2_INIT(&lookStream)
+    }
+  }
+
   SzArEx_Init(&db);
 
   if (res == SZ_OK)
   {
-    lookStream.realStream = &archiveStream.s;
-    LookToRead_Init(&lookStream);
-    
-    res = SzArEx_Open(&db, &lookStream.s, &allocImp, &allocTempImp);
+    res = SzArEx_Open(&db, &lookStream.vt, &allocImp, &allocTempImp);
   }
     
   if (res == SZ_OK)
@@ -1204,7 +1401,7 @@ if (res == SZ_OK)
       }
 
       {
-        size_t len = SzArEx_GetFileNameUtf16(&db, i, NULL);
+        const size_t len = SzArEx_GetFileNameUtf16(&db, i, NULL);
         if (len >= MAX_PATH)
         {
           res = SZ_ERROR_FAIL;
@@ -1214,13 +1411,13 @@ if (res == SZ_OK)
         
       temp = path + pathLen;
       
-      SzArEx_GetFileNameUtf16(&db, i, temp);
+      SzArEx_GetFileNameUtf16(&db, i, (UInt16 *)temp);
 
       if (!g_SilentMode)
         SetWindowTextW(g_InfoLine_HWND, temp);
 
       {
-        res = SzArEx_Extract(&db, &lookStream.s, i,
+        res = SzArEx_Extract(&db, &lookStream.vt, i,
             &blockIndex, &outBuf, &outBufSize,
             &offset, &outSizeProcessed,
             &allocImp, &allocTempImp);
@@ -1234,6 +1431,7 @@ if (res == SZ_OK)
         size_t j;
         // size_t nameStartPos = 0;
         UInt32 tempIndex = 0;
+        int fileLevel = 1 << 2;
         WCHAR origPath[MAX_PATH * 2 + 10];
 
         for (j = 0; temp[j] != 0; j++)
@@ -1254,7 +1452,7 @@ if (res == SZ_OK)
         }
 
         {
-          // Bool skipFile = False;
+          // BoolInt skipFile = False;
           
           wcscpy(origPath, path);
   
@@ -1270,7 +1468,7 @@ if (res == SZ_OK)
                 break;
               }
               wcscpy(path, origPath);
-              wcscat(path, L".tmp");
+              CatAscii(path, ".tmp");
               if (tempIndex > 1)
                 HexToString(tempIndex, path + wcslen(path));
               if (GetFileAttributesW(path) != INVALID_FILE_ATTRIBUTES)
@@ -1287,13 +1485,20 @@ if (res == SZ_OK)
                 break;
             }
 
-            if (tempIndex != 0
-                || FindSubString(temp, "7-zip.dll")
-                #ifdef _64BIT_INSTALLER
+            if (tempIndex != 0)
+            {
+              tempIndex++;
+              continue;
+            }
+            
+            if (FindSubString(temp, "7-zip.dll")
+                #ifdef USE_7ZIP_32_DLL
                 || FindSubString(temp, "7-zip32.dll")
                 #endif
                 )
             {
+              const DWORD ver = GetFileVersion(path);
+              fileLevel = ((ver < Z7_7ZIP_DLL_VER_COMPAT || ver > Z7_7ZIP_CUR_VER) ? 2 : 1);
               tempIndex++;
               continue;
             }
@@ -1307,9 +1512,9 @@ if (res == SZ_OK)
               WCHAR message[MAX_PATH * 3 + 100];
               int mbRes;
 
-              wcscpy(message, L"Can't open file\n");
+              CpyAscii(message, "Can't open file\n");
               wcscat(message, path);
-              wcscat(message, L"\n");
+              CatAscii(message, "\n");
               
               GetErrorMessage(openRes, message + wcslen(message));
 
@@ -1337,7 +1542,7 @@ if (res == SZ_OK)
           */
         }
   
-        // if (res = S_OK)
+        // if (res == SZ_OK)
         {
           processedSize = outSizeProcessed;
           winRes = File_Write(&outFile, outBuf + offset, &processedSize);
@@ -1361,7 +1566,7 @@ if (res == SZ_OK)
           #endif
           
           {
-            SRes winRes2 = File_Close(&outFile);
+            const WRes winRes2 = File_Close(&outFile);
             if (res != SZ_OK)
               break;
             if (winRes2 != 0)
@@ -1386,14 +1591,14 @@ if (res == SZ_OK)
             winRes = GetLastError();
             break;
           }
-          needReboot = True;
+          needRebootLevel |= fileLevel;
           #endif
         }
 
       }
     }
 
-    IAlloc_Free(&allocImp, outBuf);
+    ISzAlloc_Free(&allocImp, outBuf);
 
     if (!g_SilentMode)
       SendMessage(g_Progress_HWND, PBM_SETPOS, i, 0);
@@ -1414,6 +1619,8 @@ if (res == SZ_OK)
 
   SzArEx_Free(&db, &allocImp);
 
+  ISzAlloc_Free(&allocImp, lookStream.buf);
+
   File_Close(&archiveStream.file);
 
 }
@@ -1423,7 +1630,7 @@ if (res == SZ_OK)
 
   if (res == SZ_OK)
   {
-    if (!g_SilentMode && needReboot)
+    if (!g_SilentMode && needRebootLevel > 1)
     {
       if (MessageBoxW(g_HWND, L"You must restart your system to complete the installation.\nRestart now?",
           k_7zip_Setup, MB_YESNO | MB_DEFBUTTON2) == IDYES)
@@ -1466,7 +1673,7 @@ if (res == SZ_OK)
       WCHAR m[MAX_PATH + 100];
       m[0] = 0;
       GetErrorMessage(winRes, m);
-      MessageBoxW(g_HWND, m, k_7zip_with_Ver_str, MB_ICONERROR);
+      PrintErrorMessage(NULL, m);
     }
     else
     {
@@ -1484,7 +1691,7 @@ if (res == SZ_OK)
       
       if (!errorMessage)
         errorMessage = "ERROR";
-      PrintErrorMessage(errorMessage);
+      PrintErrorMessage(errorMessage, NULL);
     }
   }
   

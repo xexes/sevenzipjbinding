@@ -1,7 +1,7 @@
 // Archive/ChmIn.h
 
-#ifndef __ARCHIVE_CHM_IN_H
-#define __ARCHIVE_CHM_IN_H
+#ifndef ZIP7_INC_ARCHIVE_CHM_IN_H
+#define ZIP7_INC_ARCHIVE_CHM_IN_H
 
 #include "../../../Common/MyBuffer.h"
 #include "../../../Common/MyString.h"
@@ -59,7 +59,7 @@ struct CDatabase
   {
     FOR_VECTOR (i, Items)
       if (Items[i].Name == name)
-        return i;
+        return (int)i;
     return -1;
   }
 
@@ -84,6 +84,11 @@ struct CResetTable
   // unsigned BlockSizeBits;
   CRecordVector<UInt64> ResetOffsets;
   
+  CResetTable():
+      UncompressedSize(0),
+      CompressedSize(0)
+      {}
+
   bool GetCompressedSizeOfBlocks(UInt64 blockIndex, UInt32 numBlocks, UInt64 &size) const
   {
     if (blockIndex >= ResetOffsets.Size())
@@ -118,6 +123,13 @@ struct CLzxInfo
   
   CResetTable ResetTable;
 
+  CLzxInfo():
+      Version(0),
+      ResetIntervalBits(0),
+      WindowSizeBits(0),
+      CacheSize(0)
+      {}
+
   unsigned GetNumDictBits() const
   {
     if (Version == 2 || Version == 3)
@@ -149,14 +161,14 @@ struct CLzxInfo
 
 struct CMethodInfo
 {
-  GUID Guid;
+  Byte Guid[16];
   CByteBuffer ControlData;
   CLzxInfo LzxInfo;
   
   bool IsLzx() const;
   bool IsDes() const;
   AString GetGuidString() const;
-  UString GetName() const;
+  AString GetName() const;
 };
 
 
@@ -243,7 +255,7 @@ class CInArchive
   UInt64 ReadEncInt();
   void ReadString(unsigned size, AString &s);
   void ReadUString(unsigned size, UString &s);
-  void ReadGUID(GUID &g);
+  void ReadGUID(Byte *g);
 
   HRESULT ReadChunk(IInStream *inStream, UInt64 pos, UInt64 size);
 

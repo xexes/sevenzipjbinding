@@ -7,24 +7,26 @@
 #include "CPPToJava/CPPToJavaCryptoGetTextPassword.h"
 #include "CPPToJava/CPPToJavaInStream.h"
 
-class UniversalArchiveOpencallback :
-    public IArchiveOpenCallback,
-    public IArchiveOpenVolumeCallback,
-    public ICryptoGetTextPassword,
-    public CMyUnknownImp,
-    public Object
+#include <set>
+
+class UniversalArchiveOpencallback : public virtual IArchiveOpenCallback,
+                                     public virtual IArchiveOpenVolumeCallback,
+                                     public virtual ICryptoGetTextPassword,
+                                     public virtual CMyUnknownImp,
+                                     public Object
 {
 private:
+    JBindingSession * _jbindingSession;
+    JNIEnv * _initEnv;
     IArchiveOpenCallback * _archiveOpenCallback;
     IArchiveOpenVolumeCallback * _archiveOpenVolumeCallback;
     ICryptoGetTextPassword * _cryptoGetTextPassword;
     bool _simulateArchiveOpenVolumeCallback;
 
     void Init(JBindingSession & jbindingSession, JNIEnv * initEnv,
-    		jobject archiveOpenCallbackImpl);
+            jobject archiveOpenCallbackImpl);
 
 public:
-
     UniversalArchiveOpencallback(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject archiveOpenCallbackImpl)
     {
         TRACE_OBJECT_CREATION("UniversalArchiveOpencallback")
@@ -51,28 +53,14 @@ public:
         _simulateArchiveOpenVolumeCallback = value;
     }
 
-    STDMETHOD(QueryInterface)(REFGUID iid, void **outObject);
-
-    STDMETHOD_(ULONG, AddRef)()
-    {
-        return ++__m_RefCount;
-    }
-    STDMETHOD_(ULONG, Release)()
-    {
-        if (--__m_RefCount != 0)
-            return __m_RefCount;
-        delete this;
-        return 0;
-    }
-
-    STDMETHOD(SetTotal)(const UInt64 *files, const UInt64 *bytes)
+    STDMETHOD(SetTotal)(const UInt64 *files, const UInt64 *bytes) noexcept Z7_override
     {
         TRACE_OBJECT_CALL("SetTotal")
         TRACE("UniversalArchiveOpencallback::SetTotal")
 
         return _archiveOpenCallback->SetTotal(files, bytes);
     }
-    STDMETHOD(SetCompleted)(const UInt64 *files, const UInt64 *bytes)
+    STDMETHOD(SetCompleted)(const UInt64 *files, const UInt64 *bytes) noexcept Z7_override
     {
         TRACE_OBJECT_CALL("SetCompleted")
         TRACE("UniversalArchiveOpencallback::SetCompleted")
@@ -80,7 +68,7 @@ public:
         return _archiveOpenCallback->SetCompleted(files, bytes);
     }
 
-    STDMETHOD(GetProperty)(PROPID propID, PROPVARIANT *value)
+    STDMETHOD(GetProperty)(PROPID propID, PROPVARIANT *value) noexcept Z7_override
     {
         TRACE_OBJECT_CALL("GetProperty")
         TRACE("UniversalArchiveOpencallback::GetProperty")
@@ -89,11 +77,16 @@ public:
         {
             return _archiveOpenVolumeCallback->GetProperty(propID, value);
         }
-        // TODO Generate exception explaining situation:
-        // IArchiveOpenCallback implementation must also implement IArchiveOpenVolumeCallback
-        return E_NOINTERFACE;
+        // No IArchiveOpenVolumeCallback implemented - return empty variant (not NULL!)
+        // VT_EMPTY allows 7-zip to continue during codec auto-detection
+        if (value)
+        {
+            value->vt = VT_EMPTY;
+        }
+        return S_OK;
     }
-    STDMETHOD(GetStream)(const wchar_t *name, IInStream **inStream)
+
+   STDMETHOD(GetStream)(const wchar_t *name, IInStream **inStream) noexcept Z7_override
     {
         TRACE_OBJECT_CALL("GetStream")
         TRACE("UniversalArchiveOpencallback::GetStream")
@@ -102,12 +95,28 @@ public:
         {
             return _archiveOpenVolumeCallback->GetStream(name, inStream);
         }
-        // TODO Generate exception explaining situation:
-        // IArchiveOpenCallback implementation must also implement IArchiveOpenVolumeCallback
-        return E_NOINTERFACE;
+
+        if (inStream)
+        {
+            *inStream = NULL;
+        }
+
+        // No IArchiveOpenVolumeCallback implemented by Java.
+        if (_simulateArchiveOpenVolumeCallback) {
+            // Archive is a CAB (or other format requiring volumes).
+            // 7-zip called GetStream() meaning it needs another volume.
+            // Since no callback was provided, we must return an error.
+            TRACE("Volume requested but IArchiveOpenVolumeCallback not implemented - returning E_FAIL")
+            return E_FAIL;  // This will cause SevenZipException to be thrown
+        }
+
+        // For non-CAB archives or during initial detection, allow 7-zip to continue.
+        // Return S_OK with NULL stream - this allows codec auto-detection.
+
+        return S_OK;
     }
 
-    STDMETHOD(CryptoGetTextPassword)(BSTR *password)
+    STDMETHOD(CryptoGetTextPassword)(BSTR *password) noexcept Z7_override
     {
         TRACE_OBJECT_CALL("CryptoGetTextPassword")
         TRACE("UniversalArchiveOpencallback::CryptoGetTextPassword")
@@ -118,5 +127,8 @@ public:
         }
         return E_NOINTERFACE;
     }
+
+private:
+    Z7_COM_UNKNOWN_IMP_3(IArchiveOpenCallback, IArchiveOpenVolumeCallback, ICryptoGetTextPassword)
 };
 #endif /*UNIVERSALARCHIVEOPENCALLBACK_*/

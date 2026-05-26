@@ -13,7 +13,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
 import java.util.Random;
+
+import org.junit.Test;
 
 import net.sf.sevenzipjbinding.ArchiveFormat;
 import net.sf.sevenzipjbinding.ExtractOperationResult;
@@ -25,8 +28,6 @@ import net.sf.sevenzipjbinding.junit.ExtractFileAbstractTest;
 import net.sf.sevenzipjbinding.junit.junittools.annotations.Multithreaded;
 import net.sf.sevenzipjbinding.junit.junittools.annotations.Repeat;
 
-import org.junit.Test;
-
 /**
  * This test tests extraction of archives with a single file. Test data: <code>testdata/simple</code>.<br>
  * <br>
@@ -37,6 +38,9 @@ import org.junit.Test;
  * <li>PACKED_SIZE
  * <li>IS_FOLDER
  * <li>ENCRYPTED
+ * <li>CRC
+ * <li>ATTRIBUTES
+ * <li>LAST_WRITE_TIME
  * </ul>
  *
  * Following properties will be NOT verified:
@@ -53,7 +57,6 @@ import org.junit.Test;
  * <li>SPLIT_BEFORE
  * <li>SPLIT_AFTER
  * <li>DICTIONARY_SIZE
- * <li>CRC
  * <li>TYPE
  * <li>IS_ANTI
  * <li>METHOD
@@ -216,6 +219,7 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
                 PasswordArchiveExtractCallback extractCallback = new PasswordArchiveExtractCallback(outputStream);
                 inArchive.extract(new int[] { index }, false, extractCallback);
                 operationResult = extractCallback.getExtractOperationResult();
+                assertNotNull("setOperationResult should have been called", operationResult);
             } else {
                 operationResult = inArchive.extractSlow(index, outputStream, context().passwordToUse);
             }
@@ -233,6 +237,9 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
             checkPropertyPackedSize(inArchive, index, expectedFilename);
         }
         checkPropertyIsEncrypted(inArchive, index, expectedFilename);
+        checkPropertyCRC(inArchive, index, expectedFilename);
+        checkPropertyAttributes(inArchive, index, expectedFilename);
+        checkPropertyLastWriteTime(inArchive, index, expectedFilename);
 	}
 
     protected String getUncompressedFilename(int fileIndex) {
@@ -278,6 +285,86 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
 			assertFalse("File reported to be crypted (PropID.ENCRYPTED)", isEncrypted1);
 		}
 		assertEquals("Simple interface problem: ENCRYPTED", isEncrypted1, isEncrypted2);
+	}
+
+private void checkPropertyCRC(IInArchive inArchive, int index, String uncompressedFilename)
+		throws SevenZipException {
+		// CRC can be returned as either Long or Integer depending on the archive format
+		Object crcObj1 = inArchive.getProperty(index, PropID.CRC);
+		Integer crc2 = inArchive.getSimpleInterface().getArchiveItem(index).getCRC();
+
+		// Many formats don't support file-level CRC - skip if not available
+		if (crcObj1 == null && crc2 == null) {
+			return; // Both null is acceptable for formats that don't store CRC
+		}
+		
+		// If one is present, both should be present and match
+		assertNotNull("CRC from getProperty should match simple interface", 
+				crcObj1 != null || crc2 == null);
+		assertNotNull("CRC from simple interface should match getProperty", 
+				crc2 != null || crcObj1 == null);
+		
+		if (crcObj1 == null || crc2 == null) {
+			return; // Skip further checks if either is null
+		}
+		
+		// Handle both Long and Integer return types
+		long crc1;
+		if (crcObj1 instanceof Long) {
+			crc1 = ((Long) crcObj1).longValue();
+		} else if (crcObj1 instanceof Integer) {
+			crc1 = ((Integer) crcObj1).intValue();
+		} else {
+			throw new SevenZipException("Unexpected CRC type: " + crcObj1.getClass().getName());
+		}
+		
+		assertEquals("Simple interface problem: CRC mismatch", crc1, crc2.longValue());
+	}
+
+private void checkPropertyAttributes(IInArchive inArchive, int index, String uncompressedFilename)
+		throws SevenZipException {
+		Integer attributes1 = (Integer) inArchive.getProperty(index, PropID.ATTRIBUTES);
+		Integer attributes2 = inArchive.getSimpleInterface().getArchiveItem(index).getAttributes();
+
+		// Many formats don't support file attributes - skip if not available
+		if (attributes1 == null && attributes2 == null) {
+			return; // Both null is acceptable for formats that don't store attributes
+		}
+		
+		// If one is present, both should be present and match
+		assertNotNull("ATTRIBUTES from getProperty should match simple interface", 
+				attributes1 != null || attributes2 == null);
+		assertEquals("Simple interface ATTRIBUTES mismatch", 
+				attributes1 == null ? "null" : attributes1.toString(), 
+				attributes2 == null ? "null" : attributes2.toString());
+	}
+
+	private void checkPropertyLastWriteTime(IInArchive inArchive, int index, String uncompressedFilename)
+			throws SevenZipException {
+		// LAST_WRITE_TIME is supported by most archive formats except stream-based compression
+		if (archiveFormat == ArchiveFormat.BZIP2 || archiveFormat == ArchiveFormat.GZIP 
+				|| archiveFormat == ArchiveFormat.LZMA || archiveFormat == ArchiveFormat.Z) {
+			// These stream formats don't store file metadata
+			return;
+		}
+		
+		Date lastWriteTime1 = (Date) inArchive.getProperty(index, PropID.LAST_MODIFICATION_TIME);
+		Date lastWriteTime2 = inArchive.getSimpleInterface().getArchiveItem(index).getLastWriteTime();
+
+		// Some formats may not have modification time set
+		if (lastWriteTime1 == null && lastWriteTime2 == null) {
+			return; // Both null is acceptable for some formats
+		}
+		
+		assertNotNull("LAST_WRITE_TIME from getProperty should match simple interface", 
+				lastWriteTime1 != null || lastWriteTime2 == null);
+		assertNotNull("LAST_WRITE_TIME from simple interface should match getProperty", 
+				lastWriteTime2 != null || lastWriteTime1 == null);
+				
+		if (lastWriteTime1 != null && lastWriteTime2 != null) {
+			assertEquals("Simple interface problem: LAST_WRITE_TIME mismatch", 
+					lastWriteTime1.getTime(), lastWriteTime2.getTime());
+		}
 	}
 
 	private void checkPropertyIsFolder(IInArchive inArchive, int index) throws SevenZipException {

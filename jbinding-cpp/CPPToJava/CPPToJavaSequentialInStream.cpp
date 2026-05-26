@@ -4,7 +4,7 @@
 #include "CPPToJavaSequentialInStream.h"
 
 
-STDMETHODIMP CPPToJavaSequentialInStream::Read(void *data, UInt32 size, UInt32 *processedSize)
+STDMETHODIMP CPPToJavaSequentialInStream::Read(void *data, UInt32 size, UInt32 *processedSize) noexcept
 {
     TRACE_OBJECT_CALL("Read");
 
@@ -33,7 +33,7 @@ STDMETHODIMP CPPToJavaSequentialInStream::Read(void *data, UInt32 size, UInt32 *
 	}
 
 	jbyte * buffer = jniEnvInstance->GetByteArrayElements(byteArray, NULL);
-	memcpy(data, buffer, size);
+	memcpy(data, buffer, wasRead);
 	jniEnvInstance->ReleaseByteArrayElements(byteArray, buffer, JNI_ABORT);
 
 	jniEnvInstance->DeleteLocalRef(byteArray);

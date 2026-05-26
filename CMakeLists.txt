@@ -107,7 +107,7 @@ MACRO(CREATE_COMPILE_JAVA_CUSTOM_COMMAND
     SET(JAVAC_ARGS_FILE ${PROJECT_BINARY_DIR}/javac-args-${P_BUILD_NAME}.tmp)
     FILE(GLOB_RECURSE JAVA_SOURCE_FILES RELATIVE ${P_SRC_DIR} ${P_SRC_DIR}/*.java)
 
-    FILE(WRITE ${JAVAC_ARGS_FILE} "-source 1.5 -target 1.5\n")
+    FILE(WRITE ${JAVAC_ARGS_FILE} "-source 8 -target 8\n")
     FILE(APPEND ${JAVAC_ARGS_FILE} "-encoding UTF-8\n")
     FILE(APPEND ${JAVAC_ARGS_FILE} "-d ${BIN_DIR}\n")
     IF(NOT "${ARGN}" STREQUAL "")
@@ -252,7 +252,7 @@ ENDIF()
 
 # ------------------- CPack -------------------
 
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "7-Zip-JBinding - java binding for p7zip, crossplatform version of 7-Zip.")
+SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "7-Zip-JBinding - java binding for 7-Zip")
 SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY ZIP)
 SET(CPACK_GENERATOR ZIP)
 SET(CPACK_SOURCE_GENERATOR ZIP)

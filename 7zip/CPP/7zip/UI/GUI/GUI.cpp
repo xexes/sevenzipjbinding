@@ -2,30 +2,31 @@
 
 #include "StdAfx.h"
 
+#ifdef _WIN32
+#include "../../../../C/DllSecur.h"
+#endif
+
 #include "../../../Common/MyWindows.h"
-
+#if defined(__MINGW32__) || defined(__MINGW64__)
 #include <shlwapi.h>
-
-#include "../../../../C/Alloc.h"
+#else
+#include <Shlwapi.h>
+#endif
 
 #include "../../../Common/MyInitGuid.h"
 
 #include "../../../Common/CommandLineParser.h"
-#include "../../../Common/IntToString.h"
 #include "../../../Common/MyException.h"
 #include "../../../Common/StringConvert.h"
 
 #include "../../../Windows/FileDir.h"
 #include "../../../Windows/NtCheck.h"
-#ifdef _WIN32
-#include "../../../Windows/MemoryLock.h"
-#endif
 
 #include "../Common/ArchiveCommandLine.h"
 #include "../Common/ExitCode.h"
 
 #include "../FileManager/StringUtils.h"
-#include "../FileManager/MyWindowsNew.h"
+#include "../FileManager/LangUtils.h"
 
 #include "BenchmarkDialog.h"
 #include "ExtractGUI.h"
@@ -36,42 +37,62 @@
 
 using namespace NWindows;
 
-HINSTANCE g_hInstance;
-#ifndef _UNICODE
+#ifdef Z7_EXTERNAL_CODECS
+extern
+const CExternalCodecs *g_ExternalCodecs_Ptr;
+const CExternalCodecs *g_ExternalCodecs_Ptr;
 #endif
+
+extern
+HINSTANCE g_hInstance;
+HINSTANCE g_hInstance;
 
 #ifndef UNDER_CE
 
+extern
+DWORD g_ComCtl32Version;
 DWORD g_ComCtl32Version;
 
 static DWORD GetDllVersion(LPCTSTR dllName)
 {
   DWORD dwVersion = 0;
-  HINSTANCE hinstDll = LoadLibrary(dllName);
-  if (hinstDll)
+  const HMODULE hmodule = LoadLibrary(dllName);
+  if (hmodule)
   {
-    DLLGETVERSIONPROC pDllGetVersion = (DLLGETVERSIONPROC)GetProcAddress(hinstDll, "DllGetVersion");
-    if (pDllGetVersion)
+    const
+     DLLGETVERSIONPROC f_DllGetVersion = Z7_GET_PROC_ADDRESS(
+     DLLGETVERSIONPROC, hmodule,
+    "DllGetVersion");
+    if (f_DllGetVersion)
     {
       DLLVERSIONINFO dvi;
       ZeroMemory(&dvi, sizeof(dvi));
       dvi.cbSize = sizeof(dvi);
-      HRESULT hr = (*pDllGetVersion)(&dvi);
+      const HRESULT hr = (*f_DllGetVersion)(&dvi);
       if (SUCCEEDED(hr))
-        dwVersion = MAKELONG(dvi.dwMinorVersion, dvi.dwMajorVersion);
+        dwVersion = (DWORD)MAKELONG(dvi.dwMinorVersion, dvi.dwMajorVersion);
     }
-    FreeLibrary(hinstDll);
+    FreeLibrary(hmodule);
   }
   return dwVersion;
 }
 
 #endif
 
+extern
+bool g_LVN_ITEMACTIVATE_Support;
 bool g_LVN_ITEMACTIVATE_Support = true;
+
+DECLARE_AND_SET_CLIENT_VERSION_VAR
 
 static void ErrorMessage(LPCWSTR message)
 {
   MessageBoxW(NULL, message, L"7-Zip", MB_ICONERROR | MB_OK);
+}
+
+static void ErrorMessage(const char *s)
+{
+  ErrorMessage(GetUnicodeString(s));
 }
 
 static void ErrorLangMessage(UINT resourceID)
@@ -79,7 +100,7 @@ static void ErrorLangMessage(UINT resourceID)
   ErrorMessage(LangString(resourceID));
 }
 
-static const char *kNoFormats = "7-Zip cannot find the code that works with archives.";
+static const char * const kNoFormats = "7-Zip cannot find the code that works with archives.";
 
 static int ShowMemErrorMessage()
 {
@@ -87,7 +108,7 @@ static int ShowMemErrorMessage()
   return NExitCode::kMemoryError;
 }
 
-static int ShowSysErrorMessage(DWORD errorCode)
+static int ShowSysErrorMessage(HRESULT errorCode)
 {
   if (errorCode == E_OUTOFMEMORY)
     return ShowMemErrorMessage();
@@ -112,7 +133,7 @@ static int Main2()
   #endif
   if (commandStrings.Size() == 0)
   {
-    MessageBoxW(0, L"Specify command", L"7-Zip", 0);
+    MessageBoxW(NULL, L"Specify command", L"7-Zip", 0);
     return 0;
   }
 
@@ -122,31 +143,37 @@ static int Main2()
   parser.Parse1(commandStrings, options);
   parser.Parse2(options);
 
-  #if defined(_WIN32) && !defined(UNDER_CE)
-  NSecurity::EnablePrivilege_SymLink();
-  #ifdef _7ZIP_LARGE_PAGES
-  if (options.LargePages)
-    NSecurity::EnablePrivilege_LockMemory();
-  #endif
-  #endif
-
   CREATE_CODECS_OBJECT
 
-  codecs->CaseSensitiveChange = options.CaseSensitiveChange;
+  codecs->CaseSensitive_Change = options.CaseSensitive_Change;
   codecs->CaseSensitive = options.CaseSensitive;
   ThrowException_if_Error(codecs->Load());
+  Codecs_AddHashArcHandler(codecs);
+ 
+  #ifdef Z7_EXTERNAL_CODECS
+  {
+    g_ExternalCodecs_Ptr = &_externalCodecs;
+    UString s;
+    codecs->GetCodecsErrorMessage(s);
+    if (!s.IsEmpty())
+    {
+      MessageBoxW(NULL, s, L"7-Zip", MB_ICONERROR);
+    }
   
-  bool isExtractGroupCommand = options.Command.IsFromExtractGroup();
+  }
+  #endif
+
+  const bool isExtractGroupCommand = options.Command.IsFromExtractGroup();
   
   if (codecs->Formats.Size() == 0 &&
         (isExtractGroupCommand
         
         || options.Command.IsFromUpdateGroup()))
   {
-    #ifdef EXTERNAL_CODECS
+    #ifdef Z7_EXTERNAL_CODECS
     if (!codecs->MainDll_ErrorPath.IsEmpty())
     {
-      UString s = L"7-Zip cannot load module ";
+      UString s ("7-Zip cannot load module: ");
       s += fs2us(codecs->MainDll_ErrorPath);
       throw s;
     }
@@ -161,7 +188,7 @@ static int Main2()
     return NExitCode::kFatalError;
   }
 
-  CIntVector excludedFormatIndices;
+  CIntVector excludedFormats;
   FOR_VECTOR (k, options.ExcludedArcTypes)
   {
     CIntVector tempIndices;
@@ -171,20 +198,26 @@ static int Main2()
       ErrorLangMessage(IDS_UNSUPPORTED_ARCHIVE_TYPE);
       return NExitCode::kFatalError;
     }
-    excludedFormatIndices.AddToUniqueSorted(tempIndices[0]);
-    // excludedFormatIndices.Sort();
+    excludedFormats.AddToUniqueSorted(tempIndices[0]);
+    // excludedFormats.Sort();
   }
 
-  #ifdef EXTERNAL_CODECS
+  #ifdef Z7_EXTERNAL_CODECS
   if (isExtractGroupCommand
+      || options.Command.IsFromUpdateGroup()
       || options.Command.CommandType == NCommandType::kHash
       || options.Command.CommandType == NCommandType::kBenchmark)
-    ThrowException_if_Error(__externalCodecs.Load());
+    ThrowException_if_Error(_externalCodecs.Load());
   #endif
   
   if (options.Command.CommandType == NCommandType::kBenchmark)
   {
-    HRESULT res = Benchmark(EXTERNAL_CODECS_VARS_L options.Properties);
+    HRESULT res = Benchmark(
+        EXTERNAL_CODECS_VARS_L
+        options.Properties,
+        options.NumIterations_Defined ?
+          options.NumIterations :
+          k_NumBenchIterations_Default);
     /*
     if (res == S_FALSE)
     {
@@ -202,7 +235,7 @@ static int Main2()
     CExtractCallbackImp *ecs = new CExtractCallbackImp;
     CMyComPtr<IFolderArchiveExtractCallback> extractCallback = ecs;
 
-    #ifndef _NO_CRYPTO
+    #ifndef Z7_NO_CRYPTO
     ecs->PasswordIsDefined = options.PasswordEnabled;
     ecs->Password = options.Password;
     #endif
@@ -216,13 +249,13 @@ static int Main2()
     eo.YesToAll = options.YesToAll;
     eo.TestMode = options.Command.IsTestCommand();
 
-    #ifndef _SFX
+    #ifndef Z7_SFX
     eo.Properties = options.Properties;
     #endif
 
     bool messageWasDisplayed = false;
 
-    #ifndef _SFX
+    #ifndef Z7_SFX
     CHashBundle hb;
     CHashBundle *hb_ptr = NULL;
     
@@ -256,13 +289,15 @@ static int Main2()
 
     ecs->MultiArcMode = (ArchivePathsSorted.Size() > 1);
 
-    HRESULT result = ExtractGUI(codecs,
-          formatIndices, excludedFormatIndices,
+    HRESULT result = ExtractGUI(
+          // EXTERNAL_CODECS_VARS_L
+          codecs,
+          formatIndices, excludedFormats,
           ArchivePathsSorted,
           ArchivePathsFullSorted,
           options.Censor.Pairs.Front().Head,
           eo,
-          #ifndef _SFX
+          #ifndef Z7_SFX
           hb_ptr,
           #endif
           options.ShowDialog, messageWasDisplayed, ecs);
@@ -277,14 +312,14 @@ static int Main2()
   }
   else if (options.Command.IsFromUpdateGroup())
   {
-    #ifndef _NO_CRYPTO
+    #ifndef Z7_NO_CRYPTO
     bool passwordIsDefined = options.PasswordEnabled && !options.Password.IsEmpty();
     #endif
 
     CUpdateCallbackGUI callback;
     // callback.EnablePercents = options.EnablePercents;
 
-    #ifndef _NO_CRYPTO
+    #ifndef Z7_NO_CRYPTO
     callback.PasswordIsDefined = passwordIsDefined;
     callback.AskPassword = options.PasswordEnabled && options.Password.IsEmpty();
     callback.Password = options.Password;
@@ -350,7 +385,9 @@ static int Main2()
   return 0;
 }
 
-#define NT_CHECK_FAIL_ACTION ErrorMessage(L"Unsupported Windows version"); return NExitCode::kFatalError;
+#if defined(_UNICODE) && !defined(_WIN64) && !defined(UNDER_CE)
+#define NT_CHECK_FAIL_ACTION ErrorMessage("Unsupported Windows version"); return NExitCode::kFatalError;
+#endif
 
 int APIENTRY WinMain(HINSTANCE  hInstance, HINSTANCE /* hPrevInstance */,
   #ifdef UNDER_CE
@@ -361,9 +398,9 @@ int APIENTRY WinMain(HINSTANCE  hInstance, HINSTANCE /* hPrevInstance */,
   /* lpCmdLine */, int /* nCmdShow */)
 {
   g_hInstance = hInstance;
+  
   #ifdef _WIN32
   NT_CHECK
-  SetLargePageSize();
   #endif
 
   InitCommonControls();
@@ -378,18 +415,24 @@ int APIENTRY WinMain(HINSTANCE  hInstance, HINSTANCE /* hPrevInstance */,
   OleInitialize(NULL);
   #endif
 
+  #ifdef Z7_LANG
   LoadLangOneTime();
+  #endif
 
   // setlocale(LC_COLLATE, ".ACP");
   try
   {
+    #ifdef _WIN32
+    My_SetDefaultDllDirectories();
+    #endif
+
     return Main2();
   }
   catch(const CNewException &)
   {
     return ShowMemErrorMessage();
   }
-  catch(const CArcCmdLineException &e)
+  catch(const CMessagePathException &e)
   {
     ErrorMessage(e);
     return NExitCode::kUserError;
@@ -407,7 +450,7 @@ int APIENTRY WinMain(HINSTANCE  hInstance, HINSTANCE /* hPrevInstance */,
   }
   catch(const AString &s)
   {
-    ErrorMessage(GetUnicodeString(s));
+    ErrorMessage(s);
     return NExitCode::kFatalError;
   }
   catch(const wchar_t *s)
@@ -417,19 +460,19 @@ int APIENTRY WinMain(HINSTANCE  hInstance, HINSTANCE /* hPrevInstance */,
   }
   catch(const char *s)
   {
-    ErrorMessage(GetUnicodeString(s));
+    ErrorMessage(s);
     return NExitCode::kFatalError;
   }
   catch(int v)
   {
-    wchar_t s[32];
-    ConvertUInt32ToString(v, s);
-    ErrorMessage(UString(L"Error: ") + s);
+    AString e ("Error: ");
+    e.Add_UInt32((unsigned)v);
+    ErrorMessage(e);
     return NExitCode::kFatalError;
   }
   catch(...)
   {
-    ErrorMessage(L"Unknown error");
+    ErrorMessage("Unknown error");
     return NExitCode::kFatalError;
   }
 }

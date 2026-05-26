@@ -44,7 +44,7 @@ RSC=rc.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /c
-# ADD CPP /nologo /Gr /MD /W4 /WX /GX /O1 /D "NDEBUG" /D "_MBCS" /D "WIN32" /D "_CONSOLE" /D "WIN_LONG_PATH" /D "EXTERNAL_CODECS" /D "_7ZIP_LARGE_PAGES" /D "SUPPORT_DEVICE_FILE" /FAs /Yu"StdAfx.h" /FD /GF /c
+# ADD CPP /nologo /Gr /MD /W4 /WX /GX /O1 /D "NDEBUG" /D "_MBCS" /D "WIN32" /D "_CONSOLE" /D "Z7_LONG_PATH" /D "Z7_EXTERNAL_CODECS" /D "Z7_LARGE_PAGES" /D "Z7_DEVICE_FILE" /FAcs /Yu"StdAfx.h" /FD /GF /c
 # ADD BASE RSC /l 0x419 /d "NDEBUG"
 # ADD RSC /l 0x419 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -69,7 +69,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /GZ /c
-# ADD CPP /nologo /Gr /MTd /W4 /WX /Gm /GX /ZI /Od /D "_DEBUG" /D "_MBCS" /D "WIN32" /D "_CONSOLE" /D "WIN_LONG_PATH" /D "EXTERNAL_CODECS" /D "_7ZIP_LARGE_PAGES" /D "SUPPORT_DEVICE_FILE" /Yu"StdAfx.h" /FD /GZ /c
+# ADD CPP /nologo /Gr /MTd /W4 /WX /Gm /GX /ZI /Od /D "_DEBUG" /D "_MBCS" /D "WIN32" /D "_CONSOLE" /D "Z7_LONG_PATH" /D "Z7_EXTERNAL_CODECS" /D "Z7_LARGE_PAGES" /D "Z7_DEVICE_FILE" /FAcs /Yu"StdAfx.h" /FD /GZ /c
 # ADD BASE RSC /l 0x419 /d "_DEBUG"
 # ADD RSC /l 0x419 /d "_DEBUG"
 BSC32=bscmake.exe
@@ -95,7 +95,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /Gz /MD /W3 /GX /O1 /I "../../../" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Yu"StdAfx.h" /FD /c
-# ADD CPP /nologo /Gr /MD /W4 /WX /GX /O1 /D "NDEBUG" /D "_UNICODE" /D "UNICODE" /D "WIN32" /D "_CONSOLE" /D "WIN_LONG_PATH" /D "EXTERNAL_CODECS" /D "_7ZIP_LARGE_PAGES" /D "SUPPORT_DEVICE_FILE" /Yu"StdAfx.h" /FD /c
+# ADD CPP /nologo /Gr /MD /W4 /WX /GX /O1 /D "NDEBUG" /D "_UNICODE" /D "UNICODE" /D "WIN32" /D "_CONSOLE" /D "Z7_LONG_PATH" /D "Z7_EXTERNAL_CODECS" /D "Z7_LARGE_PAGES" /D "Z7_DEVICE_FILE" /Yu"StdAfx.h" /FD /c
 # ADD BASE RSC /l 0x419 /d "NDEBUG"
 # ADD RSC /l 0x419 /d "NDEBUG"
 BSC32=bscmake.exe
@@ -121,7 +121,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /Gz /W3 /Gm /GX /ZI /Od /I "../../../" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Yu"StdAfx.h" /FD /GZ /c
-# ADD CPP /nologo /Gr /MTd /W4 /WX /Gm /GX /ZI /Od /D "_DEBUG" /D "_UNICODE" /D "UNICODE" /D "WIN32" /D "_CONSOLE" /D "WIN_LONG_PATH" /D "EXTERNAL_CODECS" /D "_7ZIP_LARGE_PAGES" /D "SUPPORT_DEVICE_FILE" /Yu"StdAfx.h" /FD /GZ /c
+# ADD CPP /nologo /Gr /MTd /W4 /WX /Gm /GX /ZI /Od /D "_DEBUG" /D "_UNICODE" /D "UNICODE" /D "WIN32" /D "_CONSOLE" /D "Z7_LONG_PATH" /D "Z7_EXTERNAL_CODECS" /D "Z7_LARGE_PAGES" /D "Z7_DEVICE_FILE" /Yu"StdAfx.h" /FD /GZ /c
 # ADD BASE RSC /l 0x419 /d "_DEBUG"
 # ADD RSC /l 0x419 /d "_DEBUG"
 BSC32=bscmake.exe
@@ -345,6 +345,10 @@ SOURCE=..\..\..\Windows\Registry.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\..\Windows\SecurityUtils.h
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\..\Windows\Synchronization.h
 # End Source File
 # Begin Source File
@@ -354,6 +358,14 @@ SOURCE=..\..\..\Windows\System.cpp
 # Begin Source File
 
 SOURCE=..\..\..\Windows\System.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\Windows\SystemInfo.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\Windows\SystemInfo.h
 # End Source File
 # Begin Source File
 
@@ -397,6 +409,14 @@ SOURCE=..\..\..\Common\Defs.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\..\Common\DynLimBuf.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\Common\DynLimBuf.h
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\..\Common\IntToString.cpp
 # End Source File
 # Begin Source File
@@ -417,7 +437,19 @@ SOURCE=..\..\..\Common\MyBuffer.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\..\Common\MyBuffer2.h
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\..\Common\MyCom.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\Common\MyGuidDef.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\Common\MyInitGuid.h
 # End Source File
 # Begin Source File
 
@@ -438,6 +470,10 @@ SOURCE=..\..\..\Common\MyVector.cpp
 # Begin Source File
 
 SOURCE=..\..\..\Common\MyVector.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\Common\MyWindows.h
 # End Source File
 # Begin Source File
 
@@ -737,6 +773,14 @@ SOURCE=..\..\Common\MethodProps.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\Common\MultiOutStream.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\Common\MultiOutStream.h
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\Common\ProgressUtils.cpp
 # End Source File
 # Begin Source File
@@ -825,6 +869,10 @@ SOURCE=..\..\..\..\C\7zTypes.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\..\..\C\7zWindows.h
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\..\..\C\Alloc.c
 # SUBTRACT CPP /YX /Yc /Yu
 # End Source File
@@ -834,12 +882,25 @@ SOURCE=..\..\..\..\C\Alloc.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\..\..\C\Compiler.h
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\..\..\C\CpuArch.c
 # SUBTRACT CPP /YX /Yc /Yu
 # End Source File
 # Begin Source File
 
 SOURCE=..\..\..\..\C\CpuArch.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\..\C\DllSecur.c
+# SUBTRACT CPP /YX /Yc /Yu
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\..\..\C\DllSecur.h
 # End Source File
 # Begin Source File
 
@@ -863,6 +924,14 @@ SOURCE=..\..\..\..\C\Threads.h
 # Begin Group "ArchiveCommon"
 
 # PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=..\..\Archive\Common\ItemNameUtils.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\Archive\Common\ItemNameUtils.h
+# End Source File
 # Begin Source File
 
 SOURCE=..\..\Archive\Common\OutStreamWithCRC.cpp

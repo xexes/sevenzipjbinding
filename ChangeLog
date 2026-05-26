@@ -1,6 +1,13 @@
 7-Zip-JBinding ChangeLog
 ========================
 
+Release - 23.01-2.2 (Release, cross-platform, based on zip/p7zip 23.01)
+
+	* Bind 7-zip 23.01
+	  Add ReportExtractResult callback
+	  
+	* 7-Zip-JBinding requires Java 8 or higher (previously - Java 1.5)
+
 Release - 16.02-2.02 (Release, cross-platform, based on zip/p7zip 16.02)
 
 	* Bugfix #5 RandomAccessFileOutStream should implement Closeable

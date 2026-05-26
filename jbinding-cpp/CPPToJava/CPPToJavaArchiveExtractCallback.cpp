@@ -51,9 +51,21 @@
  }
  */
 
+STDMETHODIMP CPPToJavaArchiveExtractCallback::CryptoGetTextPassword(BSTR *password) noexcept {
+    TRACE_OBJECT_CALL("CryptoGetTextPassword");
+
+    if (_cryptoGetTextPasswordImpl) {
+        return _cryptoGetTextPasswordImpl->CryptoGetTextPassword(password);
+    }
+
+    // No password callback available - return empty password
+    *password = SysAllocString(L"");
+    return S_OK;
+}
+
 STDMETHODIMP CPPToJavaArchiveExtractCallback::GetStream(UInt32 index,
                                                         ISequentialOutStream **outStream,
-                                                        Int32 askExtractMode) {
+                                                        Int32 askExtractMode) noexcept {
     TRACE_OBJECT_CALL("GetStream");
 
     JNIEnvInstance jniEnvInstance(_jbindingSession);
@@ -87,7 +99,7 @@ STDMETHODIMP CPPToJavaArchiveExtractCallback::GetStream(UInt32 index,
     return S_OK;
 }
 
-STDMETHODIMP CPPToJavaArchiveExtractCallback::PrepareOperation(Int32 askExtractMode) {
+STDMETHODIMP CPPToJavaArchiveExtractCallback::PrepareOperation(Int32 askExtractMode) noexcept {
     TRACE_OBJECT_CALL("PrepareOperation");
 
     JNIEnvInstance jniEnvInstance(_jbindingSession);
@@ -105,7 +117,7 @@ STDMETHODIMP CPPToJavaArchiveExtractCallback::PrepareOperation(Int32 askExtractM
     return jniEnvInstance.exceptionCheck() ? S_FALSE : S_OK;
 }
 
-STDMETHODIMP CPPToJavaArchiveExtractCallback::SetOperationResult(Int32 resultEOperationResult) {
+STDMETHODIMP CPPToJavaArchiveExtractCallback::SetOperationResult(Int32 resultEOperationResult) noexcept {
     TRACE_OBJECT_CALL("SetOperationResult");
 
     JNIEnvInstance jniEnvInstance(_jbindingSession);
@@ -123,3 +135,28 @@ STDMETHODIMP CPPToJavaArchiveExtractCallback::SetOperationResult(Int32 resultEOp
 
     return jniEnvInstance.exceptionCheck() ? S_FALSE : S_OK;
 }
+
+STDMETHODIMP CPPToJavaArchiveExtractCallback::ReportExtractResult(UInt32 indexType, UInt32 index, Int32 opRes) noexcept {
+    TRACE_OBJECT_CALL("ReportExtractResult");
+    
+    JNIEnvInstance jniEnvInstance(_jbindingSession);
+
+    // Convert indexType to Java enum
+    jobject indexTypeObject = jni::ReportExtractResultIndexType::getIndexType(jniEnvInstance, (jint) indexType);
+    if (jniEnvInstance.exceptionCheck()) {
+        return S_FALSE;
+    }
+
+    // Convert opRes to ExtractOperationResult enum
+    jobject opResObject = jni::ExtractOperationResult::getOperationResult(jniEnvInstance, (jint) opRes);
+    if (jniEnvInstance.exceptionCheck()) {
+        return S_FALSE;
+    }
+
+    // Call the Java method: reportExtractResult(ReportExtractResultIndexType indexType, int index, ExtractOperationResult extractOperationResult)
+    _iArchiveExtractCallback->reportExtractResult(jniEnvInstance, _javaImplementation,
+            indexTypeObject, (jint) index, opResObject);
+
+    return jniEnvInstance.exceptionCheck() ? S_FALSE : S_OK;
+}
+
