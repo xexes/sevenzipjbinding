@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+CMake: 3.31.6
+Created-By: 1.6.0_33-b03 (Sun Microsystems Inc.)
+Implementation-Title: 7-Zip-JBinding native lib (Linux-amd64)
+Implementation-Vendor: sevenzipjbind.sf.net
+Implementation-Version: 25.01-1.00
+Built-By: Boris Brodski
+Built-Date: 2026-05-26 19:23:50Z
