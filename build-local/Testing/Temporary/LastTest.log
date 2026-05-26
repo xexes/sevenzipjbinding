@@ -1,16 +1,16 @@
-Start testing: May 26 19:58 UTC
+Start testing: May 26 20:08 UTC
 ----------------------------------------------------------
 16/18 Testing: JUnit-compression
 16/18 Test: JUnit-compression
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Compression tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-local/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-local
-"JUnit-compression" start time: May 26 19:58 UTC
+"JUnit-compression" start time: May 26 20:08 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
 Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-Time: 0.001
+Time: 0
 
 OK (0 tests)
 
@@ -19,11 +19,11 @@ CMake Error at JUnitRunner.cmake:8 (MESSAGE):
 
 
 <end of output>
-Test time =   0.85 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Failed.
-"JUnit-compression" end time: May 26 19:58 UTC
+"JUnit-compression" end time: May 26 20:08 UTC
 "JUnit-compression" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 26 19:58 UTC
+End testing: May 26 20:08 UTC
