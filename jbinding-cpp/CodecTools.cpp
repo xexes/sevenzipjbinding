@@ -48,7 +48,13 @@ void CodecTools::init() {
  */
 static int getIndexByName(JNIEnv * env, UString & formatNameString) {
 	TRACE("Format: " << formatNameString)
-	return codecTools.codecs.FindFormatForArchiveType(formatNameString);
+	// Manual implementation since FindFormatForArchiveType is not available with Z7_SFX
+	for (unsigned i = 0; i < codecTools.codecs.Formats.Size(); i++) {
+		const CArcInfoEx &arc = codecTools.codecs.Formats[i];
+		if (formatNameString.IsEqualTo_NoCase(arc.Name))
+			return i;
+	}
+	return -1;
 }
 
 void CodecTools::getArchiveFormatName(JNIEnv * env, jobject archiveFormat, UString & formatNameString) {

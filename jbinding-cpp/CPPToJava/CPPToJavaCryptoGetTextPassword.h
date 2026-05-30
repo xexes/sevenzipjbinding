@@ -13,6 +13,7 @@ private:
 public:
     MY_UNKNOWN_IMP
 
+public:
     CPPToJavaCryptoGetTextPassword(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject cryptoGetTextPassword) :
         CPPToJavaAbstract(jbindingSession, initEnv, cryptoGetTextPassword),
                 _iCryptoGetTextPassword(jni::ICryptoGetTextPassword::_getInstanceFromObject(initEnv, cryptoGetTextPassword))

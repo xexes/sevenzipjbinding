@@ -36,6 +36,7 @@ class SimpleIUnknownClass : public CMyUnknownImp, public Object, public IUnknown
     int &_instanceCount;
 public:
     MY_UNKNOWN_IMP
+public:
     SimpleIUnknownClass(int &instanceCount, int index) :
         _instanceCount(instanceCount), _index(index) {
         TRACE_OBJECT_CREATION("SimpleIUnknownClass")
@@ -240,7 +241,7 @@ Java_net_sf_sevenzipjbinding_junit_jbindingtools_ExceptionHandlingTest_callRecur
             }
         }
         for (int i = 0; i < mtwidth;) {
-            threads[i].Wait();
+            threads[i].Wait_Close();
             i++;
         }
         for (int i = 0; i < mtwidth; i++) {

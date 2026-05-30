@@ -23,6 +23,14 @@ private:
     jni::ICryptoGetTextPassword * _cryptoGetTextPassword;
 
 public:
+    // IArchiveUpdateCallback, ICryptoGetTextPassword, ICryptoGetTextPassword2 all inherit
+    // IUnknown non-virtually, creating multiple IUnknown paths. Must implement AddRef/Release.
+    STDMETHOD_(ULONG, AddRef)() throw() Z7_override
+        { return ++_m_RefCount; }
+    STDMETHOD_(ULONG, Release)() throw() Z7_override
+        { if (--_m_RefCount != 0) return _m_RefCount; delete this; return 0; }
+
+public:
     CPPToJavaArchiveUpdateCallback(JBindingSession & jbindingSession, JNIEnv * initEnv,
                                    jobject archiveUpdateCallback, bool isInArchiveAttached,
                                    int archiveFormatIndex, jobject outArchive) :
@@ -63,7 +71,7 @@ public:
         return CPPToJavaProgress::SetCompleted(completeValue);
     }
 
-    STDMETHOD(QueryInterface)(REFGUID refguid, void ** p) throw() {
+    STDMETHOD(QueryInterface)(REFGUID refguid, void ** p) throw() Z7_override {
         TRACE_OBJECT_CALL("QueryInterface");
 
         if ((refguid == IID_ICryptoGetTextPassword) || (refguid == IID_ICryptoGetTextPassword2))
@@ -76,7 +84,7 @@ public:
                     *p = (void *)(ICryptoGetTextPassword2 *)this;
             	else
                     return E_NOINTERFACE;
-                AddRef();
+                CPPToJavaProgress::AddRef();  // Explicitly qualify to avoid ambiguity
                 return S_OK;
             }
             return E_NOINTERFACE;
@@ -85,15 +93,7 @@ public:
         return CPPToJavaProgress::QueryInterface(refguid, p);
     }
 
-    STDMETHOD_(ULONG, AddRef)() throw() {
-        TRACE_OBJECT_CALL("AddRef");
-        return CPPToJavaProgress::AddRef();
-    }
-
-    STDMETHOD_(ULONG, Release)() {
-        TRACE_OBJECT_CALL("Release");
-        return CPPToJavaProgress::Release();
-    }
+    // Inherit AddRef and Release from CPPToJavaProgress (non-final now)
 
     void freeOutItem(JNIEnvInstance & jniEnvInstance);
 

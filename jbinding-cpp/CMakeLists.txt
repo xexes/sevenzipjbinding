@@ -145,7 +145,8 @@ IF(MINGW)
 ELSE(MINGW)
     SET(SEVEN_ZIP_SRC "${P7ZIP_SRC}")
     SET(SEVEN_ZIP_PLATFORM_SOURCE_FILES
-        ${SEVEN_ZIP_SRC}/CPP/myWindows/wine_date_and_time.cpp
+        ${SEVEN_ZIP_SRC}/C/AesOpt.c
+        ${SEVEN_ZIP_SRC}/CPP/Windows/FileLink.cpp
     )
 ENDIF(MINGW)
 
@@ -205,6 +206,7 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/ZHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Bz2Handler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/DeflateProps.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/ExtHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/GzHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/FatHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/HandlerCont.cpp
@@ -339,6 +341,7 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzmaDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzmaEncoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzmaRegister.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzfseDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzOutWindow.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzxDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/PpmdDecoder.cpp
@@ -355,7 +358,10 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ShrinkDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ZDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/XpressDecoder.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/XzDecoder.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/XzEncoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ZlibDecoder.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ZstdDecoder.cpp
 
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/Crypto/7zAes.cpp
@@ -396,20 +402,30 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/C/7zStream.c
     ${SEVEN_ZIP_SRC}/C/Delta.c
     ${SEVEN_ZIP_SRC}/C/Lzma2Dec.c
+    ${SEVEN_ZIP_SRC}/C/Lzma2DecMt.c
     ${SEVEN_ZIP_SRC}/C/Lzma2Enc.c
+    ${SEVEN_ZIP_SRC}/C/LzFindOpt.c
     ${SEVEN_ZIP_SRC}/C/MtCoder.c
+    ${SEVEN_ZIP_SRC}/C/MtDec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd7.c
+    ${SEVEN_ZIP_SRC}/C/Ppmd7aDec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd7Dec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd7Enc.c
     ${SEVEN_ZIP_SRC}/C/Ppmd8.c
     ${SEVEN_ZIP_SRC}/C/Ppmd8Dec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd8Enc.c
+    ${SEVEN_ZIP_SRC}/C/Sha1Opt.c
+    ${SEVEN_ZIP_SRC}/C/Sha256Opt.c
+    ${SEVEN_ZIP_SRC}/C/Sha512.c
+    ${SEVEN_ZIP_SRC}/C/SwapBytes.c
     ${SEVEN_ZIP_SRC}/C/Xz.c
     ${SEVEN_ZIP_SRC}/C/XzCrc64.c
     ${SEVEN_ZIP_SRC}/C/XzCrc64Opt.c
     ${SEVEN_ZIP_SRC}/C/XzDec.c
     ${SEVEN_ZIP_SRC}/C/XzEnc.c
     ${SEVEN_ZIP_SRC}/C/XzIn.c
+    ${SEVEN_ZIP_SRC}/C/Xxh64.c
+    ${SEVEN_ZIP_SRC}/C/ZstdDec.c
 )
 
 SET(JBINDING_CPP_FILES

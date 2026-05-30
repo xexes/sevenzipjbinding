@@ -140,6 +140,9 @@ typedef __int64 INT64;
 #define WAIT_OBJECT_0 0
 #define INFINITE	0xFFFFFFFF
 
+// Guard against redefinition - SYSTEMTIME is already defined in MyWindows.h
+#ifndef _SYSTEMTIME_DEFINED_
+#define _SYSTEMTIME_DEFINED_
 typedef struct _SYSTEMTIME {
 	WORD wYear;
 	WORD wMonth;
@@ -150,7 +153,11 @@ typedef struct _SYSTEMTIME {
 	WORD wSecond;
 	WORD wMilliseconds;
 } SYSTEMTIME;
+#endif
 
+// Guard function declarations to avoid C/C++ linkage conflicts
+#ifndef _MYWINDOWS_TIME_FUNCTIONS_
+#define _MYWINDOWS_TIME_FUNCTIONS_
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -169,6 +176,7 @@ DWORD WINAPI GetTickCount(VOID);
 #ifdef __cplusplus
 }
 #endif
+#endif // _MYWINDOWS_TIME_FUNCTIONS_
 /* END #include <winbase.h> */
 
 /* BEGIN #include <winnls.h> */

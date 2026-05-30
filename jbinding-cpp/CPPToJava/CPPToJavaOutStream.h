@@ -8,6 +8,14 @@ private:
     jni::ISeekableStream * _iSeekableStream;
 
 public:
+    // IOutStream inherits ISequentialOutStream non-virtually, creating a second IUnknown path.
+    // Must provide AddRef/Release explicitly to satisfy both vtable slots.
+    STDMETHOD_(ULONG, AddRef)() throw() Z7_override
+        { return ++_m_RefCount; }
+    STDMETHOD_(ULONG, Release)() throw() Z7_override
+        { if (--_m_RefCount != 0) return _m_RefCount; delete this; return 0; }
+
+public:
     CPPToJavaOutStream(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject inStream) :
         CPPToJavaSequentialOutStream(jbindingSession, initEnv, inStream), //
                 _iOutStream(jni::IOutStream::_getInstanceFromObject(initEnv, inStream)), //
@@ -26,23 +34,17 @@ public:
         return result;
     }
 
-    STDMETHOD(QueryInterface)(REFGUID iid, void ** outObject) throw() {
+    STDMETHOD(QueryInterface)(REFGUID iid, void ** outObject) throw() Z7_override {
         if (iid == IID_IOutStream) {
             *outObject = (void *) (IOutStream *) this;
-            AddRef();
+            CPPToJavaSequentialOutStream::AddRef();  // Explicitly qualify to resolve ambiguity
             return S_OK;
         }
 
         return CPPToJavaSequentialOutStream::QueryInterface(iid, outObject);
     }
 
-    STDMETHOD_(ULONG, AddRef)() throw() {
-        return CPPToJavaSequentialOutStream::AddRef();
-    }
-
-    STDMETHOD_(ULONG, Release)() {
-        return CPPToJavaSequentialOutStream::Release();
-    }
+    // Inherit AddRef and Release from base class (no need to override)
 
     STDMETHOD(Seek)(Int64 offset, UInt32 seekOrigin, UInt64 *newPosition);
 

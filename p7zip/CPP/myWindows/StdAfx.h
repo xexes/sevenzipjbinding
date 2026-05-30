@@ -144,6 +144,11 @@ typedef LONG_PTR LRESULT;
 #define FACILITY_WIN32                        7 // FIXME
 #define __HRESULT_FROM_WIN32(x)   ((HRESULT)(x) > 0 ? ((HRESULT) (((x) & 0x0000FFFF) | (FACILITY_WIN32 << 16) | 0x80000000)) : (HRESULT)(x) ) // FIXME
 
+// Undefine HRESULT_FROM_WIN32 macro if defined (from 7zTypes.h) to allow function definition
+#ifdef HRESULT_FROM_WIN32
+#undef HRESULT_FROM_WIN32
+#endif
+
 static inline HRESULT HRESULT_FROM_WIN32(unsigned int x)
 {
     return (HRESULT)x > 0 ? ((HRESULT) ((x & 0x0000FFFF) | (FACILITY_WIN32 << 16) | 0x80000000)) : (HRESULT)x;

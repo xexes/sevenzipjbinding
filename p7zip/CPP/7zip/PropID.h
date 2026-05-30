@@ -103,6 +103,15 @@ enum
   kpidReadOnly,
   kpidOutName,
   kpidCopyLink,
+  kpidArcFileName,
+  kpidIsHash,
+  kpidChangeTime,
+  kpidUserId,
+  kpidGroupId,
+  kpidDeviceMajor,
+  kpidDeviceMinor,
+  kpidDevMajor,
+  kpidDevMinor,
 
   kpid_NUM_DEFINED,
 

@@ -186,7 +186,7 @@ public abstract class CompressSingleFileAbstractTest<C extends AbstractTestConte
     protected static final Date MODIFICATION_TIME = getDate(2 * WEEK);
     protected static final Date CREATION_TIME = getDate(3 * WEEK);
     protected static final Integer ATTRIBUTES = 1;
-    protected static final Integer POSIX_ATTRIBUTES = 2;
+    protected static final Integer POSIX_ATTRIBUTES = 0x8002; // S_IFREG | S_IWOTH (7-Zip 25.01 TAR always adds file-type bits via Get_Combined_Mode)
     protected static final String GROUP = "mygroup";
     protected static final String USER = "me";
 

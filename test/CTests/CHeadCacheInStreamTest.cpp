@@ -32,6 +32,7 @@ public:
 	}
 
     MY_UNKNOWN_IMP2(ISequentialInStream, IInStream)
+public:
     STDMETHOD(Read)(void *data, UInt32 size, UInt32 *processedSize) {
     	if (processedSize) {
     		*processedSize = 0;

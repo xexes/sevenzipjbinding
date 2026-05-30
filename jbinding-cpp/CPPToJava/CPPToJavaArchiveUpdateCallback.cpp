@@ -168,7 +168,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
         cPropVariant = UString(FromJChar(jniEnvInstance, (jstring)value));
 
 	#define ASSIGN_VALUE_TO_C_PROP_VARIANT_INTEGER                                                                  \
-        cPropVariant = (Int32)jni::Integer::intValue(jniEnvInstance, value);                                        \
+        cPropVariant.Set_Int32((Int32)jni::Integer::intValue(jniEnvInstance, value));                               \
         if (jniEnvInstance.exceptionCheck()) {                                                                      \
             return S_FALSE;                                                                                         \
         }
@@ -231,7 +231,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
     }
 
     if (propID == kpidTimeType) {
-        cPropVariant = NFileTimeType::kWindows;
+        cPropVariant.Set_Int32((Int32)NFileTimeType::kWindows);
         cPropVariant.Detach(value);
         return S_OK;
     }
@@ -359,8 +359,14 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
 
 #endif // _DEBUG
 
-    	jniEnvInstance.reportError("CPPToJavaArchiveUpdateCallback::GetProperty() : unexpected propID=%u", propID);
-    	return S_FALSE;
+    	// Unknown property - return empty variant (property not available).
+    	// 7-Zip 25.01 may request additional properties (e.g. kpidComment) that the
+    	// Java update callback does not need to provide. Returning VT_EMPTY is the
+    	// correct way to indicate "not available" per the IArchiveUpdateCallback contract.
+    	// IMPORTANT: Use break (not return) so cPropVariant.Detach(value) is called below,
+    	// which correctly sets value->vt = VT_EMPTY. Returning early leaves value->vt = VT_NULL
+    	// (set above), which causes E_INVALIDARG in strict encoders like the ZIP handler.
+    	break;
     }
 
     cPropVariant.Detach(value);
