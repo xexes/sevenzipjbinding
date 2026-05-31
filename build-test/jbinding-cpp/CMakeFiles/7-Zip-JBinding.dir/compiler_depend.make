@@ -114,12 +114,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CHeadCacheInStream.cpp.o: /tmp/worksp
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -127,11 +130,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CHeadCacheInStream.cpp.o: /tmp/worksp
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -143,11 +150,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CHeadCacheInStream.cpp.o: /tmp/worksp
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -155,11 +170,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CHeadCacheInStream.cpp.o: /tmp/worksp
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -273,6 +292,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CHeadCacheInStream.cpp.o: /tmp/worksp
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -406,6 +427,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveExtractCall
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -413,6 +435,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveExtractCall
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -420,12 +444,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveExtractCall
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -440,11 +467,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveExtractCall
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -453,12 +488,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveExtractCall
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -572,6 +611,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveExtractCall
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -701,6 +742,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenCallbac
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -708,6 +750,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenCallbac
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -715,12 +759,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenCallbac
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -735,11 +782,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenCallbac
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -748,12 +803,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenCallbac
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -867,6 +926,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenCallbac
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1001,6 +1062,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenVolumeC
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -1008,6 +1070,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenVolumeC
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -1015,12 +1079,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenVolumeC
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -1035,11 +1102,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenVolumeC
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -1048,12 +1123,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenVolumeC
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -1167,6 +1246,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveOpenVolumeC
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1303,6 +1384,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveUpdateCallb
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -1310,6 +1392,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveUpdateCallb
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -1317,12 +1401,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveUpdateCallb
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -1337,11 +1424,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveUpdateCallb
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -1350,12 +1445,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveUpdateCallb
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -1469,6 +1568,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaArchiveUpdateCallb
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1599,6 +1700,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaCryptoGetTextPassw
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -1606,6 +1708,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaCryptoGetTextPassw
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -1613,12 +1717,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaCryptoGetTextPassw
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -1633,11 +1740,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaCryptoGetTextPassw
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -1646,12 +1761,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaCryptoGetTextPassw
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -1765,6 +1884,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaCryptoGetTextPassw
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1895,6 +2016,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaInStream.cpp.o: /t
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -1902,6 +2024,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaInStream.cpp.o: /t
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -1909,12 +2033,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaInStream.cpp.o: /t
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -1929,11 +2056,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaInStream.cpp.o: /t
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -1942,12 +2077,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaInStream.cpp.o: /t
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -2061,6 +2200,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaInStream.cpp.o: /t
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2192,6 +2333,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaOutStream.cpp.o: /
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -2199,6 +2341,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaOutStream.cpp.o: /
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -2206,12 +2350,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaOutStream.cpp.o: /
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -2226,11 +2373,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaOutStream.cpp.o: /
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -2239,12 +2394,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaOutStream.cpp.o: /
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -2358,6 +2517,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaOutStream.cpp.o: /
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2488,6 +2649,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaProgress.cpp.o: /t
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -2495,6 +2657,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaProgress.cpp.o: /t
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -2502,12 +2666,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaProgress.cpp.o: /t
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -2522,11 +2689,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaProgress.cpp.o: /t
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -2535,12 +2710,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaProgress.cpp.o: /t
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -2654,6 +2833,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaProgress.cpp.o: /t
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2782,6 +2963,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialInStream
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -2789,6 +2971,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialInStream
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -2796,12 +2980,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialInStream
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -2816,11 +3003,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialInStream
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -2829,12 +3024,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialInStream
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -2948,6 +3147,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialInStream
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3078,6 +3279,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialOutStrea
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -3085,6 +3287,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialOutStrea
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -3092,12 +3296,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialOutStrea
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -3112,11 +3319,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialOutStrea
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -3125,12 +3340,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialOutStrea
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -3244,6 +3463,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CPPToJava/CPPToJavaSequentialOutStrea
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3372,12 +3593,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CodecTools.cpp.o: /tmp/workspace/xexe
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -3385,11 +3609,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CodecTools.cpp.o: /tmp/workspace/xexe
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -3401,11 +3629,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CodecTools.cpp.o: /tmp/workspace/xexe
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -3413,11 +3649,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CodecTools.cpp.o: /tmp/workspace/xexe
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -3531,6 +3771,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/CodecTools.cpp.o: /tmp/workspace/xexe
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3655,12 +3897,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/Debug.cpp.o: /tmp/workspace/xexes/sev
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -3668,11 +3913,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/Debug.cpp.o: /tmp/workspace/xexes/sev
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -3684,11 +3933,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/Debug.cpp.o: /tmp/workspace/xexes/sev
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -3696,11 +3953,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/Debug.cpp.o: /tmp/workspace/xexes/sev
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -3814,6 +4075,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/Debug.cpp.o: /tmp/workspace/xexes/sev
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3939,12 +4202,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JBindingTools.cpp.o: /tmp/workspace/x
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -3952,11 +4218,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JBindingTools.cpp.o: /tmp/workspace/x
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -3968,11 +4238,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JBindingTools.cpp.o: /tmp/workspace/x
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -3980,11 +4258,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JBindingTools.cpp.o: /tmp/workspace/x
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -4098,6 +4380,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JBindingTools.cpp.o: /tmp/workspace/x
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4225,12 +4509,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JNITools.cpp.o: /tmp/workspace/xexes/
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -4238,11 +4525,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JNITools.cpp.o: /tmp/workspace/xexes/
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -4254,11 +4545,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JNITools.cpp.o: /tmp/workspace/xexes/
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -4266,11 +4565,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JNITools.cpp.o: /tmp/workspace/xexes/
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -4384,6 +4687,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JNITools.cpp.o: /tmp/workspace/xexes/
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4508,12 +4813,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: /tmp/workspace/
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -4521,11 +4829,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: /tmp/workspace/
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -4537,11 +4849,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: /tmp/workspace/
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -4549,11 +4869,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: /tmp/workspace/
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -4667,6 +4991,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaStaticInfo.cpp.o: /tmp/workspace/
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4802,6 +5128,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPInArchiveImpl.cpp.
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -4809,6 +5136,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPInArchiveImpl.cpp.
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -4816,12 +5145,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPInArchiveImpl.cpp.
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -4836,11 +5168,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPInArchiveImpl.cpp.
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -4849,12 +5189,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPInArchiveImpl.cpp.
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -4968,6 +5312,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPInArchiveImpl.cpp.
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5106,6 +5452,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPOutArchiveImpl.cpp
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -5113,6 +5460,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPOutArchiveImpl.cpp
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -5120,12 +5469,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPOutArchiveImpl.cpp
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -5140,11 +5492,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPOutArchiveImpl.cpp
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -5153,12 +5513,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPOutArchiveImpl.cpp
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -5272,6 +5636,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPOutArchiveImpl.cpp
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5419,6 +5785,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPSevenZip.cpp.o: /t
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -5448,6 +5815,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPSevenZip.cpp.o: /t
   /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
@@ -5455,6 +5823,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPSevenZip.cpp.o: /t
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -5473,15 +5842,20 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPSevenZip.cpp.o: /t
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -5499,11 +5873,13 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPSevenZip.cpp.o: /t
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
@@ -5511,6 +5887,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/JavaToCPP/JavaToCPPSevenZip.cpp.o: /t
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -5760,12 +6137,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/SevenZipJBinding.cpp.o: /tmp/workspac
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -5773,11 +6153,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/SevenZipJBinding.cpp.o: /tmp/workspac
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -5789,11 +6173,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/SevenZipJBinding.cpp.o: /tmp/workspac
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -5801,11 +6193,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/SevenZipJBinding.cpp.o: /tmp/workspac
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -5919,6 +6315,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/SevenZipJBinding.cpp.o: /tmp/workspac
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6059,6 +6457,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UniversalArchiveOpenCallback.cpp.o: /
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/deque.tcc \
@@ -6066,6 +6465,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UniversalArchiveOpenCallback.cpp.o: /
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -6073,12 +6474,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UniversalArchiveOpenCallback.cpp.o: /
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
@@ -6093,11 +6497,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UniversalArchiveOpenCallback.cpp.o: /
   /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
@@ -6106,12 +6518,16 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UniversalArchiveOpenCallback.cpp.o: /
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -6225,6 +6641,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UniversalArchiveOpenCallback.cpp.o: /
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6355,12 +6773,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UserTrace.cpp.o: /tmp/workspace/xexes
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/memory_resource.h \
@@ -6368,11 +6789,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UserTrace.cpp.o: /tmp/workspace/xexes
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -6384,11 +6809,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UserTrace.cpp.o: /tmp/workspace/xexes
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/ext/aligned_buffer.h \
@@ -6396,11 +6829,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UserTrace.cpp.o: /tmp/workspace/xexes
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/dirent.h \
@@ -6514,6 +6951,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/UserTrace.cpp.o: /tmp/workspace/xexes
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -28371,6 +28810,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/CHeadCacheInStreamTest
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -28399,6 +28839,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/CHeadCacheInStreamTest
   /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
@@ -28407,6 +28848,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/CHeadCacheInStreamTest
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -28422,15 +28864,20 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/CHeadCacheInStreamTest
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -28447,11 +28894,13 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/CHeadCacheInStreamTest
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
@@ -28459,6 +28908,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/CHeadCacheInStreamTest
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -28717,6 +29167,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/EnumTest.cpp.o: /tmp/w
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -28745,6 +29196,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/EnumTest.cpp.o: /tmp/w
   /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
@@ -28753,6 +29205,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/EnumTest.cpp.o: /tmp/w
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
@@ -28771,16 +29224,21 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/EnumTest.cpp.o: /tmp/w
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -28797,11 +29255,13 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/EnumTest.cpp.o: /tmp/w
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
@@ -28809,6 +29269,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/EnumTest.cpp.o: /tmp/w
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -29067,6 +29528,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JBindingTest.cpp.o: /t
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -29095,6 +29557,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JBindingTest.cpp.o: /t
   /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
@@ -29103,6 +29566,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JBindingTest.cpp.o: /t
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
@@ -29121,16 +29585,21 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JBindingTest.cpp.o: /t
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -29147,11 +29616,13 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JBindingTest.cpp.o: /t
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
@@ -29159,6 +29630,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JBindingTest.cpp.o: /t
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -29415,6 +29887,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: /t
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -29443,6 +29916,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: /t
   /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
@@ -29451,6 +29925,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: /t
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
@@ -29466,15 +29941,20 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: /t
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -29491,11 +29971,13 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: /t
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
@@ -29503,6 +29985,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: /t
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -29937,8 +30420,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Windows/PropVariantConv.c
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Windows/FileDir.cpp.o:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Common/StringToInt.cpp.o:
-
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Common/MyXml.cpp.o:
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Common/MyWindows.cpp.o:
@@ -30096,10 +30577,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Common/ItemN
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Common/HandlerOut.cpp.o:
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Common/FindSignature.cpp.o:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o:
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Cab/CabRegister.cpp.o:
 
@@ -30603,19 +31080,27 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Common/Coder
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarHeader.cpp:
 
-/usr/include/c++/13/istream:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarUpdate.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/ZlibDecoder.cpp:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Sha1Opt.c:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarItem.h:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Crypto/RandGen.cpp.o:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarIn.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/DeflateConst.h:
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/DeflateRegister.cpp.o:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Common/MultiStream.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/StdAfx.h:
 
-/usr/include/c++/13/cwchar:
+/tmp/workspace/xexes/sevenzipjbinding/test/CTests/EnumTest.cpp:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarHandler.cpp:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/SplitHandler.cpp:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/RpmHandler.cpp:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Rar/RarItem.h:
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/LzhDecoder.cpp.o:
 
@@ -30633,12 +31118,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/ImplodeDeco
 
 /usr/include/c++/13/bits/streambuf.tcc:
 
-/usr/include/c++/13/cwctype:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/BraIA64.c:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zEncode.cpp:
-
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/Wildcard.cpp:
@@ -30646,6 +31125,12 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/ImplodeDeco
 /usr/include/c++/13/bits/string_view.tcc:
 
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/JavaToCPP/JavaToCPPInArchiveImpl.cpp:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/BranchRegister.cpp.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarHeader.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyGuidDef.h:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
@@ -30661,14 +31146,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/unistd-decl.h:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Common/ListFileUtils.cpp.o:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Crypto/Rar5Aes.cpp:
-
-/usr/include/c++/13/bits/hash_bytes.h:
-
-/usr/include/stdio.h:
-
 /usr/include/c++/13/bits/char_traits.h:
 
 /usr/include/c++/13/bits/move.h:
@@ -30676,6 +31153,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Common/ListFileUtils.cpp.
 /usr/include/c++/13/bits/localefwd.h:
 
 /usr/include/c++/13/bits/basic_string.tcc:
+
+/usr/include/c++/13/chrono:
 
 /usr/include/c++/13/bits/basic_ios.tcc:
 
@@ -30727,12 +31206,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/UI/Common/PropIDUtil
 
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaProgress.h:
 
-/usr/include/c++/13/streambuf:
-
-/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaOutStream.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
-
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaArchiveExtractCallback.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaAbstract.h:
@@ -30757,8 +31230,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/UI/Common/PropIDUtil
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
-/usr/include/c++/13/ext/string_conversions.h:
-
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/FatHandler.cpp.o:
@@ -30778,6 +31249,14 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Blake2s.c.o:
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/mman.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
 
@@ -30825,19 +31304,11 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/Rar2Decoder
 
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CodecTools.h:
 
+/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaSequentialOutStream.cpp:
+
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/ZDecoder.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaSequentialOutStream.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
@@ -30917,21 +31388,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Ppmd8Enc.c.o:
 
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CHeadCacheInStream.cpp:
 
-/lib/x86_64-linux-gnu/libc.so.6:
-
-/usr/include/c++/13/bits/stringfwd.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Sort.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/XzCrc64Opt.c.o:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Wim/WimHandler.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h:
+/usr/include/c++/13/cwchar:
 
 /usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
@@ -30957,31 +31414,45 @@ jbinding-cpp/javah/net_sf_sevenzipjbinding_SevenZip.h:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/7zVersion.h:
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o:
 
-/usr/include/c++/13/bits/functexcept.h:
+/usr/include/string.h:
 
-/usr/include/c++/13/ext/alloc_traits.h:
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/usr/include/c++/13/bits/refwrap.h:
+/usr/include/asm-generic/errno-base.h:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/NtfsHandler.cpp.o:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/BcjCoder.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/XzDec.c.o:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyXml.cpp:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/c++/13/bits/exception_defines.h:
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Lzma2DecMt.c.o:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zIn.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Crypto/HmacSha256.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/c++/13/bits/exception.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyMap.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h:
-
-/usr/include/c++/13/ext/atomicity.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/HfsHandler.h:
 
@@ -30994,6 +31465,18 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/BranchMisc.
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/keylockerintrin.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Zip/ZipAddCommon.cpp.o:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Chm/ChmIn.cpp.o:
+
+/usr/include/c++/13/bits/chrono.h:
+
+/usr/include/c++/13/deque:
+
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/c++/13/debug/assertions.h:
 
 /usr/include/c++/13/bit:
 
@@ -31057,6 +31540,12 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/UI/Common/LoadCodecs
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Crypto/ZipStrong.cpp.o:
+
+/usr/include/stdc-predef.h:
+
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaProgress.cpp:
@@ -31067,23 +31556,15 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/ArHandler.cp
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/Bcj2.h:
 
-/usr/include/c++/13/bits/stl_uninitialized.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/NewHandler.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp:
-
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/JBindingTools.cpp:
 
 /usr/include/c++/13/bits/erase_if.h:
 
 /usr/include/c++/13/bits/invoke.h:
 
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
-
 jbinding-cpp/javah/net_sf_sevenzipjbinding_impl_InArchiveImpl.h:
+
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -31101,11 +31582,45 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/PpmdEncoder
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Threads.c:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/IFileExtractCallback.h:
+
+/usr/include/c++/13/bits/unique_ptr.h:
+
 /usr/include/c++/13/bits/charconv.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/MethodProps.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/ListFileUtils.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyVector.cpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/CpuArch.c:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/SwapBytes.c.o:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/LzmaDec.c.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/FilterCoder.cpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/HashCalc.h:
+
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
 /usr/include/c++/13/bits/nested_exception.h:
 
@@ -31125,21 +31640,11 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Common/FilePathAutoR
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h:
+/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaOutStream.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+/usr/include/c++/13/streambuf:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/FileStreams.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/Deflate64Register.cpp:
-
-/usr/include/c++/13/bits/streambuf_iterator.h:
-
-/usr/include/stdint.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Ppmd7.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
 
 /usr/include/asm-generic/bitsperlong.h:
 
@@ -31149,21 +31654,25 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Common/FilePathAutoR
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/Precomp.h:
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/XzCrc64Opt.c.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Wim/WimHandler.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h:
+
+/lib/x86_64-linux-gnu/libc.so.6:
+
+/usr/include/c++/13/bits/stringfwd.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Sort.h:
+
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/Compiler.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/Alloc.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/BcjCoder.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/MtDec.c:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Windows/System.h:
 
@@ -31172,6 +31681,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Common/FilePathAutoR
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Rar/Rar5Handler.cpp.o:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyString.h:
+
+/usr/include/c++/13/thread:
 
 /usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
@@ -31189,35 +31700,21 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Zip/ZipItem.
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/Xz.c:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Windows/PropVariant.h:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/ArchiveExtractCallback.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/DeflateRegister.cpp.o:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/StdAfx.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/LzOutWindow.cpp.o:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/XzEnc.c:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/c++/13/ostream:
-
-/usr/include/c++/13/string_view:
-
-/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaPackageSevenZip.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/AutoPtr.h:
 
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Windows/PropVariantUtils.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyBuffer.h:
+
+/usr/include/x86_64-linux-gnu/bits/dirent.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/IDecl.h:
 
 /usr/include/c++/13/bits/stl_vector.h:
 
@@ -31285,6 +31782,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Common/VirtThread.cp
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/IProgress.h:
 
+/usr/include/c++/13/bits/std_thread.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/c++/13/bits/stl_tree.h:
@@ -31292,6 +31791,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Common/VirtThread.cp
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/PpmdEncoder.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Windows/TimeUtils.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/LzfseDecoder.cpp:
+
+/usr/include/c++/13/exception:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyXml.cpp:
+
+/usr/include/c++/13/bits/exception_defines.h:
+
+/usr/include/c++/13/bits/refwrap.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/NtfsHandler.cpp.o:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/IStream.h:
 
@@ -31303,10 +31820,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Common/VirtThread.cp
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/ICoder.h:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/XzDec.c.o:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/CpioHandler.cpp.o:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/StreamUtils.cpp:
@@ -31317,13 +31830,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/CpioHandler.
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/ZstdDec.c:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Crypto/Rar20Crypto.cpp.o:
-
-/usr/include/string.h:
-
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/PropIDUtils.h:
-
-/usr/include/c++/13/deque:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Windows/Defs.h:
 
@@ -31361,39 +31868,47 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/UI/Console/ConsoleCl
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/XzCrc64.h:
 
-/usr/include/c++/13/stdexcept:
-
-/usr/include/c++/13/cstdlib:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/HandlerCont.cpp:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
-/usr/include/c++/13/debug/assertions.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Lzma2Enc.c.o:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/Common.h:
-
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyWindows.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/LzfseDecoder.cpp:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/LzOutWindow.cpp.o:
 
-/usr/include/c++/13/exception:
+/usr/include/c++/13/bits/basic_string.h:
 
-/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/XzEnc.c:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/HashCalc.h:
+/usr/include/asm-generic/posix_types.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/Rar3Decoder.cpp.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/ArchiveExtractCallback.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/7zVersion.h:
+
+/usr/include/c++/13/bits/functexcept.h:
+
+/usr/include/c++/13/ext/alloc_traits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.a:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/ArchiveOpenCallback.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Common/ListFileUtils.cpp.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Crypto/Rar5Aes.cpp:
+
+/usr/include/c++/13/bits/hash_bytes.h:
+
+/usr/include/stdio.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaArchiveOpenCallback.cpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h:
 
 /usr/include/c++/13/bits/list.tcc:
 
@@ -31401,7 +31916,9 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Lzma2Enc.c.o:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/InBuffer.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarUpdate.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/LzmsDecoder.cpp.o:
 
@@ -31421,6 +31938,24 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/LzmaRegiste
 
 /usr/include/c++/13/bits/node_handle.h:
 
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Common/ParseProperties.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Lzma2Enc.c.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/Common.h:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zEncode.cpp:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/XzHandler.cpp:
+
+/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaArchiveOpenVolumeCallback.cpp:
+
+/usr/include/wchar.h:
+
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyInitGuid.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Nsis/StdAfx.h:
@@ -31430,6 +31965,12 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Windows/PropVariant.cpp.o
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Nsis/NsisHandler.cpp:
+
+/usr/include/c++/13/bits/sstream.tcc:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h:
+
+/usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/limits.h:
 
@@ -31449,9 +31990,19 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Windows/PropVariantUtils.
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Rar/RarHeader.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyCom.h:
+
+/usr/include/c++/13/bits/stl_function.h:
+
 jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Windows/System.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h:
+
+/usr/include/c++/13/ostream:
 
 /usr/include/c++/13/pstl/pstl_config.h:
 
@@ -31459,11 +32010,35 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Windows/System.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/XzHandler.cpp:
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaArchiveOpenVolumeCallback.cpp:
+/usr/include/c++/13/limits:
 
-/usr/include/wchar.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zIn.cpp:
+
+/usr/include/c++/13/bits/this_thread_sleep.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/NewHandler.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Nsis/NsisDecode.cpp:
+
+/usr/include/c++/13/cstdint:
+
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zRegister.cpp:
+
+/usr/include/c++/13/cstdlib:
+
+/usr/include/c++/13/stdexcept:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/HandlerCont.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/MtDec.c:
+
+/usr/include/c++/13/ctime:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/ProgressUtils.h:
 
@@ -31494,6 +32069,28 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Windows/System.cpp.o:
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Common/ItemNameUtils.h:
 
 /usr/include/c++/13/ext/numeric_traits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/LzmaDec.c:
+
+/usr/include/c++/13/iosfwd:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/FileStreams.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/Deflate64Register.cpp:
+
+/usr/include/c++/13/bits/streambuf_iterator.h:
+
+/usr/include/stdint.h:
+
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Ppmd7.h:
+
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/Common/StringToInt.cpp.o:
+
+/usr/include/c++/13/ratio:
 
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
@@ -31533,8 +32130,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/LzmaDecoder
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/RpmHandler.cpp:
-
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/Rar1Decoder.cpp:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/GzHandler.cpp:
@@ -31559,13 +32154,7 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Iso/IsoHandl
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Common/OutStreamWithSha1.cpp:
 
-/usr/include/c++/13/iostream:
-
-/usr/include/pthread.h:
-
 /usr/include/sched.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/CPPToJava/CPPToJavaArchiveOpenCallback.cpp:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/BZip2Crc.cpp:
 
@@ -31579,89 +32168,39 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Iso/IsoHandl
 
 /usr/include/c++/13/bits/concept_check.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+/usr/include/c++/13/cwctype:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Common/DummyOutStream.cpp.o:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/BraIA64.c:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyCom.h:
+/usr/include/c++/13/ext/atomicity.h:
 
-/usr/include/c++/13/bits/stl_function.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Rar/RarHeader.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Crypto/ZipStrong.cpp.o:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/ListFileUtils.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/IDecl.h:
-
-/usr/include/x86_64-linux-gnu/bits/dirent.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyVector.cpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/CpuArch.c:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/SwapBytes.c.o:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/LzmaDec.c.o:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Common/FilterCoder.cpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Windows/PropVariant.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zCompressionMode.cpp:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/AutoPtr.h:
-
-/usr/include/c++/13/ios:
+/usr/include/c++/13/ext/string_conversions.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/LzmaDec.c:
+/usr/include/c++/13/ios:
 
-/usr/include/c++/13/iosfwd:
+/usr/include/pthread.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
+/usr/include/c++/13/iostream:
 
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/ZlibDecoder.cpp:
 
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Lzma2DecMt.c.o:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Sha1Opt.c:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Crypto/RandGen.cpp.o:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zIn.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/DeflateConst.h:
 
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Common/MultiStream.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Crypto/HmacSha256.h:
+/usr/include/c++/13/istream:
 
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/JavaStatInfos/JavaPackageSevenZip.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/IFileExtractCallback.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Common/ParseProperties.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/C/Threads.c:
+/usr/include/c++/13/string_view:
 
 /usr/include/c++/13/typeinfo:
 
@@ -31691,16 +32230,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Sha1.c.o:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
-/usr/include/c++/13/bits/sstream.tcc:
-
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h:
-
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/UniversalArchiveOpenCallback.cpp:
 
 /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/UserTrace.cpp:
@@ -31728,10 +32257,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Sha1.c.o:
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zProperties.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/test/CTests/EnumTest.cpp:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarHandler.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
 
@@ -31985,8 +32510,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Archive/Cab/CabBlock
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Iso/IsoIn.h:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/SplitHandler.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/mman-linux.h:
 
 /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h:
@@ -32085,8 +32608,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/LzfseDecode
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/MtCoder.c:
 
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarHandlerOut.cpp:
-
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/UI/Common/StdAfx.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/Ppmd7.c:
@@ -32141,6 +32662,8 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/ZlibDecoder
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
+/usr/include/c++/13/bits/parse_numbers.h:
+
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/SwapBytes.c:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/SwapBytes.h:
@@ -32156,8 +32679,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/ZlibDecoder
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/C/XzCrc64Opt.c:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarItem.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Windows/FileDir.cpp:
 
@@ -32220,12 +32741,6 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/QuantumDeco
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyUnknown.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Compress/BZip2Const.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zIn.cpp:
-
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/7z/7zRegister.cpp:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Iso/StdAfx.h:
 
@@ -32418,13 +32933,3 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/C/Threads.c.o:
 /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
 
 /tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Rar/RarHandler.cpp:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Rar/RarItem.h:
-
-jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/7zip/CPP/7zip/Compress/BranchRegister.cpp.o:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/Common/MyGuidDef.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarHeader.h:
-
-/tmp/workspace/xexes/sevenzipjbinding/7zip/CPP/7zip/Archive/Tar/TarIn.h:

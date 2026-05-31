@@ -17,6 +17,21 @@ JUnit-compression 2 144.437
 JUnit-badarchive 3 2.91925
 JUnit-misc 3 0.325812
 ---
-JUnit-compression
+JUnit-init-std-2
+JUnit-init-std-1
+JUnit-init-verify-1
+JUnit-init-verify-2
+JUnit-common
+JUnit-common-no-privileged-init
+JUnit-snippets
+JUnit-encoding-utf-8
+JUnit-snippets-no-privileged-init
+JUnit-encoding-cp1252
+JUnit-encoding-cp1251
+JUnit-tools
+JUnit-bug-reports
 JUnit-single-file-extraction
+JUnit-badarchive
 JUnit-multiple-files-extraction
+JUnit-misc
+JUnit-compression

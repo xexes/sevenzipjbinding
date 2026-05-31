@@ -5,4 +5,4 @@ Implementation-Title: 7-Zip-JBinding native lib (Linux-amd64)
 Implementation-Vendor: sevenzipjbind.sf.net
 Implementation-Version: 26.01-1.00
 Built-By: Boris Brodski
-Built-Date: 2026-05-31 21:42:34Z
+Built-Date: 2026-05-31 22:37:31Z
