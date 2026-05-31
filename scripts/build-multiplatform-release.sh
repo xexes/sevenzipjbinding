@@ -111,7 +111,7 @@ cd "$JARASSEMBLEDIR"
 find . \( -name "META-INF" -or -name "MANIFEST.MF" \) -delete
 mkdir META-INF
 echo "Manifest-Version: 1.0" > META-INF/MANIFEST.MF 
-echo "Created-By: 1.5.0" >> META-INF/MANIFEST.MF 
+echo "Created-By: 1.8.0" >> META-INF/MANIFEST.MF 
 
 jar cf $ASSEMBLEDIR/lib/$MULTIPLATFORMJAR *
 cd ..

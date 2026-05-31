@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8.11)
 PROJECT(SevenZipJBinding)
 
 # Compile on Mac OS https://bug477945.bugzilla.mozilla.org/attachment.cgi?id=376115
-# 64 bit java: /System/Library/Frameworks/JavaVM.framework/Versions/1.6/Commands/java
+# 64 bit java: /System/Library/Frameworks/JavaVM.framework/Versions/1.8/Commands/java
 # CC="gcc-4.2 -arch i386"
 # CXX="g++-4.2 -arch i386"
 

@@ -1,8 +1,8 @@
 @echo off
 SET MY_DIR=%~dp0
 
-REM * 7-Zip-JBinding should be build with Java 5
-SET "JAVA_JDK=C:\Program Files (x86)\Java\jdk1.5.0_22"\
+REM * 7-Zip-JBinding should be build with Java 8
+SET "JAVA_JDK=C:\Program Files (x86)\Java\jdk1.8.0"\
 
 REM * MinGW to use
 SET MINGW_HOME=D:\Coding\i686-6.2.0-release-win32-sjlj-rt_v5-rev1\
