@@ -89,9 +89,13 @@ public:
         {
             return _archiveOpenVolumeCallback->GetProperty(propID, value);
         }
-        // TODO Generate exception explaining situation:
-        // IArchiveOpenCallback implementation must also implement IArchiveOpenVolumeCallback
-        return E_NOINTERFACE;
+        // No IArchiveOpenVolumeCallback implemented - return empty variant (not NULL!)
+        // VT_EMPTY allows 7-zip to continue during codec auto-detection
+        if (value)
+        {
+            value->vt = VT_EMPTY;
+        }
+        return S_OK;
     }
     STDMETHOD(GetStream)(const wchar_t *name, IInStream **inStream)
     {
@@ -102,9 +106,24 @@ public:
         {
             return _archiveOpenVolumeCallback->GetStream(name, inStream);
         }
-        // TODO Generate exception explaining situation:
-        // IArchiveOpenCallback implementation must also implement IArchiveOpenVolumeCallback
-        return E_NOINTERFACE;
+
+        if (inStream)
+        {
+            *inStream = NULL;
+        }
+
+        // No IArchiveOpenVolumeCallback implemented by Java.
+        if (_simulateArchiveOpenVolumeCallback) {
+            // Archive is a CAB (or other format requiring volumes).
+            // 7-zip called GetStream() meaning it needs another volume.
+            // Since no callback was provided, we must return an error.
+            TRACE("Volume requested but IArchiveOpenVolumeCallback not implemented - returning E_FAIL")
+            return E_FAIL;
+        }
+
+        // For non-CAB archives or during initial detection, allow 7-zip to continue.
+        // Return S_OK with NULL stream - this allows codec auto-detection.
+        return S_OK;
     }
 
     STDMETHOD(CryptoGetTextPassword)(BSTR *password)

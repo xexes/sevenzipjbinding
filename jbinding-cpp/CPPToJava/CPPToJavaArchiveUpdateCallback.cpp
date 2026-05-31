@@ -256,6 +256,9 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
     case kpidGroup:              GET_ATTRIBUTE(STRING,   propertyGroup)
     case kpidSymLink:            GET_ATTRIBUTE(STRING,   propertySymLink)
     case kpidHardLink:           GET_ATTRIBUTE(STRING,   propertyHardLink)
+    case kpidComment:            GET_ATTRIBUTE(STRING,   propertyComment)
+    case kpidEncrypted:          GET_ATTRIBUTE(BOOLEAN,  propertyEncrypted)
+    case kpidCRC:                GET_ATTRIBUTE(UINTEGER, propertyCRC)
 
     case kpidTimeType: // Should be processed by now
     default:
