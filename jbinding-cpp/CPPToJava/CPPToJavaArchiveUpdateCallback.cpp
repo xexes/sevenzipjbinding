@@ -360,7 +360,7 @@ STDMETHODIMP CPPToJavaArchiveUpdateCallback::GetProperty(UInt32 index, PROPID pr
 #endif // _DEBUG
 
     	// Unknown property - return empty variant (property not available).
-    	// 7-Zip 25.01 may request additional properties (e.g. kpidComment) that the
+    	// 7-Zip 26.01 may request additional properties (e.g. kpidComment) that the
     	// Java update callback does not need to provide. Returning VT_EMPTY is the
     	// correct way to indicate "not available" per the IArchiveUpdateCallback contract.
     	// IMPORTANT: Use break (not return) so cPropVariant.Detach(value) is called below,
