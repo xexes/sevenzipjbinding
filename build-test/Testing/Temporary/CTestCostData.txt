@@ -1,0 +1,19 @@
+JUnit-common 1 0.622392
+JUnit-common-no-privileged-init 1 0.560639
+JUnit-init-std-1 1 0.165515
+JUnit-init-std-2 1 0.152268
+JUnit-init-verify-1 1 0.174219
+JUnit-init-verify-2 1 0.193589
+JUnit-tools 1 0.580323
+JUnit-snippets 1 0.392225
+JUnit-snippets-no-privileged-init 1 0.385841
+JUnit-encoding-utf-8 1 0.26385
+JUnit-encoding-cp1252 1 0.256013
+JUnit-encoding-cp1251 1 0.249674
+JUnit-bug-reports 1 0.384088
+JUnit-single-file-extraction 1 107.704
+JUnit-multiple-files-extraction 1 88.9666
+JUnit-compression 1 289.481
+JUnit-badarchive 1 2.38448
+JUnit-misc 1 0.30175
+---
