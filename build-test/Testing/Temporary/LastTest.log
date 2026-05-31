@@ -1,10 +1,10 @@
-Start testing: May 31 20:22 UTC
+Start testing: May 31 21:46 UTC
 ----------------------------------------------------------
-1/18 Testing: JUnit-common
-1/18 Test: JUnit-common
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Common tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+17/18 Testing: JUnit-badarchive
+17/18 Test: JUnit-badarchive
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Bad archive tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-common" start time: May 31 20:22 UTC
+"JUnit-badarchive" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
@@ -19,27 +19,24 @@ TEST_TRACE                 : false
 TEST_ON_LOW_MEMORY         : false
 ========================================================
 ..WARNING! SevenZip native libraray was build without object tracing debug function.
-..............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.......................................................
-Time: 0.332
+..................................................................................................
+Time: 5.62
 
-OK (268 tests)
+OK (50 tests)
 
 <end of output>
-Test time =   0.56 sec
+Test time =   6.13 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-common" end time: May 31 20:23 UTC
-"JUnit-common" time elapsed: 00:00:00
+"JUnit-badarchive" end time: May 31 21:46 UTC
+"JUnit-badarchive" time elapsed: 00:00:06
 ----------------------------------------------------------
 
 2/18 Testing: JUnit-common-no-privileged-init
 2/18 Test: JUnit-common-no-privileged-init
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Common tests" "-D" "JAVA_OPT=-Dsevenzip.no_doprivileged_initialization%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-common-no-privileged-init" start time: May 31 20:23 UTC
+"JUnit-common-no-privileged-init" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
@@ -58,107 +55,58 @@ TEST_ON_LOW_MEMORY         : false
 ................................................................................................................................................................
 ................................................................................................................................................................
 .......................................................
-Time: 0.334
+Time: 0.777
 
 OK (268 tests)
 
 <end of output>
-Test time =   0.56 sec
+Test time =   1.31 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-common-no-privileged-init" end time: May 31 20:23 UTC
-"JUnit-common-no-privileged-init" time elapsed: 00:00:00
+"JUnit-common-no-privileged-init" end time: May 31 21:46 UTC
+"JUnit-common-no-privileged-init" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-3/18 Testing: JUnit-init-std-1
-3/18 Test: JUnit-init-std-1
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Std) 1" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+1/18 Testing: JUnit-common
+1/18 Test: JUnit-common
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Common tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-std-1" start time: May 31 20:23 UTC
+"JUnit-common" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-.
-Time: 0.033
+== TEST CONFIGURATION ==================================
+TEST_PROFILE               : DEFAULT
+TEST_REPEAT_SINGLETHREADED : 2
+TEST_REPEAT_MULTITHREADED  : 2
+TEST_MULTITHREADED_THREADS : 2
+TEST_TIMEOUT               : 600 seconds
+TEST_LONG_RUNNING          : false
+TEST_TRACE                 : false
+TEST_ON_LOW_MEMORY         : false
+========================================================
+..WARNING! SevenZip native libraray was build without object tracing debug function.
+..............................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+.......................................................
+Time: 0.713
 
-OK (1 test)
-
-<end of output>
-Test time =   0.19 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-init-std-1" end time: May 31 20:23 UTC
-"JUnit-init-std-1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-4/18 Testing: JUnit-init-std-2
-4/18 Test: JUnit-init-std-2
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Std) 2" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D2" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-std-2" start time: May 31 20:23 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-.
-Time: 0.004
-
-OK (1 test)
+OK (268 tests)
 
 <end of output>
-Test time =   0.15 sec
+Test time =   1.14 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-init-std-2" end time: May 31 20:23 UTC
-"JUnit-init-std-2" time elapsed: 00:00:00
-----------------------------------------------------------
-
-5/18 Testing: JUnit-init-verify-1
-5/18 Test: JUnit-init-verify-1
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Verify) 1" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-verify-1" start time: May 31 20:23 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-.
-Time: 0.033
-
-OK (1 test)
-
-<end of output>
-Test time =   0.18 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-init-verify-1" end time: May 31 20:23 UTC
-"JUnit-init-verify-1" time elapsed: 00:00:00
-----------------------------------------------------------
-
-6/18 Testing: JUnit-init-verify-2
-6/18 Test: JUnit-init-verify-2
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Verify) 2" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D2" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-verify-2" start time: May 31 20:23 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-.
-Time: 0.052
-
-OK (1 test)
-
-<end of output>
-Test time =   0.20 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-init-verify-2" end time: May 31 20:23 UTC
-"JUnit-init-verify-2" time elapsed: 00:00:00
+"JUnit-common" end time: May 31 21:46 UTC
+"JUnit-common" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 7/18 Testing: JUnit-tools
 7/18 Test: JUnit-tools
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Tools tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-tools" start time: May 31 20:23 UTC
+"JUnit-tools" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
@@ -175,161 +123,44 @@ TEST_ON_LOW_MEMORY         : false
 ....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................WARNING! SevenZip native libraray was build without object tracing debug function.
 .................................................................................................................................................................................................................................................
 ...........................................................................................................................................................................................................................................................................................................................................................
-Time: 0.317
+Time: 0.712
 
 OK (1590 tests)
 
 <end of output>
-Test time =   0.54 sec
+Test time =   1.24 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-tools" end time: May 31 20:23 UTC
-"JUnit-tools" time elapsed: 00:00:00
+"JUnit-tools" end time: May 31 21:46 UTC
+"JUnit-tools" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 8/18 Testing: JUnit-snippets
 8/18 Test: JUnit-snippets
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Snippets tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-snippets" start time: May 31 20:23 UTC
+"JUnit-snippets" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
 ...........................
-Time: 0.236
+Time: 0.434
 
 OK (27 tests)
 
 <end of output>
-Test time =   0.39 sec
+Test time =   0.78 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-snippets" end time: May 31 20:23 UTC
+"JUnit-snippets" end time: May 31 21:46 UTC
 "JUnit-snippets" time elapsed: 00:00:00
-----------------------------------------------------------
-
-9/18 Testing: JUnit-snippets-no-privileged-init
-9/18 Test: JUnit-snippets-no-privileged-init
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Snippets tests" "-D" "JAVA_OPT=-Dsevenzip.no_doprivileged_initialization%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-snippets-no-privileged-init" start time: May 31 20:23 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-...........................
-Time: 0.213
-
-OK (27 tests)
-
-<end of output>
-Test time =   0.36 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-snippets-no-privileged-init" end time: May 31 20:23 UTC
-"JUnit-snippets-no-privileged-init" time elapsed: 00:00:00
-----------------------------------------------------------
-
-10/18 Testing: JUnit-encoding-utf-8
-10/18 Test: JUnit-encoding-utf-8
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 1" "-D" "JAVA_OPT=-Dfile.encoding%3DUTF8" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-encoding-utf-8" start time: May 31 20:23 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..
-Time: 0.101
-
-OK (2 tests)
-
-<end of output>
-Test time =   0.26 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-encoding-utf-8" end time: May 31 20:23 UTC
-"JUnit-encoding-utf-8" time elapsed: 00:00:00
-----------------------------------------------------------
-
-11/18 Testing: JUnit-encoding-cp1252
-11/18 Test: JUnit-encoding-cp1252
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 2" "-D" "JAVA_OPT=-Dfile.encoding%3DCP1252" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-encoding-cp1252" start time: May 31 20:23 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..
-Time: 0.081
-
-OK (2 tests)
-
-<end of output>
-Test time =   0.25 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-encoding-cp1252" end time: May 31 20:23 UTC
-"JUnit-encoding-cp1252" time elapsed: 00:00:00
-----------------------------------------------------------
-
-12/18 Testing: JUnit-encoding-cp1251
-12/18 Test: JUnit-encoding-cp1251
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 3" "-D" "JAVA_OPT=-Dfile.encoding%3DCP1251" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-encoding-cp1251" start time: May 31 20:23 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..
-Time: 0.092
-
-OK (2 tests)
-
-<end of output>
-Test time =   0.26 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-encoding-cp1251" end time: May 31 20:23 UTC
-"JUnit-encoding-cp1251" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 13/18 Testing: JUnit-bug-reports
 13/18 Test: JUnit-bug-reports
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Bug report tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-bug-reports" start time: May 31 20:23 UTC
+"JUnit-bug-reports" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
@@ -345,231 +176,44 @@ TEST_ON_LOW_MEMORY         : false
 ========================================================
 .............WARNING! SevenZip native libraray was build without object tracing debug function.
 ......................................
-Time: 0.225
+Time: 0.555
 
 OK (31 tests)
 
 <end of output>
-Test time =   0.39 sec
+Test time =   0.88 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-bug-reports" end time: May 31 20:23 UTC
+"JUnit-bug-reports" end time: May 31 21:46 UTC
 "JUnit-bug-reports" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-14/18 Testing: JUnit-single-file-extraction
-14/18 Test: JUnit-single-file-extraction
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Single file tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+9/18 Testing: JUnit-snippets-no-privileged-init
+9/18 Test: JUnit-snippets-no-privileged-init
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Snippets tests" "-D" "JAVA_OPT=-Dsevenzip.no_doprivileged_initialization%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-single-file-extraction" start time: May 31 20:23 UTC
+"JUnit-snippets-no-privileged-init" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-.............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.................................
-Time: 105.915
+...........................
+Time: 0.454
 
-OK (3056 tests)
+OK (27 tests)
 
 <end of output>
-Test time = 106.17 sec
+Test time =   0.82 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-single-file-extraction" end time: May 31 20:24 UTC
-"JUnit-single-file-extraction" time elapsed: 00:01:46
-----------------------------------------------------------
-
-15/18 Testing: JUnit-multiple-files-extraction
-15/18 Test: JUnit-multiple-files-extraction
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Multiple files tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-multiple-files-extraction" start time: May 31 20:24 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-.............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.....................................................................................................
-Time: 88.524
-
-OK (1170 tests)
-
-<end of output>
-Test time =  88.74 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-multiple-files-extraction" end time: May 31 20:26 UTC
-"JUnit-multiple-files-extraction" time elapsed: 00:01:28
-----------------------------------------------------------
-
-16/18 Testing: JUnit-compression
-16/18 Test: JUnit-compression
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Compression tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-compression" start time: May 31 20:26 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-.............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.................................................................................................................................................
-Time: 288.434
-
-OK (2312 tests)
-
-<end of output>
-Test time = 288.87 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-compression" end time: May 31 20:31 UTC
-"JUnit-compression" time elapsed: 00:04:48
-----------------------------------------------------------
-
-17/18 Testing: JUnit-badarchive
-17/18 Test: JUnit-badarchive
-Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Bad archive tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
-Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-badarchive" start time: May 31 20:31 UTC
-Output:
-----------------------------------------------------------
-JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..................................................................................................
-Time: 2.436
-
-OK (50 tests)
-
-<end of output>
-Test time =   2.63 sec
-----------------------------------------------------------
-Test Passed.
-"JUnit-badarchive" end time: May 31 20:31 UTC
-"JUnit-badarchive" time elapsed: 00:00:02
+"JUnit-snippets-no-privileged-init" end time: May 31 21:46 UTC
+"JUnit-snippets-no-privileged-init" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 18/18 Testing: JUnit-misc
 18/18 Test: JUnit-misc
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Misc tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-misc" start time: May 31 20:31 UTC
+"JUnit-misc" start time: May 31 21:46 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
@@ -585,16 +229,313 @@ TEST_ON_LOW_MEMORY         : false
 ========================================================
 ..WARNING! SevenZip native libraray was build without object tracing debug function.
 ....
-Time: 0.163
+Time: 0.307
 
 OK (3 tests)
 
 <end of output>
-Test time =   0.32 sec
+Test time =   0.66 sec
 ----------------------------------------------------------
 Test Passed.
-"JUnit-misc" end time: May 31 20:31 UTC
+"JUnit-misc" end time: May 31 21:46 UTC
 "JUnit-misc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 31 20:31 UTC
+10/18 Testing: JUnit-encoding-utf-8
+10/18 Test: JUnit-encoding-utf-8
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 1" "-D" "JAVA_OPT=-Dfile.encoding%3DUTF8" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-encoding-utf-8" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+== TEST CONFIGURATION ==================================
+TEST_PROFILE               : DEFAULT
+TEST_REPEAT_SINGLETHREADED : 2
+TEST_REPEAT_MULTITHREADED  : 2
+TEST_MULTITHREADED_THREADS : 2
+TEST_TIMEOUT               : 600 seconds
+TEST_LONG_RUNNING          : false
+TEST_TRACE                 : false
+TEST_ON_LOW_MEMORY         : false
+========================================================
+..WARNING! SevenZip native libraray was build without object tracing debug function.
+..
+Time: 0.178
+
+OK (2 tests)
+
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Passed.
+"JUnit-encoding-utf-8" end time: May 31 21:46 UTC
+"JUnit-encoding-utf-8" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/18 Testing: JUnit-encoding-cp1251
+12/18 Test: JUnit-encoding-cp1251
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 3" "-D" "JAVA_OPT=-Dfile.encoding%3DCP1251" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-encoding-cp1251" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+== TEST CONFIGURATION ==================================
+TEST_PROFILE               : DEFAULT
+TEST_REPEAT_SINGLETHREADED : 2
+TEST_REPEAT_MULTITHREADED  : 2
+TEST_MULTITHREADED_THREADS : 2
+TEST_TIMEOUT               : 600 seconds
+TEST_LONG_RUNNING          : false
+TEST_TRACE                 : false
+TEST_ON_LOW_MEMORY         : false
+========================================================
+..WARNING! SevenZip native libraray was build without object tracing debug function.
+..
+Time: 0.195
+
+OK (2 tests)
+
+<end of output>
+Test time =   0.59 sec
+----------------------------------------------------------
+Test Passed.
+"JUnit-encoding-cp1251" end time: May 31 21:46 UTC
+"JUnit-encoding-cp1251" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/18 Testing: JUnit-encoding-cp1252
+11/18 Test: JUnit-encoding-cp1252
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 2" "-D" "JAVA_OPT=-Dfile.encoding%3DCP1252" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-encoding-cp1252" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+== TEST CONFIGURATION ==================================
+TEST_PROFILE               : DEFAULT
+TEST_REPEAT_SINGLETHREADED : 2
+TEST_REPEAT_MULTITHREADED  : 2
+TEST_MULTITHREADED_THREADS : 2
+TEST_TIMEOUT               : 600 seconds
+TEST_LONG_RUNNING          : false
+TEST_TRACE                 : false
+TEST_ON_LOW_MEMORY         : false
+========================================================
+..WARNING! SevenZip native libraray was build without object tracing debug function.
+..
+Time: 0.196
+
+OK (2 tests)
+
+<end of output>
+Test time =   0.61 sec
+----------------------------------------------------------
+Test Passed.
+"JUnit-encoding-cp1252" end time: May 31 21:46 UTC
+"JUnit-encoding-cp1252" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/18 Testing: JUnit-init-verify-2
+6/18 Test: JUnit-init-verify-2
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Verify) 2" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D2" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-init-verify-2" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+.
+Time: 0.126
+
+OK (1 test)
+
+<end of output>
+Test time =   0.50 sec
+----------------------------------------------------------
+Test Passed.
+"JUnit-init-verify-2" end time: May 31 21:46 UTC
+"JUnit-init-verify-2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/18 Testing: JUnit-init-std-1
+3/18 Test: JUnit-init-std-1
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Std) 1" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-init-std-1" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+.
+Time: 0.059
+
+OK (1 test)
+
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Passed.
+"JUnit-init-std-1" end time: May 31 21:46 UTC
+"JUnit-init-std-1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/18 Testing: JUnit-init-verify-1
+5/18 Test: JUnit-init-verify-1
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Verify) 1" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-init-verify-1" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+.
+Time: 0.1
+
+OK (1 test)
+
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Passed.
+"JUnit-init-verify-1" end time: May 31 21:46 UTC
+"JUnit-init-verify-1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/18 Testing: JUnit-init-std-2
+4/18 Test: JUnit-init-std-2
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Std) 2" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D2" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-init-std-2" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+.
+Time: 0.009
+
+OK (1 test)
+
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"JUnit-init-std-2" end time: May 31 21:46 UTC
+"JUnit-init-std-2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/18 Testing: JUnit-compression
+16/18 Test: JUnit-compression
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Compression tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-compression" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+== TEST CONFIGURATION ==================================
+TEST_PROFILE               : DEFAULT
+TEST_REPEAT_SINGLETHREADED : 2
+TEST_REPEAT_MULTITHREADED  : 2
+TEST_MULTITHREADED_THREADS : 2
+TEST_TIMEOUT               : 600 seconds
+TEST_LONG_RUNNING          : false
+TEST_TRACE                 : false
+TEST_ON_LOW_MEMORY         : false
+========================================================
+..WARNING! SevenZip native libraray was build without object tracing debug function.
+.............................................................................................................................................................
+...........................................................................................................................................................E.....
+...........E.....................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+<end of output>
+Test time = 120.01 sec
+----------------------------------------------------------
+Test Failed.
+"JUnit-compression" end time: May 31 21:48 UTC
+"JUnit-compression" time elapsed: 00:02:00
+----------------------------------------------------------
+
+14/18 Testing: JUnit-single-file-extraction
+14/18 Test: JUnit-single-file-extraction
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Single file tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-single-file-extraction" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+== TEST CONFIGURATION ==================================
+TEST_PROFILE               : DEFAULT
+TEST_REPEAT_SINGLETHREADED : 2
+TEST_REPEAT_MULTITHREADED  : 2
+TEST_MULTITHREADED_THREADS : 2
+TEST_TIMEOUT               : 600 seconds
+TEST_LONG_RUNNING          : false
+TEST_TRACE                 : false
+TEST_ON_LOW_MEMORY         : false
+========================================================
+..WARNING! SevenZip native libraray was build without object tracing debug function.
+.............................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+<end of output>
+Test time = 120.01 sec
+----------------------------------------------------------
+Test Failed.
+"JUnit-single-file-extraction" end time: May 31 21:48 UTC
+"JUnit-single-file-extraction" time elapsed: 00:02:00
+----------------------------------------------------------
+
+15/18 Testing: JUnit-multiple-files-extraction
+15/18 Test: JUnit-multiple-files-extraction
+Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Multiple files tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
+Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
+"JUnit-multiple-files-extraction" start time: May 31 21:46 UTC
+Output:
+----------------------------------------------------------
+JUnit version 4.11
+== TEST CONFIGURATION ==================================
+TEST_PROFILE               : DEFAULT
+TEST_REPEAT_SINGLETHREADED : 2
+TEST_REPEAT_MULTITHREADED  : 2
+TEST_MULTITHREADED_THREADS : 2
+TEST_TIMEOUT               : 600 seconds
+TEST_LONG_RUNNING          : false
+TEST_TRACE                 : false
+TEST_ON_LOW_MEMORY         : false
+========================================================
+..WARNING! SevenZip native libraray was build without object tracing debug function.
+.............................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+................................................................................................................................................................
+<end of output>
+Test time = 120.01 sec
+----------------------------------------------------------
+Test Failed.
+"JUnit-multiple-files-extraction" end time: May 31 21:48 UTC
+"JUnit-multiple-files-extraction" time elapsed: 00:02:00
+----------------------------------------------------------
+
+End testing: May 31 21:48 UTC
