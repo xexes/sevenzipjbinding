@@ -1,9 +1,9 @@
 7-Zip-JBinding Release Notes
 ============================
 
-Main features of 25.01-1.00 (Release, extraction/compression/update, cross-platform, based on 7-Zip 25.01)
+Main features of 26.01-1.00 (Release, extraction/compression/update, cross-platform, based on 7-Zip 26.01)
 
-    * Bind 7-Zip 25.01 with latest features and security updates
+    * Bind 7-Zip 26.01 with latest features and security updates
     
     * Security improvements:
         - Improved symbolic link handling to prevent directory traversal vulnerabilities
@@ -53,11 +53,11 @@ Main features of 25.01-1.00 (Release, extraction/compression/update, cross-platf
         <dependency>
             <groupId>net.sf.sevenzipjbinding</groupId>
             <artifactId>sevenzipjbinding</artifactId>
-            <version>25.01-1.00</version>
+            <version>26.01-1.00</version>
         </dependency>
         <dependency>
             <groupId>net.sf.sevenzipjbinding</groupId>
             <artifactId>sevenzipjbinding-all-platforms</artifactId>
-            <version>25.01-1.00</version>
+            <version>26.01-1.00</version>
         </dependency>
 
