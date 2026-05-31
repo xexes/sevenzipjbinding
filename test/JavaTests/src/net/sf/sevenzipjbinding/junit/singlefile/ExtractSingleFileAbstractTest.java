@@ -195,7 +195,8 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
             for (int i = 0; i < sizes.length; i++) {
                 sizes[i] = -1;
             }
-            sizes[index] = (Long) inArchive.getProperty(index, PropID.SIZE);
+            Long propSize = (Long) inArchive.getProperty(index, PropID.SIZE);
+            sizes[index] = propSize != null ? propSize.longValue() : -1L;
         }
 
         if (archiveFormat == ArchiveFormat.CHM || archiveFormat == ArchiveFormat.NTFS) {
@@ -300,10 +301,15 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
 		Long size2 = inArchive.getSimpleInterface().getArchiveItem(index).getSize();
 
 		Long actual = Long.valueOf(new File(uncommpressedFilename).length());
-		assertNotNull(size1);
-		assertNotNull(size2);
-		if (!skipSizeCheck()) {
+		// Some formats (e.g. XAR with 7-zip 26.01) return null SIZE for empty files
+		if (size1 == null) {
+			assertEquals("SIZE property is null; only expected for empty files", 0L, actual.longValue());
+		} else if (!skipSizeCheck()) {
 			assertEquals("Wrong size of the file (PropID.SIZE)", actual, size1);
+		}
+		if (size2 == null) {
+			assertEquals("SIZE property (simple interface) is null; only expected for empty files", 0L, actual.longValue());
+		} else if (!skipSizeCheck()) {
 			assertEquals("Simple interface problem: wrong size of the file", actual, size2);
 		}
 	}
@@ -314,6 +320,11 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
 		Long size2 = inArchive.getSimpleInterface().getArchiveItem(index).getPackedSize();
 
 		long unpackedSize = Long.valueOf(new File(uncommpressedFilename).length());
+		// Some formats (e.g. XAR with 7-zip 26.01) return null PACKED_SIZE for empty files
+		if (size1 == null || size2 == null) {
+			assertEquals("PACKED_SIZE property is null; only expected for empty files", 0L, unpackedSize);
+			return;
+		}
 		long expectedPackedSize;
 		if (unpackedSize < 1024) {
             if (inArchive.getArchiveFormat() == ArchiveFormat.FAT) {
@@ -324,8 +335,6 @@ public abstract class ExtractSingleFileAbstractTest extends ExtractFileAbstractT
 		} else {
 			expectedPackedSize = unpackedSize * 2;
 		}
-		assertNotNull(size1);
-		assertNotNull(size2);
 		assertTrue("Packed size == 0 (PropID.PACKED_SIZE)", unpackedSize == 0 || size1 != 0);
         assertTrue("Wrong size of the file (PropID.PACKED_SIZE): expected >= " + expectedPackedSize + ", actual="
                 + size1,

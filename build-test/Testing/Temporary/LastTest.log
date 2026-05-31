@@ -1,37 +1,28 @@
-Start testing: May 31 20:22 UTC
+Start testing: May 31 22:43 UTC
 ----------------------------------------------------------
 1/18 Testing: JUnit-common
 1/18 Test: JUnit-common
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Common tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-common" start time: May 31 20:22 UTC
+"JUnit-common" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.......................................................
-Time: 0.332
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (268 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.56 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-common" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-common" end time: May 31 22:43 UTC
 "JUnit-common" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -39,34 +30,25 @@ Test Passed.
 2/18 Test: JUnit-common-no-privileged-init
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Common tests" "-D" "JAVA_OPT=-Dsevenzip.no_doprivileged_initialization%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-common-no-privileged-init" start time: May 31 20:23 UTC
+"JUnit-common-no-privileged-init" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.......................................................
-Time: 0.334
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (268 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.56 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-common-no-privileged-init" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-common-no-privileged-init" end time: May 31 22:43 UTC
 "JUnit-common-no-privileged-init" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -74,20 +56,25 @@ Test Passed.
 3/18 Test: JUnit-init-std-1
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Std) 1" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-std-1" start time: May 31 20:23 UTC
+"JUnit-init-std-1" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-.
-Time: 0.033
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (1 test)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.19 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-init-std-1" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-init-std-1" end time: May 31 22:43 UTC
 "JUnit-init-std-1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -95,20 +82,25 @@ Test Passed.
 4/18 Test: JUnit-init-std-2
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Std) 2" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D2" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-std-2" start time: May 31 20:23 UTC
+"JUnit-init-std-2" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-.
-Time: 0.004
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (1 test)
+Time: 0
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.15 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-init-std-2" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-init-std-2" end time: May 31 22:43 UTC
 "JUnit-init-std-2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -116,20 +108,25 @@ Test Passed.
 5/18 Test: JUnit-init-verify-1
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Verify) 1" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-verify-1" start time: May 31 20:23 UTC
+"JUnit-init-verify-1" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-.
-Time: 0.033
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (1 test)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.18 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-init-verify-1" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-init-verify-1" end time: May 31 22:43 UTC
 "JUnit-init-verify-1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -137,20 +134,25 @@ Test Passed.
 6/18 Test: JUnit-init-verify-2
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Init tests (Verify) 2" "-D" "JAVA_OPT=-Dsevenziptest.standard_initialization_test_phase%3D2" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-init-verify-2" start time: May 31 20:23 UTC
+"JUnit-init-verify-2" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-.
-Time: 0.052
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (1 test)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.20 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-init-verify-2" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-init-verify-2" end time: May 31 22:43 UTC
 "JUnit-init-verify-2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -158,32 +160,25 @@ Test Passed.
 7/18 Test: JUnit-tools
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Tools tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-tools" start time: May 31 20:23 UTC
+"JUnit-tools" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................WARNING! SevenZip native libraray was build without object tracing debug function.
-.................................................................................................................................................................................................................................................
-...........................................................................................................................................................................................................................................................................................................................................................
-Time: 0.317
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (1590 tests)
+Time: 0
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.54 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-tools" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-tools" end time: May 31 22:43 UTC
 "JUnit-tools" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -191,20 +186,25 @@ Test Passed.
 8/18 Test: JUnit-snippets
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Snippets tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-snippets" start time: May 31 20:23 UTC
+"JUnit-snippets" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-...........................
-Time: 0.236
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (27 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.39 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-snippets" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-snippets" end time: May 31 22:43 UTC
 "JUnit-snippets" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -212,20 +212,25 @@ Test Passed.
 9/18 Test: JUnit-snippets-no-privileged-init
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Snippets tests" "-D" "JAVA_OPT=-Dsevenzip.no_doprivileged_initialization%3D1" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-snippets-no-privileged-init" start time: May 31 20:23 UTC
+"JUnit-snippets-no-privileged-init" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-...........................
-Time: 0.213
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (27 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.36 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-snippets-no-privileged-init" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-snippets-no-privileged-init" end time: May 31 22:43 UTC
 "JUnit-snippets-no-privileged-init" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -233,31 +238,25 @@ Test Passed.
 10/18 Test: JUnit-encoding-utf-8
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 1" "-D" "JAVA_OPT=-Dfile.encoding%3DUTF8" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-encoding-utf-8" start time: May 31 20:23 UTC
+"JUnit-encoding-utf-8" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..
-Time: 0.101
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (2 tests)
+Time: 0
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.26 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-encoding-utf-8" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-encoding-utf-8" end time: May 31 22:43 UTC
 "JUnit-encoding-utf-8" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -265,31 +264,25 @@ Test Passed.
 11/18 Test: JUnit-encoding-cp1252
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 2" "-D" "JAVA_OPT=-Dfile.encoding%3DCP1252" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-encoding-cp1252" start time: May 31 20:23 UTC
+"JUnit-encoding-cp1252" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..
-Time: 0.081
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (2 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.25 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-encoding-cp1252" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-encoding-cp1252" end time: May 31 22:43 UTC
 "JUnit-encoding-cp1252" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -297,31 +290,25 @@ Test Passed.
 12/18 Test: JUnit-encoding-cp1251
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Encoding tests 3" "-D" "JAVA_OPT=-Dfile.encoding%3DCP1251" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-encoding-cp1251" start time: May 31 20:23 UTC
+"JUnit-encoding-cp1251" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..
-Time: 0.092
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (2 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.26 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-encoding-cp1251" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-encoding-cp1251" end time: May 31 22:43 UTC
 "JUnit-encoding-cp1251" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -329,31 +316,25 @@ Test Passed.
 13/18 Test: JUnit-bug-reports
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Bug report tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-bug-reports" start time: May 31 20:23 UTC
+"JUnit-bug-reports" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-.............WARNING! SevenZip native libraray was build without object tracing debug function.
-......................................
-Time: 0.225
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (31 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.39 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-bug-reports" end time: May 31 20:23 UTC
+Test Failed.
+"JUnit-bug-reports" end time: May 31 22:43 UTC
 "JUnit-bug-reports" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -361,240 +342,130 @@ Test Passed.
 14/18 Test: JUnit-single-file-extraction
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Single file tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-single-file-extraction" start time: May 31 20:23 UTC
+"JUnit-single-file-extraction" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-.............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.................................
-Time: 105.915
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (3056 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time = 106.17 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-single-file-extraction" end time: May 31 20:24 UTC
-"JUnit-single-file-extraction" time elapsed: 00:01:46
+Test Failed.
+"JUnit-single-file-extraction" end time: May 31 22:43 UTC
+"JUnit-single-file-extraction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 15/18 Testing: JUnit-multiple-files-extraction
 15/18 Test: JUnit-multiple-files-extraction
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Multiple files tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-multiple-files-extraction" start time: May 31 20:24 UTC
+"JUnit-multiple-files-extraction" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-.............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.....................................................................................................
-Time: 88.524
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (1170 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =  88.74 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-multiple-files-extraction" end time: May 31 20:26 UTC
-"JUnit-multiple-files-extraction" time elapsed: 00:01:28
+Test Failed.
+"JUnit-multiple-files-extraction" end time: May 31 22:43 UTC
+"JUnit-multiple-files-extraction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 16/18 Testing: JUnit-compression
 16/18 Test: JUnit-compression
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Compression tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-compression" start time: May 31 20:26 UTC
+"JUnit-compression" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-.............................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-................................................................................................................................................................
-.................................................................................................................................................
-Time: 288.434
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (2312 tests)
+Time: 0.001
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time = 288.87 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-compression" end time: May 31 20:31 UTC
-"JUnit-compression" time elapsed: 00:04:48
+Test Failed.
+"JUnit-compression" end time: May 31 22:43 UTC
+"JUnit-compression" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 17/18 Testing: JUnit-badarchive
 17/18 Test: JUnit-badarchive
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Bad archive tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-badarchive" start time: May 31 20:31 UTC
+"JUnit-badarchive" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-..................................................................................................
-Time: 2.436
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (50 tests)
+Time: 0
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   2.63 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-badarchive" end time: May 31 20:31 UTC
-"JUnit-badarchive" time elapsed: 00:00:02
+Test Failed.
+"JUnit-badarchive" end time: May 31 22:43 UTC
+"JUnit-badarchive" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 18/18 Testing: JUnit-misc
 18/18 Test: JUnit-misc
 Command: "/usr/local/bin/cmake" "-D" "RUNTIME_JAVA_OPTS=" "-D" "SINGLEBUNDLE=Misc tests" "-P" "/tmp/workspace/xexes/sevenzipjbinding/build-test/JUnitRunner.cmake"
 Directory: /tmp/workspace/xexes/sevenzipjbinding/build-test
-"JUnit-misc" start time: May 31 20:31 UTC
+"JUnit-misc" start time: May 31 22:43 UTC
 Output:
 ----------------------------------------------------------
 JUnit version 4.11
-== TEST CONFIGURATION ==================================
-TEST_PROFILE               : DEFAULT
-TEST_REPEAT_SINGLETHREADED : 2
-TEST_REPEAT_MULTITHREADED  : 2
-TEST_MULTITHREADED_THREADS : 2
-TEST_TIMEOUT               : 600 seconds
-TEST_LONG_RUNNING          : false
-TEST_TRACE                 : false
-TEST_ON_LOW_MEMORY         : false
-========================================================
-..WARNING! SevenZip native libraray was build without object tracing debug function.
-....
-Time: 0.163
+Could not find class: net.sf.sevenzipjbinding.junit.AllTestSuite
 
-OK (3 tests)
+Time: 0
+
+OK (0 tests)
+
+CMake Error at JUnitRunner.cmake:8 (MESSAGE):
+  Error during JUnit Tests.  Return code: 1
+
 
 <end of output>
-Test time =   0.32 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"JUnit-misc" end time: May 31 20:31 UTC
+Test Failed.
+"JUnit-misc" end time: May 31 22:43 UTC
 "JUnit-misc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 31 20:31 UTC
+End testing: May 31 22:43 UTC

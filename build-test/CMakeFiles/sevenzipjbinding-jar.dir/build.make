@@ -113,6 +113,7 @@ jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbindi
 jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbinding-java/src/net/sf/sevenzipjbinding/NFileTimeType.java
 jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbinding-java/src/net/sf/sevenzipjbinding/PropID.java
 jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbinding-java/src/net/sf/sevenzipjbinding/PropertyInfo.java
+jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbinding-java/src/net/sf/sevenzipjbinding/ReportExtractResultIndexType.java
 jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbinding-java/src/net/sf/sevenzipjbinding/SevenZip.java
 jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbinding-java/src/net/sf/sevenzipjbinding/SevenZipException.java
 jbinding-java/sevenzipjbinding.jar: /tmp/workspace/xexes/sevenzipjbinding/jbinding-java/src/net/sf/sevenzipjbinding/SevenZipNativeInitializationException.java

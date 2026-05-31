@@ -130,6 +130,7 @@ public class TraceCompressionTest extends JUnitNativeTestBase<VoidContext> {
                 + "Get property 'propertyPath' (index: 0)\n" //
                 + "Get property 'propertyIsDir' (index: 0)\n" //
                 + "Get property 'propertyLastModificationTime' (index: 0)\n" //
+                + "Get property 'propertyComment' (index: 0)\n" //
                 + "Get property 'dataSize' (index: 0)\n" //
                 + "Get stream (index: 0)\n" //
                 + "Get update info (new data: true) (new props: true) (old index: -1) (index: 1)\n" //
@@ -137,6 +138,7 @@ public class TraceCompressionTest extends JUnitNativeTestBase<VoidContext> {
                 + "Get property 'propertyPath' (index: 1)\n" //
                 + "Get property 'propertyIsDir' (index: 1)\n" //
                 + "Get property 'propertyLastModificationTime' (index: 1)\n" //
+                + "Get property 'propertyComment' (index: 1)\n" //
                 + "Get property 'dataSize' (index: 1)\n" //
                 + "Get stream (index: 1)\n");
     }
@@ -195,6 +197,7 @@ public class TraceCompressionTest extends JUnitNativeTestBase<VoidContext> {
                 "Get property 'propertyPath' (index: 1)\n" + //
                 "Get property 'propertyIsDir' (index: 1)\n" + //
                 "Get property 'propertyLastModificationTime' (index: 1)\n" + //
+                "Get property 'propertyComment' (index: 1)\n" + //
                 "Get property 'dataSize' (index: 1)\n" + //
                 "Get stream (index: 1)\n");
     }

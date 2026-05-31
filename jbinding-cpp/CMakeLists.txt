@@ -35,7 +35,6 @@ ELSE(HAVE_WCHAR_H)
   SET(HAVE_UNICODE_WCHAR 0)
 ENDIF(HAVE_WCHAR_H)
 
-SET(P7ZIP_SRC ../p7zip)
 SET(_7ZIP_SRC ../7zip)
 
 SET(JBINDING_PLATFORM_CPP_FILES)
@@ -50,7 +49,7 @@ IF(MINGW)
         )
     ENDIF(MINGW64)
 ELSE(MINGW)
-    ###include_directories(PlatformUnix/)
+    include_directories(PlatformUnix/)
 ENDIF(MINGW)
 
 ###include_directories(/usr/include)
@@ -58,17 +57,9 @@ ENDIF(MINGW)
 include_directories(${JAVA_INCLUDE_PATH})
 include_directories(${JAVA_INCLUDE_PATH2})
 
-IF(MINGW)
-    include_directories(${_7ZIP_SRC})
-    include_directories(${_7ZIP_SRC}/CPP)
-    include_directories(${_7ZIP_SRC}/C)
-ELSE(MINGW)
-    include_directories(${P7ZIP_SRC})
-    include_directories(${P7ZIP_SRC}/CPP)
-    include_directories(${P7ZIP_SRC}/C)
-    include_directories(${P7ZIP_SRC}/CPP/myWindows)
-    include_directories(${P7ZIP_SRC}/CPP/include_windows)
-ENDIF(MINGW)
+include_directories(${_7ZIP_SRC})
+include_directories(${_7ZIP_SRC}/CPP)
+include_directories(${_7ZIP_SRC}/C)
 include_directories(${PROJECT_BINARY_DIR}/javah)
 include_directories(.)
 
@@ -135,15 +126,14 @@ ELSE(MINGW)
     )
 ENDIF(MINGW)
 
+SET(SEVEN_ZIP_SRC "${_7ZIP_SRC}")
 IF(MINGW)
-    SET(SEVEN_ZIP_SRC "${_7ZIP_SRC}")
     SET(SEVEN_ZIP_PLATFORM_SOURCE_FILES
         ${SEVEN_ZIP_SRC}/C/AesOpt.c
         ${SEVEN_ZIP_SRC}/CPP/Windows/FileLink.cpp
         ${SEVEN_ZIP_SRC}/CPP/Common/NewHandler.cpp
     )
 ELSE(MINGW)
-    SET(SEVEN_ZIP_SRC "${P7ZIP_SRC}")
     SET(SEVEN_ZIP_PLATFORM_SOURCE_FILES
         ${SEVEN_ZIP_SRC}/C/AesOpt.c
         ${SEVEN_ZIP_SRC}/CPP/Windows/FileLink.cpp

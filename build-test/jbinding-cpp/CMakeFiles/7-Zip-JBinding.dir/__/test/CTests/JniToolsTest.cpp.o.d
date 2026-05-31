@@ -160,82 +160,45 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: \
  /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/sstream \
  /usr/include/c++/13/bits/sstream.tcc \
  /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/./SevenZipJBinding.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows/StdAfx.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows/config.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/Common.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/../../C/Precomp.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/../../C/Compiler.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/Common0.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/../../C/Compiler.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/NewHandler.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyWindows.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/PlatformUnix/StdAfx.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/Common.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/../../C/Precomp.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/../../C/Compiler.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/Common0.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/../../C/Compiler.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/NewHandler.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/MyWindows.h \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/../../C/7zTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/../../C/7zTypes.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyGuidDef.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyWindows.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/Common.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/MyVector.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/include_windows/windows.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/include_windows/basetyps.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/MyGuidDef.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/MyCom.h \
  /usr/include/c++/13/stdlib.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/include_windows/tchar.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/c++/13/math.h \
- /usr/include/c++/13/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/13/bits/specfun.h /usr/include/c++/13/limits \
- /usr/include/c++/13/tr1/gamma.tcc \
- /usr/include/c++/13/tr1/special_function_util.h \
- /usr/include/c++/13/tr1/bessel_function.tcc \
- /usr/include/c++/13/tr1/beta_function.tcc \
- /usr/include/c++/13/tr1/ell_integral.tcc \
- /usr/include/c++/13/tr1/exp_integral.tcc \
- /usr/include/c++/13/tr1/hypergeometric.tcc \
- /usr/include/c++/13/tr1/legendre_function.tcc \
- /usr/include/c++/13/tr1/modified_bessel_func.tcc \
- /usr/include/c++/13/tr1/poly_hermite.tcc \
- /usr/include/c++/13/tr1/poly_laguerre.tcc \
- /usr/include/c++/13/tr1/riemann_zeta.tcc \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Common/IntToString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/ArchiveExtractCallback.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyCom.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyWindows.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyLinux.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/Wildcard.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../IPassword.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyUnknown.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../IDecl.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/FileStreams.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyCom.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/FileIO.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyWindows.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Common/IntToString.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/ArchiveExtractCallback.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyCom.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyLinux.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/Wildcard.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyString.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/Common.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyWindows.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyVector.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../IPassword.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../IDecl.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/Common0.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyUnknown.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/FileStreams.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyCom.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyString.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/FileIO.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyWindows.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
@@ -251,74 +214,74 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyBuffer.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/Defs.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/TimeUtils.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/../Common/MyWindows.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/PropVariant.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/../Common/MyString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/Defs.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../IStream.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/Common0.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyWindows.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../IDecl.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/UniqBlocks.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyBuffer.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/ProgressUtils.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../ICoder.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../IStream.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../IProgress.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/StreamObjects.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyVector.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Archive/IArchive.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Archive/../IProgress.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Archive/../IStream.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Archive/../PropID.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Archive/../../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/ExtractMode.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/IFileExtractCallback.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../IDecl.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/LoadCodecs.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyBuffer.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/ComTry.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../ICoder.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/OpenArchive.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/PropVariant.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/ArchiveOpenCallback.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/FileFind.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyString.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyBuffer.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/Defs.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/TimeUtils.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/../Common/MyWindows.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/PropVariant.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/../Windows/../Common/MyString.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/Defs.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../IStream.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/Common0.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyWindows.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../IDecl.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/UniqBlocks.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyBuffer.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/ProgressUtils.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../ICoder.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../IStream.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../IProgress.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/StreamObjects.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyVector.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Archive/IArchive.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Archive/../IProgress.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Archive/../IStream.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Archive/../PropID.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Archive/../../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/ExtractMode.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/IFileExtractCallback.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyString.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../IDecl.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/LoadCodecs.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyBuffer.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/ComTry.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../ICoder.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/OpenArchive.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/PropVariant.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/ArchiveOpenCallback.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/FileFind.h \
  /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/../Common/MyLinux.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/../Common/MyString.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/../Common/MyWindows.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/Defs.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/FileIO.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/Property.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/DirItem.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Windows/TimeUtils.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/UniqBlocks.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/HashCalc.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/UTFConvert.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../../Common/MyBuffer.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/CreateCoder.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/MethodId.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/MethodProps.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Common/Defs.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/Defs.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/../../Common/../../Windows/PropVariant.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/UI/Common/PropIDUtils.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/Common/FileStreams.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/PropVariant.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/7zip/Archive/IArchive.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/../Common/MyLinux.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/../Common/MyString.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/../Common/MyWindows.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/Defs.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/FileIO.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/Property.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/DirItem.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Windows/TimeUtils.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/UniqBlocks.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/HashCalc.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/UTFConvert.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../../Common/MyBuffer.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/CreateCoder.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/MethodId.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/MethodProps.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Common/Defs.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/Defs.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/../../Common/../../Windows/PropVariant.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/UI/Common/PropIDUtils.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/Common/FileStreams.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Windows/PropVariant.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/7zip/Archive/IArchive.h \
  /usr/lib/jvm/temurin-17-jdk-amd64/include/jni.h \
  /usr/lib/jvm/temurin-17-jdk-amd64/include/linux/jni_md.h \
  /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/./Debug.h \
@@ -334,11 +297,18 @@ jbinding-cpp/CMakeFiles/7-Zip-JBinding.dir/__/test/CTests/JniToolsTest.cpp.o: \
  /usr/include/c++/13/bits/allocated_ptr.h \
  /usr/include/c++/13/bits/list.tcc \
  /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/./BaseSystem.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/Synchronization.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../../C/Threads.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../../C/Compiler.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../../C/7zTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/../Common/MyTypes.h \
- /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/Windows/Defs.h \
+ /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
+ /usr/include/c++/13/ratio /usr/include/c++/13/cstdint \
+ /usr/include/c++/13/limits /usr/include/c++/13/ctime \
+ /usr/include/c++/13/bits/parse_numbers.h /usr/include/c++/13/thread \
+ /usr/include/c++/13/bits/std_thread.h \
+ /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/this_thread_sleep.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Windows/Synchronization.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Windows/../../C/Threads.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Windows/../../C/Compiler.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Windows/../../C/7zTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Windows/../Common/MyTypes.h \
+ /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP/Windows/Defs.h \
  /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/./JavaStatInfos/JavaStandardLibrary.h \
  /tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/./JavaStaticInfo.h

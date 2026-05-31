@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = -DBREAK_HANDLER -DENV_HAVE_GCCVISIBILITYPATCH -DENV_UNIX -DNDEBUG -DUNICODE -DUNIX_USE_WIN_FILE -D_7ZIP_LARGE_PAGES -D_7_Zip_JBinding_EXPORTS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -D_UNICODE
 
-C_INCLUDES = -I/usr/lib/jvm/temurin-17-jdk-amd64/include -I/usr/lib/jvm/temurin-17-jdk-amd64/include/linux -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/C -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/include_windows -I/tmp/workspace/xexes/sevenzipjbinding/build-test/jbinding-cpp/javah -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/.
+C_INCLUDES = -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/PlatformUnix -I/usr/lib/jvm/temurin-17-jdk-amd64/include -I/usr/lib/jvm/temurin-17-jdk-amd64/include/linux -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/C -I/tmp/workspace/xexes/sevenzipjbinding/build-test/jbinding-cpp/javah -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/.
 
 C_FLAGS =  -fmessage-length=0 -O3 -DNDEBUG -fPIC   -O2 -fPIC -fexceptions -pipe
 
 CXX_DEFINES = -DBREAK_HANDLER -DENV_HAVE_GCCVISIBILITYPATCH -DENV_UNIX -DNDEBUG -DUNICODE -DUNIX_USE_WIN_FILE -D_7ZIP_LARGE_PAGES -D_7_Zip_JBinding_EXPORTS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -D_UNICODE
 
-CXX_INCLUDES = -I/usr/lib/jvm/temurin-17-jdk-amd64/include -I/usr/lib/jvm/temurin-17-jdk-amd64/include/linux -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/C -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/myWindows -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../p7zip/CPP/include_windows -I/tmp/workspace/xexes/sevenzipjbinding/build-test/jbinding-cpp/javah -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/.
+CXX_INCLUDES = -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/PlatformUnix -I/usr/lib/jvm/temurin-17-jdk-amd64/include -I/usr/lib/jvm/temurin-17-jdk-amd64/include/linux -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/CPP -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/../7zip/C -I/tmp/workspace/xexes/sevenzipjbinding/build-test/jbinding-cpp/javah -I/tmp/workspace/xexes/sevenzipjbinding/jbinding-cpp/.
 
 CXX_FLAGS =  -fmessage-length=0 -O3 -DNDEBUG -fPIC   -O2 -fPIC -fexceptions -pipe
 

@@ -44,11 +44,15 @@
 #endif
 
 // #define Z7_COM7F_E            Z7_noexcept
+#ifndef Z7_COM7F_E
 #define Z7_COM7F_E            throw()
+#endif
+#ifndef Z7_COM7F_IMF
 #define Z7_COM7F_EO           Z7_COM7F_E  Z7_override
 #define Z7_COM7F_EOF          Z7_COM7F_EO Z7_final
 #define Z7_COM7F_IMF(f)       Z7_COM7F_B     f Z7_COM7F_E
 #define Z7_COM7F_IMF2(t, f)   Z7_COM7F_B_(t) f Z7_COM7F_E
+#endif
 
 #define Z7_COM7F_PURE(f)              virtual Z7_COM7F_IMF(f) =0;
 #define Z7_COM7F_PURE2(t, f)          virtual Z7_COM7F_IMF2(t, f) =0;

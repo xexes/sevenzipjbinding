@@ -8,6 +8,9 @@
 #ifndef BASESYSTEM_H_
 #define BASESYSTEM_H_
 
+#include <chrono>
+#include <thread>
+
 #ifndef _7ZIP_ST
 #include "Windows/Synchronization.h"
 #endif
@@ -40,7 +43,7 @@ inline ThreadId PlatformGetCurrentThreadId() {
 #ifdef MINGW
 #   define PlatformSleep(seconds) Sleep((seconds) * 1000)
 #else
-#   define PlatformSleep(seconds) sleep(seconds)
+#   define PlatformSleep(sec) std::this_thread::sleep_for(std::chrono::seconds(sec))
 #endif
 
 
