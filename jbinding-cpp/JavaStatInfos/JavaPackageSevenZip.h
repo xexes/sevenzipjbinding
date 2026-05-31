@@ -16,6 +16,9 @@
 #define JAVA_EXTRACT_OPERATION_RESULT 					SEVEN_ZIP_PACKAGE "/ExtractOperationResult"
 #define JAVA_EXTRACT_OPERATION_RESULT_T 				JAVA_MAKE_SIGNATURE_TYPE(JAVA_EXTRACT_OPERATION_RESULT)
 
+#define JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE			SEVEN_ZIP_PACKAGE "/ReportExtractResultIndexType"
+#define JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE_T			JAVA_MAKE_SIGNATURE_TYPE(JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE)
+
 #define JAVA_IIN_ARCHIVE 								SEVEN_ZIP_PACKAGE "/IInArchive"
 #define JAVA_IIN_ARCHIVE_T 								JAVA_MAKE_SIGNATURE_TYPE(JAVA_IIN_ARCHIVE)
 
@@ -49,6 +52,7 @@
 #define JT_PROP_ID(name, param_spec)    				JT_PARAM(Object, JAVA_PROP_ID_T, name, param_spec)
 #define JT_EXTRACT_ASK_MODE(name, param_spec)   		JT_PARAM(Object, JAVA_EXTRACT_ASK_MODE_T, name, param_spec)
 #define JT_EXTRACT_OPERATION_RESULT(name, param_spec)   JT_PARAM(Object, JAVA_EXTRACT_OPERATION_RESULT_T, name, param_spec)
+#define JT_REPORT_EXTRACT_RESULT_INDEX_TYPE(name, param_spec)   JT_PARAM(Object, JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE_T, name, param_spec)
 
 
 JT_BEGIN_INTERFACE(SEVEN_ZIP_PACKAGE, ISequentialInStream)
@@ -100,6 +104,9 @@ JT_BEGIN_INTERFACE(SEVEN_ZIP_PACKAGE, IArchiveExtractCallback)
 
 	// public void setOperationResult(ExtractOperationResult extractOperationResult)
 	JT_INTERFACE_METHOD(Void, setOperationResult, JT_EXTRACT_OPERATION_RESULT(extractOperationResult, _))
+
+	// public void reportExtractResult(ReportExtractResultIndexType indexType, int index, ExtractOperationResult extractOperationResult)
+	JT_INTERFACE_METHOD(Void, reportExtractResult, JT_REPORT_EXTRACT_RESULT_INDEX_TYPE(indexType, JT_INT(index, JT_EXTRACT_OPERATION_RESULT(extractOperationResult, _))))
 JT_END_INTERFACE
 
 
@@ -156,6 +163,9 @@ JT_BEGIN_CLASS(SEVEN_ZIP_PACKAGE_IMPL, OutItem)
     JT_FIELD_OBJECT(propertyIsAnti, JAVA_BOOLEAN_T)
     JT_FIELD_OBJECT(propertySymLink, JAVA_STRING_T)
     JT_FIELD_OBJECT(propertyHardLink, JAVA_STRING_T)
+    JT_FIELD_OBJECT(propertyComment, JAVA_STRING_T)
+    JT_FIELD_OBJECT(propertyEncrypted, JAVA_BOOLEAN_T)
+    JT_FIELD_OBJECT(propertyCRC, JAVA_INTEGER_T)
 
     JT_FIELD_OBJECT(updateIsNewData, JAVA_BOOLEAN_T)
     JT_FIELD_OBJECT(updateIsNewProperties, JAVA_BOOLEAN_T)
@@ -208,6 +218,12 @@ JT_END_CLASS
 JT_BEGIN_CLASS(SEVEN_ZIP_PACKAGE, ExtractOperationResult)
 	// public static ExtractOperationResult getOperationResult(int index)
 	JT_CLASS_STATIC_METHOD_OBJECT(JAVA_EXTRACT_OPERATION_RESULT_T, getOperationResult, JT_INT(index, _))
+JT_END_CLASS
+
+
+JT_BEGIN_CLASS(SEVEN_ZIP_PACKAGE, ReportExtractResultIndexType)
+	// public static ReportExtractResultIndexType getIndexType(int index)
+	JT_CLASS_STATIC_METHOD_OBJECT(JAVA_REPORT_EXTRACT_RESULT_INDEX_TYPE_T, getIndexType, JT_INT(index, _))
 JT_END_CLASS
 
 

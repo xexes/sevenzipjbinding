@@ -124,3 +124,27 @@ STDMETHODIMP CPPToJavaArchiveExtractCallback::SetOperationResult(Int32 resultEOp
 
     return jniEnvInstance.exceptionCheck() ? S_FALSE : S_OK;
 }
+
+STDMETHODIMP CPPToJavaArchiveExtractCallback::ReportExtractResult(UInt32 indexType, UInt32 index, Int32 opRes) {
+    TRACE_OBJECT_CALL("ReportExtractResult");
+
+    JNIEnvInstance jniEnvInstance(_jbindingSession);
+
+    // Convert indexType to Java enum
+    jobject indexTypeObject = jni::ReportExtractResultIndexType::getIndexType(jniEnvInstance, (jint) indexType);
+    if (jniEnvInstance.exceptionCheck()) {
+        return S_FALSE;
+    }
+
+    // Convert opRes to ExtractOperationResult enum
+    jobject opResObject = jni::ExtractOperationResult::getOperationResult(jniEnvInstance, (jint) opRes);
+    if (jniEnvInstance.exceptionCheck()) {
+        return S_FALSE;
+    }
+
+    // Call the Java method: reportExtractResult(ReportExtractResultIndexType indexType, int index, ExtractOperationResult extractOperationResult)
+    _iArchiveExtractCallback->reportExtractResult(jniEnvInstance, _javaImplementation,
+            indexTypeObject, (jint) index, opResObject);
+
+    return jniEnvInstance.exceptionCheck() ? S_FALSE : S_OK;
+}

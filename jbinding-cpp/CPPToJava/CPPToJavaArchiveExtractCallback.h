@@ -5,13 +5,16 @@
 #include "CPPToJavaCryptoGetTextPassword.h"
 
 class CPPToJavaArchiveExtractCallback : public virtual IArchiveExtractCallback,
-        public virtual ICryptoGetTextPassword, public virtual CPPToJavaProgress {
+        public virtual ICryptoGetTextPassword,
+        public virtual IArchiveExtractCallbackMessage2,
+        public virtual CPPToJavaProgress {
 private:
     ICryptoGetTextPassword * _cryptoGetTextPasswordImpl;
     jni::IArchiveExtractCallback * _iArchiveExtractCallback;
 
 public:
-    // IArchiveExtractCallback and ICryptoGetTextPassword each have non-virtual IUnknown paths.
+    // IArchiveExtractCallback, ICryptoGetTextPassword, and IArchiveExtractCallbackMessage2
+    // each have non-virtual IUnknown paths.
     // Must provide AddRef/Release explicitly to satisfy all vtable slots.
     STDMETHOD_(ULONG, AddRef)() throw() Z7_override
         { return ++_m_RefCount; }
@@ -58,6 +61,12 @@ public:
             return S_OK;
         }
 
+        if (refguid == IID_IArchiveExtractCallbackMessage2) {
+            *p = (void *) (IArchiveExtractCallbackMessage2 *) this;
+            AddRef();
+            return S_OK;
+        }
+
         return CPPToJavaProgress::QueryInterface(refguid, p);
     }
 
@@ -93,6 +102,9 @@ public:
      */
     STDMETHOD(PrepareOperation)(Int32 askExtractMode);
     STDMETHOD(SetOperationResult)(Int32 resultEOperationResult);
+
+    // IArchiveExtractCallbackMessage2
+    STDMETHOD(ReportExtractResult)(UInt32 indexType, UInt32 index, Int32 opRes);
 };
 
 #endif /*CPPTOJAVAARCHIVEEXTRACTCALLBACK_H_*/
