@@ -71,8 +71,9 @@ public class OpenMultipartCabWithNonVolumedCallbackTest extends JUnitNativeTestB
             boolean expectToOpen) throws Throwable {
         IInArchive inArchive = null;
         Throwable throwable = null;
+        RandomAccessFile randomAccessFile = null;
         try {
-            RandomAccessFile randomAccessFile = new RandomAccessFile(PATH_TO_ARCHIVES + DISK1_FILE, "r");
+            randomAccessFile = new RandomAccessFile(PATH_TO_ARCHIVES + DISK1_FILE, "r");
             assertNotNull(randomAccessFile);
             try {
                 inArchive = SevenZip.openInArchive(archiveType, new RandomAccessFileInStream(randomAccessFile),
@@ -85,6 +86,17 @@ public class OpenMultipartCabWithNonVolumedCallbackTest extends JUnitNativeTestB
             if (inArchive != null) {
                 try {
                     inArchive.close();
+                } catch (Throwable t) {
+                    if (throwable == null) {
+                        throwable = t;
+                    } else {
+                        t.printStackTrace();
+                    }
+                }
+            }
+            if (randomAccessFile != null) {
+                try {
+                    randomAccessFile.close();
                 } catch (Throwable t) {
                     if (throwable == null) {
                         throwable = t;

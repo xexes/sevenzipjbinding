@@ -1,8 +1,8 @@
 # Add extended seach to the java tools.
 #
 # Input variables (for example, through -Dvar=value cmake option)
-# - JAVA_JDK - path to jdk1.5 or higher 
-# - JAVA_HOME - path to jdk1.5 or higher 
+# - JAVA_JDK - path to jdk1.8 or higher 
+# - JAVA_HOME - path to jdk1.8 or higher 
 #
 # Sets:
 #  - JAVA_COMPILE        (<jdk>/bin/javac)
@@ -13,7 +13,7 @@
 #  - JAVA_INCLUDE_PATH   (<jdk>/include) Path to jni.h
 #  - JAVA_ARCH           (System.getProperty("os.arch"))
 
-SET(JAVA_JDK CACHE PATH "Path to JDK 1.5 or higher")
+SET(JAVA_JDK CACHE PATH "Path to JDK 1.8 or higher")
 IF(NOT JAVA_JDK_OLD)
     SET(JAVA_JDK_OLD CACHE INTERNAL "Internal: Old copy of JAVA_JDK")
 ENDIF()
@@ -21,7 +21,7 @@ IF(JAVA_HOME)
     SET(JAVA_JDK "${JAVA_HOME}")
 ENDIF()
 SET(HELP
-"Please set JAVA_HOME to jdk1.5 or higher or use -DJAVA_JDK=<path-to-jdk> switch for cmake.
+"Please set JAVA_HOME to jdk1.8 or higher or use -DJAVA_JDK=<path-to-jdk> switch for cmake.
 Don't forget to delete 'CMakeCache.txt' file, if you want '-D' parameter to take effect."
 )
 
@@ -110,8 +110,8 @@ IF(NOT JAVA_COMPILE)
             "${JAVA_JDK}/bin"
             "$ENV{JAVA_HOME}/bin"
             "${JAVA_JNI_JDK_PATH}/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.4;JavaHome]/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.3;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
             /usr/bin
             /usr/lib/java/bin
             /usr/share/java/bin
@@ -146,8 +146,8 @@ IF(NOT JAVA_HEADER_COMPILE)
             "${JAVA_JDK}/bin"
             "$ENV{JAVA_HOME}/bin"
             "${JAVA_JNI_JDK_PATH}/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.4;JavaHome]/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.3;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
             /usr/bin
             /usr/lib/java/bin
             /usr/share/java/bin
@@ -182,8 +182,8 @@ IF(NOT JAVA_DOC)
             "${JAVA_JDK}/bin"
             "$ENV{JAVA_HOME}/bin"
             "${JAVA_JNI_JDK_PATH}/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.4;JavaHome]/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.3;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
             /usr/bin
             /usr/lib/java/bin
             /usr/share/java/bin
@@ -218,8 +218,8 @@ IF(NOT JAVA_RUNTIME)
             "${JAVA_JDK}/bin"
             "$ENV{JAVA_HOME}/bin"
             "${JAVA_JNI_JDK_PATH}/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.4;JavaHome]/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.3;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
             /usr/bin
             /usr/lib/java/bin
             /usr/share/java/bin
@@ -254,8 +254,8 @@ IF(NOT JAVA_ARCHIVE)
             "${JAVA_JDK}/bin"
             "$ENV{JAVA_HOME}/bin"
             "${JAVA_JNI_JDK_PATH}/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.4;JavaHome]/bin"
-            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.3;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
+            "[HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Development Kit\\1.8;JavaHome]/bin"
             /usr/bin
             /usr/lib/java/bin
             /usr/share/java/bin
@@ -305,7 +305,7 @@ public class TestClass {
     IF(javac_test_result)
         MESSAGE(FATAL_ERROR "${JAVA_COMPILE} can't compile simple java program.
         
-NOTE: Java 1.5 or higher is required in order to compile 7-Zip-JBinding.
+NOTE: Java 1.8 or higher is required in order to compile 7-Zip-JBinding.
         
 Javac error message: ${javac_test_err}")
     ENDIF()
@@ -335,7 +335,7 @@ public class JavaSystemPropertyTest {
     IF(javac_result)
         MESSAGE(FATAL_ERROR "${JAVA_COMPILE} can't compile simple java program.
         
-NOTE: Java 1.5 or higher is required in order to compile 7-Zip-JBinding.
+NOTE: Java 1.8 or higher is required in order to compile 7-Zip-JBinding.
         
 Javac error message: ${javac_err}")
     ENDIF()
@@ -348,7 +348,7 @@ Javac error message: ${javac_err}")
     IF(java_result)
         MESSAGE(FATAL_ERROR "${JAVA_RUNTIME} can't run simple java program.
         
-NOTE: Java 1.5 or higher is required in order to compile 7-Zip-JBinding.
+NOTE: Java 1.8 or higher is required in order to compile 7-Zip-JBinding.
         
 Javac error message: ${java_err}")
     ENDIF()
@@ -362,7 +362,7 @@ Javac error message: ${java_err}")
     IF(java_result)
         MESSAGE(FATAL_ERROR "${JAVA_RUNTIME} can't run simple java program.
         
-NOTE: Java 1.5 or higher is required in order to compile 7-Zip-JBinding.
+NOTE: Java 1.8 or higher is required in order to compile 7-Zip-JBinding.
         
 Javac error message: ${java_err}")
     ENDIF()

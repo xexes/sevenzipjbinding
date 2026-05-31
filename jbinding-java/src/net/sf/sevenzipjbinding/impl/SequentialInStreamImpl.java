@@ -58,7 +58,8 @@ public class SequentialInStreamImpl implements ISequentialInStream {
     }
 
     public void close() throws IOException {
-        // TODO Auto-generated method stub
-
+        if (inputStream != null) {
+            inputStream.close();
+        }
     }
 }
