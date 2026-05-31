@@ -119,6 +119,7 @@ JNIEXPORT void JNICALL Java_net_sf_sevenzipjbinding_impl_OutArchiveImpl_nativeSe
     names.Add(L"X");
 
     result = setProperties->SetProperties(names.ConstData(), propValues, names.Size());
+    delete[] propValues;
     if (result) {
         TRACE("Error setting 'Level' property. Result: 0x" << std::hex << result)
         jniNativeCallContext.reportError(result, "Error setting 'Level' property.");
@@ -163,6 +164,7 @@ JNIEXPORT void JNICALL Java_net_sf_sevenzipjbinding_impl_OutArchiveImpl_nativeSe
     names.Add(L"HE"); // See 7zHandlerOut.cpp:823
 
     result = setProperties->SetProperties(names.ConstData(), propValues, names.Size());
+    delete[] propValues;
     if (result) {
         TRACE("Error setting 'Header Encryption' property. Result: 0x" << std::hex << result)
         jniNativeCallContext.reportError(result, "Error setting 'Header Encryption' property.");
@@ -210,6 +212,7 @@ JNIEXPORT void JNICALL Java_net_sf_sevenzipjbinding_impl_OutArchiveImpl_nativeSe
     names.Add(L"S");
 
     result = setProperties->SetProperties(names.ConstData(), propValues, names.Size());
+    delete[] propValues;
     if (result) {
         TRACE("Error setting 'Solid' property. Result: 0x" << std::hex << result)
         jniNativeCallContext.reportError(result, "Error setting 'Solid' property.");
@@ -258,6 +261,7 @@ JNIEXPORT void JNICALL Java_net_sf_sevenzipjbinding_impl_OutArchiveImpl_nativeSe
     names.Add(L"MT");
 
     result = setProperties->SetProperties(names.ConstData(), propValues, names.Size());
+    delete[] propValues;
     if (result) {
         TRACE("Error setting 'Multithreading' property. Result: 0x" << std::hex << result)
         jniNativeCallContext.reportError(result, "Error setting 'Multithreading' property.");
