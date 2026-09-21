@@ -29,6 +29,7 @@ import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFile7zPass
 import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFile7zPassTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFile7zTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFileBZip2Test;
+import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFileXzTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFileGZipTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFileTarTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressGenericSingleFileZipPassNullTest;
@@ -44,10 +45,12 @@ import net.sf.sevenzipjbinding.junit.compression.CompressMultipleFileZipPassTest
 import net.sf.sevenzipjbinding.junit.compression.CompressMultipleFileZipTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressNonGenericSingleFile7zTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressNonGenericSingleFileBZip2Test;
+import net.sf.sevenzipjbinding.junit.compression.CompressNonGenericSingleFileXzTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressNonGenericSingleFileGZipTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressNonGenericSingleFileTarTest;
 import net.sf.sevenzipjbinding.junit.compression.CompressNonGenericSingleFileZipTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneCompressBZip2Test;
+import net.sf.sevenzipjbinding.junit.compression.StandaloneCompressXzTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneCompressGZipTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneCompressSevenZipTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneCompressTarTest;
@@ -58,6 +61,7 @@ import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateArchiveUpdateCo
 import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateArchiveUpdatePropertiesTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateNonGeneric7zTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateNonGenericBZip2Test;
+import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateNonGenericXzTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateNonGenericGZipTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateNonGenericTarTest;
 import net.sf.sevenzipjbinding.junit.compression.StandaloneUpdateNonGenericZipTest;
@@ -76,6 +80,7 @@ import net.sf.sevenzipjbinding.junit.compression.UpdateMultipleFilesNonGenericZi
 import net.sf.sevenzipjbinding.junit.compression.UpdateSingleFileGenericTest;
 import net.sf.sevenzipjbinding.junit.compression.UpdateSingleFileNonGeneric7zTest;
 import net.sf.sevenzipjbinding.junit.compression.UpdateSingleFileNonGenericBZip2Test;
+import net.sf.sevenzipjbinding.junit.compression.UpdateSingleFileNonGenericXzTest;
 import net.sf.sevenzipjbinding.junit.compression.UpdateSingleFileNonGenericGZipTest;
 import net.sf.sevenzipjbinding.junit.compression.UpdateSingleFileNonGenericTarTest;
 import net.sf.sevenzipjbinding.junit.compression.UpdateSingleFileNonGenericZipTest;
@@ -196,6 +201,7 @@ import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileTarTest;
 import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileUdfTest;
 import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileWimTest;
 import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileXarTest;
+import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileXzTest;
 import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileZTest;
 import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileZipPassCallbackTest;
 import net.sf.sevenzipjbinding.junit.singlefile.ExtractSingleFileZipPassTest;
@@ -204,6 +210,7 @@ import net.sf.sevenzipjbinding.junit.snippets.CompressGenericTest;
 import net.sf.sevenzipjbinding.junit.snippets.CompressMessageTest;
 import net.sf.sevenzipjbinding.junit.snippets.CompressNonGeneric7zTest;
 import net.sf.sevenzipjbinding.junit.snippets.CompressNonGenericBZip2Test;
+import net.sf.sevenzipjbinding.junit.snippets.CompressNonGenericXzTest;
 import net.sf.sevenzipjbinding.junit.snippets.CompressNonGenericGZipTest;
 import net.sf.sevenzipjbinding.junit.snippets.CompressNonGenericTarTest;
 import net.sf.sevenzipjbinding.junit.snippets.CompressNonGenericZipTest;
@@ -343,6 +350,7 @@ public class AllTestSuite extends TestSuite {
             ExtractSingleFileUdfTest.class, //
             ExtractSingleFileWimTest.class, //
             ExtractSingleFileXarTest.class, //
+            ExtractSingleFileXzTest.class, //
             ExtractSingleFileZTest.class, //
             ExtractSingleFileZipPassCallbackTest.class, //
             ExtractSingleFileZipPassTest.class, //
@@ -363,6 +371,7 @@ public class AllTestSuite extends TestSuite {
             CompressNonGeneric7zTest.class, //
             CompressGenericTest.class, //
             CompressNonGenericBZip2Test.class, //
+            CompressNonGenericXzTest.class, //
             CompressNonGenericGZipTest.class, //
             CompressNonGenericTarTest.class, //
             CompressWithErrorTest.class, //
@@ -408,6 +417,7 @@ public class AllTestSuite extends TestSuite {
             TraceCompressionTest.class, //
             StandaloneCompressZipTest.class, //
             StandaloneCompressBZip2Test.class, //
+            StandaloneCompressXzTest.class, //
             StandaloneCompressGZipTest.class, //
             StandaloneCompressSevenZipTest.class, //
             StandaloneCompressTarTest.class, //
@@ -419,6 +429,7 @@ public class AllTestSuite extends TestSuite {
             StandaloneUpdateNonGenericTarTest.class, //
             StandaloneUpdateNonGenericZipTest.class, //
             StandaloneUpdateNonGenericBZip2Test.class, //
+            StandaloneUpdateNonGenericXzTest.class, //
             StandaloneUpdateNonGenericGZipTest.class, //
 
             CompressFeatureSetLevel.class, //
@@ -431,6 +442,7 @@ public class AllTestSuite extends TestSuite {
             CompressGenericSingleFile7zPassTest.class, //
             CompressGenericSingleFile7zTest.class, //
             CompressGenericSingleFileBZip2Test.class, //
+            CompressGenericSingleFileXzTest.class, //
             CompressGenericSingleFileGZipTest.class, //
             CompressGenericSingleFileTarTest.class, //
             CompressGenericSingleFileZipPassNullTest.class, //
@@ -447,6 +459,7 @@ public class AllTestSuite extends TestSuite {
             CompressMultipleFileZipTest.class, //
             CompressNonGenericSingleFile7zTest.class, //
             CompressNonGenericSingleFileBZip2Test.class, //
+            CompressNonGenericSingleFileXzTest.class, //
             CompressNonGenericSingleFileGZipTest.class, //
             CompressNonGenericSingleFileTarTest.class, //
             CompressNonGenericSingleFileZipTest.class, //
@@ -465,6 +478,7 @@ public class AllTestSuite extends TestSuite {
             UpdateSingleFileGenericTest.class, //
             UpdateSingleFileNonGeneric7zTest.class, //
             UpdateSingleFileNonGenericBZip2Test.class, //
+            UpdateSingleFileNonGenericXzTest.class, //
             UpdateSingleFileNonGenericGZipTest.class, //
             UpdateSingleFileNonGenericTarTest.class, //
             UpdateSingleFileNonGenericZipTest.class, //
@@ -472,6 +486,7 @@ public class AllTestSuite extends TestSuite {
     };
     static Class<?>[] miscTests = { //
             ArchiveWithTwoPasswordsTest.class, //
+            net.sf.sevenzipjbinding.PlatformArchDetectorTest.class, //
     };
     static Class<?>[] initStdTests = { //
     /*    */StandardInitializationTest.class, //
