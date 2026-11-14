@@ -156,16 +156,23 @@ with those artifacts. The 26.06 source tree includes the upstream fix — tracki
 You only need this to build the native library yourself; most users should just use the artifacts above.
 
 ```bash
-# Linux — requires CMake (>= 2.6), a C/C++ toolchain and JDK 8+
-cmake .            # or: cmake . -DJAVA_JDK=<path-to-jdk>
-make
-ctest              # run the tests
-make package       # build the distribution ZIP
+# Linux — requires CMake 3.x, a C/C++ toolchain and JDK 8+
+cmake -S . -B build -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+    -DJAVA_JDK=/path/to/jdk
+cmake --build build
+ctest --test-dir build --output-on-failure
+cmake --build build --target package
 ```
 
-Windows builds use MinGW (recommended) or Cygwin; the full cross‑platform release matrix
-(Linux glibc/musl, ARM, Windows, macOS) is produced with the helper scripts under
-[`scripts/`](scripts/) (DockCross / Alpine / QEMU). See the scripts for details.
+`JAVA_JDK` may be omitted when `JAVA_HOME` points to the installed JDK.
+The tests use the bundled JUnit dependencies under `test/JavaTests/lib/`; the complete
+`ctest` suite can take a while to run.
+
+The project builds the Java API and a platform-specific JNI library with CMake. The Java sources
+are in `jbinding-java/src/`, native binding code is in `jbinding-cpp/`, bundled 7-Zip sources are
+in `7zip/`, and Java/C++ tests are in `test/`. Windows native builds use MinGW. Release builds for
+additional platforms are handled by the scripts under [`scripts/`](scripts/) and the platform
+workflows under [`.github/workflows/`](.github/workflows/).
 
 ## 🤝 Contributing
 
