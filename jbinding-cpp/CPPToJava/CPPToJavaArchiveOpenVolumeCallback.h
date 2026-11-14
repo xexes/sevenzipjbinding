@@ -5,14 +5,13 @@
 #include "CPPToJava/CPPToJavaInStream.h"
 #include "JavaStatInfos/JavaPackageSevenZip.h"
 
-class CPPToJavaArchiveOpenVolumeCallback : public CPPToJavaAbstract, //
-        public virtual IArchiveOpenVolumeCallback, public CMyUnknownImp {
+class CPPToJavaArchiveOpenVolumeCallback :
+    public CPPToJavaAbstract, //
+    public virtual IArchiveOpenVolumeCallback,
+    public CMyUnknownImp {
 
 private:
     jni::IArchiveOpenVolumeCallback * _iArchiveOpenVolumeCallback;
-public:
-    MY_UNKNOWN_IMP
-
 public:
     CPPToJavaArchiveOpenVolumeCallback(JBindingSession & jbindingSession, JNIEnv * initEnv,
                                        jobject archiveOpenColumeCallback) :
@@ -22,8 +21,11 @@ public:
         TRACE_OBJECT_CREATION("CPPToJavaArchiveOpenVolumeCallback")
     }
 
-    STDMETHOD(GetProperty)(PROPID propID, PROPVARIANT *value);
-    STDMETHOD(GetStream)(const wchar_t *name, IInStream **inStream);
+public:
+    Z7_COM_UNKNOWN_IMP_1(IArchiveOpenVolumeCallback)
+
+private:
+    Z7_IFACE_COM7_IMP_NONFINAL(IArchiveOpenVolumeCallback)
 };
 
 #endif /*CPPTOJAVAARCHIVEOPENVOLUMECALLBACK_H_*/

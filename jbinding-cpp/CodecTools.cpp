@@ -22,21 +22,24 @@ void CodecTools::init() {
 
 #ifdef TRACE_ON
 	for (int i = 0; i < CodecTools::codecs.Formats.Size(); i++) {
-        const wchar_t * name = (const wchar_t*)CodecTools::codecs.Formats[i].Name;
+        const wchar_t * name = CodecTools::codecs.Formats[i].Name.Ptr();
 		TRACE("Available codec: '" << name << "'")
 	}
 #endif // TRACE_ON
 
 	gzipIndex = -1;
 	bzip2Index = -1;
+	xzIndex = -1;
 	for (int i = 0; i < CodecTools::codecs.Formats.Size(); i++) {
-        const wchar_t * name = (const wchar_t*)CodecTools::codecs.Formats[i].Name;
+        const wchar_t * name = CodecTools::codecs.Formats[i].Name.Ptr();
         if (wcscmp(name, L"Cab") == 0) {
             cabIndex = i;
         } else if (wcscmp(name, L"gzip") == 0) {
             gzipIndex = i;
         } else if (wcscmp(name, L"bzip2") == 0) {
             bzip2Index = i;
+        } else if (wcscmp(name, L"xz") == 0) {
+            xzIndex = i;
         }
 	}
 }
@@ -48,13 +51,7 @@ void CodecTools::init() {
  */
 static int getIndexByName(JNIEnv * env, UString & formatNameString) {
 	TRACE("Format: " << formatNameString)
-	// Manual implementation since FindFormatForArchiveType is not available with Z7_SFX
-	for (unsigned i = 0; i < codecTools.codecs.Formats.Size(); i++) {
-		const CArcInfoEx &arc = codecTools.codecs.Formats[i];
-		if (formatNameString.IsEqualTo_NoCase(arc.Name))
-			return i;
-	}
-	return -1;
+	return codecTools.codecs.FindFormatForArchiveType(formatNameString);
 }
 
 void CodecTools::getArchiveFormatName(JNIEnv * env, jobject archiveFormat, UString & formatNameString) {

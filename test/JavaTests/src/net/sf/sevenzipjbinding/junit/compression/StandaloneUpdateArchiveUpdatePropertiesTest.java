@@ -1,6 +1,7 @@
 package net.sf.sevenzipjbinding.junit.compression;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
 import java.util.Date;
@@ -27,6 +28,13 @@ import net.sf.sevenzipjbinding.util.ByteArrayStream;
 public class StandaloneUpdateArchiveUpdatePropertiesTest extends JUnitNativeTestBase<VoidContext>{
     private String newPath;
     private Date newModificationTime;
+    private Integer newAttributes;
+    private String newComment;
+
+    /**
+     * Tests updating archive item properties: PATH, LAST_MODIFICATION_TIME, ATTRIBUTES, COMMENT.
+     * These are the main modifiable properties for 7z archives during update operations.
+     */
 
     private class UpdateItemContentArchiveUpdateCallback implements IOutCreateCallback<IOutItemAllFormats> {
         private int itemToUpdate;
@@ -53,8 +61,11 @@ public class StandaloneUpdateArchiveUpdatePropertiesTest extends JUnitNativeTest
 
                 outItem.setUpdateIsNewProperties(Boolean.TRUE);
 
+                // Update all testable properties
                 outItem.setPropertyPath(newPath);
                 outItem.setPropertyLastModificationTime(newModificationTime);
+                outItem.setPropertyAttributes(newAttributes);
+                outItem.setPropertyComment(newComment);
 
                 return outItem;
             }
@@ -87,6 +98,9 @@ public class StandaloneUpdateArchiveUpdatePropertiesTest extends JUnitNativeTest
 
         newPath = inArchive.getProperty(itemToUpdate, PropID.PATH) + "_changed";
         newModificationTime = new Date(System.currentTimeMillis() + getRandom().nextInt(100000) + 100000);
+        // Set attributes with standard file permission bits (readable, writable, executable by owner)
+        newAttributes = Integer.valueOf(0x81A4); // Unix: -rwxr-xr-x (regular file with execute)
+        newComment = "Test comment for item " + itemToUpdate;
 
         outArchiveConnected.updateItems(byteArrayStream2, inArchive.getNumberOfItems(),
                 new UpdateItemContentArchiveUpdateCallback(itemToUpdate));
@@ -106,8 +120,27 @@ public class StandaloneUpdateArchiveUpdatePropertiesTest extends JUnitNativeTest
         }
 
         virtualContent.updateItemLastModificationTimeByPath(itemToUpdatePath, newModificationTime);
+        virtualContent.updateItemAttributesByPath(itemToUpdatePath, newAttributes);
         virtualContent.updateItemPathByPath(itemToUpdatePath, newPath);
         virtualContent.verifyInArchive(modifiedInArchive);
+        
+        // Verify the additional properties we set (COMMENT is not read-back supported in binding)
+        verifyUpdatedProperties(modifiedInArchive, itemToUpdate, newPath, newAttributes);
+    }
+
+    private void verifyUpdatedProperties(IInArchive inArchive, int index, String expectedPath, 
+            Integer expectedAttributes) throws SevenZipException {
+        // Verify PATH (already done by virtualContent.verifyInArchive)
+        
+        // Verify ATTRIBUTES
+        Integer actualAttributes = (Integer) inArchive.getProperty(index, PropID.ATTRIBUTES);
+        assertNotNull("ATTRIBUTES should be set after update", actualAttributes);
+        assertEquals("ATTRIBUTES mismatch after update", expectedAttributes.intValue(), actualAttributes.intValue());
+        
+        // Also verify via simple interface
+        Integer simpleAttributes = inArchive.getSimpleInterface().getArchiveItem(index).getAttributes();
+        
+        assertEquals("Simple interface ATTRIBUTES mismatch", expectedAttributes.intValue(), simpleAttributes.intValue());
     }
 
 

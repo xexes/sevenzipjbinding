@@ -2,6 +2,8 @@
 #include "JNITools.h"
 #include "UnicodeHelper.h"
 
+#include <cstring>
+
 // TODO Refactor to use java static info
 
 // TODO Synchronize access to this variable or call the init method from the global initialization routing (better)
@@ -227,7 +229,7 @@ bool ObjectToFILETIME(JNIEnvInstance & jniEnvInstance, jobject obj, FILETIME & f
 jstring PropVariantToString(JNIEnv * env, PROPID propID, const PROPVARIANT &propVariant) {
 
     UString string;
-    ConvertPropertyToString2(string, propVariant, propID, 0);
+    ConvertPropertyToString2(string, propVariant, propID, 5);
     return ToJChar(string).toNewString(env);
 }
 
@@ -238,7 +240,7 @@ void ObjectToPropVariant(JNIEnvInstance & jniEnvInstance, jobject object, PROPVA
     if (object) {
         if (jniEnvInstance->IsInstanceOf(object, g_IntegerClass)) {
             jint value = jniEnvInstance->CallIntMethod(object, g_IntegerIntValue);
-            cPropVariant.Set_Int32((Int32) value);
+            cPropVariant.Set_Int32(value);
         } else if (jniEnvInstance->IsInstanceOf(object, g_StringClass)) {
             cPropVariant = UString(FromJChar(jniEnvInstance, (jstring)object));
         } else if (jniEnvInstance->IsInstanceOf(object, g_BooleanClass)) {

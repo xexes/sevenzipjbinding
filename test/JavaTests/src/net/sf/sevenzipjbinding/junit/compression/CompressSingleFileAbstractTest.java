@@ -19,6 +19,7 @@ import net.sf.sevenzipjbinding.IOutCreateCallback;
 import net.sf.sevenzipjbinding.IOutItem7z;
 import net.sf.sevenzipjbinding.IOutItemAllFormats;
 import net.sf.sevenzipjbinding.IOutItemBZip2;
+import net.sf.sevenzipjbinding.IOutItemXz;
 import net.sf.sevenzipjbinding.IOutItemBase;
 import net.sf.sevenzipjbinding.IOutItemGZip;
 import net.sf.sevenzipjbinding.IOutItemTar;
@@ -69,6 +70,7 @@ public abstract class CompressSingleFileAbstractTest<C extends AbstractTestConte
             setPropertiesForZip(outItem, testContext);
             setPropertiesForGZip(outItem, testContext);
             setPropertiesForBZip2(outItem, testContext);
+            setPropertiesForXz(outItem, testContext);
             setPropertiesForTar(outItem, testContext);
         }
 
@@ -88,6 +90,10 @@ public abstract class CompressSingleFileAbstractTest<C extends AbstractTestConte
 
             case BZIP2:
                 setPropertiesForBZip2(outItem, testContext);
+                break;
+
+            case XZ:
+                setPropertiesForXz(outItem, testContext);
                 break;
 
             case TAR:
@@ -144,6 +150,9 @@ public abstract class CompressSingleFileAbstractTest<C extends AbstractTestConte
         protected void setPropertiesForBZip2(IOutItemBZip2 outItem, TestContext testContext) {
         }
 
+        protected void setPropertiesForXz(IOutItemXz outItem, TestContext testContext) {
+        }
+
         protected void setPropertiesForTar(IOutItemTar outItem, TestContext testContext) {
             outItem.setPropertyPosixAttributes(POSIX_ATTRIBUTES);
             testContext.posixAttributesSet = true;
@@ -186,7 +195,9 @@ public abstract class CompressSingleFileAbstractTest<C extends AbstractTestConte
     protected static final Date MODIFICATION_TIME = getDate(2 * WEEK);
     protected static final Date CREATION_TIME = getDate(3 * WEEK);
     protected static final Integer ATTRIBUTES = 1;
-    protected static final Integer POSIX_ATTRIBUTES = 0x8002; // S_IFREG | S_IWOTH (7-Zip 25.01 TAR always adds file-type bits via Get_Combined_Mode)
+    // POSIX attributes for TAR: S_IFREG (32768) | permissions (2) = 32770
+    // 7-zip stores the full mode including file type bits
+    protected static final Integer POSIX_ATTRIBUTES = 32770;
     protected static final String GROUP = "mygroup";
     protected static final String USER = "me";
 

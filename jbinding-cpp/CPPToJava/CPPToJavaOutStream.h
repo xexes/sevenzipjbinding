@@ -1,55 +1,31 @@
 #ifndef __JAVA_OUT_STREAM_H__INCLUDED__
+#define __JAVA_OUT_STREAM_H__INCLUDED__
 
 #include "CPPToJavaSequentialOutStream.h"
 
-class CPPToJavaOutStream : public virtual IOutStream, public CPPToJavaSequentialOutStream {
+class CPPToJavaOutStream :
+    public CPPToJavaAbstract,
+    public virtual IOutStream,
+    public CMyUnknownImp {
 private:
+    CPPToJavaSequentialOutStream _sequentialOutStream;
     jni::IOutStream * _iOutStream;
     jni::ISeekableStream * _iSeekableStream;
 
 public:
-    // IOutStream inherits ISequentialOutStream non-virtually, creating a second IUnknown path.
-    // Must provide AddRef/Release explicitly to satisfy both vtable slots.
-    STDMETHOD_(ULONG, AddRef)() throw() Z7_override
-        { return ++_m_RefCount; }
-    STDMETHOD_(ULONG, Release)() throw() Z7_override
-        { if (--_m_RefCount != 0) return _m_RefCount; delete this; return 0; }
-
-public:
     CPPToJavaOutStream(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject inStream) :
-        CPPToJavaSequentialOutStream(jbindingSession, initEnv, inStream), //
-                _iOutStream(jni::IOutStream::_getInstanceFromObject(initEnv, inStream)), //
-                _iSeekableStream(jni::ISeekableStream::_getInstanceFromObject(initEnv, inStream)) {
+            CPPToJavaAbstract(jbindingSession, initEnv, inStream), //
+            _sequentialOutStream(jbindingSession, initEnv, inStream), //
+            _iOutStream(jni::IOutStream::_getInstanceFromObject(initEnv, inStream)), //
+            _iSeekableStream(jni::ISeekableStream::_getInstanceFromObject(initEnv, inStream)) {
         TRACE_OBJECT_CREATION("CPPToJavaOutStream")
     }
 
-    STDMETHOD(Write)(const void *data, UInt32 size, UInt32 *processedSize) {
-        TRACE("WRITE(size=" << size << ")")
-        HRESULT result = CPPToJavaSequentialOutStream::Write(data, size, processedSize);
-#ifdef TRACE_ON
-        if (processedSize) {
-            TRACE("WRITE: size=" << size << ", was written:" << *processedSize << ", result:" << result);
-        }
-#endif
-        return result;
-    }
+    Z7_IFACE_COM7_IMP_NONFINAL(IOutStream)
+    Z7_IFACE_COM7_IMP_NONFINAL(ISequentialOutStream)
 
-    STDMETHOD(QueryInterface)(REFGUID iid, void ** outObject) throw() Z7_override {
-        if (iid == IID_IOutStream) {
-            *outObject = (void *) (IOutStream *) this;
-            CPPToJavaSequentialOutStream::AddRef();  // Explicitly qualify to resolve ambiguity
-            return S_OK;
-        }
-
-        return CPPToJavaSequentialOutStream::QueryInterface(iid, outObject);
-    }
-
-    // Inherit AddRef and Release from base class (no need to override)
-
-    STDMETHOD(Seek)(Int64 offset, UInt32 seekOrigin, UInt64 *newPosition);
-
-    STDMETHOD(SetSize)(UInt64 newSize);
+private:
+    Z7_COM_UNKNOWN_IMP_2(IOutStream, ISequentialOutStream)
 };
 
-#define __JAVA_OUT_STREAM_H__INCLUDED__
 #endif // __JAVA_OUT_STREAM_H__INCLUDED__

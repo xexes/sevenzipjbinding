@@ -5,7 +5,7 @@
 #include "CPPToJavaInStream.h"
 #include "UnicodeHelper.h"
 
-STDMETHODIMP CPPToJavaArchiveOpenVolumeCallback::GetProperty(PROPID propID, PROPVARIANT *value) {
+STDMETHODIMP CPPToJavaArchiveOpenVolumeCallback::GetProperty(PROPID propID, PROPVARIANT *value) noexcept {
     TRACE_OBJECT_CALL("GetProperty");
 
     TRACE("GetProperty(" << propID << ')')
@@ -33,7 +33,7 @@ STDMETHODIMP CPPToJavaArchiveOpenVolumeCallback::GetProperty(PROPID propID, PROP
 }
 
 STDMETHODIMP CPPToJavaArchiveOpenVolumeCallback::GetStream(const wchar_t *name,
-                                                           IInStream **inStream) {
+                                                           IInStream **inStream) noexcept {
     TRACE_OBJECT_CALL("GetStream");
 
     JNIEnvInstance jniEnvInstance(_jbindingSession);
@@ -60,10 +60,11 @@ STDMETHODIMP CPPToJavaArchiveOpenVolumeCallback::GetStream(const wchar_t *name,
             CMyComPtr<IInStream> inStreamComPtr = newInStream;
             *inStream = inStreamComPtr.Detach();
         } else {
-            //			jniInstance.ThrowSevenZipException(
-            //					"IArchiveOpenVolumeCallback.GetStream() returns stream=null. "
-            //						"Use non-zero return value if requested volume doesn't exists");
-            return S_FALSE;
+            // Volume not found - report error so SevenZipException is thrown to Java
+            jniEnvInstance.reportError(E_FAIL,
+                    "IArchiveOpenVolumeCallback.GetStream() returns stream=null for volume '%S'. "
+                    "The requested volume doesn't exist.", name);
+            return E_FAIL;
         }
     }
 

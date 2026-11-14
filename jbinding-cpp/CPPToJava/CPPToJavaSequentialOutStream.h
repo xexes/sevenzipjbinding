@@ -2,32 +2,33 @@
 #define CPPTOJAVASEQUENTIALOUTSTREAM_H_
 
 #include "7zip/Archive/IArchive.h"
-#include "Common/MyCom.h"
 #include "CPPToJavaAbstract.h"
+#include "Common/MyCom.h"
 #include "JavaStatInfos/JavaPackageSevenZip.h"
 
-// Import non-final COM macros from CPPToJavaSequentialInStream.h
-#include "CPPToJavaSequentialInStream.h"
-
 class CPPToJavaSequentialOutStream : public CPPToJavaAbstract,
-	public virtual ISequentialOutStream,
-	public CMyUnknownImp
-{
+                                     public ISequentialOutStream,
+                                     public CMyUnknownImp {
 private:
-    jni::ISequentialOutStream * _iSequentialOutStream;
-public:
-	MY_UNKNOWN_IMP1_NONFINAL(ISequentialOutStream)
+  jni::ISequentialOutStream *_iSequentialOutStream;
 
 public:
-	CPPToJavaSequentialOutStream(JBindingSession & jbindingSession, JNIEnv * initEnv, jobject javaSequentialOutStreamImpl) :
-		CPPToJavaAbstract(jbindingSession, initEnv, javaSequentialOutStreamImpl),
-		        _iSequentialOutStream(jni::ISequentialOutStream::_getInstanceFromObject(initEnv, javaSequentialOutStreamImpl))
-	{
-	    TRACE_OBJECT_CREATION("CPPToJavaSequentialOutStream")
-	}
+  CPPToJavaSequentialOutStream(JBindingSession &jbindingSession,
+                               JNIEnv *initEnv,
+                               jobject javaSequentialOutStreamImpl)
+      : CPPToJavaAbstract(jbindingSession, initEnv,
+                          javaSequentialOutStreamImpl),
+        _iSequentialOutStream(jni::ISequentialOutStream::_getInstanceFromObject(
+            initEnv, javaSequentialOutStreamImpl)) {
+    TRACE_OBJECT_CREATION("CPPToJavaSequentialOutStream")
+  }
 
-	STDMETHOD(Write)(const void *data, UInt32 size, UInt32 *processedSize);
+  virtual ~CPPToJavaSequentialOutStream() {}
+
+  Z7_IFACE_COM7_IMP_NONFINAL(ISequentialOutStream)
+
+private:
+  Z7_COM_UNKNOWN_IMP_1(ISequentialOutStream)
 };
-
 
 #endif /*CPPTOJAVASEQUENTIALOUTSTREAM_H_*/

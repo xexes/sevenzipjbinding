@@ -1,49 +1,80 @@
 7-Zip-JBinding Release Notes
 ============================
 
-Main features of 26.01-1.00 (Release, extraction/compression/update, cross-platform, based on 7-Zip 26.01)
+Known issues
+------------
 
-    * Bind 7-Zip 26.01 with latest features and security updates
-    
-    * Security improvements:
-        - Improved symbolic link handling to prevent directory traversal vulnerabilities
-        - Patches CVE-2025-11001 and CVE-2025-11002
-    
-    * In-memory archive extraction/creation/update
+    * None currently tracked.
+      (CVE-2024-11477, the 7-Zip Zstandard decompression issue affecting 23.01-2.x, is resolved
+      as of 26.03-2.4 - the bundled engine now postdates the upstream fix in 7-Zip 24.07.)
+
+
+Main features of 26.03-2.4 (engine upgrade to 7-Zip 26.03)
+
+    * Upgraded the bundled 7-Zip engine from 23.01 to 26.03 (latest, released
+      2026-09-03), via the vendored-engine workflow. Brings the upstream format,
+      decoder and bug fixes accumulated since 23.01, including native Zstandard
+      (.zst) decompression handled inside the engine.
+
+    * Security: resolves CVE-2024-11477 (7-Zip Zstandard decompression, severity
+      HIGH, CVSS 7.8). The 26.03 engine postdates the upstream fix released in
+      7-Zip 24.07, so the Zstandard known-issue from 23.01-2.x no longer applies.
+      Tracking: https://github.com/borisbrodski/sevenzipjbinding/issues/72
+
+    * No public API changes: existing Java code is unaffected. The full set of
+      supported platforms is unchanged and the complete build + runtime test
+      matrix is green on the new engine (Linux glibc & musl on arm/x86, Windows
+      x86/x64/arm64, macOS arm64 & x86_64).
+
+
+Main features of 23.01-2.3 (new platform: Windows on Arm)
+
+    * New platform: Windows on Arm (arm64). A native aarch64 Windows library
+      (platform 'Windows-arm64'), built with the llvm-mingw GCC-style toolchain
+      and included in the AllWindows and AllPlatforms jars. The -all-platforms
+      jar auto-detects and loads it on a native arm64 Windows JVM.
+
+
+Main features of 23.01-2.2 (Release, extraction/compression/update, cross-platform, based on 7-Zip 23.01)
+
+    * Bind 7-Zip 23.01, In-memory archive extraction/creation/update
 
     * Extraction of
         - 7z, Arj, BZip2, Cab, Chm, Cpio, Ar/A/Lib/Deb, Fat, GZip, HFS, Iso,
-          Lzh, Lzma, Nsis, Ntfs, Rar, Rpm, Split, Tar, Udf, Wim, Xar, Z, Zip
+          Lzh, Lzma, Nsis, Ntfs, Rar, Rpm, Split, Tar, Udf, Wim, Xar, Xz, Z, Zip
 
         - Archive format auto detection
-        - Support for password protected and in volumes splitted archives
+        - Support for password-protected and multi-volume (split) archives
         - Full featured and simplified extraction interfaces
 
     * Compression & update of
-        - 7z, Zip, Tar, GZip, BZip2
+        - 7z, Zip, Tar, GZip, BZip2, Xz
         - Convenient archive format specific and generic compression APIs
         - Password protected archives (7z, zip) with encrypted archive headers (7z only)
         
-    * 7-Zip-JBinding requires Java 1.5 or higher
+    * 7-Zip-JBinding requires Java 8 or higher
 
     * Cross-platform. Binaries available for
         - Windows 32/64
-        - Linux 32/64
-        - Mac OS X 64
-        - ARM (WARNING: Not a part of -AllPlatform or -AllLinux !!!)
-			* ARMv5 (armel)
-			* ARMv6 (RaspberryPi 2)
+        - Linux 32/64 (glibc)
+        - Linux ARM (glibc):
+			* ARMv5 (armel, soft-float)
+			* ARMv6 (Raspberry Pi 1/Zero, hard-float)
 			* ARMv7 (armhf)
 			* ARM64
+        - Linux musl (Alpine): amd64, ARM64, ARMv7
+        - macOS: single universal binary for Intel (x86_64) and
+          Apple Silicon (arm64)
 
-    * Multi-platform distributions (with platform auto-detection):
-        - AllWindows - includes Win32 and Win64
-        - AllLinux - includes Linux32 and Linux64 (ARM not included)
-        - AllPlatforms - includes AllWindows, AllLinux and Mac
+    * Multi-platform distributions (with runtime platform auto-detection:
+      OS/architecture, ARM level + float ABI, glibc vs musl):
+        - AllWindows   - Win32 + Win64
+        - AllPlatforms - ALL 12 platforms in one jar (Windows, Linux glibc
+                         including ARM, Linux musl, macOS universal)
 
     * JavaDoc + Snippets (see documentation on the web: sevenzipjbind.sf.net)
 
-        * Over 8599 JUnit tests:
+        * 8845 JUnit tests:
             - Initialization
             - All extraction methods
             - Compression
@@ -53,11 +84,11 @@ Main features of 26.01-1.00 (Release, extraction/compression/update, cross-platf
         <dependency>
             <groupId>net.sf.sevenzipjbinding</groupId>
             <artifactId>sevenzipjbinding</artifactId>
-            <version>26.01-1.00</version>
+            <version>23.01-2.2</version>
         </dependency>
         <dependency>
             <groupId>net.sf.sevenzipjbinding</groupId>
             <artifactId>sevenzipjbinding-all-platforms</artifactId>
-            <version>26.01-1.00</version>
+            <version>23.01-2.2</version>
         </dependency>
 

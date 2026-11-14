@@ -168,8 +168,11 @@ IF(NOT JAVA_HEADER_COMPILE)
     
     IF(JAVA_HEADER_COMPILE)
         MESSAGE("-- Looking for java header compiler 'javah' - found: ${JAVA_HEADER_COMPILE}")
+        SET(JAVA_HEADER_USE_JAVAC No CACHE INTERNAL "Generate JNI headers with javac -h")
     ELSE()
-        MESSAGE(FATAL_ERROR "Java header compiler 'javah' not found. ${HELP}")
+        MESSAGE("-- 'javah' not found (removed in JDK 10+) - generating JNI headers with 'javac -h'")
+        SET(JAVA_HEADER_COMPILE "${JAVA_COMPILE}")
+        SET(JAVA_HEADER_USE_JAVAC Yes CACHE INTERNAL "Generate JNI headers with javac -h")
     ENDIF()
 ENDIF()
 

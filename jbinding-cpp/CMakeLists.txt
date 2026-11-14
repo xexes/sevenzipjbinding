@@ -35,20 +35,19 @@ ELSE(HAVE_WCHAR_H)
   SET(HAVE_UNICODE_WCHAR 0)
 ENDIF(HAVE_WCHAR_H)
 
-SET(P7ZIP_SRC ../p7zip)
-SET(_7ZIP_SRC ../7zip)
+SET(SEVEN_ZIP_SRC ../7zip)
 
 SET(JBINDING_PLATFORM_CPP_FILES)
 IF(MINGW)
     add_definitions(-include PlatformMinGW/StdAfx.h)
     include_directories(PlatformMinGW/)
-    IF(MINGW64)
+    IF(MINGW64 OR MINGWARM64)
         set_source_files_properties(PlatformMinGW/MyUser32.cpp PROPERTIES COMPILE_FLAGS -DNO_MY_STDAFX)
         SET(JBINDING_PLATFORM_CPP_FILES
             #PlatformMinGW/MyWindows.cpp
             #PlatformMinGW/MyUser32.cpp
         )
-    ENDIF(MINGW64)
+    ENDIF()
 ELSE(MINGW)
     ###include_directories(PlatformUnix/)
 ENDIF(MINGW)
@@ -59,15 +58,15 @@ include_directories(${JAVA_INCLUDE_PATH})
 include_directories(${JAVA_INCLUDE_PATH2})
 
 IF(MINGW)
-    include_directories(${_7ZIP_SRC})
-    include_directories(${_7ZIP_SRC}/CPP)
-    include_directories(${_7ZIP_SRC}/C)
+    include_directories(${SEVEN_ZIP_SRC})
+    include_directories(${SEVEN_ZIP_SRC}/CPP)
+    include_directories(${SEVEN_ZIP_SRC}/C)
 ELSE(MINGW)
-    include_directories(${P7ZIP_SRC})
-    include_directories(${P7ZIP_SRC}/CPP)
-    include_directories(${P7ZIP_SRC}/C)
-    include_directories(${P7ZIP_SRC}/CPP/myWindows)
-    include_directories(${P7ZIP_SRC}/CPP/include_windows)
+    include_directories(${SEVEN_ZIP_SRC})
+    include_directories(${SEVEN_ZIP_SRC}/CPP)
+    include_directories(${SEVEN_ZIP_SRC}/C)
+    include_directories(${SEVEN_ZIP_SRC}/CPP/Windows)
+    # include_directories(${SEVEN_ZIP_SRC}/CPP/include_windows)
 ENDIF(MINGW)
 include_directories(${PROJECT_BINARY_DIR}/javah)
 include_directories(.)
@@ -77,6 +76,12 @@ IF(MINGW32)
 ENDIF()
 IF(MINGW64)
     add_definitions(-DMINGW -mthreads -D_JNI_IMPLEMENTATION_ -D_OLEAUT32_ -D_USER32_)
+ENDIF()
+IF(MINGWARM64)
+    # Windows on Arm (aarch64), built with llvm-mingw (clang). Same JNI/Windows defines as the 64-bit
+    # MinGW build. _JNI_IMPLEMENTATION_ makes JNIEXPORT expand to __declspec(dllexport) so the JNI
+    # entry points are exported from the DLL. (-mthreads is a no-op flavour thing on clang/arm64.)
+    add_definitions(-DMINGW -D_JNI_IMPLEMENTATION_ -D_OLEAUT32_ -D_USER32_)
 ENDIF()
 
 IF(CMAKE_BUILD_TYPE STREQUAL "Debug")
@@ -102,6 +107,9 @@ add_definitions(
 #    -DTRACE_ON
     -fPIC
     -fexceptions
+    # Disable 7-Zip's 256-bit VAES AES path (x86/x64 only; see 7zip/C/AesOpt.c). Old MinGW binutils
+    # can't assemble the vaes* opcodes, and VAES faulted under QEMU x86_64 in CI. AES-NI stays on.
+    -DZ7_JB_DISABLE_VAES
 )
 
 IF(MINGW)
@@ -114,6 +122,12 @@ IF(MINGW)
         -D_UNICODE     # since 9.13
         -DBREAK_HANDLER
         -DBENCH_MT
+        # Opt out of 7-Zip's NTFS security-descriptor/privilege code (EnumDirItems.cpp ->
+        # InitLocalPrivileges(), defined only in 7-Zip's ArchiveExtractCallback.cpp/UpdateCallback.cpp
+        # which jbinding does NOT link - it uses its own CPPToJava*Callback). On a *nix build this code
+        # is never compiled (no _WIN32); defining this makes the Windows/MinGW build match and avoids
+        # 'undefined symbol: InitLocalPrivileges()' at link time. jbinding never exposes this feature.
+        -DZ7_JB_NO_SECURITY_CODE
     )
 ELSE(MINGW)
 #  -s 
@@ -136,26 +150,27 @@ ELSE(MINGW)
 ENDIF(MINGW)
 
 IF(MINGW)
-    SET(SEVEN_ZIP_SRC "${_7ZIP_SRC}")
     SET(SEVEN_ZIP_PLATFORM_SOURCE_FILES
         ${SEVEN_ZIP_SRC}/C/AesOpt.c
         ${SEVEN_ZIP_SRC}/CPP/Windows/FileLink.cpp
         ${SEVEN_ZIP_SRC}/CPP/Common/NewHandler.cpp
     )
 ELSE(MINGW)
-    SET(SEVEN_ZIP_SRC "${P7ZIP_SRC}")
-    SET(SEVEN_ZIP_PLATFORM_SOURCE_FILES
-        ${SEVEN_ZIP_SRC}/C/AesOpt.c
-        ${SEVEN_ZIP_SRC}/CPP/Windows/FileLink.cpp
-    )
+    # SET(SEVEN_ZIP_PLATFORM_SOURCE_FILES
+    #     ${SEVEN_ZIP_SRC}/CPP/myWindows/wine_date_and_time.cpp
+    # )
 ENDIF(MINGW)
 
 SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/Common/CommandLineParser.cpp
     ${SEVEN_ZIP_SRC}/CPP/Common/CRC.cpp
+    # Static initializer that calls Crc64GenerateTable() at library load. Without it, the CRC64
+    # function pointer (g_Crc64Update in XzCrc64.c) stays NULL and extracting an Xz archive (whose
+    # default integrity check is CRC64) calls through NULL -> SIGSEGV. CRC.cpp is the CRC32 equivalent.
+    ${SEVEN_ZIP_SRC}/CPP/Common/XzCrc64Init.cpp
     ${SEVEN_ZIP_SRC}/CPP/Common/IntToString.cpp
     ${SEVEN_ZIP_SRC}/CPP/Common/ListFileUtils.cpp
-    #${SEVEN_ZIP_SRC}/CPP/Common/StdInStream.cpp TODO check on Linux, remove it not needed
+    ####${SEVEN_ZIP_SRC}/CPP/Common/StdInStream.cpp TODO check on Linux, remove it not needed
     ${SEVEN_ZIP_SRC}/CPP/Common/MyString.cpp
     ${SEVEN_ZIP_SRC}/CPP/Common/MyWindows.cpp
     ${SEVEN_ZIP_SRC}/CPP/Common/StringConvert.cpp
@@ -169,6 +184,7 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/Windows/FileDir.cpp
     ${SEVEN_ZIP_SRC}/CPP/Windows/FileFind.cpp
     ${SEVEN_ZIP_SRC}/CPP/Windows/FileIO.cpp
+    ${SEVEN_ZIP_SRC}/CPP/Windows/FileLink.cpp
     ${SEVEN_ZIP_SRC}/CPP/Windows/FileName.cpp
     ${SEVEN_ZIP_SRC}/CPP/Windows/PropVariant.cpp
     ${SEVEN_ZIP_SRC}/CPP/Windows/PropVariantConv.cpp
@@ -202,14 +218,21 @@ SET(SEVEN_ZIP_SOURCE_FILES
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/UI/Common/LoadCodecs.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/UI/Common/PropIDUtils.cpp
+    # 7-Zip 23.01: the core open/property path references NHash::CHandler (hash-archive handler).
+    # Newer GCC dead-code-eliminated it; older toolchains (old-glibc compat) need it linked.
+    # These provide its vtable + deps; --gc-sections drops what stays unreachable at link time.
+    ${SEVEN_ZIP_SRC}/CPP/7zip/UI/Common/HashCalc.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/UI/Common/EnumDirItems.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/UI/Common/SortUtils.cpp
+    ${SEVEN_ZIP_SRC}/CPP/Common/DynLimBuf.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/UI/Console/ConsoleClose.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/ZHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Bz2Handler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/DeflateProps.cpp
-    ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/ExtHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/GzHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/FatHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/HandlerCont.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/ExtHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/HfsHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/LzmaHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/NtfsHandler.cpp
@@ -218,7 +241,7 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/XzHandler.cpp
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Common/CoderMixer2.cpp
-    #${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Common/CrossThreadProgress.cpp
+    ####${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Common/CrossThreadProgress.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Common/DummyOutStream.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Common/FindSignature.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Common/HandlerOut.cpp
@@ -234,7 +257,7 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zEncode.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zExtract.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zFolderInStream.cpp
-    #${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zFolderOutStream.cpp
+    ####${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zFolderOutStream.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zHandlerOut.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/7z/7zHeader.cpp
@@ -254,6 +277,9 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/LzhHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzhDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzmsDecoder.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzfseDecoder.cpp
+    # New in 7-Zip 26.03: Zstandard decoder (used by ZipHandler + the .zst archive handler).
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ZstdDecoder.cpp
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Chm/ChmHandler.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Chm/ChmIn.cpp
@@ -266,11 +292,11 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Wim/WimIn.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Wim/WimRegister.cpp
 
-    # Com ??
+    # # Com ??
 
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/ArHandler.cpp
-    
+
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/RpmHandler.cpp
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/XarHandler.cpp
@@ -301,9 +327,9 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Tar/TarRegister.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Tar/TarUpdate.cpp
 
-    # Udf
+    # # Udf
 
-    # Wim
+    # # Wim
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Zip/ZipAddCommon.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Archive/Zip/ZipHandler.cpp
@@ -341,7 +367,6 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzmaDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzmaEncoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzmaRegister.cpp
-    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzfseDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzOutWindow.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/LzxDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/PpmdDecoder.cpp
@@ -358,10 +383,9 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ShrinkDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ZDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/XpressDecoder.cpp
-    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/XzDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/XzEncoder.cpp
+    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/XzDecoder.cpp
     ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ZlibDecoder.cpp
-    ${SEVEN_ZIP_SRC}/CPP/7zip/Compress/ZstdDecoder.cpp
 
 
     ${SEVEN_ZIP_SRC}/CPP/7zip/Crypto/7zAes.cpp
@@ -398,32 +422,35 @@ SET(SEVEN_ZIP_SOURCE_FILES
     ${SEVEN_ZIP_SRC}/C/Sha256.c
     ${SEVEN_ZIP_SRC}/C/7zCrc.c
     ${SEVEN_ZIP_SRC}/C/7zCrcOpt.c
+    ${SEVEN_ZIP_SRC}/C/SwapBytes.c
+    ${SEVEN_ZIP_SRC}/C/Lzma2DecMt
+    ${SEVEN_ZIP_SRC}/C/AesOpt.c
+    ${SEVEN_ZIP_SRC}/C/LzFindOpt.c
+    ${SEVEN_ZIP_SRC}/C/Sha1Opt.c
+    ${SEVEN_ZIP_SRC}/C/Sha256Opt.c
+    ${SEVEN_ZIP_SRC}/C/MtDec.c
 
     ${SEVEN_ZIP_SRC}/C/7zStream.c
     ${SEVEN_ZIP_SRC}/C/Delta.c
     ${SEVEN_ZIP_SRC}/C/Lzma2Dec.c
-    ${SEVEN_ZIP_SRC}/C/Lzma2DecMt.c
     ${SEVEN_ZIP_SRC}/C/Lzma2Enc.c
-    ${SEVEN_ZIP_SRC}/C/LzFindOpt.c
     ${SEVEN_ZIP_SRC}/C/MtCoder.c
-    ${SEVEN_ZIP_SRC}/C/MtDec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd7.c
-    ${SEVEN_ZIP_SRC}/C/Ppmd7aDec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd7Dec.c
+    ${SEVEN_ZIP_SRC}/C/Ppmd7aDec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd7Enc.c
     ${SEVEN_ZIP_SRC}/C/Ppmd8.c
     ${SEVEN_ZIP_SRC}/C/Ppmd8Dec.c
     ${SEVEN_ZIP_SRC}/C/Ppmd8Enc.c
-    ${SEVEN_ZIP_SRC}/C/Sha1Opt.c
-    ${SEVEN_ZIP_SRC}/C/Sha256Opt.c
-    ${SEVEN_ZIP_SRC}/C/Sha512.c
-    ${SEVEN_ZIP_SRC}/C/SwapBytes.c
     ${SEVEN_ZIP_SRC}/C/Xz.c
     ${SEVEN_ZIP_SRC}/C/XzCrc64.c
     ${SEVEN_ZIP_SRC}/C/XzCrc64Opt.c
     ${SEVEN_ZIP_SRC}/C/XzDec.c
     ${SEVEN_ZIP_SRC}/C/XzEnc.c
     ${SEVEN_ZIP_SRC}/C/XzIn.c
+    # New in 7-Zip 26.03: SHA-512 (Xar hashing) and the Zstandard decoder (Zip/.zst).
+    ${SEVEN_ZIP_SRC}/C/Sha512.c
+    ${SEVEN_ZIP_SRC}/C/Sha512Opt.c
     ${SEVEN_ZIP_SRC}/C/Xxh64.c
     ${SEVEN_ZIP_SRC}/C/ZstdDec.c
 )
@@ -442,16 +469,16 @@ SET(JBINDING_CPP_FILES
     JavaToCPP/JavaToCPPSevenZip.cpp
     JavaToCPP/JavaToCPPInArchiveImpl.cpp
     JavaToCPP/JavaToCPPOutArchiveImpl.cpp
+    CPPToJava/CPPToJavaArchiveUpdateCallback.cpp
+    CPPToJava/CPPToJavaCryptoGetTextPassword.cpp
     CPPToJava/CPPToJavaArchiveExtractCallback.cpp
     CPPToJava/CPPToJavaArchiveOpenCallback.cpp
     CPPToJava/CPPToJavaArchiveOpenVolumeCallback.cpp
-    CPPToJava/CPPToJavaCryptoGetTextPassword.cpp
-    CPPToJava/CPPToJavaInStream.cpp
-    CPPToJava/CPPToJavaOutStream.cpp
     CPPToJava/CPPToJavaProgress.cpp
     CPPToJava/CPPToJavaSequentialInStream.cpp
+    CPPToJava/CPPToJavaInStream.cpp
     CPPToJava/CPPToJavaSequentialOutStream.cpp
-    CPPToJava/CPPToJavaArchiveUpdateCallback.cpp
+    CPPToJava/CPPToJavaOutStream.cpp
 
     ../test/CTests/JniToolsTest.cpp
     ../test/CTests/JBindingTest.cpp
@@ -468,11 +495,36 @@ SET(JBINDING_JAVAH_H_FILES
 
 SET(CMAKE_VERBOSE_MAKEFILE OFF)
 IF(CMAKE_COMPILER_IS_GNUCC)
-    SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fmessage-length=0")
+    # -ffunction-sections/-fdata-sections + --gc-sections lets the linker drop unreferenced
+    # code/data (e.g. 7-Zip 23.01 hash-on-extract paths that this binding never calls). Newer
+    # GCC removed them via -O DCE; older toolchains (old-glibc compat) need explicit section GC
+    # so -Wl,--no-undefined does not trip over their unused symbols. Also shrinks the binary.
+    SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fmessage-length=0 -ffunction-sections -fdata-sections")
 ENDIF(CMAKE_COMPILER_IS_GNUCC)
 IF(CMAKE_COMPILER_IS_GNUCXX)
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fmessage-length=0")
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fmessage-length=0 -ffunction-sections -fdata-sections")
+    # Old cross toolchains (e.g. ARMv5 dockcross = GCC 4.9) default to C++98, but the binding uses
+    # C++11 (noexcept / Z7_override). Newer toolchains already default to >= C++14, so only bump the
+    # old ones (set here, in CMakeLists, so it survives the dockcross toolchain file's flag override).
+    IF(CMAKE_CXX_COMPILER_VERSION VERSION_LESS "6.0")
+        SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
+    ENDIF()
 ENDIF(CMAKE_COMPILER_IS_GNUCXX)
+# Same for old Clang (e.g. the macOS cross toolchain multiarch/crossbuild = Clang 3.8, which defaults
+# to C++03): the binding needs C++11 (noexcept / Z7_override), else "expected ';'" on those keywords.
+IF(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    # The binding uses C++11 (noexcept / Z7_override). Clang can default to an older standard:
+    #  - AppleClang notably defaults to gnu++98 (so "expected ';'" on noexcept/override) on ALL
+    #    versions, including AppleClang 15 -> set -std explicitly for every Apple build;
+    #  - old non-Apple Clang (< 6.0) also defaults pre-C++11.
+    # On macOS also select libc++ (has C++11 <chrono> etc.; the osxcross default otherwise can't
+    # find them: "'chrono' file not found").
+    IF(APPLE)
+        SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
+    ELSEIF(CMAKE_CXX_COMPILER_VERSION VERSION_LESS "6.0")
+        SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+    ENDIF()
+ENDIF()
 
 #ADD_EXECUTABLE(Client7z Client7z.cpp ${P7ZIP_SOURCE_FILES})
 #TARGET_LINK_LIBRARIES(Client7z dl)
@@ -495,18 +547,36 @@ SET(JAVAH_JAVA_CLASS_LIST
     net.sf.sevenzipjbinding.impl.OutArchiveImpl
 )
 
-
-add_custom_command(OUTPUT ${JBINDING_JAVAH_H_FILES}
-                   COMMAND ${JAVA_HEADER_COMPILE} -jni -d . -classpath ${SEVENZIPJBINDING_JAR} ${JAVAH_JAVA_CLASS_LIST}  
-                   DEPENDS ${SEVENZIPJBINDING_JAR}
-                   WORKING_DIRECTORY ${JAVAH_OUTPUT_DIR}
-                   COMMENT "javah: generating h-files from java classes ${JAVAH_JAVA_CLASS_LIST}"
+# The same three classes as source files, for the 'javac -h' fallback (JDK 10+ has no 'javah').
+SET(JAVAH_JAVA_SRC_LIST
+    ${JAVA_SOURCE_DIR}/net/sf/sevenzipjbinding/SevenZip.java
+    ${JAVA_SOURCE_DIR}/net/sf/sevenzipjbinding/impl/InArchiveImpl.java
+    ${JAVA_SOURCE_DIR}/net/sf/sevenzipjbinding/impl/OutArchiveImpl.java
 )
+
+IF(JAVA_HEADER_USE_JAVAC)
+    # 'javac -h <dir>' emits the JNI headers as a side effect of compiling the given sources; the full
+    # (already built) jar on the classpath resolves every dependency, and -d discards the .class files.
+    add_custom_command(OUTPUT ${JBINDING_JAVAH_H_FILES}
+                       COMMAND ${JAVA_HEADER_COMPILE} -h ${JAVAH_OUTPUT_DIR} -d ${JAVAH_OUTPUT_DIR}/classes
+                                                      -classpath ${SEVENZIPJBINDING_JAR} ${JAVAH_JAVA_SRC_LIST}
+                       DEPENDS ${SEVENZIPJBINDING_JAR}
+                       WORKING_DIRECTORY ${JAVAH_OUTPUT_DIR}
+                       COMMENT "javac -h: generating JNI h-files from ${JAVAH_JAVA_CLASS_LIST}"
+    )
+ELSE()
+    add_custom_command(OUTPUT ${JBINDING_JAVAH_H_FILES}
+                       COMMAND ${JAVA_HEADER_COMPILE} -jni -d . -classpath ${SEVENZIPJBINDING_JAR} ${JAVAH_JAVA_CLASS_LIST}
+                       DEPENDS ${SEVENZIPJBINDING_JAR}
+                       WORKING_DIRECTORY ${JAVAH_OUTPUT_DIR}
+                       COMMENT "javah: generating h-files from java classes ${JAVAH_JAVA_CLASS_LIST}"
+    )
+ENDIF()
 
 add_library(7-Zip-JBinding
             SHARED
             ${JBINDING_CPP_FILES}
-            ${JBINDING_PLATFORM_CPP_FILES}
+            # ${JBINDING_PLATFORM_CPP_FILES}
             ${SEVEN_ZIP_SOURCE_FILES}
             ${SEVEN_ZIP_PLATFORM_SOURCE_FILES}
             ${JBINDING_JAVAH_H_FILES})
@@ -514,14 +584,25 @@ add_library(7-Zip-JBinding
 #GET_TARGET_PROPERTY(SEVENZIP_JBINDING_LIB 7-Zip-JBinding LOCATION)
 #SET_PROPERTY(GLOBAL PROPERTY SEVENZIP_JBINDING_LIB ${SEVENZIP_JBINDING_LIB}) 
 
-IF(STATIC_BUILD) 
+IF(STATIC_BUILD)
     SET_PROPERTY(TARGET 7-Zip-JBinding APPEND_STRING PROPERTY LINK_FLAGS " -static-libgcc -static-libstdc++ ")
+    IF(MINGWARM64)
+        # llvm-mingw: also statically link libc++ / libunwind / libwinpthread so the produced arm64
+        # DLL is fully self-contained (no runtime DLLs to ship alongside it, like the other platforms).
+        SET_PROPERTY(TARGET 7-Zip-JBinding APPEND_STRING PROPERTY LINK_FLAGS " -static ")
+    ENDIF()
 ENDIF()
 
 IF(MINGW)
 #   TARGET_LINK_LIBRARIES(7-Zip-JBinding c)
 ELSE(MINGW)
     TARGET_LINK_LIBRARIES(7-Zip-JBinding dl c pthread)
+    IF(NOT APPLE)
+        # 7-Zip 26.03's TimeUtils.cpp calls clock_gettime(); on old glibc (<2.17, e.g. manylinux2010
+        # and the old-glibc ARM cross toolchains) that symbol lives in librt, so link -lrt on Linux.
+        # Harmless on modern glibc (librt is a stub there); librt doesn't exist on macOS (NOT APPLE).
+        TARGET_LINK_LIBRARIES(7-Zip-JBinding rt)
+    ENDIF()
 ENDIF(MINGW)
 
 
@@ -541,7 +622,7 @@ IF(MINGW)
     #        SET_TARGET_PROPERTIES(7-Zip-JBinding PROPERTIES LINK_FLAGS "-Wl,--add-stdcall-alias -mthreads") # -lpthread -lstdc++ -lws2_32") #-Wl,--add-stdcall-alias
 ELSE(MINGW)
     IF(NOT APPLE)
-        SET_PROPERTY(TARGET 7-Zip-JBinding APPEND_STRING PROPERTY LINK_FLAGS " -Wl,-z,defs -Wl,--no-undefined ") # Check for missing symbols
+        SET_PROPERTY(TARGET 7-Zip-JBinding APPEND_STRING PROPERTY LINK_FLAGS " -Wl,--gc-sections -Wl,-z,defs -Wl,--no-undefined ") # GC dead sections, then check for missing symbols
     ENDIF()
 ENDIF(MINGW)
 

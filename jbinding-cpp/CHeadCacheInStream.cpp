@@ -1,6 +1,9 @@
 #include "SevenZipJBinding.h"
 #include "CHeadCacheInStream.h"
 
+#include <cstdlib>
+#include <cstring>
+
 STDMETHODIMP CHeadCacheInStream::ReadIntoCache(UInt64 newCacheInitializedSize) {
 	HRESULT res;
 	if (newCacheInitializedSize <= _cacheInitializedSize) {
@@ -74,7 +77,7 @@ STDMETHODIMP CHeadCacheInStream::InStreamSeekAndRead(void *data, UInt32 size, UI
 	return S_OK;
 }
 
-STDMETHODIMP CHeadCacheInStream::Read(void *data, UInt32 size, UInt32 *processedSize) {
+STDMETHODIMP CHeadCacheInStream::Read(void *data, UInt32 size, UInt32 *processedSize) noexcept {
 	if (_inStreamSize == -1) {
 		TRACE("Uninitialized. Call Init() first");
 		return S_FALSE;
@@ -93,7 +96,7 @@ STDMETHODIMP CHeadCacheInStream::Read(void *data, UInt32 size, UInt32 *processed
 }
 
 
-STDMETHODIMP CHeadCacheInStream::Seek(Int64 offset, UInt32 seekOrigin, UInt64 *newPosition) {
+STDMETHODIMP CHeadCacheInStream::Seek(Int64 offset, UInt32 seekOrigin, UInt64 *newPosition) noexcept {
 	if (_inStreamSize == -1) {
 		TRACE("Uninitialized. Call Init() first");
 		return S_FALSE;
