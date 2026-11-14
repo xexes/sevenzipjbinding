@@ -53,9 +53,20 @@ Release - 23.01-2.2 (Release, cross-platform, based on 7-Zip 23.01)
 	* Bugfix #43 misleading error message when java.io.tmpdir is invalid
 		(https://github.com/borisbrodski/sevenzipjbinding/issues/43)
 
-	* Known issue: CVE-2024-11477 (7-Zip Zstandard decompression) - the
-	  bundled 23.01 engine predates the upstream fix (7-Zip 24.07); see
-	  ReleaseNotes and issue #72
+	* CVE-2024-11477 (7-Zip Zstandard decompression) is resolved by the
+	  engine upgrade; see ReleaseNotes and issue #72.
+
+Release - 26.01-1.00 (Release, cross-platform, based on 7-Zip 26.01)
+
+	* Update to 7-Zip 26.01
+
+Release - 25.01-1.00 (Release, cross-platform, based on 7-Zip 25.01)
+
+	* Update to 7-Zip 25.01
+		- Enhanced symbolic link handling security
+		- Fixes CVE-2025-11001 and CVE-2025-11002
+		- Updated copyright year to 2025
+		- Based on 7-Zip released August 3, 2025
 
 Release - 16.02-2.02 (Release, cross-platform, based on zip/p7zip 16.02)
 

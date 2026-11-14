@@ -8,7 +8,7 @@ Extract and create 20+ archive formats with native performance — one small lib
 [![Maven Central](https://img.shields.io/maven-central/v/net.sf.sevenzipjbinding/sevenzipjbinding?label=Maven%20Central)](https://central.sonatype.com/artifact/net.sf.sevenzipjbinding/sevenzipjbinding)
 [![License: LGPL v2.1](https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg)](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)
 [![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)](#requirements)
-[![7-Zip engine](https://img.shields.io/badge/7--Zip%20engine-23.01-1f8ceb.svg)](https://www.7-zip.org/)
+[![7-Zip engine](https://img.shields.io/badge/7--Zip%20engine-26.06-1f8ceb.svg)](https://www.7-zip.org/)
 [![macOS build](https://github.com/borisbrodski/sevenzipjbinding/actions/workflows/macos.yml/badge.svg)](https://github.com/borisbrodski/sevenzipjbinding/actions/workflows/macos.yml)
 
 [**Website**](https://sevenzipjbind.sourceforge.net/) ·
@@ -24,7 +24,7 @@ Extract and create 20+ archive formats with native performance — one small lib
 ---
 
 7‑Zip‑JBinding is a free, cross‑platform Java binding for the [7‑Zip](https://www.7-zip.org/) /
-[p7zip](https://p7zip.sourceforge.net/) archive engine. The unmodified 7‑Zip C/C++ engine runs
+[p7zip](https://p7zip.sourceforge.net/) archive engine. The bundled 7‑Zip C/C++ engine runs
 **in‑process** through JNI — no child processes, no external `7z` binary — and all I/O is
 **callback‑driven**, so you can read and write archives entirely in memory, stream from any source,
 and abort at any time.
@@ -32,7 +32,7 @@ and abort at any time.
 ## ✨ Highlights
 
 - **20+ formats to extract, 6 to create/update** — see the [formats table](#-supported-formats).
-- **Native performance, in‑process** — the genuine 7‑Zip 23.01 engine via JNI.
+- **Native performance, in‑process** — the 7‑Zip 26.06 engine via JNI.
 - **Callback‑driven, streaming I/O** — fully in‑memory round‑trips, partial extraction from huge
   archives, extract‑while‑downloading a remote archive, and abortable operations. No temp files
   unless you want them.
@@ -72,7 +72,9 @@ The right native library is selected automatically at runtime.
 
 ## 🚀 Install
 
-Current version: **`23.01-2.2`** (7‑Zip engine 23.01).
+The source tree builds **`26.06-2.4`** with the 7‑Zip 26.06 engine. The published
+Maven examples below use **`23.01-2.2`** (7‑Zip 23.01); the newer version must
+be built from source until it is published.
 
 **Maven**
 ```xml
@@ -144,10 +146,9 @@ and in‑memory round‑trips are on the site:
 
 ## 🔒 Known issue / security
 
-**CVE‑2024‑11477** (7‑Zip Zstandard decompression, severity HIGH, CVSS 7.8): the bundled 7‑Zip engine
-(23.01) predates the upstream fix, released in 7‑Zip 24.07, so processing **untrusted Zstandard‑
-compressed** input may be affected. **Mitigation:** do not open/extract untrusted Zstandard data. This
-will be resolved by a future engine upgrade — tracking:
+**CVE‑2024‑11477** (7‑Zip Zstandard decompression, severity HIGH, CVSS 7.8): published
+23.01 artifacts predate the upstream fix in 7‑Zip 24.07. Avoid untrusted Zstandard data
+with those artifacts. The 26.06 source tree includes the upstream fix — tracking:
 [#72](https://github.com/borisbrodski/sevenzipjbinding/issues/72).
 
 ## 🔧 Build from source

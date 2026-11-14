@@ -44,6 +44,7 @@ public class VersionTest extends JUnitNativeTestBase<VoidContext> {
         assertTrue(version.major > 0);
         assertTrue(version.minor > 0);
         assertTrue(version.version.length() > 0);
+        assertEquals(SevenZip.getSevenZipJBindingVersion().split("-")[0], version.version);
         assertTrue(version.date.length() > 0);
         assertTrue(version.copyright.length() > 0);
     }
